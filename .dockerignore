@@ -1,0 +1,12 @@
+.git
+.idea
+.vscode
+.phase10-build
+.codex-finalizer
+target
+submission
+*.iml
+.env*
+*.pptx
+docs
+README.md

@@ -1,0 +1,57 @@
+package com.guvi.recommendationsystem.controller;
+
+import com.guvi.recommendationsystem.model.AdminDashboardSummary;
+import com.guvi.recommendationsystem.service.AdminAnalyticsService;
+import com.guvi.recommendationsystem.web.ApiExceptionHandler;
+import com.guvi.recommendationsystem.web.SessionAccess;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
+import org.springframework.context.annotation.Import;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
+import org.springframework.test.web.servlet.MockMvc;
+
+import java.math.BigDecimal;
+
+import static org.mockito.Mockito.verifyNoInteractions;
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+@WebMvcTest(AdminAnalyticsController.class)
+@Import({SessionAccess.class, ApiExceptionHandler.class})
+class AdminAnalyticsControllerWebTest {
+    @Autowired private MockMvc mockMvc;
+    @MockitoBean private AdminAnalyticsService analyticsService;
+
+    @Test
+    void summaryRequiresAuthentication() throws Exception {
+        mockMvc.perform(get("/api/admin/analytics/summary"))
+                .andExpect(status().isUnauthorized());
+        verifyNoInteractions(analyticsService);
+    }
+
+    @Test
+    void ordinaryUserCannotReadAdministratorAnalytics() throws Exception {
+        mockMvc.perform(get("/api/admin/analytics/summary")
+                        .sessionAttr("authenticatedUserId", 21L)
+                        .sessionAttr("authenticatedUserRole", "USER"))
+                .andExpect(status().isForbidden());
+        verifyNoInteractions(analyticsService);
+    }
+
+    @Test
+    void administratorReceivesDatabaseSummary() throws Exception {
+        when(analyticsService.getSummary()).thenReturn(new AdminDashboardSummary(
+                8, 3, 20, 5, 40, 16, new BigDecimal("4.25")));
+
+        mockMvc.perform(get("/api/admin/analytics/summary")
+                        .sessionAttr("authenticatedUserId", 21L)
+                        .sessionAttr("authenticatedUserRole", "ADMIN"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.totalUsers").value(8))
+                .andExpect(jsonPath("$.activeUsersLast30Days").value(3))
+                .andExpect(jsonPath("$.averageRating").value(4.25));
+    }
+}
