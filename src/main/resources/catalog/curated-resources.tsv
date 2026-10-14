@@ -1,0 +1,176 @@
+category	title	url	source	tags	type	difficulty	estimatedMinutes	isEditorPick
+Technology	Python Tutorial	https://docs.python.org/3/tutorial/	Python Docs	Programming|Databases|AI/ML	DOCUMENTATION	BEGINNER	90	true
+Technology	CS50x: Introduction to Computer Science	https://cs50.harvard.edu/x/	Harvard CS50	Programming|Web Development|Databases	COURSE	BEGINNER	120	true
+Technology	Python for Everybody	https://www.py4e.com/	PY4E	Programming|Databases|AI/ML	COURSE	BEGINNER	90	false
+Technology	The Odin Project: Foundations	https://www.theodinproject.com/paths/foundations/courses/foundations	The Odin Project	Programming|Web Development|Databases	COURSE	BEGINNER	120	false
+Technology	freeCodeCamp: Responsive Web Design	https://www.freecodecamp.org/learn/2022/responsive-web-design/	freeCodeCamp	Web Development|Programming|Design	COURSE	BEGINNER	120	false
+Technology	MDN JavaScript Guide	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide	MDN	Programming|Web Development|AI/ML	DOCUMENTATION	INTERMEDIATE	60	false
+Technology	React: Learn	https://react.dev/learn	React	Web Development|Programming|Design	DOCUMENTATION	INTERMEDIATE	60	false
+Technology	Vue.js Guide	https://vuejs.org/guide/introduction.html	Vue.js	Web Development|Programming|Design	DOCUMENTATION	BEGINNER	45	false
+Technology	Angular: Learn	https://angular.dev/tutorials/learn-angular	Angular	Web Development|Programming|Databases	GUIDE	INTERMEDIATE	60	false
+Technology	TypeScript Handbook	https://www.typescriptlang.org/docs/handbook/intro.html	TypeScript	Programming|Web Development|Databases	DOCUMENTATION	INTERMEDIATE	60	false
+Technology	A Tour of Go	https://go.dev/tour/	Go	Programming|Web Development|Databases	GUIDE	BEGINNER	45	false
+Technology	The Rust Programming Language	https://doc.rust-lang.org/book/	Rust Project	Programming|Databases|Web Development	GUIDE	INTERMEDIATE	120	false
+Technology	Kotlin Koans	https://play.kotlinlang.org/koans/overview	Kotlin	Programming|Web Development|Databases	PROJECT	BEGINNER	60	false
+Technology	Pro Git Book	https://git-scm.com/book/en/v2	Git	Programming|DevOps|Web Development	GUIDE	BEGINNER	60	false
+Technology	GitHub Skills: Introduction to GitHub	https://skills.github.com/	GitHub	Programming|DevOps|Web Development	COURSE	BEGINNER	30	true
+Technology	SQLBolt Interactive Lessons	https://sqlbolt.com/	SQLBolt	Databases|Programming|AI/ML	GUIDE	BEGINNER	45	false
+Technology	PostgreSQL Tutorial	https://www.postgresql.org/docs/current/tutorial.html	PostgreSQL	Databases|Programming|Cloud Computing	DOCUMENTATION	INTERMEDIATE	90	false
+Technology	MongoDB University Learning Paths	https://learn.mongodb.com/	MongoDB	Databases|Programming|Cloud Computing	COURSE	BEGINNER	60	false
+Technology	MySQL 8.4 Reference Manual	https://dev.mysql.com/doc/refman/8.4/en/	MySQL	Databases|Programming|Cloud Computing	DOCUMENTATION	ADVANCED	90	false
+Technology	AWS Skill Builder	https://skillbuilder.aws/	AWS	Cloud Computing|DevOps|Cybersecurity	COURSE	BEGINNER	60	false
+Technology	Microsoft Learn: Azure Fundamentals	https://learn.microsoft.com/	Microsoft Learn	Cloud Computing|DevOps|Cybersecurity	COURSE	BEGINNER	60	false
+Technology	Google Cloud Skills Boost	https://www.cloudskillsboost.google/	Google Cloud	Cloud Computing|DevOps|Cybersecurity	COURSE	INTERMEDIATE	60	false
+Technology	Kubernetes Basics	https://kubernetes.io/docs/tutorials/kubernetes-basics/	Kubernetes	DevOps|Cloud Computing|Programming	GUIDE	INTERMEDIATE	60	false
+Technology	Linux Journey	https://linuxjourney.com/	Linux Journey	DevOps|Cybersecurity|Programming	GUIDE	BEGINNER	45	false
+Technology	PortSwigger Web Security Academy	https://portswigger.net/web-security	PortSwigger	Cybersecurity|Web Development|Programming	COURSE	INTERMEDIATE	60	true
+Technology	OWASP Cheat Sheet Series	https://cheatsheetseries.owasp.org/	OWASP	Cybersecurity|Web Development|Programming	DOCUMENTATION	INTERMEDIATE	45	false
+Technology	OWASP Web Security Testing Guide	https://owasp.org/www-project-web-security-testing-guide/	OWASP	Cybersecurity|Web Development|Programming	GUIDE	ADVANCED	90	false
+Technology	NIST Cybersecurity Framework	https://www.nist.gov/cyberframework	NIST	Cybersecurity|Cloud Computing|DevOps	GUIDE	INTERMEDIATE	60	false
+Technology	Google Machine Learning Crash Course	https://developers.google.com/machine-learning/crash-course	Google	AI/ML|Programming|Databases	COURSE	INTERMEDIATE	90	true
+Technology	Practical Deep Learning for Coders	https://course.fast.ai/	fast.ai	AI/ML|Programming|Databases	COURSE	INTERMEDIATE	120	false
+Technology	Hugging Face NLP Course	https://huggingface.co/learn/nlp-course/	Hugging Face	AI/ML|Programming|Web Development	COURSE	INTERMEDIATE	90	false
+Technology	PyTorch Tutorials	https://pytorch.org/tutorials/	PyTorch	AI/ML|Programming|Databases	GUIDE	INTERMEDIATE	60	false
+Technology	TensorFlow Tutorials	https://www.tensorflow.org/tutorials	TensorFlow	AI/ML|Programming|Databases	GUIDE	INTERMEDIATE	60	false
+Technology	Elements of AI	https://www.elementsofai.com/	University of Helsinki	AI/ML|Programming|Cloud Computing	COURSE	BEGINNER	60	false
+Business & Finance	SBA: Plan Your Business	https://www.sba.gov/business-guide/plan-your-business	U.S. Small Business Administration	Entrepreneurship|Startups|Business Strategy	GUIDE	BEGINNER	30	false
+Business & Finance	SBA: Launch Your Business	https://www.sba.gov/business-guide/launch-your-business	U.S. Small Business Administration	Entrepreneurship|Startups|Business Strategy	GUIDE	BEGINNER	30	true
+Business & Finance	SBA: Manage Your Business	https://www.sba.gov/business-guide/manage-your-business	U.S. Small Business Administration	Business Strategy|Entrepreneurship|Marketing	GUIDE	INTERMEDIATE	30	false
+Business & Finance	SCORE Business Plan Template	https://www.score.org/resource/business-plan-template-startup-business	SCORE	Entrepreneurship|Startups|Business Strategy	RESOURCE	BEGINNER	45	false
+Business & Finance	Y Combinator Startup School	https://www.startupschool.org/	Y Combinator	Startups|Entrepreneurship|Business Strategy	COURSE	BEGINNER	60	true
+Business & Finance	Y Combinator Startup Library	https://www.ycombinator.com/library	Y Combinator	Startups|Entrepreneurship|Business Strategy	ARTICLE	INTERMEDIATE	30	false
+Business & Finance	OpenStax: Entrepreneurship	https://openstax.org/details/books/entrepreneurship	OpenStax	Entrepreneurship|Startups|Business Strategy	RESOURCE	BEGINNER	90	false
+Business & Finance	Wharton Entrepreneurship Specialization	https://www.coursera.org/	Coursera	Entrepreneurship|Startups|Business Strategy	COURSE	INTERMEDIATE	60	false
+Business & Finance	MIT Entrepreneurship	https://entrepreneurship.mit.edu/	MIT	Entrepreneurship|Startups|Business Strategy	RESOURCE	INTERMEDIATE	30	false
+Business & Finance	Strategyzer: Value Proposition Canvas	https://www.strategyzer.com/library/the-value-proposition-canvas	Strategyzer	Business Strategy|Entrepreneurship|Marketing	GUIDE	INTERMEDIATE	30	false
+Business & Finance	CFPB Budgeting	https://www.consumerfinance.gov/consumer-tools/	Consumer Financial Protection Bureau	Personal Finance|Investing Basics|Healthy Habits	TOOL	BEGINNER	20	true
+Business & Finance	CFPB Saving	https://www.consumerfinance.gov/	Consumer Financial Protection Bureau	Personal Finance|Investing Basics|Healthy Habits	GUIDE	BEGINNER	20	false
+Business & Finance	CFPB Credit Reports and Scores	https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/	Consumer Financial Protection Bureau	Personal Finance|Investing Basics|Professional Skills	GUIDE	BEGINNER	25	false
+Business & Finance	Khan Academy: Personal Finance	https://www.khanacademy.org/college-careers-more/personal-finance	Khan Academy	Personal Finance|Investing Basics|Healthy Habits	COURSE	BEGINNER	45	false
+Business & Finance	FDIC Money Smart	https://www.fdic.gov/consumer-resource-center/money-smart	FDIC	Personal Finance|Investing Basics|Healthy Habits	COURSE	BEGINNER	45	false
+Business & Finance	FINRA Investing Basics	https://www.finra.org/investors/investing/investing-basics	FINRA	Investing Basics|Personal Finance|Business Strategy	GUIDE	BEGINNER	30	true
+Business & Finance	FINRA Asset Allocation and Diversification	https://www.finra.org/investors/	FINRA	Investing Basics|Personal Finance|Business Strategy	ARTICLE	INTERMEDIATE	20	false
+Business & Finance	Investor.gov: Investing Basics	https://www.investor.gov/	Investor.gov	Investing Basics|Personal Finance|Business Strategy	GUIDE	BEGINNER	25	false
+Business & Finance	Vanguard Investor Education	https://investor.vanguard.com/investor-resources-education	Vanguard	Investing Basics|Personal Finance|Business Strategy	RESOURCE	INTERMEDIATE	30	false
+Business & Finance	Charles Schwab Investing Basics	https://www.schwab.com/learn/story/investing-basics	Charles Schwab	Investing Basics|Personal Finance|Business Strategy	GUIDE	BEGINNER	25	false
+Business & Finance	HubSpot Content Marketing Certification	https://academy.hubspot.com/courses/content-marketing	HubSpot Academy	Marketing|Business Strategy|Communication	COURSE	BEGINNER	45	true
+Business & Finance	HubSpot Inbound Marketing Certification	https://academy.hubspot.com/courses/inbound-marketing	HubSpot Academy	Marketing|Business Strategy|Communication	COURSE	BEGINNER	45	false
+Business & Finance	Google Skillshop	https://skillshop.withgoogle.com/	Google	Marketing|Business Strategy|Professional Skills	COURSE	BEGINNER	45	false
+Business & Finance	Meta Blueprint	https://www.facebook.com/business/learn	Meta	Marketing|Business Strategy|Communication	COURSE	BEGINNER	45	false
+Business & Finance	Ahrefs SEO Training Course	https://ahrefs.com/academy/seo-training-course	Ahrefs	Marketing|Business Strategy|Professional Skills	COURSE	INTERMEDIATE	60	false
+Business & Finance	Semrush Academy	https://www.semrush.com/academy/	Semrush	Marketing|Business Strategy|Professional Skills	COURSE	INTERMEDIATE	45	false
+Business & Finance	Mailchimp Marketing Resources	https://mailchimp.com/	Mailchimp	Marketing|Business Strategy|Communication	GUIDE	BEGINNER	25	false
+Business & Finance	Shopify: Start an Online Store	https://www.shopify.com/blog/how-to-start-an-online-store	Shopify	Entrepreneurship|Marketing|Business Strategy	ARTICLE	BEGINNER	30	false
+Business & Finance	Google Analytics Skillshop	https://skillshop.exceedlms.com/student/catalog/list?category_ids=53-google-ads	Google	Marketing|Business Strategy|Professional Skills	COURSE	INTERMEDIATE	45	false
+Business & Finance	CFI Accounting Resources	https://corporatefinanceinstitute.com/resources/accounting/	CFI	Personal Finance|Investing Basics|Business Strategy	GUIDE	INTERMEDIATE	30	false
+Business & Finance	Khan Academy: Taxes	https://www.khanacademy.org/economics-finance-domain/core-finance/taxes-topic	Khan Academy	Personal Finance|Investing Basics|Business Strategy	COURSE	BEGINNER	45	false
+Business & Finance	Federal Reserve Economic Data	https://fred.stlouisfed.org/	Federal Reserve Bank of St. Louis	Investing Basics|Personal Finance|Business Strategy	TOOL	INTERMEDIATE	25	false
+Business & Finance	World Bank Open Data	https://data.worldbank.org/	World Bank	Business Strategy|Investing Basics|Marketing	TOOL	INTERMEDIATE	30	false
+Business & Finance	IMF Finance & Development	https://www.imf.org/en/Publications/fandd	International Monetary Fund	Business Strategy|Investing Basics|Personal Finance	ARTICLE	ADVANCED	30	false
+Business & Finance	Google Digital Marketing Learning	https://learndigital.withgoogle.com/digitalgarage	Google	Marketing|Business Strategy|Professional Skills	COURSE	BEGINNER	45	false
+Learning & Career	The Learning Scientists: Six Strategies	https://www.learningscientists.org/blog/2016/8/18-1	The Learning Scientists	Study Skills|Productivity|Professional Skills	ARTICLE	BEGINNER	15	false
+Learning & Career	Anki Manual	https://docs.ankiweb.net/	Anki	Study Skills|Productivity|Career Development	DOCUMENTATION	BEGINNER	30	false
+Learning & Career	MIT OpenCourseWare	https://ocw.mit.edu/	MIT OpenCourseWare	Study Skills|Professional Skills|Career Development	COURSE	INTERMEDIATE	60	false
+Learning & Career	Coursera: Mindshift	https://www.coursera.org/learn/mindshift	Coursera	Study Skills|Career Development|Productivity	COURSE	BEGINNER	45	true
+Learning & Career	Google Career Certificates	https://grow.google/certificates/	Google	Career Development|Professional Skills|Interview Preparation	COURSE	BEGINNER	60	true
+Learning & Career	Microsoft Learn Training	https://learn.microsoft.com/en-us/training/	Microsoft Learn	Career Development|Professional Skills|Programming	COURSE	BEGINNER	45	false
+Learning & Career	IBM SkillsBuild	https://skillsbuild.org/	IBM	Career Development|Professional Skills|Programming	COURSE	BEGINNER	45	false
+Learning & Career	CareerOneStop Skills Matcher	https://www.careeronestop.org/Toolkit/Skills/skills-matcher.aspx	CareerOneStop	Career Development|Professional Skills|Interview Preparation	TOOL	BEGINNER	20	true
+Learning & Career	My Next Move Interest Profiler	https://www.mynextmove.org/explore/ip	O*NET	Career Development|Professional Skills|Study Skills	TOOL	BEGINNER	20	false
+Learning & Career	Harvard Resume and Cover Letter Guide	https://careerservices.fas.harvard.edu/resources/create-a-strong-resume/	Harvard FAS	Career Development|Professional Skills|Communication	GUIDE	BEGINNER	30	false
+Learning & Career	Google Technical Writing One	https://developers.google.com/tech-writing/one	Google	Communication|Professional Skills|Programming	COURSE	INTERMEDIATE	45	false
+Learning & Career	Google Technical Writing Two	https://developers.google.com/tech-writing/two	Google	Communication|Professional Skills|Programming	COURSE	ADVANCED	45	false
+Learning & Career	Purdue OWL Professional Writing	https://owl.purdue.edu/owl/subject_specific_writing/professional_technical_writing/	Purdue OWL	Communication|Professional Skills|Career Development	GUIDE	INTERMEDIATE	30	false
+Learning & Career	Toastmasters Public Speaking Tips	https://www.toastmasters.org/resources/public-speaking-tips	Toastmasters	Communication|Professional Skills|Career Development	GUIDE	BEGINNER	25	false
+Learning & Career	MIT Career Advising Resources	https://capd.mit.edu/resources/	MIT	Career Development|Interview Preparation|Professional Skills	RESOURCE	BEGINNER	30	true
+Learning & Career	Big Interview Practice Resources	https://biginterview.com/	Big Interview	Interview Preparation|Communication|Career Development	TOOL	BEGINNER	30	false
+Learning & Career	Google Interview Warmup	https://grow.google/certificates/interview-warmup/	Google	Interview Preparation|Communication|Career Development	TOOL	BEGINNER	20	true
+Learning & Career	Coursera Career Success Specialization	https://www.coursera.org/specializations/career-success	Coursera	Career Development|Professional Skills|Communication	COURSE	BEGINNER	45	false
+Learning & Career	LinkedIn Interview Preparation	https://www.linkedin.com/interview-prep/	LinkedIn	Interview Preparation|Career Development|Communication	TOOL	BEGINNER	30	false
+Learning & Career	Atlassian Team Playbook	https://www.atlassian.com/team-playbook	Atlassian	Professional Skills|Communication|Productivity	GUIDE	INTERMEDIATE	30	false
+Learning & Career	Todoist Productivity Methods	https://www.todoist.com/productivity-methods	Todoist	Productivity|Study Skills|Professional Skills	GUIDE	BEGINNER	25	false
+Learning & Career	Getting Things Done	https://gettingthingsdone.com/what-is-gtd/	GTD	Productivity|Study Skills|Career Development	GUIDE	BEGINNER	25	false
+Learning & Career	Pomodoro Technique	https://www.pomodorotechnique.com/	Francesco Cirillo	Productivity|Study Skills|Healthy Habits	GUIDE	BEGINNER	20	false
+Learning & Career	OpenStax Psychology 2e	https://openstax.org/details/books/psychology-2e	OpenStax	Study Skills|Communication|Professional Skills	RESOURCE	INTERMEDIATE	90	false
+Learning & Career	FutureLearn Career Development	https://www.futurelearn.com/subjects/business-and-management-courses/career-development	FutureLearn	Career Development|Professional Skills|Communication	COURSE	BEGINNER	45	false
+Learning & Career	edX Professional Development Courses	https://www.edx.org/learn/professional-development	edX	Professional Skills|Career Development|Communication	COURSE	INTERMEDIATE	45	false
+Learning & Career	Khan Academy Growth Mindset	https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us	Khan Academy	Study Skills|Career Development|Productivity	RESOURCE	BEGINNER	20	false
+Learning & Career	University of Minnesota: Communication in the Real World	https://open.lib.umn.edu/communication/	University of Minnesota	Communication|Professional Skills|Career Development	RESOURCE	INTERMEDIATE	60	false
+Learning & Career	MindTools Career Skills	https://www.mindtools.com/	MindTools	Professional Skills|Career Development|Productivity	GUIDE	INTERMEDIATE	30	false
+Learning & Career	Coursera: Successful Negotiation	https://www.coursera.org/learn/negotiation-skills	University of Michigan	Communication|Professional Skills|Career Development	COURSE	INTERMEDIATE	45	false
+Learning & Career	OpenLearn: Effective Communication	https://www.open.edu/openlearn/money-business/leadership-management/effective-communication/content-section-overview	The Open University	Communication|Professional Skills|Career Development	COURSE	BEGINNER	45	false
+Learning & Career	The Muse Career Advice	https://www.themuse.com/advice	The Muse	Career Development|Interview Preparation|Professional Skills	ARTICLE	BEGINNER	20	false
+Learning & Career	Coursera: English for Career Development	https://www.coursera.org/learn	Coursera	Communication|Professional Skills|Career Development	COURSE	BEGINNER	45	false
+Learning & Career	LeetCode Interview Preparation	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode	Interview Preparation|Programming|Career Development	PROJECT	INTERMEDIATE	60	false
+Learning & Career	GitHub: Technical Interview Handbook	https://github.com/yangshun/tech-interview-handbook	GitHub	Interview Preparation|Programming|Career Development	GUIDE	INTERMEDIATE	60	false
+Health & Fitness	Harvard Health: Exercise and Fitness	https://www.health.harvard.edu/topics/exercise-and-fitness	Harvard Health Publishing	Fitness|Workouts|Healthy Habits	GUIDE	BEGINNER	20	true
+Health & Fitness	WHO Physical Activity Fact Sheet	https://www.who.int/news-room/fact-sheets/detail/physical-activity	World Health Organization	Fitness|Workouts|Wellness	ARTICLE	BEGINNER	15	false
+Health & Fitness	Health.gov Physical Activity Guidelines	https://health.gov/our-work/nutrition-physical-activity/physical-activity-guidelines/current-guidelines	Move Your Way	Fitness|Workouts|Healthy Habits	GUIDE	BEGINNER	15	false
+Health & Fitness	NHS Couch to 5K	https://www.nhs.uk/live-well/exercise/get-running-with-couch-to-5k/	NHS	Fitness|Workouts|Healthy Habits	COURSE	BEGINNER	30	true
+Health & Fitness	NHS Strength Exercises	https://www.nhs.uk/live-well/exercise/strength-exercises/	NHS	Workouts|Fitness|Healthy Habits	GUIDE	BEGINNER	20	false
+Health & Fitness	MedlinePlus Exercise and Physical Fitness	https://medlineplus.gov/exerciseandphysicalfitness.html	U.S. National Library of Medicine	Fitness|Workouts|Wellness	GUIDE	BEGINNER	20	false
+Health & Fitness	NHS Eatwell Guide	https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/the-eatwell-guide/	NHS	Nutrition Basics|Healthy Habits|Wellness	GUIDE	BEGINNER	20	false
+Health & Fitness	Harvard Healthy Eating Plate	https://nutritionsource.hsph.harvard.edu/healthy-eating-plate/	Harvard T.H. Chan School of Public Health	Nutrition Basics|Healthy Habits|Wellness	GUIDE	BEGINNER	20	true
+Health & Fitness	MyPlate Plan	https://www.myplate.gov/myplate-plan	USDA MyPlate	Nutrition Basics|Healthy Habits|Wellness	TOOL	BEGINNER	15	false
+Health & Fitness	MedlinePlus Nutrition	https://medlineplus.gov/nutrition.html	U.S. National Library of Medicine	Nutrition Basics|Healthy Habits|Wellness	GUIDE	BEGINNER	20	false
+Health & Fitness	NHLBI Sleep Health	https://www.nhlbi.nih.gov/health/sleep	NHLBI	Sleep|Wellness|Healthy Habits	GUIDE	BEGINNER	15	true
+Health & Fitness	CDC About Sleep	https://www.cdc.gov/sleep/about/index.html	CDC	Sleep|Wellness|Healthy Habits	GUIDE	BEGINNER	15	false
+Health & Fitness	NHS Sleep and Tiredness	https://www.nhs.uk/live-well/sleep-and-tiredness/	NHS	Sleep|Wellness|Healthy Habits	GUIDE	BEGINNER	20	false
+Health & Fitness	MedlinePlus Sleep Disorders	https://medlineplus.gov/sleepdisorders.html	U.S. National Library of Medicine	Sleep|Wellness|Healthy Habits	GUIDE	INTERMEDIATE	20	false
+Health & Fitness	WHO Mental Health at Work	https://www.who.int/news-room/fact-sheets/detail/mental-health-at-work	World Health Organization	Wellness|Sleep|Healthy Habits	ARTICLE	BEGINNER	20	false
+Health & Fitness	NHS Every Mind Matters	https://www.nhs.uk/every-mind-matters/	NHS	Wellness|Sleep|Healthy Habits	RESOURCE	BEGINNER	20	false
+Health & Fitness	Mental Health America Screening Tools	https://mhanational.org/	Mental Health America	Wellness|Healthy Habits|Sleep	TOOL	BEGINNER	15	false
+Health & Fitness	WHO Stress Management Guide	https://www.who.int/publications/i/item/9789240003927	World Health Organization	Wellness|Healthy Habits|Sleep	GUIDE	BEGINNER	30	true
+Health & Fitness	NHS Mindfulness	https://www.nhs.uk/mental-health/self-help/tips-and-support/mindfulness/	NHS	Wellness|Sleep|Healthy Habits	GUIDE	BEGINNER	15	false
+Health & Fitness	CDC Healthy Weight	https://www.cdc.gov/healthy-weight-growth/about/index.html	CDC	Nutrition Basics|Fitness|Healthy Habits	GUIDE	BEGINNER	20	false
+Health & Fitness	USDA FoodData Central	https://fdc.nal.usda.gov/	USDA	Nutrition Basics|Healthy Habits|Fitness	TOOL	INTERMEDIATE	20	false
+Health & Fitness	NHS Food Labels	https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/how-to-read-food-labels/	NHS	Nutrition Basics|Healthy Habits|Wellness	GUIDE	BEGINNER	15	false
+Health & Fitness	WHO Healthy Diet	https://www.who.int/news-room/fact-sheets/detail/healthy-diet	World Health Organization	Nutrition Basics|Healthy Habits|Wellness	ARTICLE	BEGINNER	15	false
+Health & Fitness	CDC Physical Activity Benefits	https://www.cdc.gov/physical-activity-basics/benefits/index.html	CDC	Fitness|Workouts|Healthy Habits	GUIDE	INTERMEDIATE	20	false
+Health & Fitness	NHS Exercise for Health	https://www.nhs.uk/live-well/exercise/	NHS	Fitness|Wellness|Healthy Habits	GUIDE	BEGINNER	20	false
+Health & Fitness	Yoga With Adriene Foundations	https://yogawithadriene.com/	Yoga With Adriene	Fitness|Wellness|Healthy Habits	VIDEO	BEGINNER	25	false
+Health & Fitness	Nike Training Club	https://www.nike.com/ntc-app	Nike	Workouts|Fitness|Healthy Habits	TOOL	BEGINNER	30	false
+Health & Fitness	NHS Home Workout Videos	https://www.nhs.uk/better-health/get-active/home-workout-videos/	NHS	Workouts|Fitness|Healthy Habits	VIDEO	BEGINNER	10	false
+Health & Fitness	American Heart Association Fitness	https://www.heart.org/en/healthy-living/fitness	American Heart Association	Fitness|Workouts|Wellness	GUIDE	BEGINNER	20	false
+Health & Fitness	NHS Food Guidelines and Labels	https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/	NHS	Nutrition Basics|Healthy Habits|Wellness	GUIDE	BEGINNER	20	false
+Health & Fitness	WHO Physical Activity Guidelines	https://www.who.int/publications/i/item/9789240015128	World Health Organization	Fitness|Workouts|Wellness	DOCUMENTATION	INTERMEDIATE	30	false
+Health & Fitness	CDC Sleep and Sleep Disorders	https://www.cdc.gov/sleep/index.html	CDC	Sleep|Wellness|Healthy Habits	RESOURCE	BEGINNER	20	false
+Health & Fitness	NHS Mental Wellbeing Guides	https://www.nhs.uk/mental-health/self-help/guides-tools-and-activities/	NHS	Wellness|Healthy Habits|Sleep	RESOURCE	BEGINNER	20	false
+Health & Fitness	MedlinePlus Healthy Lifestyle	https://medlineplus.gov/healthyliving.html	U.S. National Library of Medicine	Healthy Habits|Wellness|Fitness	GUIDE	BEGINNER	20	false
+Health & Fitness	Nutrition.gov	https://www.nutrition.gov/	USDA	Nutrition Basics|Healthy Habits|Wellness	RESOURCE	BEGINNER	20	false
+Creative & Lifestyle	Adobe Learn: Creative Cloud	https://www.adobe.com/learn	Adobe	Design|Creativity|Photography	GUIDE	BEGINNER	30	true
+Creative & Lifestyle	Figma Learn Design	https://www.figma.com/resource-library/	Figma	Design|Creativity|Photography	GUIDE	BEGINNER	30	true
+Creative & Lifestyle	Google Arts & Culture	https://artsandculture.google.com/	Google Arts & Culture	Creativity|Photography|Travel	RESOURCE	BEGINNER	20	false
+Creative & Lifestyle	The Met: Heilbrunn Timeline of Art History	https://www.metmuseum.org/toah/	The Met	Creativity|Design|Travel	GUIDE	INTERMEDIATE	30	true
+Creative & Lifestyle	MoMA Learning	https://www.moma.org/learn/moma_learning/	MoMA	Creativity|Design|Photography	RESOURCE	BEGINNER	25	false
+Creative & Lifestyle	Tate Art Terms	https://www.tate.org.uk/art/art-terms	Tate	Creativity|Design|Photography	GUIDE	BEGINNER	20	false
+Creative & Lifestyle	Khan Academy Art History	https://www.khanacademy.org/humanities/art-history	Khan Academy	Creativity|Design|Photography	COURSE	BEGINNER	45	false
+Creative & Lifestyle	Pixar in a Box	https://www.khanacademy.org/computing/pixar	Khan Academy and Pixar	Creativity|Design|Hobbies	COURSE	BEGINNER	45	true
+Creative & Lifestyle	Blender Tutorials	https://www.blender.org/support/tutorials/	Blender	Design|Creativity|Hobbies	GUIDE	INTERMEDIATE	45	false
+Creative & Lifestyle	Inkscape Tutorials	https://inkscape.org/learn/tutorials/	Inkscape	Design|Creativity|Photography	GUIDE	BEGINNER	30	false
+Creative & Lifestyle	GIMP Tutorials	https://www.gimp.org/tutorials/	GIMP	Photography|Design|Creativity	GUIDE	BEGINNER	30	false
+Creative & Lifestyle	Unsplash Photography Resources	https://unsplash.com/blog/	Unsplash	Photography|Creativity|Travel	ARTICLE	BEGINNER	20	false
+Creative & Lifestyle	PetaPixel Photography Tutorials	https://petapixel.com/	PetaPixel	Photography|Creativity|Design	ARTICLE	INTERMEDIATE	20	false
+Creative & Lifestyle	Digital Photography School	https://digital-photography-school.com/	Digital Photography School	Photography|Creativity|Travel	GUIDE	BEGINNER	25	false
+Creative & Lifestyle	National Geographic Photography	https://www.nationalgeographic.com/photography	National Geographic	Photography|Travel|Creativity	ARTICLE	INTERMEDIATE	20	false
+Creative & Lifestyle	Adobe Lightroom Tutorials	https://helpx.adobe.com/lightroom-cc/tutorials.html	Adobe	Photography|Design|Creativity	GUIDE	INTERMEDIATE	30	false
+Creative & Lifestyle	Adobe Illustrator Tutorials	https://helpx.adobe.com/illustrator/tutorials.html	Adobe	Design|Creativity|Photography	GUIDE	INTERMEDIATE	30	false
+Creative & Lifestyle	Adobe Photoshop Tutorials	https://helpx.adobe.com/photoshop/tutorials.html	Adobe	Photography|Design|Creativity	GUIDE	INTERMEDIATE	30	false
+Creative & Lifestyle	Procreate Handbook	https://procreate.com/handbook/procreate	Procreate	Design|Creativity|Hobbies	GUIDE	BEGINNER	30	false
+Creative & Lifestyle	W3C Web Accessibility Tutorials	https://www.w3.org/WAI/tutorials/	W3C	Design|Creativity|Professional Skills	GUIDE	INTERMEDIATE	30	false
+Creative & Lifestyle	Google Fonts Knowledge	https://fonts.google.com/knowledge	Google Fonts	Design|Creativity|Writing	GUIDE	INTERMEDIATE	25	false
+Creative & Lifestyle	Typography.com	https://typography.com/	Hoefler&Co.	Design|Creativity|Writing	RESOURCE	INTERMEDIATE	25	false
+Creative & Lifestyle	The Writing Cooperative	https://writingcooperative.com/	The Writing Cooperative	Writing|Creativity|Communication	ARTICLE	BEGINNER	20	false
+Creative & Lifestyle	Purdue OWL General Writing	https://owl.purdue.edu/owl/general_writing/	Purdue OWL	Writing|Communication|Creativity	GUIDE	BEGINNER	30	false
+Creative & Lifestyle	Hemingway Editor	https://hemingwayapp.com/	Hemingway Editor	Writing|Communication|Creativity	TOOL	BEGINNER	20	false
+Creative & Lifestyle	NaNoWriMo Resources	https://nanowrimo.org/	National Novel Writing Month	Writing|Creativity|Hobbies	RESOURCE	BEGINNER	25	false
+Creative & Lifestyle	Poetry Foundation Poems	https://www.poetryfoundation.org/poems	Poetry Foundation	Writing|Creativity|Hobbies	RESOURCE	INTERMEDIATE	20	false
+Creative & Lifestyle	Project Gutenberg	https://www.gutenberg.org/	Project Gutenberg	Writing|Creativity|Hobbies	RESOURCE	BEGINNER	30	true
+Creative & Lifestyle	Library of Congress: Chronicling America	https://www.loc.gov/collections/chronicling-america/	Library of Congress	Writing|Travel|Creativity	RESOURCE	INTERMEDIATE	30	false
+Creative & Lifestyle	Atlas Obscura Places	https://www.atlasobscura.com/places	Atlas Obscura	Travel|Photography|Hobbies	RESOURCE	BEGINNER	20	false
+Creative & Lifestyle	UNESCO World Heritage List	https://whc.unesco.org/en/list/	UNESCO	Travel|Photography|Creativity	RESOURCE	BEGINNER	25	false
+Creative & Lifestyle	National Park Service: Find a Park	https://www.nps.gov/findapark/index.htm	National Park Service	Travel|Hobbies|Photography	TOOL	BEGINNER	20	false
+Creative & Lifestyle	Google Maps Trip Planning	https://support.google.com/maps/answer/6230175	Google Maps Help	Travel|Hobbies|Photography	GUIDE	BEGINNER	15	false
+Creative & Lifestyle	Smithsonian Learning Lab	https://learninglab.si.edu/	Smithsonian	Hobbies|Creativity|Travel	RESOURCE	BEGINNER	25	false
+Creative & Lifestyle	Exploratorium Learning Resources	https://www.exploratorium.edu/learn	Exploratorium	Hobbies|Creativity|Design	RESOURCE	BEGINNER	25	false
+Creative & Lifestyle	Royal Photographic Society Learning	https://rps.org/learning/	Royal Photographic Society	Photography|Creativity|Design	GUIDE	INTERMEDIATE	30	false

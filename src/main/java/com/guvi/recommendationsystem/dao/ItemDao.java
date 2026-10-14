@@ -3,10 +3,12 @@ package com.guvi.recommendationsystem.dao;
 import com.guvi.recommendationsystem.model.CatalogItem;
 import com.guvi.recommendationsystem.model.CatalogSort;
 import com.guvi.recommendationsystem.model.ItemType;
+import com.guvi.recommendationsystem.model.ItemDifficulty;
 
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
+import java.util.Collection;
 
 public interface ItemDao {
     Optional<CatalogItem> findById(long itemId);
@@ -14,6 +16,8 @@ public interface ItemDao {
     List<CatalogItem> findAll();
 
     List<CatalogItem> findActive();
+
+    List<CatalogItem> findDiscoveryForUser(long userId, int limit);
 
     List<CatalogItem> findActiveByCategory(long categoryId);
 
@@ -23,10 +27,16 @@ public interface ItemDao {
     long countActive(String query, Long categoryId, ItemType type);
 
     CatalogItem insert(long categoryId, String title, String description, ItemType type,
-                       String externalUrl, BigDecimal price);
+                       String externalUrl, BigDecimal price, String sourceName, ItemDifficulty difficulty,
+                       Integer estimatedMinutes, BigDecimal qualityScore, boolean editorPick);
 
     boolean update(long itemId, long categoryId, String title, String description, ItemType type,
-                   String externalUrl, BigDecimal price);
+                   String externalUrl, BigDecimal price, String sourceName, ItemDifficulty difficulty,
+                   Integer estimatedMinutes, BigDecimal qualityScore, boolean editorPick);
 
     boolean setActive(long itemId, boolean active);
+
+    int setActive(Collection<Long> itemIds, boolean active);
+
+    boolean existsByExternalUrl(String externalUrl);
 }

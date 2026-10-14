@@ -4,6 +4,7 @@ import com.guvi.recommendationsystem.model.AdminDashboardSummary;
 import com.guvi.recommendationsystem.service.AdminAnalyticsService;
 import com.guvi.recommendationsystem.web.ApiExceptionHandler;
 import com.guvi.recommendationsystem.web.SessionAccess;
+import com.guvi.recommendationsystem.dao.UserDao;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
@@ -12,6 +13,7 @@ import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.math.BigDecimal;
+import java.util.OptionalInt;
 
 import static org.mockito.Mockito.verifyNoInteractions;
 import static org.mockito.Mockito.when;
@@ -22,8 +24,14 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(AdminAnalyticsController.class)
 @Import({SessionAccess.class, ApiExceptionHandler.class})
 class AdminAnalyticsControllerWebTest {
+    @org.springframework.test.context.bean.override.mockito.MockitoBean private UserDao userDao;
     @Autowired private MockMvc mockMvc;
     @MockitoBean private AdminAnalyticsService analyticsService;
+
+    @org.junit.jupiter.api.BeforeEach
+    void userAuthVersionExistsForAuthenticatedTestSessions() {
+        when(userDao.findAuthVersion(21L)).thenReturn(OptionalInt.of(1));
+    }
 
     @Test
     void summaryRequiresAuthentication() throws Exception {

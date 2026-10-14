@@ -1,0 +1,12 @@
+{
+  "name": "recomai-browser-tests",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:e2e": "node scripts/test-e2e-isolated.mjs",
+    "check:catalog-links": "node scripts/check-catalog-links.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.0"
+  }
+}

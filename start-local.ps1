@@ -2,6 +2,7 @@ $ErrorActionPreference = 'Stop'
 
 Push-Location $PSScriptRoot
 try {
+    $env:COMPOSE_PROFILES = 'local-mail'
     if (-not (Get-Command docker -ErrorAction SilentlyContinue)) {
         throw 'Docker CLI was not found. Install and start Docker Desktop, then run this command again.'
     }
@@ -34,6 +35,8 @@ try {
             'MYSQL_HOST_PORT=3307'
             'APP_HOST_PORT=8080'
             'SESSION_COOKIE_SECURE=false'
+            'APP_PUBLIC_URL=http://localhost:8080'
+            'COMPOSE_PROFILES=local-mail'
         ) -join "`n"
         [System.IO.File]::WriteAllText($envFile, $contents + "`n", (New-Object System.Text.UTF8Encoding($false)))
         Write-Host 'Created a local .env file with randomly generated passwords.'

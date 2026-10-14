@@ -1,6 +1,7 @@
 package com.guvi.recommendationsystem.controller;
 
 import com.guvi.recommendationsystem.model.Feedback;
+import com.guvi.recommendationsystem.dao.UserDao;
 import com.guvi.recommendationsystem.service.FeedbackService;
 import com.guvi.recommendationsystem.web.ApiExceptionHandler;
 import com.guvi.recommendationsystem.web.SessionAccess;
@@ -12,6 +13,7 @@ import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.time.LocalDateTime;
+import java.util.OptionalInt;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
@@ -26,6 +28,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 class FeedbackControllerWebTest {
     @Autowired private MockMvc mockMvc;
     @MockitoBean private FeedbackService feedbackService;
+    @MockitoBean private UserDao userDao;
+
+    @org.junit.jupiter.api.BeforeEach
+    void userAuthVersionExistsForAuthenticatedTestSessions() {
+        when(userDao.findAuthVersion(9L)).thenReturn(OptionalInt.of(1));
+    }
 
     @Test
     void feedbackRequiresAnAuthenticatedOwner() throws Exception {

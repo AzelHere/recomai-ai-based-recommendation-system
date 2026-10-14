@@ -24,6 +24,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoInteractions;
+import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -80,6 +81,8 @@ class FeedbackServiceTest {
         when(feedbackDao.findByUserAndItem(5L, 8L)).thenReturn(Optional.of(updated));
 
         assertThat(service.update(5L, 8L, new FeedbackRequest(null, 1, null))).isEqualTo(updated);
+        verify(feedbackDao).update(5L, 8L, 1, null);
+        verify(feedbackDao, never()).insert(5L, 8L, 1, null);
     }
 
     @Test

@@ -2,6 +2,8 @@ package com.guvi.recommendationsystem.dao;
 
 import com.guvi.recommendationsystem.model.Interaction;
 import com.guvi.recommendationsystem.model.InteractionType;
+import com.guvi.recommendationsystem.model.InteractionWriteResult;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -20,9 +22,10 @@ public class JdbcInteractionDao implements InteractionDao {
     private final RowMapper<Interaction> interactionMapper = (resultSet, rowNumber) -> new Interaction(
             resultSet.getLong("interaction_id"),
             resultSet.getLong("user_id"),
-            resultSet.getLong("item_id"),
+            resultSet.getObject("item_id", Long.class),
             InteractionType.valueOf(resultSet.getString("interaction_type")),
-            resultSet.getTimestamp("occurred_at").toLocalDateTime());
+            resultSet.getTimestamp("occurred_at").toLocalDateTime(),
+            resultSet.getString("search_query"));
 
     public JdbcInteractionDao(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
@@ -51,9 +54,69 @@ public class JdbcInteractionDao implements InteractionDao {
     }
 
     @Override
+    public InteractionWriteResult insertWithRequestId(long userId, long itemId, InteractionType type,
+                                                       String requestId) {
+        return insertWithRequestId(userId, itemId, type, null, requestId);
+    }
+
+    @Override
+    public InteractionWriteResult insertSearchWithRequestId(long userId, String query, String requestId) {
+        return insertWithRequestId(userId, null, InteractionType.SEARCH, query, requestId);
+    }
+
+    private InteractionWriteResult insertWithRequestId(long userId, Long itemId, InteractionType type,
+                                                        String query, String requestId) {
+        try {
+            KeyHolder keyHolder = new GeneratedKeyHolder();
+            jdbcTemplate.update(connection -> {
+                PreparedStatement statement = connection.prepareStatement("""
+                        INSERT INTO interactions (user_id, item_id, interaction_type, search_query, request_id)
+                        VALUES (?, ?, ?, ?, ?)
+                        """, Statement.RETURN_GENERATED_KEYS);
+                statement.setLong(1, userId);
+                if (itemId == null) statement.setNull(2, java.sql.Types.BIGINT);
+                else statement.setLong(2, itemId);
+                statement.setString(3, type.name());
+                statement.setString(4, query);
+                statement.setString(5, requestId);
+                return statement;
+            }, keyHolder);
+            Number generatedId = keyHolder.getKey();
+            if (generatedId == null) throw new IllegalStateException("The database did not return the new interaction ID.");
+            return new InteractionWriteResult(findById(generatedId.longValue())
+                    .orElseThrow(() -> new IllegalStateException("The new interaction could not be read back.")), true);
+        } catch (DuplicateKeyException duplicate) {
+            return findByUserAndRequestId(userId, requestId)
+                    .map(existing -> new InteractionWriteResult(existing, false))
+                    .orElseThrow(() -> duplicate);
+        }
+    }
+
+    @Override
+    public Interaction insertSearch(long userId, String query) {
+        KeyHolder keyHolder = new GeneratedKeyHolder();
+        jdbcTemplate.update(connection -> {
+            PreparedStatement statement = connection.prepareStatement("""
+                    INSERT INTO interactions (user_id, interaction_type, search_query)
+                    VALUES (?, 'SEARCH', ?)
+                    """, Statement.RETURN_GENERATED_KEYS);
+            statement.setLong(1, userId);
+            statement.setString(2, query);
+            return statement;
+        }, keyHolder);
+
+        Number generatedId = keyHolder.getKey();
+        if (generatedId == null) {
+            throw new IllegalStateException("The database did not return the new search event ID.");
+        }
+        return findById(generatedId.longValue())
+                .orElseThrow(() -> new IllegalStateException("The new search event could not be read back."));
+    }
+
+    @Override
     public Optional<Interaction> findById(long interactionId) {
         return jdbcTemplate.query("""
-                SELECT interaction_id, user_id, item_id, interaction_type, occurred_at
+                SELECT interaction_id, user_id, item_id, interaction_type, occurred_at, search_query
                 FROM interactions
                 WHERE interaction_id = ?
                 """, interactionMapper, interactionId).stream().findFirst();
@@ -62,11 +125,39 @@ public class JdbcInteractionDao implements InteractionDao {
     @Override
     public List<Interaction> findRecentByUser(long userId, int limit) {
         return jdbcTemplate.query("""
-                SELECT interaction_id, user_id, item_id, interaction_type, occurred_at
+                SELECT interaction_id, user_id, item_id, interaction_type, occurred_at, search_query
                 FROM interactions
                 WHERE user_id = ?
                 ORDER BY occurred_at DESC, interaction_id DESC
                 LIMIT ?
                 """, interactionMapper, userId, limit);
+    }
+
+    @Override
+    public List<Interaction> findCurrentProgressByUser(long userId) {
+        return jdbcTemplate.query("""
+                SELECT interaction_id, user_id, item_id, interaction_type, occurred_at, search_query
+                FROM (
+                    SELECT interaction_id, user_id, item_id, interaction_type, occurred_at, search_query,
+                           ROW_NUMBER() OVER (PARTITION BY item_id
+                               ORDER BY occurred_at DESC, interaction_id DESC) AS event_rank
+                    FROM interactions
+                    WHERE user_id = ? AND interaction_type IN ('READ_PROGRESS', 'COMPLETE')
+                ) current_event
+                WHERE event_rank = 1
+                ORDER BY occurred_at DESC, interaction_id DESC
+                """, interactionMapper, userId);
+    }
+
+    private Optional<Interaction> findByUserAndRequestId(long userId, String requestId) {
+        return jdbcTemplate.query("""
+                SELECT interaction_id, user_id, item_id, interaction_type, occurred_at, search_query
+                FROM interactions WHERE user_id = ? AND request_id = ?
+                """, interactionMapper, userId, requestId).stream().findFirst();
+    }
+
+    @Override
+    public int deleteAllForUser(long userId) {
+        return jdbcTemplate.update("DELETE FROM interactions WHERE user_id = ?", userId);
     }
 }

@@ -1,5 +1,7 @@
 # Architecture Audit — AI-Based Recommendation System
 
+> Historical snapshot: this Phase 1 read-only audit predates the later completed implementation phases. Its gap list describes the repository at the audit date, not the current feature set. See the README for current architecture and capabilities.
+
 **Audit scope:** Phase 1 (repository audit only)
 **Project topic:** AI-Based Recommendation System
 **Reviewed:** 2026-10-07
@@ -108,3 +110,7 @@ This phase inspected files and configuration. It did not change application code
 ## Phase 1 boundary and verification
 
 This document is the only intended deliverable for Phase 1. No application source, schema, build configuration, or frontend files were modified for this audit. The audit used repository inspection; it did not run Maven, connect to MySQL, or claim a live deployment check. Build and test verification should be the first action in the next implementation phase.
+
+## Phase 6A follow-up (2026-10-08)
+
+The Phase 1 observations above are a historical snapshot and have been superseded by later phases. The Phase 6A audit found that registration persisted a user but did not start a session; the frontend switched to the login tab and left new users outside the expected onboarding flow. Registration now starts a session, and the frontend confirms that session before opening the application. A dedicated Saved resources view was added over the existing interaction history. Live Docker MySQL verification covered registration through onboarding, recommendations, activity signals, interest insights, saved-item history, logout, and re-login. The current implementation retains five top-level niches and 25 curated resources. See [README.md](../README.md) for current architecture and run instructions.

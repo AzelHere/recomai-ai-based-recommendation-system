@@ -13,6 +13,8 @@ import com.guvi.recommendationsystem.exception.RecommendationNotFoundException;
 import com.guvi.recommendationsystem.exception.UnauthorizedRequestException;
 import com.guvi.recommendationsystem.exception.UserNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,6 +27,7 @@ import java.time.Instant;
 
 @RestControllerAdvice
 public class ApiExceptionHandler {
+    private static final Logger logger = LoggerFactory.getLogger(ApiExceptionHandler.class);
     @ExceptionHandler({
             InvalidUserInputException.class,
             IllegalArgumentException.class,
@@ -76,6 +79,9 @@ public class ApiExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ApiError> handleUnexpected(Exception exception, HttpServletRequest request) {
+        logger.error("Unhandled request failure requestId={} method={} path={}",
+                request.getAttribute(RequestContextFilter.REQUEST_ID_ATTRIBUTE),
+                request.getMethod(), request.getRequestURI(), exception);
         return error(HttpStatus.INTERNAL_SERVER_ERROR, "Internal server error",
                 "The request could not be completed.", request);
     }

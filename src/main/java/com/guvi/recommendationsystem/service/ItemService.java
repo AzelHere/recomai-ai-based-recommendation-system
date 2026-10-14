@@ -16,6 +16,8 @@ import java.math.BigDecimal;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
+import java.util.Collection;
+import java.util.LinkedHashSet;
 
 @Service
 public class ItemService {
@@ -38,7 +40,8 @@ public class ItemService {
                 validated.description(),
                 validated.type(),
                 validated.externalUrl(),
-                validated.price());
+                validated.price(), validated.sourceName(), validated.difficulty(),
+                validated.estimatedMinutes(), validated.qualityScore(), Boolean.TRUE.equals(validated.editorPick()));
     }
 
     public CatalogItem get(long itemId) {
@@ -100,7 +103,8 @@ public class ItemService {
                 validated.description(),
                 validated.type(),
                 validated.externalUrl(),
-                validated.price());
+                validated.price(), validated.sourceName(), validated.difficulty(),
+                validated.estimatedMinutes(), validated.qualityScore(), Boolean.TRUE.equals(validated.editorPick()));
         return get(itemId);
     }
 
@@ -112,6 +116,19 @@ public class ItemService {
         CatalogItem item = get(itemId);
         ensureActiveCategory(item.categoryId());
         return setActive(itemId, true);
+    }
+
+    public int setActive(Collection<Long> itemIds, boolean active) {
+        if (itemIds == null || itemIds.isEmpty() || itemIds.size() > 500
+                || itemIds.stream().anyMatch(id -> id == null || id <= 0)) {
+            throw new InvalidUserInputException("Provide between 1 and 500 valid item IDs.");
+        }
+        List<Long> distinctIds = new LinkedHashSet<>(itemIds).stream().toList();
+        for (Long id : distinctIds) {
+            CatalogItem item = get(id);
+            if (active) ensureActiveCategory(item.categoryId());
+        }
+        return itemDao.setActive(distinctIds, active);
     }
 
     private CatalogItem setActive(long itemId, boolean active) {
@@ -153,7 +170,23 @@ public class ItemService {
                 || price.scale() > 2)) {
             throw new InvalidUserInputException("Price must be between 0 and 99999999.99 with at most two decimal places.");
         }
-        return new ItemRequest(request.categoryId(), title, description, request.type(), externalUrl, price);
+        String sourceName = request.sourceName() == null || request.sourceName().isBlank()
+                ? null : request.sourceName().trim();
+        if (sourceName != null && sourceName.length() > 160) {
+            throw new InvalidUserInputException("Source name must be 160 characters or fewer.");
+        }
+        var difficulty = request.difficulty() == null
+                ? com.guvi.recommendationsystem.model.ItemDifficulty.ALL_LEVELS : request.difficulty();
+        Integer estimatedMinutes = request.estimatedMinutes();
+        if (estimatedMinutes != null && (estimatedMinutes < 1 || estimatedMinutes > 1440)) {
+            throw new InvalidUserInputException("Estimated time must be between 1 and 1440 minutes.");
+        }
+        BigDecimal quality = request.qualityScore() == null ? new BigDecimal("0.5000") : request.qualityScore();
+        if (quality.compareTo(BigDecimal.ZERO) < 0 || quality.compareTo(BigDecimal.ONE) > 0) {
+            throw new InvalidUserInputException("Quality score must be between 0 and 1.");
+        }
+        return new ItemRequest(request.categoryId(), title, description, request.type(), externalUrl, price,
+                sourceName, difficulty, estimatedMinutes, quality, Boolean.TRUE.equals(request.editorPick()));
     }
 
     private String validateUrl(String value) {

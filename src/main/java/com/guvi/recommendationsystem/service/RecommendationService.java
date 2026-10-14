@@ -1,11 +1,13 @@
 package com.guvi.recommendationsystem.service;
 
 import com.guvi.recommendationsystem.dao.RecommendationDao;
+import com.guvi.recommendationsystem.dao.ItemDao;
 import com.guvi.recommendationsystem.dao.UserDao;
 import com.guvi.recommendationsystem.exception.InvalidUserInputException;
 import com.guvi.recommendationsystem.exception.UserNotFoundException;
 import com.guvi.recommendationsystem.model.PersonalizedRecommendation;
 import com.guvi.recommendationsystem.model.RecommendationDraft;
+import com.guvi.recommendationsystem.model.CatalogItem;
 import com.guvi.recommendationsystem.recommendation.RecommendationEngine;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,14 +22,17 @@ public class RecommendationService {
     private final RecommendationDao recommendationDao;
     private final UserDao userDao;
     private final RecommendationEngine recommendationEngine;
+    private final ItemDao itemDao;
 
     public RecommendationService(
             RecommendationDao recommendationDao,
             UserDao userDao,
-            RecommendationEngine recommendationEngine) {
+            RecommendationEngine recommendationEngine,
+            ItemDao itemDao) {
         this.recommendationDao = recommendationDao;
         this.userDao = userDao;
         this.recommendationEngine = recommendationEngine;
+        this.itemDao = itemDao;
     }
 
     @Transactional
@@ -39,7 +44,7 @@ public class RecommendationService {
         List<RecommendationDraft> drafts = recommendationEngine.recommend(
                 recommendationDao.findCandidates(userId),
                 topN);
-        long batchId = recommendationDao.createBatch(userId, "content-score-v1");
+        long batchId = recommendationDao.createBatch(userId, "hybrid-evidence-v2");
         List<PersonalizedRecommendation> savedRecommendations = new ArrayList<>(drafts.size());
         for (RecommendationDraft draft : drafts) {
             savedRecommendations.add(recommendationDao.save(userId, batchId, draft));
@@ -52,6 +57,14 @@ public class RecommendationService {
         validateLimit(limit);
         ensureUserExists(userId);
         return recommendationDao.findLatestForUser(userId, limit);
+    }
+
+    /** A distinctly non-personalized fallback; it uses catalog curation/quality, never user scoring. */
+    public List<CatalogItem> getCatalogDiscoveryForUser(long userId, int limit) {
+        validateUserId(userId);
+        validateLimit(limit);
+        ensureUserExists(userId);
+        return itemDao.findDiscoveryForUser(userId, limit);
     }
 
     private void ensureUserExists(long userId) {

@@ -14,6 +14,7 @@ import com.guvi.recommendationsystem.web.SessionAccess;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -48,6 +49,14 @@ public class UserController {
     @GetMapping
     public UserProfile getProfile(HttpServletRequest request) {
         return userAccountService.getProfile(sessionAccess.requireUserId(request));
+    }
+
+    @DeleteMapping
+    public ResponseEntity<Void> deleteAccount(HttpServletRequest request) {
+        long userId = sessionAccess.requireUserId(request);
+        userAccountService.deleteAccount(userId);
+        sessionAccess.endSession(request);
+        return ResponseEntity.noContent().build();
     }
 
     @GetMapping("/recommendation-profile")

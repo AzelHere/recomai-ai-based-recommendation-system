@@ -5,7 +5,13 @@ import java.time.LocalDateTime;
 public record Interaction(
         long interactionId,
         long userId,
-        long itemId,
+        Long itemId,
         InteractionType type,
-        LocalDateTime occurredAt) {
+        LocalDateTime occurredAt,
+        String searchQuery) {
+
+    public Interaction(long interactionId, long userId, long itemId, InteractionType type,
+                       LocalDateTime occurredAt) {
+        this(interactionId, userId, itemId, type, occurredAt, null);
+    }
 }

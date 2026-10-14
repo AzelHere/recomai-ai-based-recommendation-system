@@ -1,8 +1,11 @@
 package com.guvi.recommendationsystem.service;
 
 import com.guvi.recommendationsystem.dao.RecommendationDao;
+import com.guvi.recommendationsystem.dao.ItemDao;
 import com.guvi.recommendationsystem.dao.UserDao;
 import com.guvi.recommendationsystem.model.PersonalizedRecommendation;
+import com.guvi.recommendationsystem.model.CatalogItem;
+import com.guvi.recommendationsystem.model.ItemType;
 import com.guvi.recommendationsystem.model.RecommendationCandidate;
 import com.guvi.recommendationsystem.model.RecommendationDraft;
 import com.guvi.recommendationsystem.recommendation.RecommendationEngine;
@@ -31,12 +34,14 @@ class RecommendationServiceTest {
     private UserDao userDao;
     @Mock
     private RecommendationEngine recommendationEngine;
+    @Mock
+    private ItemDao itemDao;
 
     private RecommendationService service;
 
     @BeforeEach
     void setUp() {
-        service = new RecommendationService(recommendationDao, userDao, recommendationEngine);
+        service = new RecommendationService(recommendationDao, userDao, recommendationEngine, itemDao);
     }
 
     @Test
@@ -50,13 +55,13 @@ class RecommendationServiceTest {
         when(userDao.existsById(9L)).thenReturn(true);
         when(recommendationDao.findCandidates(9L)).thenReturn(List.of(candidate));
         when(recommendationEngine.recommend(List.of(candidate), 3)).thenReturn(List.of(draft));
-        when(recommendationDao.createBatch(9L, "content-score-v1")).thenReturn(31L);
+        when(recommendationDao.createBatch(9L, "hybrid-evidence-v2")).thenReturn(31L);
         when(recommendationDao.save(9L, 31L, draft)).thenReturn(saved);
 
         List<PersonalizedRecommendation> results = service.generateForUser(9L, 3);
 
         assertThat(results).containsExactly(saved);
-        verify(recommendationDao).createBatch(9L, "content-score-v1");
+        verify(recommendationDao).createBatch(9L, "hybrid-evidence-v2");
         verify(recommendationDao).save(9L, 31L, draft);
     }
 
@@ -65,5 +70,17 @@ class RecommendationServiceTest {
         assertThatExceptionOfType(InvalidUserInputException.class)
                 .isThrownBy(() -> service.generateForUser(9L, 51));
         verifyNoInteractions(userDao, recommendationDao, recommendationEngine);
+    }
+
+    @Test
+    void fallbackReturnsGeneralCatalogDiscoveryWithoutRunningPersonalizedRanker() {
+        CatalogItem editorPick = new CatalogItem(12, 4, "Editor choice", null, ItemType.ARTICLE,
+                "https://example.com", null, List.of(), com.guvi.recommendationsystem.model.ItemDifficulty.ALL_LEVELS,
+                null, BigDecimal.valueOf(0.8), null, true, LocalDateTime.now(), LocalDateTime.now(), true);
+        when(userDao.existsById(9L)).thenReturn(true);
+        when(itemDao.findDiscoveryForUser(9L, 5)).thenReturn(List.of(editorPick));
+
+        assertThat(service.getCatalogDiscoveryForUser(9L, 5)).containsExactly(editorPick);
+        verifyNoInteractions(recommendationDao, recommendationEngine);
     }
 }

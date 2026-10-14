@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
 import java.util.Optional;
+import java.util.OptionalInt;
 
 @Repository
 public class JdbcUserDao implements UserDao {
@@ -58,6 +59,12 @@ public class JdbcUserDao implements UserDao {
     }
 
     @Override
+    public OptionalInt findAuthVersion(long userId) {
+        return jdbcTemplate.query("SELECT auth_version FROM users WHERE user_id = ?",
+                (rs, row) -> rs.getInt(1), userId).stream().mapToInt(Integer::intValue).findFirst();
+    }
+
+    @Override
     public UserAccount insertUser(String username, String email, String passwordHash, String displayName) {
         String sql = """
                 INSERT INTO users (username, email, password_hash, display_name, role)
@@ -87,5 +94,10 @@ public class JdbcUserDao implements UserDao {
                 "UPDATE users SET display_name = ?, updated_at = CURRENT_TIMESTAMP WHERE user_id = ?",
                 displayName,
                 userId) == 1;
+    }
+
+    @Override
+    public boolean deleteById(long userId) {
+        return jdbcTemplate.update("DELETE FROM users WHERE user_id = ?", userId) == 1;
     }
 }

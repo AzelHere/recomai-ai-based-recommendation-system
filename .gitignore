@@ -16,3 +16,25 @@ Thumbs.db
 submission/AI-Based-Recommendation-System-GUVI-Project-Phase10-Review.pptx
 submission/AI-Based-Recommendation-System-GUVI-Project-Phase10.pptx
 submission/AI-Based-Recommendation-System-GUVI-Project.pptx
+node_modules/
+playwright-report/
+test-results/
+coverage/
+.nyc_output/
+dist/
+
+# Local runtime and diagnostic output
+logs/
+*.log
+*.log.*
+*.hprof
+*.pid
+
+# Local database exports and backups (keep versioned Flyway .sql migrations)
+*.dump
+*.sql.gz
+*.sqlite
+*.sqlite3
+*.db
+*.bak
+*.tmp

@@ -14,4 +14,6 @@ public interface RecommendationDao {
     PersonalizedRecommendation save(long userId, long batchId, RecommendationDraft recommendation);
 
     List<PersonalizedRecommendation> findLatestForUser(long userId, int limit);
+
+    int deleteAllForUser(long userId);
 }

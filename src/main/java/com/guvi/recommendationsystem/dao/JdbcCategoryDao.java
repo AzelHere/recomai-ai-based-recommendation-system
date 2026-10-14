@@ -20,6 +20,7 @@ public class JdbcCategoryDao implements CategoryDao {
             resultSet.getLong("category_id"),
             resultSet.getString("name"),
             resultSet.getString("description"),
+            resultSet.getString("niche_code"),
             resultSet.getBoolean("is_active"),
             resultSet.getTimestamp("created_at").toLocalDateTime());
 
@@ -30,7 +31,7 @@ public class JdbcCategoryDao implements CategoryDao {
     @Override
     public Optional<Category> findById(long categoryId) {
         return jdbcTemplate.query("""
-                SELECT category_id, name, description, is_active, created_at
+                SELECT category_id, name, description, niche_code, is_active, created_at
                 FROM categories
                 WHERE category_id = ?
                 """, categoryMapper, categoryId).stream().findFirst();
@@ -39,7 +40,7 @@ public class JdbcCategoryDao implements CategoryDao {
     @Override
     public List<Category> findAll() {
         return jdbcTemplate.query("""
-                SELECT category_id, name, description, is_active, created_at
+                SELECT category_id, name, description, niche_code, is_active, created_at
                 FROM categories
                 ORDER BY name
                 """, categoryMapper);
@@ -48,7 +49,7 @@ public class JdbcCategoryDao implements CategoryDao {
     @Override
     public List<Category> findActive() {
         return jdbcTemplate.query("""
-                SELECT category_id, name, description, is_active, created_at
+                SELECT category_id, name, description, niche_code, is_active, created_at
                 FROM categories
                 WHERE is_active = TRUE
                 ORDER BY name

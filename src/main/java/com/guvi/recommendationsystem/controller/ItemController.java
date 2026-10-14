@@ -3,12 +3,18 @@ package com.guvi.recommendationsystem.controller;
 import com.guvi.recommendationsystem.exception.InvalidUserInputException;
 import com.guvi.recommendationsystem.exception.ItemNotFoundException;
 import com.guvi.recommendationsystem.model.ActiveStatusRequest;
+import com.guvi.recommendationsystem.model.BulkActiveStatusRequest;
+import com.guvi.recommendationsystem.model.BulkActiveStatusResult;
 import com.guvi.recommendationsystem.model.CatalogItem;
+import com.guvi.recommendationsystem.model.CatalogCsvRequest;
+import com.guvi.recommendationsystem.model.CatalogCsvPreview;
+import com.guvi.recommendationsystem.model.CatalogCsvImportResult;
 import com.guvi.recommendationsystem.model.CatalogPage;
 import com.guvi.recommendationsystem.model.CatalogSort;
 import com.guvi.recommendationsystem.model.ItemRequest;
 import com.guvi.recommendationsystem.model.ItemType;
 import com.guvi.recommendationsystem.service.ItemService;
+import com.guvi.recommendationsystem.service.CatalogCsvService;
 import com.guvi.recommendationsystem.web.SessionAccess;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.ResponseEntity;
@@ -30,10 +36,12 @@ import java.util.List;
 public class ItemController {
     private final ItemService itemService;
     private final SessionAccess sessionAccess;
+    private final CatalogCsvService catalogCsvService;
 
-    public ItemController(ItemService itemService, SessionAccess sessionAccess) {
+    public ItemController(ItemService itemService, SessionAccess sessionAccess, CatalogCsvService catalogCsvService) {
         this.itemService = itemService;
         this.sessionAccess = sessionAccess;
+        this.catalogCsvService = catalogCsvService;
     }
 
     @GetMapping("/items")
@@ -99,5 +107,27 @@ public class ItemController {
         return statusRequest.active()
                 ? itemService.activate(itemId)
                 : itemService.deactivate(itemId);
+    }
+
+    @PatchMapping("/admin/items/active")
+    public BulkActiveStatusResult setItemsActive(
+            @RequestBody BulkActiveStatusRequest requestBody, HttpServletRequest request) {
+        sessionAccess.requireAdmin(request);
+        if (requestBody == null || requestBody.active() == null) {
+            throw new InvalidUserInputException("Active status is required.");
+        }
+        return new BulkActiveStatusResult(itemService.setActive(requestBody.itemIds(), requestBody.active()));
+    }
+
+    @PostMapping("/admin/items/import/preview")
+    public CatalogCsvPreview previewImport(@RequestBody CatalogCsvRequest body, HttpServletRequest request) {
+        sessionAccess.requireAdmin(request);
+        return catalogCsvService.preview(body == null ? null : body.csv());
+    }
+
+    @PostMapping("/admin/items/import/commit")
+    public CatalogCsvImportResult commitImport(@RequestBody CatalogCsvRequest body, HttpServletRequest request) {
+        sessionAccess.requireAdmin(request);
+        return catalogCsvService.commit(body == null ? null : body.csv());
     }
 }

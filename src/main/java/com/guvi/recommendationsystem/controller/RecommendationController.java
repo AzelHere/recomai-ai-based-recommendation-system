@@ -1,6 +1,7 @@
 package com.guvi.recommendationsystem.controller;
 
 import com.guvi.recommendationsystem.model.PersonalizedRecommendation;
+import com.guvi.recommendationsystem.model.CatalogItem;
 import com.guvi.recommendationsystem.service.RecommendationService;
 import com.guvi.recommendationsystem.web.SessionAccess;
 import jakarta.servlet.http.HttpServletRequest;
@@ -42,5 +43,12 @@ public class RecommendationController {
             @RequestParam(defaultValue = "10") int limit,
             HttpServletRequest request) {
         return recommendationService.getLatestForUser(sessionAccess.requireUserId(request), limit);
+    }
+
+    @GetMapping("/discovery")
+    public List<CatalogItem> getCatalogDiscovery(
+            @RequestParam(defaultValue = "10") int limit,
+            HttpServletRequest request) {
+        return recommendationService.getCatalogDiscoveryForUser(sessionAccess.requireUserId(request), limit);
     }
 }

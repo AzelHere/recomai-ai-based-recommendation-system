@@ -6,6 +6,9 @@ public enum ItemType {
     COURSE,
     RESOURCE,
     ARTICLE,
+    VIDEO,
+    DOCUMENTATION,
+    GUIDE,
     TOOL,
     PROJECT,
     OTHER

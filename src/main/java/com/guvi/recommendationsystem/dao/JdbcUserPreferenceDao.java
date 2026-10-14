@@ -33,10 +33,11 @@ public class JdbcUserPreferenceDao implements UserPreferenceDao {
     @Override
     public void save(long userId, long categoryId, BigDecimal weight) {
         jdbcTemplate.update("""
-                INSERT INTO user_preferences (user_id, category_id, preference_weight)
-                VALUES (?, ?, ?)
+                INSERT INTO user_preferences (user_id, category_id, preference_weight, preference_source)
+                VALUES (?, ?, ?, 'USER')
                 ON DUPLICATE KEY UPDATE
                     preference_weight = ?,
+                    preference_source = 'USER',
                     updated_at = CURRENT_TIMESTAMP
                 """,
                 userId,

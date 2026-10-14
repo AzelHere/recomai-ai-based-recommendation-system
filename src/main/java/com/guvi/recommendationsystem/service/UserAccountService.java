@@ -10,6 +10,7 @@ import com.guvi.recommendationsystem.model.UserAccount;
 import com.guvi.recommendationsystem.model.UserProfile;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Locale;
 import java.util.Optional;
@@ -96,6 +97,16 @@ public class UserAccountService {
             throw new UserNotFoundException("User was not found.");
         }
         return getProfile(userId);
+    }
+
+    @Transactional
+    public void deleteAccount(long userId) {
+        if (userId <= 0) {
+            throw new InvalidUserInputException("User ID must be positive.");
+        }
+        if (!userDao.deleteById(userId)) {
+            throw new UserNotFoundException("User was not found.");
+        }
     }
 
     private String requiredTrimmed(String value, String label) {
