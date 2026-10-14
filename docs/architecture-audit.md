@@ -26,7 +26,7 @@ This phase inspected files and configuration. It did not change application code
 | JDBC access | src/main/java/.../dao/ | Parameterized SQL and row mapping through Spring JDBC |
 | Domain and request models | src/main/java/.../model/ | Java records for domain and request/response data |
 | Recommendation logic | src/main/java/.../recommendation/ | Engine interface and scoring implementation |
-| Static frontend | src/main/resources/static/ | HTML, CSS, and JavaScript application |
+| Static frontend | src/main/resources/static/ | Spring-served HTML; CSS in `css/`, JavaScript in `js/`, and media in `assets/` |
 | Tests | src/test/java/ | Unit and web-layer tests |
 | Project and submission material | README.md, docs/, submission/ | Setup, phase notes, slides, and submission checklist |
 

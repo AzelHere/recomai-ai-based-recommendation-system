@@ -205,7 +205,12 @@ src/main/java/com/guvi/recommendationsystem/
   web/              Session, request context, rate limiting, and security headers
 src/main/resources/
   db/migration/     Flyway V1 through V11 migrations
-  static/           Browser application
+  static/           Browser application served by Spring Boot
+    index.html      Application page
+    css/            Stylesheets
+    js/             Application JavaScript and reusable modules
+    assets/         Images and other static media
+    catalog-import-template.csv  Downloadable admin import template
   catalog/          Idempotent TSV source for curated public resources
 e2e/                 Playwright browser journey tests
   application.properties
@@ -214,7 +219,7 @@ Dockerfile          Java 21 multi-stage backend image
 start-local.ps1     One-command local startup and safe secret generation
 ```
 
-See [docs/phase-0-requirements-and-design.md](docs/phase-0-requirements-and-design.md), [docs/architecture-audit.md](docs/architecture-audit.md), and [submission/SUBMISSION-CHECKLIST.md](submission/SUBMISSION-CHECKLIST.md) for project and submission context.
+See [docs/phase-0-requirements-and-design.md](docs/phase-0-requirements-and-design.md), [docs/architecture-audit.md](docs/architecture-audit.md), [the historical Phase 5 verification record](docs/history/phase-5-verification.md), and [submission/SUBMISSION-CHECKLIST.md](submission/SUBMISSION-CHECKLIST.md) for project and submission context.
 
 ## Screenshots
 

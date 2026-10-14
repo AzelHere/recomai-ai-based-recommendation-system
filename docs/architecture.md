@@ -29,7 +29,7 @@ flowchart LR
 - `model/` contains request, response, and domain records/classes.
 - `web/` contains session access, request context, throttling, and response security headers.
 - `src/main/resources/db/migration/` is the append-only Flyway history.
-- `src/main/resources/static/` is the browser application; it uses plain JavaScript modules, not a frontend framework.
+- `src/main/resources/static/` is the browser application served by Spring Boot. Keep the page at the static root, styles in `css/`, JavaScript and reusable modules in `js/`, and media in `assets/`. It uses plain JavaScript modules, not a frontend framework.
 - `e2e/` contains Playwright browser journeys. The E2E runner provisions its own uniquely named Compose project and disposable MySQL volume.
 
 The diagram documents source/configuration structure. It is not evidence that external deployment or live-database tests have run in every environment.
