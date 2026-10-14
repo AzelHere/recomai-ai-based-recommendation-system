@@ -1,6 +1,6 @@
 # Database migrations
 
-The application uses Flyway to apply ordered MySQL schema migrations at startup. The scripts live in `src/main/resources/db/migration` and are versioned; do not edit a migration that has already been applied to a shared database. Add a new migration for later schema changes.
+The application uses Flyway to apply ordered MySQL schema migrations at startup. The scripts live in `backend/src/main/resources/db/migration` and are versioned; this is Spring Boot's conventional classpath location. Do not edit a migration that has already been applied to a shared database. Add a new migration for later schema changes.
 
 ## Existing project database
 
@@ -26,12 +26,13 @@ For Docker development, `start-local.ps1` creates the database/user and starts t
 | 8 | `V8__repair_broken_catalog_urls.sql` | Repairs 13 catalog destinations confirmed to return HTTP 404; no schema change. |
 | 9 | `V9__progress_and_collections.sql` | Adds explicit COMPLETE interaction and normalized owner-scoped user collections and collection items. |
 | 10 | `V10__admin_recommendation_settings.sql` | Adds persisted feed mix settings and an audit trail linked to the user who changed settings. |
+| 11 | `V11__interaction_idempotency.sql` | Adds optional user-scoped interaction request IDs and a latest-per-item progress lookup index. |
 
-`src/main/resources/schema.sql` is the complete current-schema reference. Runtime schema changes are applied from the ordered migration files, not by re-running that snapshot over a database.
+`schema-reference.sql` is the current-schema reference. It is not a runtime initializer. Runtime schema changes are applied from the ordered migration files in the backend resources, not by re-running that snapshot over a database.
 
 ## Safe operation
 
 - Back up any important database before the first migration.
 - Do not delete `flyway_schema_history` to force a rerun. Correct a failed migration deliberately, then use Flyway's repair procedure only after reviewing the database state.
-- V2 through V10 preserve existing account and catalog rows. V3 inserts starter resources and topic mappings once as part of migration. V4 expands the interaction event shape. V5 adds a defaulted auth-version column and a new token table. V6 adds nullable diagnostics and widens a reason constraint. V7 adds editor-pick data. V8 repairs 13 confirmed catalog URLs. V9 adds progress/collection structures. V10 inserts default recommendation shares and creates the audit trail.
+- V2 through V11 preserve existing account and catalog rows. V3 inserts starter resources and topic mappings once as part of migration. V4 expands the interaction event shape. V5 adds a defaulted auth-version column and a new token table. V6 adds nullable diagnostics and widens a reason constraint. V7 adds editor-pick data. V8 repairs 13 confirmed catalog URLs. V9 adds progress/collection structures. V10 inserts default recommendation shares and creates the audit trail. V11 adds request idempotency and a progress lookup index.
 - Docker Compose creates the MySQL database and application user; for non-Docker deployments, the database must exist before the application starts.

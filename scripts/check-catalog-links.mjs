@@ -7,9 +7,9 @@ const timeoutMs = Number(process.env.CATALOG_LINK_TIMEOUT_MS || 10_000);
 const concurrency = Math.max(1, Number(process.env.CATALOG_LINK_CONCURRENCY || 6));
 
 const [seedTsv, initialMigration, urlCorrections] = await Promise.all([
-  readFile(path.join(root, 'src/main/resources/catalog/curated-resources.tsv'), 'utf8'),
-  readFile(path.join(root, 'src/main/resources/db/migration/V3__adaptive_interest_discovery.sql'), 'utf8'),
-  readFile(path.join(root, 'src/main/resources/db/migration/V8__repair_broken_catalog_urls.sql'), 'utf8')
+  readFile(path.join(root, 'backend/src/main/resources/catalog/curated-resources.tsv'), 'utf8'),
+  readFile(path.join(root, 'backend/src/main/resources/db/migration/V3__adaptive_interest_discovery.sql'), 'utf8'),
+  readFile(path.join(root, 'backend/src/main/resources/db/migration/V8__repair_broken_catalog_urls.sql'), 'utf8')
 ]);
 
 const urls = new Map();

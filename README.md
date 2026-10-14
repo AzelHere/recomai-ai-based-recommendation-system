@@ -46,7 +46,7 @@ flowchart LR
     Compose -. optional local profile .-> Mailpit[Mailpit password-reset inbox]
 ```
 
-Controllers handle HTTP requests, services validate and coordinate application behavior, DAO classes execute parameterized SQL using Spring JDBC, and the recommendation engine ranks a bounded candidate set with content and aggregate behavior features. Flyway migrations are append-only and are kept in `src/main/resources/db/migration`.
+Controllers handle HTTP requests, services validate and coordinate application behavior, DAO classes execute parameterized SQL using Spring JDBC, and the recommendation engine ranks a bounded candidate set with content and aggregate behavior features. Flyway migrations are append-only and remain under `backend/src/main/resources/db/migration`.
 
 ## Prerequisites
 
@@ -126,7 +126,7 @@ docker compose logs -f mysql
 
 The Compose MySQL 8.4 service creates the database and an application-specific, non-root account from `.env`. Compose waits for MySQL's health check before starting Spring Boot. A named volume persists database data. No manual database or table creation is needed for a new Docker volume. After Flyway completes, the idempotent `CatalogSeedLoader` imports 175 additional curated URLs and topic mappings; repeated starts skip URLs already present. It does not reset the database or remove user/catalog data. The backend image build runs `mvn clean verify` before packaging, so it fails if the automated tests fail.
 
-At application startup, the `spring-boot-starter-flyway` integration reads the SQL migrations in `src/main/resources/db/migration`. A fresh database applies V1 through V11 in order. Flyway records applied versions in `flyway_schema_history`; migrations are append-only and should not be edited after use. `schema.sql` is a reference of the current schema, not the runtime initializer. Existing project databases with valid migration history continue from their recorded version. Baseline-on-migrate is off by default; an operator should only enable it for a legacy database after verifying the schema matches V1. Read [docs/database-migrations.md](docs/database-migrations.md) before using an existing database.
+At application startup, the `spring-boot-starter-flyway` integration reads the SQL migrations in `backend/src/main/resources/db/migration`. A fresh database applies V1 through V11 in order. Flyway records applied versions in `flyway_schema_history`; migrations are append-only and should not be edited after use. `database/schema-reference.sql` is a reference of the current schema, not the runtime initializer. Existing project databases with valid migration history continue from their recorded version. Baseline-on-migrate is off by default; an operator should only enable it for a legacy database after verifying the schema matches V1. Read [database/README.md](database/README.md) before using an existing database.
 
 The schema covers users, five niche categories and their topics, tagged resources, onboarding answers, decaying user-topic signals, interactions and bounded search queries, feedback, recommendation batches/results, and password-reset tokens. V3 stores curated topic relationships and structured recommendation reasoning; V4 allows authenticated search events without requiring a content item; V5 adds reset-token storage and auth-version revocation; V6 stores the ranker's actual feature contributions as optional JSON; V7 adds an explicit editorial-pick signal and allows its recommendation reason; V8 repairs 13 catalog URLs confirmed to return HTTP 404 without changing the schema. Foreign keys, uniqueness/check constraints, and indexes are defined by the migration scripts. The starter data stores metadata and outbound links, not copied articles. The 25 editorial picks are explicit curation signals, not synthetic behavior; admins can change each flag.
 
@@ -165,8 +165,8 @@ There is no claim yet that this heuristic beats a baseline. The validation snaps
 Run the automated suite and package verification:
 
 ```powershell
-.\mvnw.cmd test
-.\mvnw.cmd verify
+.\mvnw.cmd -f backend/pom.xml test
+.\mvnw.cmd -f backend/pom.xml verify
 ```
 
 Maven unit and MVC tests do not replace a live MySQL check. The project targets Java 21; use a Java 21 runtime for the official verification. Start the app with `start-local.ps1`, verify Compose services are healthy, and check `http://localhost:8080/api/health` (which runs `SELECT 1` through Spring JDBC). Install the browser-test dependency with `npm ci`; Windows uses the installed Edge browser by default, and other platforms can install Chromium with `npx playwright install chromium`. Then run `npm run test:e2e`. The runner creates a uniquely named Compose project with a fresh MySQL 8.4 volume and stops only that temporary project's containers when tests finish. It retains the isolated volume and never uses or deletes the main development database. Pass Playwright flags after `--`, for example `npm run test:e2e -- --grep "cold-start"`.
@@ -195,28 +195,36 @@ docker compose up --wait
 ## Project layout
 
 ```text
-src/main/java/com/guvi/recommendationsystem/
-  controller/       HTTP endpoints
-  dao/              DAO interfaces and Spring JDBC implementations
-  exception/        Application exceptions
-  model/            Request, response, and domain types
-  recommendation/   Scoring engine and TF-IDF metadata feature scorer
-  service/          Validation and application workflows
-  web/              Session, request context, rate limiting, and security headers
-src/main/resources/
-  db/migration/     Flyway V1 through V11 migrations
-  static/           Browser application served by Spring Boot
-    index.html      Application page
-    css/            Stylesheets
-    js/             Application JavaScript and reusable modules
-    assets/         Images and other static media
-    catalog-import-template.csv  Downloadable admin import template
-  catalog/          Idempotent TSV source for curated public resources
-e2e/                 Playwright browser journey tests
-  application.properties
-docker-compose.yml  MySQL, backend, and opt-in local Mailpit service
-Dockerfile          Java 21 multi-stage backend image
-start-local.ps1     One-command local startup and safe secret generation
+backend/
+  pom.xml           Java 21 / Spring Boot Maven project
+  src/main/java/com/guvi/recommendationsystem/
+    controller/     HTTP endpoints
+    dao/            DAO interfaces and Spring JDBC implementations
+    exception/      Application exceptions
+    model/          Request, response, and domain types
+    recommendation/ Scoring engine and TF-IDF metadata scorer
+    service/        Validation and application workflows
+    web/            Session, request context, and security filters
+  src/main/resources/
+    application*.properties
+    db/migration/   Flyway V1 through V11 migrations; unchanged location
+    catalog/        Classpath TSV source for curated resources
+  src/test/java/    JUnit and Spring MVC tests
+frontend/
+  index.html        Main application page
+  css/              Stylesheets
+  js/               Application code and reusable modules
+  assets/           Images and media
+  catalog-import-template.csv
+database/
+  README.md         MySQL and Flyway guide
+  schema-reference.sql
+e2e/                Playwright browser journey tests
+scripts/            E2E runner and catalog-link checker
+.mvn/, mvnw, mvnw.cmd Maven Wrapper kept at the root
+docker-compose.yml MySQL, backend, and opt-in local Mailpit service
+Dockerfile         Java 21 image; builds backend/pom.xml and packages frontend/
+start-local.ps1    One-command local startup and safe secret generation
 ```
 
 See [docs/phase-0-requirements-and-design.md](docs/phase-0-requirements-and-design.md), [docs/architecture-audit.md](docs/architecture-audit.md), [the historical Phase 5 verification record](docs/history/phase-5-verification.md), and [submission/SUBMISSION-CHECKLIST.md](submission/SUBMISSION-CHECKLIST.md) for project and submission context.

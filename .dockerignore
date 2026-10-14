@@ -4,11 +4,13 @@
 .phase10-build
 .codex-finalizer
 target
+**/target
 submission
 *.iml
 .env*
 *.pptx
 docs
+database
 README.md
 node_modules/
 playwright-report

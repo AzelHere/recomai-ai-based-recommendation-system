@@ -22,7 +22,7 @@ This note records the Phase 5 Docker/MySQL verification for the GUVI Galgotias *
 - Start the application and database on Windows with `.\start-local.ps1`; stop without deleting persistent database data with `docker compose down`.
 - `GET /api/health` executes JDBC `SELECT 1` and returns `{ "status": "UP", "database": "UP" }` only when that database query succeeds.
 - Docker uses a local-only ignored `.env`; never commit it. The `mysql_data` named volume preserves database contents.
-- Migrations remain `src/main/resources/db/migration/V1__initial_schema.sql` and `V2__recommendation_schema_improvements.sql`. Never rewrite applied migration files.
+- Migrations remain under `backend/src/main/resources/db/migration/`, including V1 and V2. Never rewrite applied migration files.
 
 ## Git
 

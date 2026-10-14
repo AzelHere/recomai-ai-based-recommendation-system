@@ -18,16 +18,16 @@ This phase inspected files and configuration. It did not change application code
 
 | Area | Location | Current role |
 |---|---|---|
-| Build and runtime configuration | pom.xml, .mvn/wrapper/, Dockerfile | Maven wrapper, Java 21 / Spring Boot build, container packaging |
-| Application configuration | src/main/resources/application.properties | Datasource, SQL initialization, server and cookie settings |
-| Database schema | src/main/resources/schema.sql | MySQL tables, constraints, and indexes |
-| Web/API controllers | src/main/java/.../controller/ | Authentication, users, catalog, interactions, recommendations |
-| Services and validation | src/main/java/.../service/ | User, catalog, signal, and recommendation workflows |
-| JDBC access | src/main/java/.../dao/ | Parameterized SQL and row mapping through Spring JDBC |
-| Domain and request models | src/main/java/.../model/ | Java records for domain and request/response data |
-| Recommendation logic | src/main/java/.../recommendation/ | Engine interface and scoring implementation |
-| Static frontend | src/main/resources/static/ | Spring-served HTML; CSS in `css/`, JavaScript in `js/`, and media in `assets/` |
-| Tests | src/test/java/ | Unit and web-layer tests |
+| Build and runtime configuration | backend/pom.xml, root .mvn/wrapper/, Dockerfile | Maven wrapper, Java 21 / Spring Boot build, container packaging |
+| Application configuration | backend/src/main/resources/application.properties | Datasource, SQL initialization, server and cookie settings |
+| Database schema | database/schema-reference.sql | MySQL tables, constraints, and indexes |
+| Web/API controllers | backend/src/main/java/.../controller/ | Authentication, users, catalog, interactions, recommendations |
+| Services and validation | backend/src/main/java/.../service/ | User, catalog, signal, and recommendation workflows |
+| JDBC access | backend/src/main/java/.../dao/ | Parameterized SQL and row mapping through Spring JDBC |
+| Domain and request models | backend/src/main/java/.../model/ | Java records for domain and request/response data |
+| Recommendation logic | backend/src/main/java/.../recommendation/ | Engine interface and scoring implementation |
+| Static frontend | frontend/ | HTML, CSS, JavaScript, and assets copied to Spring's static classpath during Maven resource processing |
+| Tests | backend/src/test/java/ | Unit and web-layer tests |
 | Project and submission material | README.md, docs/, submission/ | Setup, phase notes, slides, and submission checklist |
 
 ## What is working and should be preserved
@@ -44,7 +44,7 @@ This phase inspected files and configuration. It did not change application code
 
 ### Database and recommendation engine
 
-- schema.sql defines normalized tables for users, categories, items, preferences, interests, interactions, feedback, and persisted recommendations, with primary keys, foreign keys, uniqueness rules, checks, and supporting indexes.
+- `database/schema-reference.sql` documents normalized tables for users, categories, items, preferences, interests, interactions, feedback, and persisted recommendations, with primary keys, foreign keys, uniqueness rules, checks, and supporting indexes.
 - The recommendation engine uses category preference, interest, ratings, and positive/negative interaction signals; it sorts deterministically, supports bounded top-N requests, and provides an explanation.
 - Recommendation weights and scoring behavior are localized in the scoring implementation, which keeps the current algorithm understandable and replaceable.
 - Catalog and user-related DAOs use parameterized SQL rather than building queries from user-provided values.

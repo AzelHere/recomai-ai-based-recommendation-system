@@ -1,4 +1,5 @@
 target/
+**/target/
 .phase10-build/
 .codex-finalizer/
 .vscode/

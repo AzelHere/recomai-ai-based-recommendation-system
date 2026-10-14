@@ -90,6 +90,22 @@ class ScoringRecommendationEngineTest {
     }
 
     @Test
+    void categoryPreferenceAddsTwelveRankingPointsAndRanksOtherwiseEqualItemsHigher() {
+        RecommendationCandidate preferred = candidate(
+                1, "Preferred category", "1.00", "0.00", null, null, "0.00", "0.00");
+        RecommendationCandidate unpreferred = candidate(
+                2, "Unpreferred category", "0.00", "0.00", null, null, "0.00", "0.00");
+
+        List<RecommendationDraft> results = engine.recommend(List.of(unpreferred, preferred), 2);
+
+        assertThat(results).extracting(RecommendationDraft::itemTitle)
+                .containsExactly("Preferred category", "Unpreferred category");
+        assertThat(results.getFirst().scoreBreakdown())
+                .containsEntry("category_preference", decimal("12.0000"));
+        assertThat(results.getFirst().score()).isGreaterThan(results.getLast().score());
+    }
+
+    @Test
     void editorialSelectionCanSeedColdStartAndIsVisibleInTheBreakdown() {
         RecommendationCandidate pick = new RecommendationCandidate(15, "Curated start",
                 decimal("0"), decimal("0"), null, null, decimal("0"), decimal("0"), decimal("0.5"),
