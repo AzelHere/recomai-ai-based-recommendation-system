@@ -18,6 +18,7 @@ The working project contained generated ZIPs, raw downloads, scanner caches, pri
 | Low | Null ingestion rows relied on an indirect validation exception; analyzer could not establish non-null flow | Added explicit REJECT row and regression test; required category/type before provider-specific checks |
 | Low | Dead local variable in category deactivation | Removed assignment while retaining the existence validation call |
 | Low | Outdated user-facing brand and skeletal Maven project description | Website/email copy, banner and repository documentation use Recom AI; internal identifiers retained |
+| Low | Unix Maven wrapper skipped an unterminated final distribution URL line | Added the required final newline and explicit wrapper line-ending attributes; verified under Linux |
 | Informational | Missing measured coverage and CI entry point | Added JaCoCo without exclusions and an isolated GitHub Actions workflow |
 | Informational | Non-obvious cache/session/transaction assumptions | Added concise JavaDoc to scorer, ranker, recommendation service, SessionAccess, ingestion and journey services |
 
