@@ -1,0 +1,14 @@
+{
+  "verifiedAt": "2026-11-26T14:03:33.481Z",
+  "allTablesIdentical": true,
+  "tables": 30,
+  "privateFingerprintsExported": false,
+  "health": {
+    "database": "UP",
+    "status": "UP"
+  },
+  "branding": "Recom AI",
+  "migrationFilesUnchanged": 18,
+  "dockerVolumesPreserved": true,
+  "publicDeployment": false
+}

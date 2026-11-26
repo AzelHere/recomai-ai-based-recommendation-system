@@ -1,0 +1,110 @@
+{
+  "capturedAt": "2026-11-26T14:02:15.604Z",
+  "scope": "Read-only public local application responses; no accounts, sessions or tokens",
+  "responses": [
+    {
+      "path": "/api/health",
+      "status": 200,
+      "body": {
+        "database": "UP",
+        "status": "UP"
+      }
+    },
+    {
+      "path": "/api/categories",
+      "status": 200,
+      "body": [
+        {
+          "categoryId": 4,
+          "name": "Business & Finance",
+          "description": "Entrepreneurship, finance, marketing, and strategy.",
+          "nicheCode": "BUSINESS_FINANCE",
+          "active": true,
+          "createdAt": "2026-10-07T17:15:07"
+        },
+        {
+          "categoryId": 7,
+          "name": "Creative & Lifestyle",
+          "description": "Design, writing, photography, travel, and hobbies.",
+          "nicheCode": "CREATIVE_LIFESTYLE",
+          "active": true,
+          "createdAt": "2026-10-07T17:15:07"
+        },
+        {
+          "categoryId": 6,
+          "name": "Health & Fitness",
+          "description": "Fitness, nutrition, sleep, and everyday wellbeing.",
+          "nicheCode": "HEALTH_FITNESS",
+          "active": true,
+          "createdAt": "2026-10-07T17:15:07"
+        },
+        {
+          "categoryId": 5,
+          "name": "Learning & Career",
+          "description": "Study skills, career growth, and professional skills.",
+          "nicheCode": "LEARNING_CAREER",
+          "active": true,
+          "createdAt": "2026-10-07T17:15:07"
+        },
+        {
+          "categoryId": 3,
+          "name": "Technology",
+          "description": "Programming, cloud, AI, security, and digital tools.",
+          "nicheCode": "TECHNOLOGY",
+          "active": true,
+          "createdAt": "2026-10-07T17:15:07"
+        }
+      ]
+    },
+    {
+      "path": "/api/items/search?page=1&pageSize=2",
+      "status": 200,
+      "body": {
+        "items": [
+          {
+            "itemId": 2367,
+            "categoryId": 6,
+            "title": "Is height determined by genetics?",
+            "description": "Inherited gene variants play a large role in determining height. Other factors like nutrition and health can also impact how tall a child will be as an adult.",
+            "type": "ARTICLE",
+            "externalUrl": "https://medlineplus.gov/genetics/understanding/traits/height",
+            "sourceName": "MedlinePlus Genetics, National Library of Medicine",
+            "tags": [],
+            "difficulty": "UNKNOWN",
+            "estimatedMinutes": null,
+            "qualityScore": 0.5,
+            "price": null,
+            "active": true,
+            "createdAt": "2026-11-25T18:03:11",
+            "updatedAt": "2026-11-25T18:03:11",
+            "editorPick": false,
+            "revision": 0
+          },
+          {
+            "itemId": 2366,
+            "categoryId": 6,
+            "title": "Is handedness determined by genetics?",
+            "description": "Genetic and environmental factors play a role in determining whether you are right handed or left handed. Learn more about how genetics impacts handedness.",
+            "type": "ARTICLE",
+            "externalUrl": "https://medlineplus.gov/genetics/understanding/traits/handedness",
+            "sourceName": "MedlinePlus Genetics, National Library of Medicine",
+            "tags": [],
+            "difficulty": "UNKNOWN",
+            "estimatedMinutes": null,
+            "qualityScore": 0.5,
+            "price": null,
+            "active": true,
+            "createdAt": "2026-11-25T18:03:11",
+            "updatedAt": "2026-11-25T18:03:11",
+            "editorPick": false,
+            "revision": 0
+          }
+        ],
+        "page": 1,
+        "pageSize": 2,
+        "totalItems": 2365,
+        "totalPages": 1183
+      }
+    }
+  ]
+}

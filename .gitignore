@@ -64,3 +64,8 @@ recomai-2-phase-4-deliverables.sha256
 
 # Historical academic material stays local; application repository only.
 /submission/
+
+# Retired local screenshot captures; current gallery uses numbered images.
+/docs/screenshots/for-you.png
+/docs/screenshots/journeys.png
+/docs/screenshots/landing.png

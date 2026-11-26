@@ -86,4 +86,3 @@ if __name__=="__main__":
                 print(path.name,compare(base,path),"exact matches")
     else:
         unittest.main()
-

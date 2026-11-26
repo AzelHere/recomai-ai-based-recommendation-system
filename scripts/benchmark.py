@@ -184,4 +184,3 @@ if __name__ == "__main__":
         path = folder/(result["project"]+".json")
         path.write_text(json.dumps(result,indent=2),encoding="utf-8")
         print(name,result["avg_ms"],result["error_rate"],path,flush=True)
-

@@ -21,7 +21,29 @@
     "viewport": "1440x900",
     "visualReview": "All 18 captures inspected in three contact sheets; generated isolated demonstration account only"
   },
-  "cleanClone": "Pending",
-  "publication": "Not pushed yet",
+  "cleanClone": {
+    "sourceCommit": "796a9c3",
+    "method": "git clone --no-local --no-hardlinks into an isolated directory; fresh npm ci and independent Maven/Docker build",
+    "maven": {
+      "passed": 167,
+      "failed": 0,
+      "skipped": 0
+    },
+    "npmAudit": "zero vulnerabilities",
+    "dockerBuild": "passed",
+    "databaseAndGallery": {
+      "passed": 1,
+      "failed": 0,
+      "catalogResources": 2365,
+      "articlesAndReadings": 505,
+      "newIsolatedDatabase": true,
+      "applicationStartup": "passed",
+      "mysqlConnectivity": "passed",
+      "migrations": "V1-V18 applied",
+      "includedMetadataInitialization": "passed",
+      "coreWorkflows": "onboarding, recommendations/details, filters, library/collections, journeys, progress/activity, settings, admin/provenance"
+    }
+  },
+  "publication": "Safety checks completed locally; push and remote verification follow",
   "ci": "Configured; no remote pass claimed"
 }

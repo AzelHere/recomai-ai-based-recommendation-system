@@ -39,4 +39,3 @@ SELECT MIN(item_id) FROM items WHERE is_active = TRUE;
     docker compose -p $project down
     Pop-Location
 }
-

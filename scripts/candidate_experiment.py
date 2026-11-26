@@ -146,4 +146,3 @@ if __name__=="__main__":
     parser.add_argument("scenarios",choices=benchmark.SIZES,nargs="+")
     args=parser.parse_args()
     execute(args.mode,args.scenarios,args.trial)
-
