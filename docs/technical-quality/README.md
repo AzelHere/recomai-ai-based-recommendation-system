@@ -8,7 +8,7 @@ Measured 26 November 2026 against the existing `master` baseline `09335f8edf7f9f
 | SpotBugs priority 2 findings | 175 | 112; 63 resolved, no new suppressions |
 | Priority 1 findings | 0 | 0 |
 | Maven-only line / branch coverage | 41.45% / 34.20% | 41.77% / 34.72% |
-| Maven plus instrumented real-database browser coverage | Not measured | See [coverage](coverage.md); scope differs from Maven-only |
+| Maven plus instrumented real-database browser coverage | Not measured | 76.79% line / 55.32% branch; scope differs from Maven-only |
 | Runtime image package/advisory matches | 149 medium, 12 low | 63 medium, 12 low; zero critical/high |
 | Unique image advisory IDs | 67 | 38 |
 | OSV resolved Maven / npm findings | 0 / 0 | 0 / 0 |

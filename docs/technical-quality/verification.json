@@ -32,20 +32,20 @@
   },
   "integrationCoverage": {
     "INSTRUCTION": {
-      "covered": 19218,
-      "missed": 8692
+      "covered": 19219,
+      "missed": 8691
     },
     "BRANCH": {
-      "covered": 1371,
-      "missed": 1109
+      "covered": 1372,
+      "missed": 1108
     },
     "LINE": {
       "covered": 2723,
       "missed": 823
     },
     "COMPLEXITY": {
-      "covered": 1200,
-      "missed": 978
+      "covered": 1201,
+      "missed": 977
     },
     "METHOD": {
       "covered": 760,
@@ -103,6 +103,29 @@
     "failed": 0,
     "skipped": 3
   },
-  "browserWorkers1": "Final retry-after-aware run in progress; final evidence ZIP records outcome",
-  "remoteCi": "Verify the published commit through the repository Actions page; local checks do not establish remote success."
+  "browserWorkers1": {
+    "passed": 32,
+    "failed": 0,
+    "skipped": 3,
+    "minutes": 8.9
+  },
+  "remoteCi": "Commit-specific remote results are available at https://github.com/AzelHere/recomai-ai-based-recommendation-system/actions; final published SHA and observed run status are recorded in the evidence ZIP.",
+  "integrationCoverageScope": "195 Maven tests plus successful focused, full one/two-worker and optional evidence application JVMs; failed attempt excluded; no package exclusions",
+  "cleanClone": {
+    "source": "Fresh independent local Git clone of the proposed application commit, no hard links, generated loopback-only test databases; not the original application environment.",
+    "testedCommit": "3c5c3904839542279ffa9a3ab407f294da6251c9",
+    "javaTests": 195,
+    "javaFailures": 0,
+    "javaSkipped": 0,
+    "spotbugsVisible": 112,
+    "spotbugsUnreviewed": 0,
+    "browserWorkers": 2,
+    "browserPassed": 32,
+    "browserFailed": 0,
+    "browserSkipped": 3,
+    "imageBuiltFromClone": true,
+    "expandedCatalogExercised": 2365,
+    "originalDatabaseUsed": false,
+    "volumesDeleted": false
+  }
 }

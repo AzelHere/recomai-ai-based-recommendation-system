@@ -4,7 +4,7 @@ JaCoCo 0.8.14 measures all 207 production classes, including catalog operators a
 
 The combined report merges that execution data with the application JVMs exercised through isolated Playwright tests using real MySQL, Flyway and HTTP. This is integration coverage, not an increase in unit-only coverage. The JaCoCo agent writes a local file on graceful shutdown; it opens no network listener and is absent from the normal application image. Class IDs must match the compiled source/image; do not merge data from earlier source revisions. Failed test attempts are retained as diagnostics but excluded from the final merged report.
 
-The 75% line goal is met by combined execution; the 60% branch goal is not met. Remaining branches include offline acquisition/evaluation operators and exceptional database/network paths. Artificially excluding them, asserting implementation details or weakening validation would misrepresent quality. Automated browser coverage does not replace focused exception-path tests.
+Combined coverage is 2,723/3,546 lines (76.79%) and 1,372/2,480 branches (55.32%). The 75% line goal is met by combined execution; the 60% branch goal is not met. Remaining branches include offline acquisition/evaluation operators and exceptional database/network paths. Artificially excluding them, asserting implementation details or weakening validation would misrepresent quality. Automated browser coverage does not replace focused exception-path tests.
 
 ```sh
 sh mvnw -B -f backend/pom.xml clean verify

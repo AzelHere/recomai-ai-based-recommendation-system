@@ -12,7 +12,7 @@
   },
   {
     "stage": "after",
-    "image": "sha256:11bfb4c9ecdc1fe4a965bfafa116b0266176ae7bdcb44ba2dfd8ac8429370cac",
+    "image": "sha256:49f3c80ae5ef68fbe8a0e9165a573a16f778c5bff91e6dee322121ef9382cf27",
     "matches": 75,
     "uniqueAdvisories": 38,
     "severity": {

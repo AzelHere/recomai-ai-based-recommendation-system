@@ -1,5 +1,7 @@
 # Recom AI audit report
 
+Historical publication report. The subsequent [technical quality phase](../technical-quality/README.md) supersedes the test/static-analysis/coverage figures below; the older evidence is retained for an honest baseline comparison.
+
 ## Code quality
 
 186 production Java files were scanned structurally and with SpotBugs, with focused manual tracing of security, SQL, transactions, cache, ranking and journeys. First-party frontend scope: one HTML, five CSS and ten JavaScript files; all ten JavaScript syntax checks passed. Two meaningful policy tests cover ranker bounds and null ingestion rows. JavaDoc clarifies six critical areas. Remaining static warnings and maintenance debts are disclosed in [the full report](README.md): 175 priority-2 warnings, no priority-1 warnings. No exhaustive defect-free certification is claimed.
