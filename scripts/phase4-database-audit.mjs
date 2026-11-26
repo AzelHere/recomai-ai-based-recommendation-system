@@ -13,5 +13,6 @@ const queries={
 };
 const plans={};for(const [name,query]of Object.entries(queries)){plans[name]={query,explain:JSON.parse(sql('EXPLAIN FORMAT=JSON '+query+';'))};}
 const migrations=sql('SELECT version,description,success FROM flyway_schema_history ORDER BY installed_rank;');
+await fs.mkdir('design-audit/recomai-2-phase-4/evidence',{recursive:true});
 await fs.writeFile('design-audit/recomai-2-phase-4/evidence/database-plans.json',JSON.stringify({capturedAt:new Date().toISOString(),isolated:true,items:Number(sql('SELECT COUNT(*) FROM items;')),plans,migrations,assessment:'Leading-wildcard/LOCATE searches and LOWER(title) ordering can scan/sort this bounded catalog. No index is claimed to fix substring search. Existing owner and provenance indexes are retained; no speculative migration.'},null,2));
 console.log('Captured six actual MySQL query plans and migration status.');

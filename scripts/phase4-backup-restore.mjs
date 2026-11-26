@@ -28,5 +28,6 @@ run(mysql,`CREATE DATABASE \`${restored}\` CHARACTER SET utf8mb4 COLLATE utf8mb4
 run(`${mysql} ${restored}`,dump);
 const after=fingerprint(restored),preserved=JSON.stringify(before)===JSON.stringify(after);
 if(!preserved)throw Error('Backup/restore fingerprints differ');
+await fs.mkdir('design-audit/recomai-2-phase-4/evidence',{recursive:true});
 await fs.writeFile('design-audit/recomai-2-phase-4/evidence/backup-restore.json',JSON.stringify({completedAt:new Date().toISOString(),isolated:true,dumpStored:false,snapshotDatabase:snapshot,restoredDatabase:restored,tableCount:tables.length,allTablesPreserved:preserved,tables:before,method:'Consistent live fixture dump restored into a new quiescent snapshot; snapshot backup restored into a separate new database; sorted null-aware binary column SHA256 comparison for every table. Concurrent browser writes cannot change the comparison source. Main database untouched. All isolated databases retained.'},null,2));
 console.log(`Verified backup/restore: ${tables.length} tables preserved; no dump stored.`);

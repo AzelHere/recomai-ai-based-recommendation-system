@@ -42,6 +42,13 @@
       "migrations": "V1-V18 applied",
       "includedMetadataInitialization": "passed",
       "coreWorkflows": "onboarding, recommendations/details, filters, library/collections, journeys, progress/activity, settings, admin/provenance"
+    },
+    "evidenceHelperRegression": {
+      "passed": 2,
+      "failed": 0,
+      "outputDirectoryAbsentBeforeRun": true,
+      "queryPlanFileCreated": true,
+      "testAssertionsPreserved": true
     }
   },
   "publication": {
@@ -58,5 +65,10 @@
     "defect": "Missing final newline caused the Unix parser to skip distributionUrl",
     "fixed": true,
     "linuxJava21Maven3916Verified": true
-  }
+  },
+  "ciCorrections": [
+    "Added final newline to Unix Maven wrapper properties after the first remote run exposed the missing final-line read",
+    "Evidence helpers create their own ignored output directory in clean checkouts; dependent completion-marker assertions retained",
+    "One-worker and two-worker browser suites run on separate hosted runners; fail-fast is disabled and isolated databases remain independent"
+  ]
 }
