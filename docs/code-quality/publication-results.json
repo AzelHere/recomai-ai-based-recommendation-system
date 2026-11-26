@@ -44,6 +44,19 @@
       "coreWorkflows": "onboarding, recommendations/details, filters, library/collections, journeys, progress/activity, settings, admin/provenance"
     }
   },
-  "publication": "Safety checks completed locally; push and remote verification follow",
-  "ci": "Configured; no remote pass claimed"
+  "publication": {
+    "repository": "https://github.com/AzelHere/recomai-ai-based-recommendation-system",
+    "visibility": "PUBLIC",
+    "branch": "master",
+    "status": "Published; GitHub branch HEAD is the authoritative current commit",
+    "history": "Original four commits preserved; normal fast-forward pushes only",
+    "verification": "Rendered README retrieved successfully; official branding, image markup and Mermaid blocks present",
+    "ci": "See the live GitHub Actions runs; no unconfirmed passing status is asserted in this snapshot"
+  },
+  "ci": "Configured; no remote pass claimed",
+  "unixWrapper": {
+    "defect": "Missing final newline caused the Unix parser to skip distributionUrl",
+    "fixed": true,
+    "linuxJava21Maven3916Verified": true
+  }
 }
