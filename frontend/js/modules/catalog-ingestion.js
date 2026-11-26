@@ -8,6 +8,10 @@ export function installCatalogIngestion(target, api, refreshCatalog) {
     async function overview(){
         try{const data=await api('/admin/ingestion');if(!section.isConnected)return;const summary=find('sourceRegistrySummary');summary.replaceChildren(element('h4','Catalog provenance'));
             for(const row of data.statistics)summary.append(element('p',row.name+' · '+row.resources+' imported resources · '+(row.verified||0)+' HTTP verified · '+row.license));
+            const health=document.createElement('details');health.append(element('summary','Stored link health by source'));
+            health.append(element('p','Cached HTTP observations can become stale. A restriction or temporary failure does not mean the resource is unavailable to a person. Checks never automatically pause resources.'));
+            const labels={ACCESSIBLE:'Accessible',REDIRECTED:'Redirected',ACCESS_RESTRICTED:'Restricted to automated access',TEMPORARILY_UNAVAILABLE:'Temporarily unavailable',NOT_FOUND:'Reported missing (404/410)',NOT_CHECKED:'Not checked',UNSAFE_DESTINATION:'Blocked by destination policy'};
+            for(const row of data.linkHealth||[])health.append(element('p',row.source_id+' · '+(labels[row.status]||row.status)+' · '+row.resources));summary.append(health);
             summary.append(element('p',data.batches.length+' recent import batches · '+data.reviews.length+' pending duplicate reviews shown (up to 100). External research learners are excluded from platform analytics.'));
             const history=document.createElement('details');history.append(element('summary','Import history and duplicate review'));
             for(const row of data.batches)history.append(element('p','Batch '+row.batch_id+' · '+row.imported_count+' imported · '+row.skipped_count+' kept · '+row.review_count+' review · '+row.created_at));

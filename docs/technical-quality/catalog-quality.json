@@ -1,0 +1,857 @@
+{
+  "capturedAt": "2026-11-26T19:08:59.974Z",
+  "resources": 2365,
+  "catalogSha256": "69035930d74674b3b74c5723429436ce37650f0d38fa6b05f1a5d8747c99dfd3",
+  "counts": {
+    "types": [
+      [
+        "ARTICLE",
+        "1",
+        "505"
+      ],
+      [
+        "COURSE",
+        "1",
+        "1513"
+      ],
+      [
+        "DOCUMENTATION",
+        "1",
+        "14"
+      ],
+      [
+        "GUIDE",
+        "1",
+        "277"
+      ],
+      [
+        "PROJECT",
+        "1",
+        "2"
+      ],
+      [
+        "RESOURCE",
+        "1",
+        "38"
+      ],
+      [
+        "TOOL",
+        "1",
+        "14"
+      ],
+      [
+        "VIDEO",
+        "1",
+        "2"
+      ]
+    ],
+    "providers": [
+      [
+        "Strategyzer",
+        "3"
+      ],
+      [
+        "CFPB",
+        "1"
+      ],
+      [
+        "Investor.gov",
+        "2"
+      ],
+      [
+        "HubSpot Academy",
+        "3"
+      ],
+      [
+        "Canva Design School",
+        "1"
+      ],
+      [
+        "Adobe",
+        "5"
+      ],
+      [
+        "PlainLanguage.gov",
+        "1"
+      ],
+      [
+        "IDEO U",
+        "1"
+      ],
+      [
+        "Move Your Way",
+        "2"
+      ],
+      [
+        "NHS",
+        "12"
+      ],
+      [
+        "CDC",
+        "5"
+      ],
+      [
+        "NHLBI",
+        "2"
+      ],
+      [
+        "WHO",
+        "1"
+      ],
+      [
+        "Coursera",
+        "6"
+      ],
+      [
+        "Pramp",
+        "1"
+      ],
+      [
+        "CareerOneStop",
+        "2"
+      ],
+      [
+        "Cal Newport",
+        "1"
+      ],
+      [
+        "dev.java",
+        "1"
+      ],
+      [
+        "Spring",
+        "1"
+      ],
+      [
+        "MDN",
+        "2"
+      ],
+      [
+        "Docker",
+        "1"
+      ],
+      [
+        "AWS",
+        "2"
+      ],
+      [
+        "OWASP",
+        "3"
+      ],
+      [
+        "Python Docs",
+        "1"
+      ],
+      [
+        "Harvard CS50",
+        "1"
+      ],
+      [
+        "PY4E",
+        "1"
+      ],
+      [
+        "The Odin Project",
+        "1"
+      ],
+      [
+        "freeCodeCamp",
+        "1"
+      ],
+      [
+        "React",
+        "1"
+      ],
+      [
+        "Vue.js",
+        "1"
+      ],
+      [
+        "Angular",
+        "1"
+      ],
+      [
+        "TypeScript",
+        "1"
+      ],
+      [
+        "Go",
+        "1"
+      ],
+      [
+        "Rust Project",
+        "1"
+      ],
+      [
+        "Kotlin",
+        "1"
+      ],
+      [
+        "Git",
+        "1"
+      ],
+      [
+        "GitHub",
+        "2"
+      ],
+      [
+        "SQLBolt",
+        "1"
+      ],
+      [
+        "PostgreSQL",
+        "1"
+      ],
+      [
+        "MongoDB",
+        "1"
+      ],
+      [
+        "MySQL",
+        "1"
+      ],
+      [
+        "Microsoft Learn",
+        "9"
+      ],
+      [
+        "Google Cloud",
+        "1"
+      ],
+      [
+        "Kubernetes",
+        "1"
+      ],
+      [
+        "Linux Journey",
+        "1"
+      ],
+      [
+        "PortSwigger",
+        "1"
+      ],
+      [
+        "NIST",
+        "1"
+      ],
+      [
+        "Google",
+        "8"
+      ],
+      [
+        "fast.ai",
+        "1"
+      ],
+      [
+        "Hugging Face",
+        "1"
+      ],
+      [
+        "PyTorch",
+        "1"
+      ],
+      [
+        "TensorFlow",
+        "1"
+      ],
+      [
+        "University of Helsinki",
+        "1"
+      ],
+      [
+        "U.S. Small Business Administration",
+        "3"
+      ],
+      [
+        "SCORE",
+        "1"
+      ],
+      [
+        "Y Combinator",
+        "2"
+      ],
+      [
+        "OpenStax",
+        "401"
+      ],
+      [
+        "MIT",
+        "2"
+      ],
+      [
+        "Consumer Financial Protection Bureau",
+        "3"
+      ],
+      [
+        "Khan Academy",
+        "4"
+      ],
+      [
+        "FDIC",
+        "1"
+      ],
+      [
+        "FINRA",
+        "2"
+      ],
+      [
+        "Vanguard",
+        "1"
+      ],
+      [
+        "Charles Schwab",
+        "1"
+      ],
+      [
+        "Meta",
+        "1"
+      ],
+      [
+        "Ahrefs",
+        "1"
+      ],
+      [
+        "Semrush",
+        "1"
+      ],
+      [
+        "Mailchimp",
+        "1"
+      ],
+      [
+        "Shopify",
+        "1"
+      ],
+      [
+        "CFI",
+        "1"
+      ],
+      [
+        "Federal Reserve Bank of St. Louis",
+        "1"
+      ],
+      [
+        "World Bank",
+        "1"
+      ],
+      [
+        "International Monetary Fund",
+        "1"
+      ],
+      [
+        "The Learning Scientists",
+        "1"
+      ],
+      [
+        "Anki",
+        "1"
+      ],
+      [
+        "MIT OpenCourseWare",
+        "1466"
+      ],
+      [
+        "IBM",
+        "1"
+      ],
+      [
+        "O*NET",
+        "1"
+      ],
+      [
+        "Harvard FAS",
+        "1"
+      ],
+      [
+        "Purdue OWL",
+        "2"
+      ],
+      [
+        "Toastmasters",
+        "1"
+      ],
+      [
+        "Big Interview",
+        "1"
+      ],
+      [
+        "LinkedIn",
+        "1"
+      ],
+      [
+        "Atlassian",
+        "1"
+      ],
+      [
+        "Todoist",
+        "1"
+      ],
+      [
+        "GTD",
+        "1"
+      ],
+      [
+        "Francesco Cirillo",
+        "1"
+      ],
+      [
+        "FutureLearn",
+        "1"
+      ],
+      [
+        "edX",
+        "1"
+      ],
+      [
+        "University of Minnesota",
+        "1"
+      ],
+      [
+        "MindTools",
+        "1"
+      ],
+      [
+        "University of Michigan",
+        "1"
+      ],
+      [
+        "The Open University",
+        "1"
+      ],
+      [
+        "The Muse",
+        "1"
+      ],
+      [
+        "LeetCode",
+        "1"
+      ],
+      [
+        "Harvard Health Publishing",
+        "1"
+      ],
+      [
+        "World Health Organization",
+        "5"
+      ],
+      [
+        "U.S. National Library of Medicine",
+        "4"
+      ],
+      [
+        "Harvard T.H. Chan School of Public Health",
+        "1"
+      ],
+      [
+        "USDA MyPlate",
+        "1"
+      ],
+      [
+        "Mental Health America",
+        "1"
+      ],
+      [
+        "USDA",
+        "2"
+      ],
+      [
+        "Yoga With Adriene",
+        "1"
+      ],
+      [
+        "Nike",
+        "1"
+      ],
+      [
+        "American Heart Association",
+        "1"
+      ],
+      [
+        "Figma",
+        "1"
+      ],
+      [
+        "Google Arts & Culture",
+        "1"
+      ],
+      [
+        "The Met",
+        "1"
+      ],
+      [
+        "MoMA",
+        "1"
+      ],
+      [
+        "Tate",
+        "1"
+      ],
+      [
+        "Khan Academy and Pixar",
+        "1"
+      ],
+      [
+        "Blender",
+        "1"
+      ],
+      [
+        "Inkscape",
+        "1"
+      ],
+      [
+        "GIMP",
+        "1"
+      ],
+      [
+        "Unsplash",
+        "1"
+      ],
+      [
+        "PetaPixel",
+        "1"
+      ],
+      [
+        "Digital Photography School",
+        "1"
+      ],
+      [
+        "National Geographic",
+        "1"
+      ],
+      [
+        "Procreate",
+        "1"
+      ],
+      [
+        "W3C",
+        "1"
+      ],
+      [
+        "Google Fonts",
+        "1"
+      ],
+      [
+        "Hoefler&Co.",
+        "1"
+      ],
+      [
+        "The Writing Cooperative",
+        "1"
+      ],
+      [
+        "Hemingway Editor",
+        "1"
+      ],
+      [
+        "National Novel Writing Month",
+        "1"
+      ],
+      [
+        "Poetry Foundation",
+        "1"
+      ],
+      [
+        "Project Gutenberg",
+        "1"
+      ],
+      [
+        "Library of Congress",
+        "1"
+      ],
+      [
+        "Atlas Obscura",
+        "1"
+      ],
+      [
+        "UNESCO",
+        "1"
+      ],
+      [
+        "National Park Service",
+        "1"
+      ],
+      [
+        "Google Maps Help",
+        "1"
+      ],
+      [
+        "Smithsonian",
+        "1"
+      ],
+      [
+        "Exploratorium",
+        "1"
+      ],
+      [
+        "Royal Photographic Society",
+        "1"
+      ],
+      [
+        "MedlinePlus, National Library of Medicine",
+        "200"
+      ],
+      [
+        "MedlinePlus Genetics, National Library of Medicine",
+        "94"
+      ]
+    ],
+    "categories": [
+      [
+        "Business & Finance",
+        "509"
+      ],
+      [
+        "Creative & Lifestyle",
+        "612"
+      ],
+      [
+        "Health & Fitness",
+        "443"
+      ],
+      [
+        "Learning & Career",
+        "260"
+      ],
+      [
+        "Technology",
+        "541"
+      ]
+    ],
+    "topics": [
+      [
+        "Academic Writing",
+        "29"
+      ],
+      [
+        "AI/ML",
+        "11"
+      ],
+      [
+        "Algorithms and Data Structures",
+        "77"
+      ],
+      [
+        "Business Strategy",
+        "31"
+      ],
+      [
+        "Career Development",
+        "82"
+      ],
+      [
+        "Cloud Computing",
+        "17"
+      ],
+      [
+        "Communication",
+        "124"
+      ],
+      [
+        "Computer Science",
+        "414"
+      ],
+      [
+        "Creativity",
+        "83"
+      ],
+      [
+        "Cybersecurity",
+        "9"
+      ],
+      [
+        "Databases",
+        "22"
+      ],
+      [
+        "Design",
+        "24"
+      ],
+      [
+        "DevOps",
+        "9"
+      ],
+      [
+        "Entrepreneurship",
+        "47"
+      ],
+      [
+        "Fitness",
+        "18"
+      ],
+      [
+        "Healthy Habits",
+        "42"
+      ],
+      [
+        "Hobbies",
+        "11"
+      ],
+      [
+        "Interview Preparation",
+        "10"
+      ],
+      [
+        "Investing Basics",
+        "16"
+      ],
+      [
+        "Java",
+        "9"
+      ],
+      [
+        "Machine Learning",
+        "18"
+      ],
+      [
+        "Marketing",
+        "30"
+      ],
+      [
+        "Nutrition Basics",
+        "11"
+      ],
+      [
+        "Personal Finance",
+        "15"
+      ],
+      [
+        "Photography",
+        "32"
+      ],
+      [
+        "Productivity",
+        "10"
+      ],
+      [
+        "Professional Skills",
+        "32"
+      ],
+      [
+        "Programming",
+        "38"
+      ],
+      [
+        "Sleep",
+        "13"
+      ],
+      [
+        "SQL",
+        "3"
+      ],
+      [
+        "Startups",
+        "9"
+      ],
+      [
+        "Study Skills",
+        "64"
+      ],
+      [
+        "Travel",
+        "11"
+      ],
+      [
+        "Web Development",
+        "19"
+      ],
+      [
+        "Wellness",
+        "28"
+      ],
+      [
+        "Workouts",
+        "13"
+      ],
+      [
+        "Writing",
+        "60"
+      ]
+    ],
+    "difficulty": [
+      [
+        "BEGINNER",
+        "136"
+      ],
+      [
+        "ALL_LEVELS",
+        "1"
+      ],
+      [
+        "INTERMEDIATE",
+        "59"
+      ],
+      [
+        "ADVANCED",
+        "4"
+      ],
+      [
+        "UNKNOWN",
+        "2165"
+      ]
+    ],
+    "language": [
+      [
+        "UNKNOWN",
+        "1665"
+      ],
+      [
+        "en",
+        "700"
+      ]
+    ],
+    "duration": [
+      [
+        "PRESENT",
+        "200"
+      ],
+      [
+        "UNKNOWN",
+        "2165"
+      ]
+    ],
+    "license": [
+      [
+        "NO_IMPORTED_LICENSE_RECORD",
+        "200"
+      ],
+      [
+        "CC-BY-NC-SA-4.0",
+        "1824"
+      ],
+      [
+        "CC-BY-4.0",
+        "47"
+      ],
+      [
+        "US-GOV-PUBLIC-DOMAIN",
+        "294"
+      ]
+    ],
+    "urlStatus": [
+      [
+        "NOT_CHECKED",
+        "1855"
+      ],
+      [
+        "ACCESSIBLE",
+        "405"
+      ],
+      [
+        "REDIRECTED",
+        "105"
+      ]
+    ],
+    "verificationAge": [
+      [
+        "2026-11-24 17:49:44",
+        "2026-11-25 17:58:41",
+        "510",
+        "1655"
+      ]
+    ],
+    "exactDuplicates": []
+  },
+  "invalidUrlIds": [],
+  "heldEditions": 105,
+  "policy": "No original catalog rows or relationships were modified. Unknowns remain unknown; stored URL observations are time-bound, not fresh checks of every external page."
+}

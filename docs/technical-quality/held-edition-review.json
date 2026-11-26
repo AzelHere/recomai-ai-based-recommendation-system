@@ -1,0 +1,1898 @@
+{
+  "reviewedAt": "2026-11-26T19:08:59.972Z",
+  "count": 105,
+  "decisions": [
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "115380",
+      "title": "Art, Craft, Science",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21a-501j-art-craft-science-fall-2024",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4332",
+          "canonicalUrl": "https://ocw.mit.edu/courses/21a-501j-art-craft-science-spring-2013",
+          "title": "Art, Craft, Science"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "117242",
+      "title": "Writing and Reading the Essay",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21w-735-writing-and-reading-the-essay-fall-2025",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4061",
+          "canonicalUrl": "https://ocw.mit.edu/courses/21w-735-writing-and-reading-the-essay-fall-2005",
+          "title": "Writing and Reading the Essay"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "14016",
+      "title": "Sensing Place: Photography as Inquiry",
+      "canonicalUrl": "https://ocw.mit.edu/courses/11-309j-sensing-place-photography-as-inquiry-spring-2024",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "5693",
+          "canonicalUrl": "https://ocw.mit.edu/courses/11-309j-sensing-place-photography-as-inquiry-fall-2012",
+          "title": "Sensing Place: Photography as Inquiry"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "15955",
+      "title": "Power Electronics",
+      "canonicalUrl": "https://ocw.mit.edu/courses/6-622-power-electronics-spring-2023",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4518",
+          "canonicalUrl": "https://ocw.mit.edu/courses/6-334-power-electronics-spring-2007",
+          "title": "Power Electronics"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "16265",
+      "title": "Operating System Engineering",
+      "canonicalUrl": "https://ocw.mit.edu/courses/6-1810-operating-system-engineering-fall-2023",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4625",
+          "canonicalUrl": "https://ocw.mit.edu/courses/6-828-operating-system-engineering-fall-2012",
+          "title": "Operating System Engineering"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "16416",
+      "title": "The Making of a Roman Emperor",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21h-336-the-making-of-a-roman-emperor-spring-2023",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4422",
+          "canonicalUrl": "https://ocw.mit.edu/courses/21h-402-the-making-of-a-roman-emperor-fall-2005",
+          "title": "The Making of a Roman Emperor"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "16593",
+      "title": "Computer Systems Security",
+      "canonicalUrl": "https://ocw.mit.edu/courses/6-5660-computer-systems-security-spring-2024",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3513",
+          "canonicalUrl": "https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014",
+          "title": "Computer Systems Security"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "16647",
+      "title": "Advanced Topics in Cryptography",
+      "canonicalUrl": "https://ocw.mit.edu/courses/6-5630-advanced-topics-in-cryptography-fall-2023",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4465",
+          "canonicalUrl": "https://ocw.mit.edu/courses/6-876j-advanced-topics-in-cryptography-spring-2003",
+          "title": "Advanced Topics in Cryptography"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "16719",
+      "title": "Cell-Matrix Mechanics",
+      "canonicalUrl": "https://ocw.mit.edu/courses/2-785j-cell-matrix-mechanics-fall-2016",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4243",
+          "canonicalUrl": "https://ocw.mit.edu/courses/2-785j-cell-matrix-mechanics-fall-2014",
+          "title": "Cell-Matrix Mechanics"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "16730",
+      "title": "Principles of Microeconomics",
+      "canonicalUrl": "https://ocw.mit.edu/courses/14-01-principles-of-microeconomics-fall-2023",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3357",
+          "canonicalUrl": "https://ocw.mit.edu/courses/14-01sc-principles-of-microeconomics-fall-2011",
+          "title": "Principles of Microeconomics"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "16758",
+      "title": "Game Theory",
+      "canonicalUrl": "https://ocw.mit.edu/courses/14.126-game-theory-spring-2024",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4808",
+          "canonicalUrl": "https://ocw.mit.edu/courses/14-126-game-theory-spring-2016",
+          "title": "Game Theory"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "16850",
+      "title": "Labor Economics I",
+      "canonicalUrl": "https://ocw.mit.edu/courses/14-661-labor-economics-i-fall-2024",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4116",
+          "canonicalUrl": "https://ocw.mit.edu/courses/14-661-labor-economics-i-fall-2017",
+          "title": "Labor Economics I"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "16870",
+      "title": "Introduction to Western Music",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21m-011-introduction-to-western-music-fall-2024",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "5229",
+          "canonicalUrl": "https://ocw.mit.edu/courses/21m-011-introduction-to-western-music-spring-2006",
+          "title": "Introduction to Western Music"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "16901",
+      "title": "Mathematics for Computer Science",
+      "canonicalUrl": "https://ocw.mit.edu/courses/6-1200j-mathematics-for-computer-science-spring-2024",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3500",
+          "canonicalUrl": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010",
+          "title": "Mathematics for Computer Science"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "17219",
+      "title": "Computational Methods of Scientific Programming",
+      "canonicalUrl": "https://ocw.mit.edu/courses/12-010-computational-methods-of-scientific-programming-fall-2024",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4416",
+          "canonicalUrl": "https://ocw.mit.edu/courses/12-010-computational-methods-of-scientific-programming-fall-2011",
+          "title": "Computational Methods of Scientific Programming"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "20969",
+      "title": "Topics in Mathematics with Applications in Finance",
+      "canonicalUrl": "https://ocw.mit.edu/courses/18-642-topics-in-mathematics-with-applications-in-finance-fall-2024",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3990",
+          "canonicalUrl": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013",
+          "title": "Topics in Mathematics with Applications in Finance"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "21455",
+      "title": "Principles of Discrete Applied Mathematics",
+      "canonicalUrl": "https://ocw.mit.edu/courses/18-200-principles-of-discrete-applied-mathematics-spring-2024",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4451",
+          "canonicalUrl": "https://ocw.mit.edu/courses/18-310-principles-of-discrete-applied-mathematics-fall-2013",
+          "title": "Principles of Discrete Applied Mathematics"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "3575",
+      "title": "Intermediate Macroeconomic Theory",
+      "canonicalUrl": "https://ocw.mit.edu/courses/14-06-intermediate-macroeconomic-theory-spring-2003",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3425",
+          "canonicalUrl": "https://ocw.mit.edu/courses/14-06-intermediate-macroeconomic-theory-spring-2004",
+          "title": "Intermediate Macroeconomic Theory"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "3644",
+      "title": "Introduction to Media Studies",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21l-015-introduction-to-media-studies-fall-2003",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3602",
+          "canonicalUrl": "https://ocw.mit.edu/courses/cms-100-introduction-to-media-studies-fall-2014",
+          "title": "Introduction to Media Studies"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "3663",
+      "title": "Project Management",
+      "canonicalUrl": "https://ocw.mit.edu/courses/1-040-project-management-spring-2004",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3563",
+          "canonicalUrl": "https://ocw.mit.edu/courses/1-040-project-management-spring-2009",
+          "title": "Project Management"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "3692",
+      "title": "Introduction to Contemporary Hispanic Literature",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21g-716-introduction-to-contemporary-hispanic-literature-fall-2007",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3525",
+          "canonicalUrl": "https://ocw.mit.edu/courses/21g-716-introduction-to-contemporary-hispanic-literature-spring-2005",
+          "title": "Introduction to Contemporary Hispanic Literature"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4029",
+      "title": "Electromagnetics and Applications",
+      "canonicalUrl": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3325",
+          "canonicalUrl": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-fall-2005",
+          "title": "Electromagnetics and Applications"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4106",
+      "title": "Seminar in Historical Methods",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21h-931-seminar-in-historical-methods-spring-2004",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3985",
+          "canonicalUrl": "https://ocw.mit.edu/courses/21h-931-seminar-in-historical-methods-spring-2002",
+          "title": "Seminar in Historical Methods"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4158",
+      "title": "Comedy",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21l-021-comedy-spring-2016",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4072",
+          "canonicalUrl": "https://ocw.mit.edu/courses/21l-021-comedy-spring-2022",
+          "title": "Comedy"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4164",
+      "title": "Game Design",
+      "canonicalUrl": "https://ocw.mit.edu/courses/cms-608-game-design-spring-2014",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3742",
+          "canonicalUrl": "https://ocw.mit.edu/courses/cms-608-game-design-spring-2008",
+          "title": "Game Design"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4239",
+      "title": "Underactuated Robotics",
+      "canonicalUrl": "https://ocw.mit.edu/courses/6-832-underactuated-robotics-spring-2009",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3606",
+          "canonicalUrl": "https://ocw.mit.edu/courses/6-832-underactuated-robotics-spring-2022",
+          "title": "Underactuated Robotics"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4245",
+      "title": "Introduction to World Music",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21m-030-introduction-to-world-music-spring-2013",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4127",
+          "canonicalUrl": "https://ocw.mit.edu/courses/21m-030-introduction-to-world-music-fall-2006",
+          "title": "Introduction to World Music"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4248",
+      "title": "Introduction to Fiction",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21l-003-introduction-to-fiction-spring-2002",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3799",
+          "canonicalUrl": "https://ocw.mit.edu/courses/21l-003-introduction-to-fiction-fall-2003",
+          "title": "Introduction to Fiction"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4331",
+      "title": "Aircraft Systems Engineering",
+      "canonicalUrl": "https://ocw.mit.edu/courses/16-885j-aircraft-systems-engineering-fall-2004",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4129",
+          "canonicalUrl": "https://ocw.mit.edu/courses/16-885j-aircraft-systems-engineering-fall-2005",
+          "title": "Aircraft Systems Engineering"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4345",
+      "title": "Introduction to Algorithms",
+      "canonicalUrl": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4214",
+          "canonicalUrl": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011",
+          "title": "Introduction to Algorithms"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4347",
+      "title": "Theories and Methods in the Study of History",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21h-991-theories-and-methods-in-the-study-of-history-fall-2010",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4269",
+          "canonicalUrl": "https://ocw.mit.edu/courses/21h-991-theories-and-methods-in-the-study-of-history-fall-2014",
+          "title": "Theories and Methods in the Study of History"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4412",
+      "title": "Continuum Electromechanics",
+      "canonicalUrl": "https://ocw.mit.edu/courses/res-6-001-continuum-electromechanics-spring-2009",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4121",
+          "canonicalUrl": "https://ocw.mit.edu/courses/6-642-continuum-electromechanics-fall-2008",
+          "title": "Continuum Electromechanics"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4449",
+      "title": "Major Poets",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21l-004-major-poets-fall-2005",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3706",
+          "canonicalUrl": "https://ocw.mit.edu/courses/21l-004-major-poets-fall-2001",
+          "title": "Major Poets"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4477",
+      "title": "Introduction to Urban Design and Development",
+      "canonicalUrl": "https://ocw.mit.edu/courses/11-301j-introduction-to-urban-design-and-development-fall-2016",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3741",
+          "canonicalUrl": "https://ocw.mit.edu/courses/11-001j-introduction-to-urban-design-and-development-spring-2006",
+          "title": "Introduction to Urban Design and Development"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4537",
+      "title": "Reading Fiction",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21l-003-2-reading-fiction-spring-2007",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3518",
+          "canonicalUrl": "https://ocw.mit.edu/courses/21l-003-2-reading-fiction-fall-2006",
+          "title": "Reading Fiction"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4541",
+      "title": "Gender, Power, Leadership, and the Workplace",
+      "canonicalUrl": "https://ocw.mit.edu/courses/wgs-s10-gender-power-leadership-and-the-workplace-spring-2014",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3895",
+          "canonicalUrl": "https://ocw.mit.edu/courses/wgs-150-gender-power-leadership-and-the-workplace-spring-2015",
+          "title": "Gender, Power, Leadership and the Workplace"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4574",
+      "title": "Global Strategy and Organization",
+      "canonicalUrl": "https://ocw.mit.edu/courses/15-220-global-strategy-and-organization-spring-2008",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3950",
+          "canonicalUrl": "https://ocw.mit.edu/courses/15-220-global-strategy-and-organization-spring-2012",
+          "title": "Global Strategy and Organization"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4590",
+      "title": "Artificial Intelligence",
+      "canonicalUrl": "https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4007",
+          "canonicalUrl": "https://ocw.mit.edu/courses/6-034-artificial-intelligence-spring-2005",
+          "title": "Artificial Intelligence"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4635",
+      "title": "Media in Cultural Context",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21l-715-media-in-cultural-context-fall-2015",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3978",
+          "canonicalUrl": "https://ocw.mit.edu/courses/21l-715-media-in-cultural-context-spring-2007",
+          "title": "Media in Cultural Context"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4664",
+      "title": "Beijing Urban Design Studio",
+      "canonicalUrl": "https://ocw.mit.edu/courses/11-307-beijing-urban-design-studio-summer-2008",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3744",
+          "canonicalUrl": "https://ocw.mit.edu/courses/11-946j-beijing-urban-design-studio-summer-2004",
+          "title": "Beijing Urban Design Studio"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4695",
+      "title": "Advanced Macroeconomics II",
+      "canonicalUrl": "https://ocw.mit.edu/courses/14-462-advanced-macroeconomics-ii-spring-2004",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4688",
+          "canonicalUrl": "https://ocw.mit.edu/courses/14-462-advanced-macroeconomics-ii-spring-2007",
+          "title": "Advanced Macroeconomics II"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4716",
+      "title": "The History of MIT",
+      "canonicalUrl": "https://ocw.mit.edu/courses/sts-050-the-history-of-mit-spring-2011",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3629",
+          "canonicalUrl": "https://ocw.mit.edu/courses/sts-050-the-history-of-mit-spring-2016",
+          "title": "The History of MIT"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4730",
+      "title": "Managerial Psychology Laboratory",
+      "canonicalUrl": "https://ocw.mit.edu/courses/15-310-managerial-psychology-laboratory-spring-2003",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4246",
+          "canonicalUrl": "https://ocw.mit.edu/courses/15-301-managerial-psychology-laboratory-fall-2004",
+          "title": "Managerial Psychology Laboratory"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4754",
+      "title": "Design and Analysis of Algorithms",
+      "canonicalUrl": "https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4273",
+          "canonicalUrl": "https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2012",
+          "title": "Design and Analysis of Algorithms"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4809",
+      "title": "Mathematics for Computer Science",
+      "canonicalUrl": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3500",
+          "canonicalUrl": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010",
+          "title": "Mathematics for Computer Science"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4843",
+      "title": "Game Design",
+      "canonicalUrl": "https://ocw.mit.edu/courses/cms-608-game-design-fall-2010",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3742",
+          "canonicalUrl": "https://ocw.mit.edu/courses/cms-608-game-design-spring-2008",
+          "title": "Game Design"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4893",
+      "title": "Advanced Algorithms",
+      "canonicalUrl": "https://ocw.mit.edu/courses/6-854j-advanced-algorithms-fall-2005",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3604",
+          "canonicalUrl": "https://ocw.mit.edu/courses/6-854j-advanced-algorithms-fall-2008",
+          "title": "Advanced Algorithms"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4897",
+      "title": "Architecture Studio: Building in Landscapes",
+      "canonicalUrl": "https://ocw.mit.edu/courses/4-125-architecture-studio-building-in-landscapes-fall-2002",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3559",
+          "canonicalUrl": "https://ocw.mit.edu/courses/4-125a-architecture-studio-building-in-landscapes-fall-2005",
+          "title": "Architecture Studio: Building in Landscapes"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4900",
+      "title": "Springfield Studio",
+      "canonicalUrl": "https://ocw.mit.edu/courses/11-945-springfield-studio-spring-2004",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3687",
+          "canonicalUrl": "https://ocw.mit.edu/courses/11-945-springfield-studio-fall-2005",
+          "title": "Springfield Studio"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4910",
+      "title": "Introduction to Housing, Community, and Economic Development",
+      "canonicalUrl": "https://ocw.mit.edu/courses/11-401-introduction-to-housing-community-and-economic-development-fall-2015",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3646",
+          "canonicalUrl": "https://ocw.mit.edu/courses/11-401-introduction-to-housing-community-and-economic-development-fall-2003",
+          "title": "Introduction to Housing, Community and Economic Development"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4914",
+      "title": "Database Systems",
+      "canonicalUrl": "https://ocw.mit.edu/courses/6-5830-database-systems-fall-2023",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4505",
+          "canonicalUrl": "https://ocw.mit.edu/courses/6-830-database-systems-fall-2010",
+          "title": "Database Systems"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4929",
+      "title": "Major English Novels",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21l-471-major-english-novels-spring-2009",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3868",
+          "canonicalUrl": "https://ocw.mit.edu/courses/21l-471-major-english-novels-spring-2004",
+          "title": "Major English Novels"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4933",
+      "title": "Microelectronic Devices and Circuits",
+      "canonicalUrl": "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4247",
+          "canonicalUrl": "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2005",
+          "title": "Microelectronic Devices and Circuits"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4960",
+      "title": "Introduction to Computational Thinking",
+      "canonicalUrl": "https://ocw.mit.edu/courses/18-s191-introduction-to-computational-thinking-fall-2020",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4692",
+          "canonicalUrl": "https://ocw.mit.edu/courses/18-s191-introduction-to-computational-thinking-fall-2022",
+          "title": "Introduction to Computational Thinking"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "4975",
+      "title": "Reading Poetry",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21l-004-reading-poetry-spring-2018",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3786",
+          "canonicalUrl": "https://ocw.mit.edu/courses/21l-004-reading-poetry-spring-2009",
+          "title": "Reading Poetry"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5022",
+      "title": "Media Technology and City Design and Development",
+      "canonicalUrl": "https://ocw.mit.edu/courses/11-310j-media-technology-and-city-design-and-development-spring-2002",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4781",
+          "canonicalUrl": "https://ocw.mit.edu/courses/11-310j-media-technology-and-city-design-and-development-fall-2002",
+          "title": "Media Technology and City Design and Development"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5047",
+      "title": "Darwin and Design",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21l-448j-darwin-and-design-fall-2003",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4727",
+          "canonicalUrl": "https://ocw.mit.edu/courses/21l-448j-darwin-and-design-fall-2010",
+          "title": "Darwin and Design"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5057",
+      "title": "Marketing Management",
+      "canonicalUrl": "https://ocw.mit.edu/courses/15-810-marketing-management-fall-2004",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3833",
+          "canonicalUrl": "https://ocw.mit.edu/courses/15-810-marketing-management-fall-2010",
+          "title": "Marketing Management"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5072",
+      "title": "Introduction to Algorithms",
+      "canonicalUrl": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2008",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4214",
+          "canonicalUrl": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011",
+          "title": "Introduction to Algorithms"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5084",
+      "title": "Regional Socioeconomic Impact Analyses and Modeling",
+      "canonicalUrl": "https://ocw.mit.edu/courses/11-482j-regional-socioeconomic-impact-analyses-and-modeling-fall-2007",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3760",
+          "canonicalUrl": "https://ocw.mit.edu/courses/11-482j-regional-socioeconomic-impact-analyses-and-modeling-fall-2008",
+          "title": "Regional Socioeconomic Impact Analyses and Modeling"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5097",
+      "title": "Management Accounting and Control",
+      "canonicalUrl": "https://ocw.mit.edu/courses/15-521-management-accounting-and-control-spring-2003",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3865",
+          "canonicalUrl": "https://ocw.mit.edu/courses/15-963-management-accounting-and-control-spring-2007",
+          "title": "Management Accounting and Control"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5116",
+      "title": "Writing and Reading the Essay",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21w-735-writing-and-reading-the-essay-fall-2004",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4061",
+          "canonicalUrl": "https://ocw.mit.edu/courses/21w-735-writing-and-reading-the-essay-fall-2005",
+          "title": "Writing and Reading the Essay"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5125",
+      "title": "Comedy",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21l-421-comedy-spring-2008",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4072",
+          "canonicalUrl": "https://ocw.mit.edu/courses/21l-021-comedy-spring-2022",
+          "title": "Comedy"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5128",
+      "title": "Civic Media Codesign Studio",
+      "canonicalUrl": "https://ocw.mit.edu/courses/cms-362-civic-media-codesign-studio-spring-2016",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4934",
+          "canonicalUrl": "https://ocw.mit.edu/courses/cms-362-civic-media-codesign-studio-fall-2020",
+          "title": "Civic Media Codesign Studio"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5169",
+      "title": "Econometrics",
+      "canonicalUrl": "https://ocw.mit.edu/courses/14-382-econometrics-spring-2017",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4837",
+          "canonicalUrl": "https://ocw.mit.edu/courses/14-32-econometrics-spring-2007",
+          "title": "Econometrics"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5189",
+      "title": "Introduction to Design Inquiry",
+      "canonicalUrl": "https://ocw.mit.edu/courses/4-273-introduction-to-design-inquiry-fall-2004",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4669",
+          "canonicalUrl": "https://ocw.mit.edu/courses/4-273-introduction-to-design-inquiry-fall-2001",
+          "title": "Introduction to Design Inquiry"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5191",
+      "title": "Script Analysis",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21m-710-script-analysis-fall-2005",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4143",
+          "canonicalUrl": "https://ocw.mit.edu/courses/21m-710-script-analysis-fall-2011",
+          "title": "Script Analysis"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5198",
+      "title": "Microelectronic Devices and Circuits",
+      "canonicalUrl": "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-spring-2009",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4247",
+          "canonicalUrl": "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2005",
+          "title": "Microelectronic Devices and Circuits"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5207",
+      "title": "Economic History",
+      "canonicalUrl": "https://ocw.mit.edu/courses/14-731-economic-history-fall-2006",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3472",
+          "canonicalUrl": "https://ocw.mit.edu/courses/14-731-economic-history-spring-2009",
+          "title": "Economic History"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5271",
+      "title": "Common Sense Reasoning for Interactive Applications",
+      "canonicalUrl": "https://ocw.mit.edu/courses/mas-962-common-sense-reasoning-for-interactive-applications-fall-2006",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3872",
+          "canonicalUrl": "https://ocw.mit.edu/courses/mas-964-common-sense-reasoning-for-interactive-applications-fall-2002",
+          "title": "Common Sense Reasoning for Interactive Applications"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5303",
+      "title": "Numerical Computation for Mechanical Engineers",
+      "canonicalUrl": "https://ocw.mit.edu/courses/2-086-numerical-computation-for-mechanical-engineers-fall-2014",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3986",
+          "canonicalUrl": "https://ocw.mit.edu/courses/2-086-numerical-computation-for-mechanical-engineers-spring-2013",
+          "title": "Numerical Computation for Mechanical Engineers"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5320",
+      "title": "Forms of Western Narrative",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21l-012-forms-of-western-narrative-spring-2004",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3730",
+          "canonicalUrl": "https://ocw.mit.edu/courses/21l-012-forms-of-western-narrative-fall-2007",
+          "title": "Forms of Western Narrative"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5321",
+      "title": "Machine Vision",
+      "canonicalUrl": "https://ocw.mit.edu/courses/6-801-machine-vision-fall-2004",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "5245",
+          "canonicalUrl": "https://ocw.mit.edu/courses/6-801-machine-vision-fall-2020",
+          "title": "Machine Vision"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5361",
+      "title": "Architecture Studio: Building in Landscapes",
+      "canonicalUrl": "https://ocw.mit.edu/courses/4-125b-architecture-studio-building-in-landscapes-fall-2005",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3559",
+          "canonicalUrl": "https://ocw.mit.edu/courses/4-125a-architecture-studio-building-in-landscapes-fall-2005",
+          "title": "Architecture Studio: Building in Landscapes"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5362",
+      "title": "Introductory Digital Systems Laboratory",
+      "canonicalUrl": "https://ocw.mit.edu/courses/6-111-introductory-digital-systems-laboratory-spring-2006",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4027",
+          "canonicalUrl": "https://ocw.mit.edu/courses/6-111-introductory-digital-systems-laboratory-fall-2002",
+          "title": "Introductory Digital Systems Laboratory"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5382",
+      "title": "Medical Decision Support",
+      "canonicalUrl": "https://ocw.mit.edu/courses/hst-951j-medical-decision-support-fall-2005",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4682",
+          "canonicalUrl": "https://ocw.mit.edu/courses/hst-951j-medical-decision-support-spring-2003",
+          "title": "Medical Decision Support"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5391",
+      "title": "Beijing Urban Design Studio",
+      "canonicalUrl": "https://ocw.mit.edu/courses/11-307-beijing-urban-design-studio-summer-2006",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3744",
+          "canonicalUrl": "https://ocw.mit.edu/courses/11-946j-beijing-urban-design-studio-summer-2004",
+          "title": "Beijing Urban Design Studio"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5414",
+      "title": "American Classics",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21h-105-american-classics-spring-2006",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4146",
+          "canonicalUrl": "https://ocw.mit.edu/courses/21h-105-american-classics-fall-2002",
+          "title": "American Classics"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5443",
+      "title": "Numerical Methods Applied to Chemical Engineering",
+      "canonicalUrl": "https://ocw.mit.edu/courses/10-34-numerical-methods-applied-to-chemical-engineering-fall-2015",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3503",
+          "canonicalUrl": "https://ocw.mit.edu/courses/10-34-numerical-methods-applied-to-chemical-engineering-fall-2005",
+          "title": "Numerical Methods Applied to Chemical Engineering"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5465",
+      "title": "Computation Structures",
+      "canonicalUrl": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2009",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3931",
+          "canonicalUrl": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017",
+          "title": "Computation Structures"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5486",
+      "title": "Global Markets, National Politics and the Competitive Advantage of Firms",
+      "canonicalUrl": "https://ocw.mit.edu/courses/15-223-global-markets-national-politics-and-the-competitive-advantage-of-firms-fall-2011",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4882",
+          "canonicalUrl": "https://ocw.mit.edu/courses/15-224-global-markets-national-politics-and-the-competitive-advantage-of-firms-spring-2003",
+          "title": "Global Markets, National Politics and the Competitive Advantage of Firms"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5507",
+      "title": "Introduction to Media Studies",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21l-015-introduction-to-media-studies-fall-2005",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3602",
+          "canonicalUrl": "https://ocw.mit.edu/courses/cms-100-introduction-to-media-studies-fall-2014",
+          "title": "Introduction to Media Studies"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5548",
+      "title": "Information Theory",
+      "canonicalUrl": "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "5331",
+          "canonicalUrl": "https://ocw.mit.edu/courses/6-441-information-theory-spring-2010",
+          "title": "Information Theory"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5550",
+      "title": "Introduction to Drama",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21l-005-introduction-to-drama-fall-2004",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3754",
+          "canonicalUrl": "https://ocw.mit.edu/courses/21l-005-introduction-to-drama-fall-2016",
+          "title": "Introduction to Drama"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5588",
+      "title": "Designing Your Life",
+      "canonicalUrl": "https://ocw.mit.edu/courses/pe-550-designing-your-life-january-iap-2007",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4969",
+          "canonicalUrl": "https://ocw.mit.edu/courses/pe-550-designing-your-life-spring-2009",
+          "title": "Designing Your Life"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5593",
+      "title": "Financial Accounting",
+      "canonicalUrl": "https://ocw.mit.edu/courses/15-511-financial-accounting-summer-2004",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "5208",
+          "canonicalUrl": "https://ocw.mit.edu/courses/15-515-financial-accounting-fall-2003",
+          "title": "Financial Accounting"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5596",
+      "title": "Topics in Game Theory",
+      "canonicalUrl": "https://ocw.mit.edu/courses/14-147-topics-in-game-theory-fall-2009",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "5179",
+          "canonicalUrl": "https://ocw.mit.edu/courses/14-147-topics-in-game-theory-spring-2005",
+          "title": "Topics in Game Theory"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5598",
+      "title": "Writing about Nature and Environmental Issues",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21w-775-writing-about-nature-and-environmental-issues-fall-2006",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4634",
+          "canonicalUrl": "https://ocw.mit.edu/courses/21w-775-writing-about-nature-and-environmental-issues-spring-2017",
+          "title": "Writing about Nature and Environmental Issues"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5611",
+      "title": "Signals and Systems",
+      "canonicalUrl": "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3520",
+          "canonicalUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011",
+          "title": "Signals and Systems"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5612",
+      "title": "Seminar in Historical Methods",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21h-931-seminar-in-historical-methods-spring-2003",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3985",
+          "canonicalUrl": "https://ocw.mit.edu/courses/21h-931-seminar-in-historical-methods-spring-2002",
+          "title": "Seminar in Historical Methods"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5643",
+      "title": "A Gentle Introduction to Programming Using Python",
+      "canonicalUrl": "https://ocw.mit.edu/courses/6-189-a-gentle-introduction-to-programming-using-python-january-iap-2011",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3998",
+          "canonicalUrl": "https://ocw.mit.edu/courses/6-189-a-gentle-introduction-to-programming-using-python-january-iap-2008",
+          "title": "A Gentle Introduction to Programming Using Python"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5646",
+      "title": "Mathematics for Computer Science",
+      "canonicalUrl": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2005",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3500",
+          "canonicalUrl": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010",
+          "title": "Mathematics for Computer Science"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5651",
+      "title": "Leadership Development",
+      "canonicalUrl": "https://ocw.mit.edu/courses/ids-910-leadership-development-fall-2014",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4644",
+          "canonicalUrl": "https://ocw.mit.edu/courses/ids-910-leadership-development-fall-2002",
+          "title": "Leadership Development"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5666",
+      "title": "Rhetoric",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21w-747-rhetoric-spring-2015",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "5196",
+          "canonicalUrl": "https://ocw.mit.edu/courses/21w-747-rhetoric-spring-2005",
+          "title": "Rhetoric"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5694",
+      "title": "Introductory Quantum Mechanics II",
+      "canonicalUrl": "https://ocw.mit.edu/courses/5-74-introductory-quantum-mechanics-ii-spring-2004",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3835",
+          "canonicalUrl": "https://ocw.mit.edu/courses/5-74-introductory-quantum-mechanics-ii-spring-2009",
+          "title": "Introductory Quantum Mechanics II"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5711",
+      "title": "Networks",
+      "canonicalUrl": "https://ocw.mit.edu/courses/14-15-networks-spring-2022",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3480",
+          "canonicalUrl": "https://ocw.mit.edu/courses/14-15j-networks-spring-2018",
+          "title": "Networks"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5734",
+      "title": "Operations Strategy",
+      "canonicalUrl": "https://ocw.mit.edu/courses/15-769-operations-strategy-fall-2010",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4112",
+          "canonicalUrl": "https://ocw.mit.edu/courses/15-769-operations-strategy-spring-2003",
+          "title": "Operations Strategy"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5746",
+      "title": "Introduction to Operations Management",
+      "canonicalUrl": "https://ocw.mit.edu/courses/15-761-introduction-to-operations-management-spring-2013",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4423",
+          "canonicalUrl": "https://ocw.mit.edu/courses/15-760b-introduction-to-operations-management-spring-2004",
+          "title": "Introduction to Operations Management"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5747",
+      "title": "Urban Design Policy and Action",
+      "canonicalUrl": "https://ocw.mit.edu/courses/11-337j-urban-design-policy-and-action-spring-2007",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4365",
+          "canonicalUrl": "https://ocw.mit.edu/courses/11-337j-urban-design-policy-and-action-spring-2009",
+          "title": "Urban Design Policy and Action"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5755",
+      "title": "Urban Design Seminar",
+      "canonicalUrl": "https://ocw.mit.edu/courses/11-333-urban-design-seminar-spring-2016",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "5719",
+          "canonicalUrl": "https://ocw.mit.edu/courses/11-333-urban-design-seminar-spring-2005",
+          "title": "Urban Design Seminar"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5760",
+      "title": "Space Systems Engineering",
+      "canonicalUrl": "https://ocw.mit.edu/courses/16-83x-space-systems-engineering-spring-2002-spring-2003",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4633",
+          "canonicalUrl": "https://ocw.mit.edu/courses/16-89j-space-systems-engineering-spring-2007",
+          "title": "Space Systems Engineering"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5811",
+      "title": "Introduction to MATLAB",
+      "canonicalUrl": "https://ocw.mit.edu/courses/res-18-002-introduction-to-matlab-spring-2008",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3478",
+          "canonicalUrl": "https://ocw.mit.edu/courses/6-057-introduction-to-matlab-january-iap-2019",
+          "title": "Introduction to MATLAB"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "5884",
+      "title": "Theories and Methods in the Study of History",
+      "canonicalUrl": "https://ocw.mit.edu/courses/21h-390-theories-and-methods-in-the-study-of-history-fall-2022",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4269",
+          "canonicalUrl": "https://ocw.mit.edu/courses/21h-991-theories-and-methods-in-the-study-of-history-fall-2014",
+          "title": "Theories and Methods in the Study of History"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "6008",
+      "title": "How to Develop Breakthrough Products and Services",
+      "canonicalUrl": "https://ocw.mit.edu/courses/15-356-how-to-develop-breakthrough-products-and-services-spring-2012",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "3943",
+          "canonicalUrl": "https://ocw.mit.edu/courses/15-356-how-to-develop-breakthrough-products-and-services-spring-2004",
+          "title": "How to Develop \"Breakthrough\" Products and Services"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    },
+    {
+      "sourceId": "mit-ocw",
+      "externalId": "87056",
+      "title": "Elliptic Curves",
+      "canonicalUrl": "https://ocw.mit.edu/courses/18-783-elliptic-curves-fall-2025",
+      "acquiredIdentityMatches": true,
+      "license": "CC-BY-NC-SA-4.0",
+      "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown",
+      "matchingAcceptedRecords": [
+        {
+          "externalId": "4533",
+          "canonicalUrl": "https://ocw.mit.edu/courses/18-783-elliptic-curves-spring-2021",
+          "title": "Elliptic Curves"
+        }
+      ],
+      "decision": "RETAIN_FOR_REVIEW",
+      "rationale": "Distinct source identity/URL and a similar title do not establish independently distinct syllabus content. No verified content-level comparison authorizes importing or merging the held edition."
+    }
+  ],
+  "imports": 0,
+  "merges": 0
+}

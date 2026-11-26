@@ -49,7 +49,7 @@ function installPhaseThreeControls(){
     document.getElementById('journeysRefresh').onclick=()=>loadJourneys();
     document.getElementById('journeysPrevious').onclick=()=>{if(journeyPage>1){journeyPage--;loadJourneys();}};document.getElementById('journeysNext').onclick=()=>{if(journeyPage<journeyPageCount){journeyPage++;loadJourneys();}};
     const itemForm=document.getElementById('itemForm');const editStatus=createElement('p','');editStatus.id='itemEditStatus';editStatus.setAttribute('role','status');itemForm.appendChild(editStatus);
-    itemForm.appendChild(workspaceButton('Reload current resource',async()=>{const id=itemForm.elements.itemId.value;if(!id)return;if(adminItemDirty&&!confirm('Discard this draft and load the current server resource?'))return;try{const rows=await api('/admin/items');const item=rows.find(row=>String(row.itemId)===id);if(item){adminItemDirty=false;editItem(item);}}catch(error){editStatus.textContent=error.message;handleError(error);}}));
+    itemForm.appendChild(workspaceButton('Reload current resource',async()=>{const id=itemForm.elements.itemId.value;if(!id)return;if(adminItemDirty&&!confirm('Discard this draft and load the current server resource?'))return;const owner=currentUser?.userId,epoch=workspaceEpoch;try{const item=await api('/admin/items/'+encodeURIComponent(id));if(!sameWorkspace(owner,epoch))return;adminItemDirty=false;editItem(item);}catch(error){editStatus.textContent=error.message;handleError(error);}}));
     document.getElementById('adminRecommendationSettings').appendChild(workspaceButton('Reload saved configuration',()=>{if(adminSettingsDirty&&!confirm('Discard your draft and reload saved configuration?'))return;adminSettingsDirty=false;loadAdminSettings(true);}));
 }
 

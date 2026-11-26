@@ -7,6 +7,7 @@
     "check:catalog-links": "node scripts/check-catalog-links.mjs"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.14.1",
     "@playwright/test": "1.64.0"
   },
   "dependencies": {

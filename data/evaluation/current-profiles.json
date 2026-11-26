@@ -1,0 +1,246 @@
+{
+  "method": "Assistant-authored deterministic editorial metadata proxies, frozen before model outputs. Not independent human assessment, user outcomes, or a user study. The lexical rubric can favor keyword-based methods. Knowledge level is recorded as context; unknown resource difficulty remains unknown and the production profile does not claim level adaptation.",
+  "sampling": "Purposive 20-profile sample across five categories; up to 16 topical entries plus resource-type negative controls per profile. Metrics are conditional on the common judged pool, not full-catalog recall.",
+  "profiles": [
+    {
+      "id": "P01",
+      "categoryCode": "TECHNOLOGY",
+      "topic": "Java",
+      "goal": "LEARN",
+      "level": "BEGINNER",
+      "terms": [
+        "java"
+      ]
+    },
+    {
+      "id": "P02",
+      "categoryCode": "TECHNOLOGY",
+      "topic": "SQL",
+      "goal": "LEARN",
+      "level": "INTERMEDIATE",
+      "terms": [
+        "sql",
+        "relational database"
+      ]
+    },
+    {
+      "id": "P03",
+      "categoryCode": "TECHNOLOGY",
+      "topic": "Machine Learning",
+      "goal": "EXPLORE",
+      "level": "BEGINNER",
+      "terms": [
+        "machine learning",
+        "artificial intelligence"
+      ]
+    },
+    {
+      "id": "P04",
+      "categoryCode": "TECHNOLOGY",
+      "topic": "Cybersecurity",
+      "goal": "CAREER",
+      "level": "INTERMEDIATE",
+      "terms": [
+        "cybersecurity",
+        "security",
+        "secure"
+      ]
+    },
+    {
+      "id": "P05",
+      "categoryCode": "BUSINESS_FINANCE",
+      "topic": "Personal Finance",
+      "goal": "IMPROVE_MYSELF",
+      "level": "BEGINNER",
+      "terms": [
+        "personal finance",
+        "budget",
+        "saving",
+        "investing"
+      ]
+    },
+    {
+      "id": "P06",
+      "categoryCode": "BUSINESS_FINANCE",
+      "topic": "Entrepreneurship",
+      "goal": "CAREER",
+      "level": "BEGINNER",
+      "terms": [
+        "entrepreneur",
+        "startup",
+        "start a business"
+      ]
+    },
+    {
+      "id": "P07",
+      "categoryCode": "BUSINESS_FINANCE",
+      "topic": "Marketing",
+      "goal": "LEARN",
+      "level": "INTERMEDIATE",
+      "terms": [
+        "marketing",
+        "market research"
+      ]
+    },
+    {
+      "id": "P08",
+      "categoryCode": "BUSINESS_FINANCE",
+      "topic": "Business Strategy",
+      "goal": "EXPLORE",
+      "level": "INTERMEDIATE",
+      "terms": [
+        "business strategy",
+        "management",
+        "business ethics"
+      ]
+    },
+    {
+      "id": "P09",
+      "categoryCode": "LEARNING_CAREER",
+      "topic": "Study Skills",
+      "goal": "LEARN",
+      "level": "BEGINNER",
+      "terms": [
+        "study",
+        "learning",
+        "academic success"
+      ]
+    },
+    {
+      "id": "P10",
+      "categoryCode": "LEARNING_CAREER",
+      "topic": "Career Development",
+      "goal": "CAREER",
+      "level": "BEGINNER",
+      "terms": [
+        "career",
+        "job search"
+      ]
+    },
+    {
+      "id": "P11",
+      "categoryCode": "LEARNING_CAREER",
+      "topic": "Interview Preparation",
+      "goal": "CAREER",
+      "level": "INTERMEDIATE",
+      "terms": [
+        "interview",
+        "resume"
+      ]
+    },
+    {
+      "id": "P12",
+      "categoryCode": "LEARNING_CAREER",
+      "topic": "Communication",
+      "goal": "IMPROVE_MYSELF",
+      "level": "BEGINNER",
+      "terms": [
+        "communication",
+        "presentation",
+        "public speaking"
+      ]
+    },
+    {
+      "id": "P13",
+      "categoryCode": "HEALTH_FITNESS",
+      "topic": "Nutrition Basics",
+      "goal": "IMPROVE_MYSELF",
+      "level": "BEGINNER",
+      "terms": [
+        "nutrition",
+        "diet",
+        "food",
+        "healthy eating"
+      ]
+    },
+    {
+      "id": "P14",
+      "categoryCode": "HEALTH_FITNESS",
+      "topic": "Fitness",
+      "goal": "EXPLORE",
+      "level": "INTERMEDIATE",
+      "terms": [
+        "fitness",
+        "exercise",
+        "workout",
+        "physical activity"
+      ]
+    },
+    {
+      "id": "P15",
+      "categoryCode": "HEALTH_FITNESS",
+      "topic": "Sleep",
+      "goal": "IMPROVE_MYSELF",
+      "level": "BEGINNER",
+      "terms": [
+        "sleep",
+        "insomnia",
+        "circadian"
+      ]
+    },
+    {
+      "id": "P16",
+      "categoryCode": "HEALTH_FITNESS",
+      "topic": "Wellness",
+      "goal": "LEARN",
+      "level": "BEGINNER",
+      "terms": [
+        "wellness",
+        "mental health",
+        "stress",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "P17",
+      "categoryCode": "CREATIVE_LIFESTYLE",
+      "topic": "Design",
+      "goal": "LEARN",
+      "level": "BEGINNER",
+      "terms": [
+        "design",
+        "visual art",
+        "drawing"
+      ]
+    },
+    {
+      "id": "P18",
+      "categoryCode": "CREATIVE_LIFESTYLE",
+      "topic": "Photography",
+      "goal": "CAREER",
+      "level": "INTERMEDIATE",
+      "terms": [
+        "photography",
+        "photo",
+        "camera"
+      ]
+    },
+    {
+      "id": "P19",
+      "categoryCode": "CREATIVE_LIFESTYLE",
+      "topic": "Writing",
+      "goal": "IMPROVE_MYSELF",
+      "level": "INTERMEDIATE",
+      "terms": [
+        "writing",
+        "story",
+        "fiction",
+        "poetry"
+      ]
+    },
+    {
+      "id": "P20",
+      "categoryCode": "CREATIVE_LIFESTYLE",
+      "topic": "Hobbies",
+      "goal": "EXPLORE",
+      "level": "BEGINNER",
+      "terms": [
+        "hobbies",
+        "hobby",
+        "craft",
+        "gardening",
+        "cooking"
+      ]
+    }
+  ]
+}

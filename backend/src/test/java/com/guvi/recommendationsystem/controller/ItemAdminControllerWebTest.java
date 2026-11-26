@@ -41,6 +41,25 @@ class ItemAdminControllerWebTest {
     void authVersionIsCurrent() { when(userDao.findAuthVersion(21L)).thenReturn(OptionalInt.of(1)); }
 
     @Test
+    void singleRecordReloadRequiresTheSameAdminAuthorizationAsCatalogWrites() throws Exception {
+        mockMvc.perform(org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get("/api/admin/items/7"))
+                .andExpect(status().isUnauthorized());
+        mockMvc.perform(org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get("/api/admin/items/7")
+                .sessionAttr("authenticatedUserId",21L).sessionAttr("authenticatedUserRole","USER"))
+                .andExpect(status().isForbidden());
+        verifyNoInteractions(itemService);
+        var item=new com.guvi.recommendationsystem.model.CatalogItem(7,1,"Paused resource",null,
+                com.guvi.recommendationsystem.model.ItemType.GUIDE,"https://example.test/resource",null,false,
+                java.time.LocalDateTime.of(2026,1,1,0,0),java.time.LocalDateTime.of(2026,1,1,0,0));
+        when(itemService.get(7)).thenReturn(item);
+        mockMvc.perform(org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get("/api/admin/items/7")
+                .sessionAttr("authenticatedUserId",21L).sessionAttr("authenticatedUserRole","ADMIN"))
+                .andExpect(status().isOk()).andExpect(jsonPath("$.itemId").value(7))
+                .andExpect(jsonPath("$.active").value(false));
+        verify(itemService).get(7);
+    }
+
+    @Test
     void csvPreviewRequiresAdminAndDoesNotReachServiceWithoutSession() throws Exception {
         mockMvc.perform(post("/api/admin/items/import/preview")
                         .contentType("application/json").content("{\"csv\":\"x\"}"))

@@ -10,7 +10,6 @@ import com.guvi.recommendationsystem.model.CatalogCsvRequest;
 import com.guvi.recommendationsystem.model.CatalogCsvPreview;
 import com.guvi.recommendationsystem.model.CatalogCsvImportResult;
 import com.guvi.recommendationsystem.model.CatalogPage;
-import com.guvi.recommendationsystem.model.CatalogSort;
 import com.guvi.recommendationsystem.model.ItemRequest;
 import com.guvi.recommendationsystem.model.ItemType;
 import com.guvi.recommendationsystem.service.ItemService;
@@ -54,6 +53,13 @@ public class ItemController {
     @GetMapping("/admin/items/composition")
     public List<java.util.Map<String,Object>> adminComposition(HttpServletRequest request){
         sessionAccess.requireAdmin(request);return adminCatalog.composition();
+    }
+
+    /** Reloads one editor record, including paused resources, without downloading the legacy full catalog. */
+    @GetMapping("/admin/items/{itemId}")
+    public CatalogItem adminItem(@PathVariable long itemId, HttpServletRequest request) {
+        sessionAccess.requireAdmin(request);
+        return itemService.get(itemId);
     }
 
     public ItemController(ItemService itemService, SessionAccess sessionAccess, CatalogCsvService catalogCsvService) {

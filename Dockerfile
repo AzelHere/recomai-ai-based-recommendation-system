@@ -10,6 +10,7 @@ WORKDIR /app
 ENV SERVER_PORT=8080
 ENV SESSION_COOKIE_SECURE=true
 RUN apt-get update \
+ && apt-get upgrade -y --no-install-recommends \
     && apt-get install -y --no-install-recommends curl perl-base \
     && rm -f /usr/bin/pebble \
     && rm -rf /var/lib/apt/lists/* \

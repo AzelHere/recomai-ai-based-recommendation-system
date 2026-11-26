@@ -1,0 +1,12 @@
+{
+  "exactNullAwareSortedBinaryRowsCompared": true,
+  "tables": 30,
+  "originalDatabaseUnchanged": true,
+  "migrationHashesMatch": true,
+  "catalog": {
+    "total": 2365,
+    "active": 2365,
+    "articles": 505
+  },
+  "privateHashesPublished": false
+}

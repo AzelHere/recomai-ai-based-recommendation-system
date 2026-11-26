@@ -7,8 +7,6 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
-import java.sql.PreparedStatement;
-import java.sql.Statement;
 import java.util.List;
 import java.util.Optional;
 
@@ -61,10 +59,10 @@ public class JdbcInterestDao implements InterestDao {
     public Interest insert(String name) {
         KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbcTemplate.update(connection -> {
-            PreparedStatement statement = connection.prepareStatement(
-                    "INSERT INTO interests (name) VALUES (?)", Statement.RETURN_GENERATED_KEYS);
+            return com.guvi.recommendationsystem.dao.JdbcStatements.generated(connection,
+                    "INSERT INTO interests (name) VALUES (?)", statement -> {
             statement.setString(1, name);
-            return statement;
+            });
         }, keyHolder);
         Number id = keyHolder.getKey();
         if (id == null) {

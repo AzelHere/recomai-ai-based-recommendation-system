@@ -18,6 +18,7 @@ jobs:
           cache: maven
       - run: sh mvnw -B -f backend/pom.xml clean verify
       - run: sh mvnw -B -f backend/pom.xml com.github.spotbugs:spotbugs-maven-plugin:4.10.5.0:spotbugs
+      - run: python3 scripts/check-static-analysis.py
       - run: python3 scripts/check-publication.py
       - uses: actions/upload-artifact@v4
         if: always()
@@ -47,9 +48,16 @@ jobs:
           echo "DB_PASSWORD=$(openssl rand -hex 24)" >> .env
           echo "MYSQL_ROOT_PASSWORD=$(openssl rand -hex 24)" >> .env
           echo "COMPOSE_PROFILES=local-mail" >> .env
+      - run: docker build -t recomai-ci:local .
+      - run: docker build -f Dockerfile.coverage --build-arg APP_IMAGE=recomai-ci:local -t recomai-ci-coverage:local .
       - run: npm run test:e2e -- --workers=${{ matrix.workers }}
+        env:
+          E2E_EXISTING_IMAGE: recomai-ci-coverage:local
+          E2E_COVERAGE_DIR: target/ci-coverage
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: browser-diagnostics-${{ matrix.workers }}-workers
-          path: test-results/
+          path: |
+            test-results/
+            target/ci-coverage/

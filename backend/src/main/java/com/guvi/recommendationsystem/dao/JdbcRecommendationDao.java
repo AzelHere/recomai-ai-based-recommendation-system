@@ -12,8 +12,6 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
-import java.sql.PreparedStatement;
-import java.sql.Statement;
 import java.math.BigDecimal;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -346,12 +344,11 @@ public class JdbcRecommendationDao implements RecommendationDao {
     public long createBatch(long userId, String algorithmVersion) {
         KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbcTemplate.update(connection -> {
-            PreparedStatement statement = connection.prepareStatement(
-                    "INSERT INTO recommendation_batches (user_id, algorithm_version) VALUES (?, ?)",
-                    Statement.RETURN_GENERATED_KEYS);
+            return com.guvi.recommendationsystem.dao.JdbcStatements.generated(connection,
+                    "INSERT INTO recommendation_batches (user_id, algorithm_version) VALUES (?, ?)", statement -> {
             statement.setLong(1, userId);
             statement.setString(2, algorithmVersion);
-            return statement;
+            });
         }, keyHolder);
         Number generatedId = keyHolder.getKey();
         if (generatedId == null) throw new IllegalStateException("The database did not return the new recommendation batch ID.");
@@ -362,12 +359,12 @@ public class JdbcRecommendationDao implements RecommendationDao {
     public PersonalizedRecommendation save(long userId, long batchId, RecommendationDraft recommendation) {
         KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbcTemplate.update(connection -> {
-            PreparedStatement statement = connection.prepareStatement("""
+            return com.guvi.recommendationsystem.dao.JdbcStatements.generated(connection, """
                     INSERT INTO recommendations
                         (batch_id, user_id, item_id, score, reason, reason_type, bucket_type, algorithm_version,
                          explanation_json)
                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-                    """, Statement.RETURN_GENERATED_KEYS);
+                    """, statement -> {
             statement.setLong(1, batchId);
             statement.setLong(2, userId);
             statement.setLong(3, recommendation.itemId());
@@ -377,7 +374,7 @@ public class JdbcRecommendationDao implements RecommendationDao {
             statement.setString(7, recommendation.bucketType());
             statement.setString(8, "hybrid-metadata-v4");
             statement.setString(9, writeBreakdown(recommendation.scoreBreakdown()));
-            return statement;
+            });
         }, keyHolder);
         Number generatedId = keyHolder.getKey();
         if (generatedId == null) throw new IllegalStateException("The database did not return the new recommendation ID.");

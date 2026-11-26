@@ -10,7 +10,6 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import tools.jackson.databind.json.JsonMapper;
 import java.util.*;
 import java.math.BigDecimal;
-import java.sql.Statement;
 import java.nio.charset.StandardCharsets;
 
 /** Reviews licensed metadata before importing it through the existing item service.
@@ -25,7 +24,11 @@ public class CatalogIngestionService {
     private final JsonMapper json=JsonMapper.builder().build();
     public CatalogIngestionService(JdbcTemplate jdbc,ItemService items){this.jdbc=jdbc;this.items=items;}
     public record Row(int number,String title,String decision,String reason) { }
-    public record Preview(String sha256,int imported,int existing,int review,boolean canImport,List<Row> rows) { }
+    public record Preview(String sha256,int imported,int existing,int review,boolean canImport,List<Row> rows) {
+    public Preview {
+        rows = rows == null ? null : java.util.Collections.unmodifiableList(new java.util.ArrayList<>(rows));
+    }
+ }
     public record ImportResult(long batchId,int imported,int skipped,int review,boolean repeated) { }
 
     public List<Map<String,Object>> sources(){return jdbc.queryForList("SELECT * FROM catalog_sources ORDER BY source_id");}
@@ -33,6 +36,10 @@ public class CatalogIngestionService {
     public List<Map<String,Object>> reviews(){return jdbc.queryForList("SELECT * FROM catalog_import_reviews ORDER BY last_seen_at DESC,source_id,external_id LIMIT 100");}
     public List<Map<String,Object>> stats(){return jdbc.queryForList("SELECT s.source_id,s.name,s.license,COUNT(p.item_id) resources,SUM(p.url_status IN ('ACCESSIBLE','REDIRECTED')) verified FROM catalog_sources s LEFT JOIN resource_provenance p ON p.source_id=s.source_id GROUP BY s.source_id,s.name,s.license ORDER BY s.source_id");}
     public Map<String,Object> provenance(long id){return jdbc.queryForList("SELECT p.*,s.name source_name,s.license_url FROM resource_provenance p JOIN catalog_sources s ON s.source_id=p.source_id WHERE p.item_id=?",id).stream().findFirst().orElse(Map.of());}
+    /** Stored, time-bound HTTP observations; restrictions and unknowns are not evidence of a broken resource. */
+    public List<Map<String,Object>> linkHealth(){
+        return jdbc.queryForList("SELECT source_id,COALESCE(url_status,'NOT_CHECKED') AS status,COUNT(*) AS resources FROM resource_provenance GROUP BY source_id,url_status ORDER BY source_id,url_status");
+    }
 
     public Preview preview(List<EducationalResource> input) {
         if(input==null || input.isEmpty() || input.size()>500)throw new InvalidUserInputException("Supply 1–500 source records per batch.");
@@ -92,7 +99,7 @@ public class CatalogIngestionService {
         var old=jdbc.queryForList("SELECT batch_id,imported_count,skipped_count,review_count FROM catalog_import_batches WHERE dataset_sha256=?",preview.sha256());
         if(!old.isEmpty()){var row=old.getFirst();return new ImportResult(((Number)row.get("batch_id")).longValue(),0,input.size()-preview.review(),preview.review(),true);}
         var key=new GeneratedKeyHolder();
-        jdbc.update(c->{var s=c.prepareStatement("INSERT INTO catalog_import_batches(dataset_sha256,imported_count,skipped_count,review_count) VALUES(?,?,?,?)",Statement.RETURN_GENERATED_KEYS);s.setString(1,preview.sha256());s.setInt(2,preview.imported());s.setInt(3,preview.existing());s.setInt(4,preview.review());return s;},key);
+        jdbc.update(c->{return com.guvi.recommendationsystem.dao.JdbcStatements.generated(c, "INSERT INTO catalog_import_batches(dataset_sha256,imported_count,skipped_count,review_count) VALUES(?,?,?,?)", s -> {s.setString(1,preview.sha256());s.setInt(2,preview.imported());s.setInt(3,preview.existing());s.setInt(4,preview.review());});},key);
         long batch=Objects.requireNonNull(key.getKey()).longValue();
         var sourceMap=new HashMap<String,String>();sources().forEach(s->sourceMap.put((String)s.get("source_id"),(String)s.get("name")));
         var batchTitles=new HashSet<String>();int imported=0,skipped=0,review=0;

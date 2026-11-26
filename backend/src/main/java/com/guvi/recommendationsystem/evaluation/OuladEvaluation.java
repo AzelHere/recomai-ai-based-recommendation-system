@@ -32,7 +32,7 @@ public final class OuladEvaluation {
             var candidates=popularity.keySet().stream().filter(i->!known.contains(i)).toList();
             for(String algorithm:List.of("popularity","item_cosine")) {
                 var scores=new HashMap<Long,Double>();
-                for(long candidate:candidates){double score=algorithm.equals("popularity")?popularity.get(candidate):0;
+                for(long candidate:candidates){double score=algorithm.equals("popularity")?popularity.get(candidate).doubleValue():0.0;
                     if(algorithm.equals("item_cosine"))for(long seed:known)score+=cooccurrence.getOrDefault(seed,Map.of()).getOrDefault(candidate,0)/Math.sqrt((double)popularity.get(seed)*popularity.get(candidate));
                     scores.put(candidate,score);
                 }

@@ -1,5 +1,5 @@
 import { spawnSync } from 'node:child_process';
-import { existsSync } from 'node:fs';
+import { existsSync, mkdirSync } from 'node:fs';
 import net from 'node:net';
 import path from 'node:path';
 import { randomBytes } from 'node:crypto';
@@ -74,6 +74,20 @@ try {
     // The backend may not have started if Compose setup itself failed.
   }
 } finally {
+  try {
+    if (process.env.E2E_COVERAGE_DIR) {
+      if (!process.env.E2E_EXISTING_IMAGE) throw new Error('Coverage collection requires an explicitly instrumented test image.');
+      const coverageDirectory = path.resolve(projectRoot, process.env.E2E_COVERAGE_DIR);
+      if (!coverageDirectory.startsWith(projectRoot + path.sep)) throw new Error('Coverage output must stay inside the workspace.');
+      mkdirSync(coverageDirectory, { recursive: true });
+      // The agent flushes on graceful shutdown; retain the stopped container until its file is copied.
+      run('docker', ['compose', '-p', projectName, 'stop', 'backend'], composeEnv);
+      run('docker', ['cp', `${projectName}-backend-1:/tmp/jacoco-e2e.exec`, path.join(coverageDirectory, `${projectName}.exec`)], composeEnv);
+    }
+  } catch (error) {
+    failed = true;
+    console.error(`Coverage collection failed: ${error.message}`);
+  }
   try {
     run('docker', ['compose', '-p', projectName, 'down', '--remove-orphans'], composeEnv);
     console.log(`Stopped isolated E2E containers and retained their MySQL volume (${projectName}_mysql_data).`);

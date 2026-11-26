@@ -1,0 +1,801 @@
+profile	algorithm	rank	canonicalUrl	title	grade	type	provider
+P01	popularity	1	https://dev.java/learn/	Getting Started with Java	3	GUIDE	dev.java
+P01	popularity	2	https://spring.io/guides/gs/rest-service/	Spring Guides: Building a RESTful Web Service	1	DOCUMENTATION	Spring
+P01	popularity	3	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P01	popularity	4	https://www.nhs.uk/better-health/get-active/home-workout-videos/	NHS Home Workout Videos	0	VIDEO	NHS
+P01	popularity	5	https://www.who.int/publications/i/item/9789240015128	WHO Physical Activity Guidelines	0	DOCUMENTATION	World Health Organization
+P01	popularity	6	https://www.nps.gov/findapark/index.htm	National Park Service: Find a Park	0	TOOL	National Park Service
+P01	popularity	7	https://www.exploratorium.edu/learn	Exploratorium Learning Resources	0	RESOURCE	Exploratorium
+P01	popularity	8	https://ocw.mit.edu/courses/6-092-java-preparation-for-6-170-january-iap-2006	Java Preparation for 6.170	3	COURSE	MIT OpenCourseWare
+P01	popularity	9	https://ocw.mit.edu/courses/6-088-introduction-to-c-memory-management-and-c-object-oriented-programming-january-iap-2010	Introduction to C Memory Management and C++ Object-Oriented Programming	1	COURSE	MIT OpenCourseWare
+P01	popularity	10	https://ocw.mit.edu/courses/mas-961-numeric-photography-fall-1998	Numeric Photography	1	COURSE	MIT OpenCourseWare
+P01	keyword	1	https://dev.java/learn/	Getting Started with Java	3	GUIDE	dev.java
+P01	keyword	2	https://spring.io/guides/gs/rest-service/	Spring Guides: Building a RESTful Web Service	1	DOCUMENTATION	Spring
+P01	keyword	3	https://ocw.mit.edu/courses/6-092-java-preparation-for-6-170-january-iap-2006	Java Preparation for 6.170	3	COURSE	MIT OpenCourseWare
+P01	keyword	4	https://ocw.mit.edu/courses/6-088-introduction-to-c-memory-management-and-c-object-oriented-programming-january-iap-2010	Introduction to C Memory Management and C++ Object-Oriented Programming	1	COURSE	MIT OpenCourseWare
+P01	keyword	5	https://ocw.mit.edu/courses/mas-961-numeric-photography-fall-1998	Numeric Photography	1	COURSE	MIT OpenCourseWare
+P01	keyword	6	https://ocw.mit.edu/courses/6-370-the-battlecode-programming-competition-january-iap-2013	The Battlecode Programming Competition	1	COURSE	MIT OpenCourseWare
+P01	keyword	7	https://ocw.mit.edu/courses/1-00-introduction-to-computers-and-engineering-problem-solving-spring-2012	Introduction to Computers and Engineering Problem Solving	1	COURSE	MIT OpenCourseWare
+P01	keyword	8	https://ocw.mit.edu/courses/20-453j-biomedical-information-technology-fall-2008	Biomedical Information Technology	1	COURSE	MIT OpenCourseWare
+P01	keyword	9	https://ocw.mit.edu/courses/6-092-introduction-to-programming-in-java-january-iap-2010	Introduction to Programming in Java	3	COURSE	MIT OpenCourseWare
+P01	keyword	10	https://learn.microsoft.com/en-us/azure/developer/java/fundamentals/java-azure-tools	Azure Tools for Java Developers - Java on Azure	3	ARTICLE	Microsoft Learn
+P01	content	1	https://dev.java/learn/	Getting Started with Java	3	GUIDE	dev.java
+P01	content	2	https://learn.microsoft.com/en-us/azure/developer/java/fundamentals/java-support-on-azure	Java JDKs Support for Azure Development - Java on Azure	3	ARTICLE	Microsoft Learn
+P01	content	3	https://openstax.org/books/introduction-computer-science/pages/7-1-programming-language-foundations	7.1 Programming Language Foundations	2	ARTICLE	OpenStax
+P01	content	4	https://learn.microsoft.com/en-us/azure/developer/java/fundamentals/java-azure-tools	Azure Tools for Java Developers - Java on Azure	3	ARTICLE	Microsoft Learn
+P01	content	5	https://learn.microsoft.com/en-us/azure/developer/java/fundamentals/java-jdk-install	Install a JDK for Azure Development - Java on Azure	3	ARTICLE	Microsoft Learn
+P01	content	6	https://learn.microsoft.com/en-us/azure/developer/java/fundamentals/java-get-started-with-logzio	Getting Started with Logz.io for Java Apps Running on Azure - Java on Azure	3	ARTICLE	Microsoft Learn
+P01	content	7	https://learn.microsoft.com/en-us/azure/developer/java/fundamentals/java-azure-keyvault-ssl-integration-jvm	Use Azure Key Vault to Deliver TLS/SSL Certificates to the JVM - Java on Azure	3	ARTICLE	Microsoft Learn
+P01	content	8	https://ocw.mit.edu/courses/6-092-introduction-to-programming-in-java-january-iap-2010	Introduction to Programming in Java	3	COURSE	MIT OpenCourseWare
+P01	content	9	https://learn.microsoft.com/en-us/azure/developer/java/fundamentals/java-azure-keyvault-tomcat-integration	Use Azure Key Vault to Deliver TLS/SSL Certificates to Apache Tomcat - Java on Azure	3	ARTICLE	Microsoft Learn
+P01	content	10	https://spring.io/guides/gs/rest-service/	Spring Guides: Building a RESTful Web Service	1	DOCUMENTATION	Spring
+P01	hybrid	1	https://learn.microsoft.com/en-us/azure/developer/java/fundamentals/java-support-on-azure	Java JDKs Support for Azure Development - Java on Azure	3	ARTICLE	Microsoft Learn
+P01	hybrid	2	https://openstax.org/books/introduction-computer-science/pages/7-1-programming-language-foundations	7.1 Programming Language Foundations	2	ARTICLE	OpenStax
+P01	hybrid	3	https://learn.microsoft.com/en-us/azure/developer/java/fundamentals/java-azure-tools	Azure Tools for Java Developers - Java on Azure	3	ARTICLE	Microsoft Learn
+P01	hybrid	4	https://learn.microsoft.com/en-us/azure/developer/java/fundamentals/java-jdk-install	Install a JDK for Azure Development - Java on Azure	3	ARTICLE	Microsoft Learn
+P01	hybrid	5	https://learn.microsoft.com/en-us/azure/developer/java/fundamentals/java-get-started-with-logzio	Getting Started with Logz.io for Java Apps Running on Azure - Java on Azure	3	ARTICLE	Microsoft Learn
+P01	hybrid	6	https://learn.microsoft.com/en-us/azure/developer/java/fundamentals/java-azure-keyvault-ssl-integration-jvm	Use Azure Key Vault to Deliver TLS/SSL Certificates to the JVM - Java on Azure	3	ARTICLE	Microsoft Learn
+P01	hybrid	7	https://ocw.mit.edu/courses/6-092-introduction-to-programming-in-java-january-iap-2010	Introduction to Programming in Java	3	COURSE	MIT OpenCourseWare
+P01	hybrid	8	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P01	hybrid	9	https://learn.microsoft.com/en-us/azure/developer/java/fundamentals/java-azure-keyvault-tomcat-integration	Use Azure Key Vault to Deliver TLS/SSL Certificates to Apache Tomcat - Java on Azure	3	ARTICLE	Microsoft Learn
+P01	hybrid	10	https://ocw.mit.edu/courses/6-092-java-preparation-for-6-170-january-iap-2006	Java Preparation for 6.170	3	COURSE	MIT OpenCourseWare
+P02	popularity	1	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P02	popularity	2	https://www.nhs.uk/better-health/get-active/home-workout-videos/	NHS Home Workout Videos	0	VIDEO	NHS
+P02	popularity	3	https://www.who.int/publications/i/item/9789240015128	WHO Physical Activity Guidelines	0	DOCUMENTATION	World Health Organization
+P02	popularity	4	https://www.nps.gov/findapark/index.htm	National Park Service: Find a Park	0	TOOL	National Park Service
+P02	popularity	5	https://www.exploratorium.edu/learn	Exploratorium Learning Resources	0	RESOURCE	Exploratorium
+P02	popularity	6	https://ocw.mit.edu/courses/1-264j-database-internet-and-systems-integration-technologies-fall-2013	Database, Internet, and Systems Integration Technologies	2	COURSE	MIT OpenCourseWare
+P02	popularity	7	https://ocw.mit.edu/courses/11-521-spatial-database-management-and-advanced-geographic-information-systems-spring-2003	Spatial Database Management and Advanced Geographic Information Systems	2	COURSE	MIT OpenCourseWare
+P02	popularity	8	https://ocw.mit.edu/courses/1-204-computer-algorithms-in-systems-engineering-spring-2010	Computer Algorithms in Systems Engineering	1	COURSE	MIT OpenCourseWare
+P02	popularity	9	https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026	The Engineering Student’s Guide to Effective Technical Communication	0	COURSE	MIT OpenCourseWare
+P02	popularity	10	https://medlineplus.gov/cholesterol.html	Cholesterol	0	GUIDE	MedlinePlus, National Library of Medicine
+P02	keyword	1	https://ocw.mit.edu/courses/1-264j-database-internet-and-systems-integration-technologies-fall-2013	Database, Internet, and Systems Integration Technologies	2	COURSE	MIT OpenCourseWare
+P02	keyword	2	https://ocw.mit.edu/courses/11-521-spatial-database-management-and-advanced-geographic-information-systems-spring-2003	Spatial Database Management and Advanced Geographic Information Systems	2	COURSE	MIT OpenCourseWare
+P02	keyword	3	https://learn.microsoft.com/en-us/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview	What is Azure SQL?	3	ARTICLE	Microsoft Learn
+P02	keyword	4	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P02	keyword	5	https://www.nhs.uk/better-health/get-active/home-workout-videos/	NHS Home Workout Videos	0	VIDEO	NHS
+P02	keyword	6	https://www.who.int/publications/i/item/9789240015128	WHO Physical Activity Guidelines	0	DOCUMENTATION	World Health Organization
+P02	keyword	7	https://www.nps.gov/findapark/index.htm	National Park Service: Find a Park	0	TOOL	National Park Service
+P02	keyword	8	https://www.exploratorium.edu/learn	Exploratorium Learning Resources	0	RESOURCE	Exploratorium
+P02	keyword	9	https://ocw.mit.edu/courses/1-204-computer-algorithms-in-systems-engineering-spring-2010	Computer Algorithms in Systems Engineering	1	COURSE	MIT OpenCourseWare
+P02	keyword	10	https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026	The Engineering Student’s Guide to Effective Technical Communication	0	COURSE	MIT OpenCourseWare
+P02	content	1	https://learn.microsoft.com/en-us/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview	What is Azure SQL?	3	ARTICLE	Microsoft Learn
+P02	content	2	https://ocw.mit.edu/courses/1-264j-database-internet-and-systems-integration-technologies-fall-2013	Database, Internet, and Systems Integration Technologies	2	COURSE	MIT OpenCourseWare
+P02	content	3	https://ocw.mit.edu/courses/11-521-spatial-database-management-and-advanced-geographic-information-systems-spring-2003	Spatial Database Management and Advanced Geographic Information Systems	2	COURSE	MIT OpenCourseWare
+P02	content	4	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P02	content	5	https://www.nhs.uk/better-health/get-active/home-workout-videos/	NHS Home Workout Videos	0	VIDEO	NHS
+P02	content	6	https://www.who.int/publications/i/item/9789240015128	WHO Physical Activity Guidelines	0	DOCUMENTATION	World Health Organization
+P02	content	7	https://www.nps.gov/findapark/index.htm	National Park Service: Find a Park	0	TOOL	National Park Service
+P02	content	8	https://www.exploratorium.edu/learn	Exploratorium Learning Resources	0	RESOURCE	Exploratorium
+P02	content	9	https://ocw.mit.edu/courses/1-204-computer-algorithms-in-systems-engineering-spring-2010	Computer Algorithms in Systems Engineering	1	COURSE	MIT OpenCourseWare
+P02	content	10	https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026	The Engineering Student’s Guide to Effective Technical Communication	0	COURSE	MIT OpenCourseWare
+P02	hybrid	1	https://learn.microsoft.com/en-us/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview	What is Azure SQL?	3	ARTICLE	Microsoft Learn
+P02	hybrid	2	https://ocw.mit.edu/courses/1-264j-database-internet-and-systems-integration-technologies-fall-2013	Database, Internet, and Systems Integration Technologies	2	COURSE	MIT OpenCourseWare
+P02	hybrid	3	https://ocw.mit.edu/courses/11-521-spatial-database-management-and-advanced-geographic-information-systems-spring-2003	Spatial Database Management and Advanced Geographic Information Systems	2	COURSE	MIT OpenCourseWare
+P02	hybrid	4	https://ocw.mit.edu/courses/1-204-computer-algorithms-in-systems-engineering-spring-2010	Computer Algorithms in Systems Engineering	1	COURSE	MIT OpenCourseWare
+P02	hybrid	5	https://openstax.org/books/introduction-computer-science/pages/8-3-relational-database-management-systems	8.3 Relational Database Management Systems	3	ARTICLE	OpenStax
+P02	hybrid	6	https://openstax.org/books/introduction-computer-science/pages/8-4-nonrelational-database-management-systems	8.4 Nonrelational Database Management Systems	1	ARTICLE	OpenStax
+P02	hybrid	7	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P02	hybrid	8	https://www.nhs.uk/better-health/get-active/home-workout-videos/	NHS Home Workout Videos	0	VIDEO	NHS
+P02	hybrid	9	https://www.nps.gov/findapark/index.htm	National Park Service: Find a Park	0	TOOL	National Park Service
+P02	hybrid	10	https://www.who.int/publications/i/item/9789240015128	WHO Physical Activity Guidelines	0	DOCUMENTATION	World Health Organization
+P03	popularity	1	https://developers.google.com/machine-learning/crash-course	Google Machine Learning Crash Course	3	COURSE	Google
+P03	popularity	2	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P03	popularity	3	https://www.nhs.uk/better-health/get-active/home-workout-videos/	NHS Home Workout Videos	0	VIDEO	NHS
+P03	popularity	4	https://www.who.int/publications/i/item/9789240015128	WHO Physical Activity Guidelines	0	DOCUMENTATION	World Health Organization
+P03	popularity	5	https://www.nps.gov/findapark/index.htm	National Park Service: Find a Park	0	TOOL	National Park Service
+P03	popularity	6	https://www.exploratorium.edu/learn	Exploratorium Learning Resources	0	RESOURCE	Exploratorium
+P03	popularity	7	https://ocw.mit.edu/courses/15-097-prediction-machine-learning-and-statistics-spring-2012	Prediction: Machine Learning and Statistics	3	COURSE	MIT OpenCourseWare
+P03	popularity	8	https://ocw.mit.edu/courses/10-01-ethics-for-engineers-artificial-intelligence-spring-2020	Ethics for Engineers: Artificial Intelligence	3	COURSE	MIT OpenCourseWare
+P03	popularity	9	https://ocw.mit.edu/courses/6-s897-machine-learning-for-healthcare-spring-2019	Machine Learning for Healthcare	3	COURSE	MIT OpenCourseWare
+P03	popularity	10	https://ocw.mit.edu/courses/6-825-techniques-in-artificial-intelligence-sma-5504-fall-2002	Techniques in Artificial Intelligence (SMA 5504)	3	COURSE	MIT OpenCourseWare
+P03	keyword	1	https://developers.google.com/machine-learning/crash-course	Google Machine Learning Crash Course	3	COURSE	Google
+P03	keyword	2	https://ocw.mit.edu/courses/15-097-prediction-machine-learning-and-statistics-spring-2012	Prediction: Machine Learning and Statistics	3	COURSE	MIT OpenCourseWare
+P03	keyword	3	https://ocw.mit.edu/courses/6-s897-machine-learning-for-healthcare-spring-2019	Machine Learning for Healthcare	3	COURSE	MIT OpenCourseWare
+P03	keyword	4	https://ocw.mit.edu/courses/6-s062-generative-artificial-intelligence-in-k12-education-fall-2023	Generative Artificial Intelligence in K–12 Education	3	COURSE	MIT OpenCourseWare
+P03	keyword	5	https://ocw.mit.edu/courses/6-867-machine-learning-fall-2006	Machine Learning	3	COURSE	MIT OpenCourseWare
+P03	keyword	6	https://ocw.mit.edu/courses/6-036-introduction-to-machine-learning-fall-2020	Introduction to Machine Learning	3	COURSE	MIT OpenCourseWare
+P03	keyword	7	https://ocw.mit.edu/courses/18-657-mathematics-of-machine-learning-fall-2015	Mathematics of Machine Learning	3	COURSE	MIT OpenCourseWare
+P03	keyword	8	https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018	Matrix Methods in Data Analysis, Signal Processing, and Machine Learning	3	COURSE	MIT OpenCourseWare
+P03	keyword	9	https://ocw.mit.edu/courses/6-s980-machine-learning-for-inverse-graphics-fall-2022	Machine Learning for Inverse Graphics	3	COURSE	MIT OpenCourseWare
+P03	keyword	10	https://ocw.mit.edu/courses/res-ec-001-exploring-fairness-in-machine-learning-for-international-development-spring-2020	Exploring Fairness in Machine Learning for International Development	3	COURSE	MIT OpenCourseWare
+P03	content	1	https://ocw.mit.edu/courses/6-s897-machine-learning-for-healthcare-spring-2019	Machine Learning for Healthcare	3	COURSE	MIT OpenCourseWare
+P03	content	2	https://developers.google.com/machine-learning/crash-course	Google Machine Learning Crash Course	3	COURSE	Google
+P03	content	3	https://ocw.mit.edu/courses/6-867-machine-learning-fall-2006	Machine Learning	3	COURSE	MIT OpenCourseWare
+P03	content	4	https://ocw.mit.edu/courses/6-036-introduction-to-machine-learning-fall-2020	Introduction to Machine Learning	3	COURSE	MIT OpenCourseWare
+P03	content	5	https://ocw.mit.edu/courses/res-ec-001-exploring-fairness-in-machine-learning-for-international-development-spring-2020	Exploring Fairness in Machine Learning for International Development	3	COURSE	MIT OpenCourseWare
+P03	content	6	https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018	Matrix Methods in Data Analysis, Signal Processing, and Machine Learning	3	COURSE	MIT OpenCourseWare
+P03	content	7	https://ocw.mit.edu/courses/18-657-mathematics-of-machine-learning-fall-2015	Mathematics of Machine Learning	3	COURSE	MIT OpenCourseWare
+P03	content	8	https://ocw.mit.edu/courses/15-097-prediction-machine-learning-and-statistics-spring-2012	Prediction: Machine Learning and Statistics	3	COURSE	MIT OpenCourseWare
+P03	content	9	https://ocw.mit.edu/courses/6-s980-machine-learning-for-inverse-graphics-fall-2022	Machine Learning for Inverse Graphics	3	COURSE	MIT OpenCourseWare
+P03	content	10	https://ocw.mit.edu/courses/6-s062-generative-artificial-intelligence-in-k12-education-fall-2023	Generative Artificial Intelligence in K–12 Education	3	COURSE	MIT OpenCourseWare
+P03	hybrid	1	https://ocw.mit.edu/courses/6-s897-machine-learning-for-healthcare-spring-2019	Machine Learning for Healthcare	3	COURSE	MIT OpenCourseWare
+P03	hybrid	2	https://ocw.mit.edu/courses/6-867-machine-learning-fall-2006	Machine Learning	3	COURSE	MIT OpenCourseWare
+P03	hybrid	3	https://ocw.mit.edu/courses/6-036-introduction-to-machine-learning-fall-2020	Introduction to Machine Learning	3	COURSE	MIT OpenCourseWare
+P03	hybrid	4	https://ocw.mit.edu/courses/res-ec-001-exploring-fairness-in-machine-learning-for-international-development-spring-2020	Exploring Fairness in Machine Learning for International Development	3	COURSE	MIT OpenCourseWare
+P03	hybrid	5	https://ocw.mit.edu/courses/18-657-mathematics-of-machine-learning-fall-2015	Mathematics of Machine Learning	3	COURSE	MIT OpenCourseWare
+P03	hybrid	6	https://ocw.mit.edu/courses/15-097-prediction-machine-learning-and-statistics-spring-2012	Prediction: Machine Learning and Statistics	3	COURSE	MIT OpenCourseWare
+P03	hybrid	7	https://ocw.mit.edu/courses/6-s980-machine-learning-for-inverse-graphics-fall-2022	Machine Learning for Inverse Graphics	3	COURSE	MIT OpenCourseWare
+P03	hybrid	8	https://www.exploratorium.edu/learn	Exploratorium Learning Resources	0	RESOURCE	Exploratorium
+P03	hybrid	9	https://ocw.mit.edu/courses/6-s062-generative-artificial-intelligence-in-k12-education-fall-2023	Generative Artificial Intelligence in K–12 Education	3	COURSE	MIT OpenCourseWare
+P03	hybrid	10	https://developers.google.com/machine-learning/crash-course	Google Machine Learning Crash Course	3	COURSE	Google
+P04	popularity	1	https://owasp.org/www-project-top-ten/	OWASP Top Ten	2	DOCUMENTATION	OWASP
+P04	popularity	2	https://skillbuilder.aws/	AWS Skill Builder	2	COURSE	AWS
+P04	popularity	3	https://learn.microsoft.com/	Microsoft Learn: Azure Fundamentals	2	COURSE	Microsoft Learn
+P04	popularity	4	https://www.cloudskillsboost.google/	Google Cloud Skills Boost	2	COURSE	Google Cloud
+P04	popularity	5	https://linuxjourney.com/	Linux Journey	2	GUIDE	Linux Journey
+P04	popularity	6	https://portswigger.net/web-security	PortSwigger Web Security Academy	3	COURSE	PortSwigger
+P04	popularity	7	https://cheatsheetseries.owasp.org/	OWASP Cheat Sheet Series	2	DOCUMENTATION	OWASP
+P04	popularity	8	https://owasp.org/www-project-web-security-testing-guide/	OWASP Web Security Testing Guide	3	GUIDE	OWASP
+P04	popularity	9	https://www.nist.gov/cyberframework	NIST Cybersecurity Framework	3	GUIDE	NIST
+P04	popularity	10	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P04	keyword	1	https://skillbuilder.aws/	AWS Skill Builder	2	COURSE	AWS
+P04	keyword	2	https://learn.microsoft.com/	Microsoft Learn: Azure Fundamentals	2	COURSE	Microsoft Learn
+P04	keyword	3	https://www.cloudskillsboost.google/	Google Cloud Skills Boost	2	COURSE	Google Cloud
+P04	keyword	4	https://linuxjourney.com/	Linux Journey	2	GUIDE	Linux Journey
+P04	keyword	5	https://portswigger.net/web-security	PortSwigger Web Security Academy	3	COURSE	PortSwigger
+P04	keyword	6	https://cheatsheetseries.owasp.org/	OWASP Cheat Sheet Series	2	DOCUMENTATION	OWASP
+P04	keyword	7	https://owasp.org/www-project-web-security-testing-guide/	OWASP Web Security Testing Guide	3	GUIDE	OWASP
+P04	keyword	8	https://www.nist.gov/cyberframework	NIST Cybersecurity Framework	3	GUIDE	NIST
+P04	keyword	9	https://openstax.org/books/introduction-computer-science/pages/14-2-cybersecurity-deep-dive	14.2 Cybersecurity Deep Dive	3	ARTICLE	OpenStax
+P04	keyword	10	https://owasp.org/www-project-top-ten/	OWASP Top Ten	2	DOCUMENTATION	OWASP
+P04	content	1	https://www.nist.gov/cyberframework	NIST Cybersecurity Framework	3	GUIDE	NIST
+P04	content	2	https://openstax.org/books/introduction-computer-science/pages/14-2-cybersecurity-deep-dive	14.2 Cybersecurity Deep Dive	3	ARTICLE	OpenStax
+P04	content	3	https://owasp.org/www-project-web-security-testing-guide/	OWASP Web Security Testing Guide	3	GUIDE	OWASP
+P04	content	4	https://owasp.org/www-project-top-ten/	OWASP Top Ten	2	DOCUMENTATION	OWASP
+P04	content	5	https://portswigger.net/web-security	PortSwigger Web Security Academy	3	COURSE	PortSwigger
+P04	content	6	https://learn.microsoft.com/	Microsoft Learn: Azure Fundamentals	2	COURSE	Microsoft Learn
+P04	content	7	https://linuxjourney.com/	Linux Journey	2	GUIDE	Linux Journey
+P04	content	8	https://www.cloudskillsboost.google/	Google Cloud Skills Boost	2	COURSE	Google Cloud
+P04	content	9	https://cheatsheetseries.owasp.org/	OWASP Cheat Sheet Series	2	DOCUMENTATION	OWASP
+P04	content	10	https://skillbuilder.aws/	AWS Skill Builder	2	COURSE	AWS
+P04	hybrid	1	https://portswigger.net/web-security	PortSwigger Web Security Academy	3	COURSE	PortSwigger
+P04	hybrid	2	https://www.nist.gov/cyberframework	NIST Cybersecurity Framework	3	GUIDE	NIST
+P04	hybrid	3	https://learn.microsoft.com/	Microsoft Learn: Azure Fundamentals	2	COURSE	Microsoft Learn
+P04	hybrid	4	https://www.cloudskillsboost.google/	Google Cloud Skills Boost	2	COURSE	Google Cloud
+P04	hybrid	5	https://skillbuilder.aws/	AWS Skill Builder	2	COURSE	AWS
+P04	hybrid	6	https://owasp.org/www-project-web-security-testing-guide/	OWASP Web Security Testing Guide	3	GUIDE	OWASP
+P04	hybrid	7	https://cheatsheetseries.owasp.org/	OWASP Cheat Sheet Series	2	DOCUMENTATION	OWASP
+P04	hybrid	8	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P04	hybrid	9	https://owasp.org/www-project-top-ten/	OWASP Top Ten	2	DOCUMENTATION	OWASP
+P04	hybrid	10	https://linuxjourney.com/	Linux Journey	2	GUIDE	Linux Journey
+P05	popularity	1	https://www.consumerfinance.gov/consumer-tools/educator-tools/	Personal Finance Basics	3	GUIDE	CFPB
+P05	popularity	2	https://www.investor.gov/introduction-investing	Investing Basics	3	GUIDE	Investor.gov
+P05	popularity	3	https://www.consumerfinance.gov/consumer-tools/	CFPB Budgeting	2	TOOL	Consumer Financial Protection Bureau
+P05	popularity	4	https://www.consumerfinance.gov/	CFPB Saving	3	GUIDE	Consumer Financial Protection Bureau
+P05	popularity	5	https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/	CFPB Credit Reports and Scores	2	GUIDE	Consumer Financial Protection Bureau
+P05	popularity	6	https://www.khanacademy.org/college-careers-more/personal-finance	Khan Academy: Personal Finance	3	COURSE	Khan Academy
+P05	popularity	7	https://www.fdic.gov/consumer-resource-center/money-smart	FDIC Money Smart	2	COURSE	FDIC
+P05	popularity	8	https://www.finra.org/investors/investing/investing-basics	FINRA Investing Basics	3	GUIDE	FINRA
+P05	popularity	9	https://www.finra.org/investors/	FINRA Asset Allocation and Diversification	2	RESOURCE	FINRA
+P05	popularity	10	https://www.investor.gov/	Investor.gov: Investing Basics	3	GUIDE	Investor.gov
+P05	keyword	1	https://www.consumerfinance.gov/consumer-tools/educator-tools/	Personal Finance Basics	3	GUIDE	CFPB
+P05	keyword	2	https://www.consumerfinance.gov/consumer-tools/	CFPB Budgeting	2	TOOL	Consumer Financial Protection Bureau
+P05	keyword	3	https://www.consumerfinance.gov/	CFPB Saving	3	GUIDE	Consumer Financial Protection Bureau
+P05	keyword	4	https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/	CFPB Credit Reports and Scores	2	GUIDE	Consumer Financial Protection Bureau
+P05	keyword	5	https://www.khanacademy.org/college-careers-more/personal-finance	Khan Academy: Personal Finance	3	COURSE	Khan Academy
+P05	keyword	6	https://www.fdic.gov/consumer-resource-center/money-smart	FDIC Money Smart	2	COURSE	FDIC
+P05	keyword	7	https://www.finra.org/investors/investing/investing-basics	FINRA Investing Basics	3	GUIDE	FINRA
+P05	keyword	8	https://www.finra.org/investors/	FINRA Asset Allocation and Diversification	2	RESOURCE	FINRA
+P05	keyword	9	https://www.investor.gov/	Investor.gov: Investing Basics	3	GUIDE	Investor.gov
+P05	keyword	10	https://investor.vanguard.com/investor-resources-education	Vanguard Investor Education	2	RESOURCE	Vanguard
+P05	content	1	https://www.consumerfinance.gov/consumer-tools/educator-tools/	Personal Finance Basics	3	GUIDE	CFPB
+P05	content	2	https://www.khanacademy.org/college-careers-more/personal-finance	Khan Academy: Personal Finance	3	COURSE	Khan Academy
+P05	content	3	https://www.finra.org/investors/investing/investing-basics	FINRA Investing Basics	3	GUIDE	FINRA
+P05	content	4	https://corporatefinanceinstitute.com/resources/accounting/	CFI Accounting Resources	2	GUIDE	CFI
+P05	content	5	https://www.consumerfinance.gov/	CFPB Saving	3	GUIDE	Consumer Financial Protection Bureau
+P05	content	6	https://investor.vanguard.com/investor-resources-education	Vanguard Investor Education	2	RESOURCE	Vanguard
+P05	content	7	https://www.consumerfinance.gov/consumer-tools/	CFPB Budgeting	2	TOOL	Consumer Financial Protection Bureau
+P05	content	8	https://www.fdic.gov/consumer-resource-center/money-smart	FDIC Money Smart	2	COURSE	FDIC
+P05	content	9	https://www.khanacademy.org/economics-finance-domain/core-finance/taxes-topic	Khan Academy: Taxes	2	COURSE	Khan Academy
+P05	content	10	https://www.investor.gov/	Investor.gov: Investing Basics	3	GUIDE	Investor.gov
+P05	hybrid	1	https://www.finra.org/investors/investing/investing-basics	FINRA Investing Basics	3	GUIDE	FINRA
+P05	hybrid	2	https://www.consumerfinance.gov/consumer-tools/	CFPB Budgeting	2	TOOL	Consumer Financial Protection Bureau
+P05	hybrid	3	https://corporatefinanceinstitute.com/resources/accounting/	CFI Accounting Resources	2	GUIDE	CFI
+P05	hybrid	4	https://investor.vanguard.com/investor-resources-education	Vanguard Investor Education	2	RESOURCE	Vanguard
+P05	hybrid	5	https://www.khanacademy.org/economics-finance-domain/core-finance/taxes-topic	Khan Academy: Taxes	2	COURSE	Khan Academy
+P05	hybrid	6	https://www.investor.gov/	Investor.gov: Investing Basics	3	GUIDE	Investor.gov
+P05	hybrid	7	https://www.schwab.com/learn/story/investing-basics	Charles Schwab Investing Basics	3	GUIDE	Charles Schwab
+P05	hybrid	8	https://www.investor.gov/introduction-investing	Investing Basics	3	GUIDE	Investor.gov
+P05	hybrid	9	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P05	hybrid	10	https://www.finra.org/investors/	FINRA Asset Allocation and Diversification	2	RESOURCE	FINRA
+P06	popularity	1	https://www.strategyzer.com/	The Lean Startup: Build-Measure-Learn	3	RESOURCE	Strategyzer
+P06	popularity	2	https://www.sba.gov/business-guide/plan-your-business	SBA: Plan Your Business	2	GUIDE	U.S. Small Business Administration
+P06	popularity	3	https://www.sba.gov/business-guide/launch-your-business	SBA: Launch Your Business	2	GUIDE	U.S. Small Business Administration
+P06	popularity	4	https://www.sba.gov/business-guide/manage-your-business	SBA: Manage Your Business	2	GUIDE	U.S. Small Business Administration
+P06	popularity	5	https://www.score.org/resource/business-plan-template-startup-business	SCORE Business Plan Template	2	RESOURCE	SCORE
+P06	popularity	6	https://www.startupschool.org/	Y Combinator Startup School	3	COURSE	Y Combinator
+P06	popularity	7	https://www.ycombinator.com/library	Y Combinator Startup Library	3	RESOURCE	Y Combinator
+P06	popularity	8	https://openstax.org/details/books/entrepreneurship	OpenStax: Entrepreneurship	2	RESOURCE	OpenStax
+P06	popularity	9	https://www.coursera.org/	Wharton Entrepreneurship Specialization	2	COURSE	Coursera
+P06	popularity	10	https://entrepreneurship.mit.edu/	MIT Entrepreneurship	2	RESOURCE	MIT
+P06	keyword	1	https://www.sba.gov/business-guide/plan-your-business	SBA: Plan Your Business	2	GUIDE	U.S. Small Business Administration
+P06	keyword	2	https://www.sba.gov/business-guide/launch-your-business	SBA: Launch Your Business	2	GUIDE	U.S. Small Business Administration
+P06	keyword	3	https://www.sba.gov/business-guide/manage-your-business	SBA: Manage Your Business	2	GUIDE	U.S. Small Business Administration
+P06	keyword	4	https://www.score.org/resource/business-plan-template-startup-business	SCORE Business Plan Template	2	RESOURCE	SCORE
+P06	keyword	5	https://www.startupschool.org/	Y Combinator Startup School	3	COURSE	Y Combinator
+P06	keyword	6	https://www.ycombinator.com/library	Y Combinator Startup Library	3	RESOURCE	Y Combinator
+P06	keyword	7	https://openstax.org/details/books/entrepreneurship	OpenStax: Entrepreneurship	2	RESOURCE	OpenStax
+P06	keyword	8	https://www.coursera.org/	Wharton Entrepreneurship Specialization	2	COURSE	Coursera
+P06	keyword	9	https://entrepreneurship.mit.edu/	MIT Entrepreneurship	2	RESOURCE	MIT
+P06	keyword	10	https://www.strategyzer.com/library/the-value-proposition-canvas	Strategyzer: Value Proposition Canvas	2	GUIDE	Strategyzer
+P06	content	1	https://entrepreneurship.mit.edu/	MIT Entrepreneurship	2	RESOURCE	MIT
+P06	content	2	https://openstax.org/details/books/entrepreneurship	OpenStax: Entrepreneurship	2	RESOURCE	OpenStax
+P06	content	3	https://www.coursera.org/	Wharton Entrepreneurship Specialization	2	COURSE	Coursera
+P06	content	4	https://www.sba.gov/business-guide/manage-your-business	SBA: Manage Your Business	2	GUIDE	U.S. Small Business Administration
+P06	content	5	https://www.sba.gov/business-guide/plan-your-business	SBA: Plan Your Business	2	GUIDE	U.S. Small Business Administration
+P06	content	6	https://www.sba.gov/business-guide/launch-your-business	SBA: Launch Your Business	2	GUIDE	U.S. Small Business Administration
+P06	content	7	https://www.ycombinator.com/library	Y Combinator Startup Library	3	RESOURCE	Y Combinator
+P06	content	8	https://www.startupschool.org/	Y Combinator Startup School	3	COURSE	Y Combinator
+P06	content	9	https://www.strategyzer.com/	The Lean Startup: Build-Measure-Learn	3	RESOURCE	Strategyzer
+P06	content	10	https://www.score.org/resource/business-plan-template-startup-business	SCORE Business Plan Template	2	RESOURCE	SCORE
+P06	hybrid	1	https://www.sba.gov/business-guide/launch-your-business	SBA: Launch Your Business	2	GUIDE	U.S. Small Business Administration
+P06	hybrid	2	https://www.startupschool.org/	Y Combinator Startup School	3	COURSE	Y Combinator
+P06	hybrid	3	https://entrepreneurship.mit.edu/	MIT Entrepreneurship	2	RESOURCE	MIT
+P06	hybrid	4	https://openstax.org/details/books/entrepreneurship	OpenStax: Entrepreneurship	2	RESOURCE	OpenStax
+P06	hybrid	5	https://www.coursera.org/	Wharton Entrepreneurship Specialization	2	COURSE	Coursera
+P06	hybrid	6	https://www.sba.gov/business-guide/plan-your-business	SBA: Plan Your Business	2	GUIDE	U.S. Small Business Administration
+P06	hybrid	7	https://www.ycombinator.com/library	Y Combinator Startup Library	3	RESOURCE	Y Combinator
+P06	hybrid	8	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P06	hybrid	9	https://www.strategyzer.com/	The Lean Startup: Build-Measure-Learn	3	RESOURCE	Strategyzer
+P06	hybrid	10	https://www.score.org/resource/business-plan-template-startup-business	SCORE Business Plan Template	2	RESOURCE	SCORE
+P07	popularity	1	https://academy.hubspot.com/courses/digital-marketing	Marketing Strategy Essentials	3	COURSE	HubSpot Academy
+P07	popularity	2	https://www.sba.gov/business-guide/manage-your-business	SBA: Manage Your Business	2	GUIDE	U.S. Small Business Administration
+P07	popularity	3	https://www.strategyzer.com/library/the-value-proposition-canvas	Strategyzer: Value Proposition Canvas	2	GUIDE	Strategyzer
+P07	popularity	4	https://academy.hubspot.com/courses/content-marketing	HubSpot Content Marketing Certification	3	COURSE	HubSpot Academy
+P07	popularity	5	https://academy.hubspot.com/courses/inbound-marketing	HubSpot Inbound Marketing Certification	3	COURSE	HubSpot Academy
+P07	popularity	6	https://mailchimp.com/	Mailchimp Marketing Resources	3	GUIDE	Mailchimp
+P07	popularity	7	https://www.shopify.com/blog/how-to-start-an-online-store	Shopify: Start an Online Store	2	ARTICLE	Shopify
+P07	popularity	8	https://data.worldbank.org/	World Bank Open Data	2	TOOL	World Bank
+P07	popularity	9	https://learndigital.withgoogle.com/digitalgarage	Google Digital Marketing Learning	3	COURSE	Google
+P07	popularity	10	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P07	keyword	1	https://academy.hubspot.com/courses/digital-marketing	Marketing Strategy Essentials	3	COURSE	HubSpot Academy
+P07	keyword	2	https://www.sba.gov/business-guide/manage-your-business	SBA: Manage Your Business	2	GUIDE	U.S. Small Business Administration
+P07	keyword	3	https://www.strategyzer.com/library/the-value-proposition-canvas	Strategyzer: Value Proposition Canvas	2	GUIDE	Strategyzer
+P07	keyword	4	https://academy.hubspot.com/courses/content-marketing	HubSpot Content Marketing Certification	3	COURSE	HubSpot Academy
+P07	keyword	5	https://academy.hubspot.com/courses/inbound-marketing	HubSpot Inbound Marketing Certification	3	COURSE	HubSpot Academy
+P07	keyword	6	https://mailchimp.com/	Mailchimp Marketing Resources	3	GUIDE	Mailchimp
+P07	keyword	7	https://www.shopify.com/blog/how-to-start-an-online-store	Shopify: Start an Online Store	2	ARTICLE	Shopify
+P07	keyword	8	https://data.worldbank.org/	World Bank Open Data	2	TOOL	World Bank
+P07	keyword	9	https://learndigital.withgoogle.com/digitalgarage	Google Digital Marketing Learning	3	COURSE	Google
+P07	keyword	10	https://ocw.mit.edu/courses/15-810-marketing-management-analytics-frameworks-and-applications-fall-2015	Marketing Management: Analytics, Frameworks, and Applications	3	COURSE	MIT OpenCourseWare
+P07	content	1	https://academy.hubspot.com/courses/digital-marketing	Marketing Strategy Essentials	3	COURSE	HubSpot Academy
+P07	content	2	https://learndigital.withgoogle.com/digitalgarage	Google Digital Marketing Learning	3	COURSE	Google
+P07	content	3	https://ocw.mit.edu/courses/15-840-special-seminar-in-marketing-marketing-management-spring-2004	Special Seminar in Marketing: Marketing Management	3	COURSE	MIT OpenCourseWare
+P07	content	4	https://mailchimp.com/	Mailchimp Marketing Resources	3	GUIDE	Mailchimp
+P07	content	5	https://ocw.mit.edu/courses/15-810-marketing-management-analytics-frameworks-and-applications-fall-2015	Marketing Management: Analytics, Frameworks, and Applications	3	COURSE	MIT OpenCourseWare
+P07	content	6	https://academy.hubspot.com/courses/content-marketing	HubSpot Content Marketing Certification	3	COURSE	HubSpot Academy
+P07	content	7	https://academy.hubspot.com/courses/inbound-marketing	HubSpot Inbound Marketing Certification	3	COURSE	HubSpot Academy
+P07	content	8	https://ocw.mit.edu/courses/15-810-marketing-management-fall-2010	Marketing Management	3	COURSE	MIT OpenCourseWare
+P07	content	9	https://www.sba.gov/business-guide/manage-your-business	SBA: Manage Your Business	2	GUIDE	U.S. Small Business Administration
+P07	content	10	https://ocw.mit.edu/courses/15-834-marketing-strategy-spring-2003	Marketing Strategy	3	COURSE	MIT OpenCourseWare
+P07	hybrid	1	https://academy.hubspot.com/courses/content-marketing	HubSpot Content Marketing Certification	3	COURSE	HubSpot Academy
+P07	hybrid	2	https://academy.hubspot.com/courses/digital-marketing	Marketing Strategy Essentials	3	COURSE	HubSpot Academy
+P07	hybrid	3	https://learndigital.withgoogle.com/digitalgarage	Google Digital Marketing Learning	3	COURSE	Google
+P07	hybrid	4	https://ocw.mit.edu/courses/15-840-special-seminar-in-marketing-marketing-management-spring-2004	Special Seminar in Marketing: Marketing Management	3	COURSE	MIT OpenCourseWare
+P07	hybrid	5	https://mailchimp.com/	Mailchimp Marketing Resources	3	GUIDE	Mailchimp
+P07	hybrid	6	https://ocw.mit.edu/courses/15-810-marketing-management-analytics-frameworks-and-applications-fall-2015	Marketing Management: Analytics, Frameworks, and Applications	3	COURSE	MIT OpenCourseWare
+P07	hybrid	7	https://academy.hubspot.com/courses/inbound-marketing	HubSpot Inbound Marketing Certification	3	COURSE	HubSpot Academy
+P07	hybrid	8	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P07	hybrid	9	https://ocw.mit.edu/courses/15-810-marketing-management-fall-2010	Marketing Management	3	COURSE	MIT OpenCourseWare
+P07	hybrid	10	https://www.sba.gov/business-guide/manage-your-business	SBA: Manage Your Business	2	GUIDE	U.S. Small Business Administration
+P08	popularity	1	https://www.strategyzer.com/library/the-business-model-canvas	Business Model Canvas	2	RESOURCE	Strategyzer
+P08	popularity	2	https://www.sba.gov/business-guide/plan-your-business	SBA: Plan Your Business	2	GUIDE	U.S. Small Business Administration
+P08	popularity	3	https://fred.stlouisfed.org/	Federal Reserve Economic Data	2	TOOL	Federal Reserve Bank of St. Louis
+P08	popularity	4	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P08	popularity	5	https://www.nhs.uk/better-health/get-active/home-workout-videos/	NHS Home Workout Videos	0	VIDEO	NHS
+P08	popularity	6	https://www.who.int/publications/i/item/9789240015128	WHO Physical Activity Guidelines	0	DOCUMENTATION	World Health Organization
+P08	popularity	7	https://www.nps.gov/findapark/index.htm	National Park Service: Find a Park	0	TOOL	National Park Service
+P08	popularity	8	https://www.exploratorium.edu/learn	Exploratorium Learning Resources	0	RESOURCE	Exploratorium
+P08	popularity	9	https://ocw.mit.edu/courses/esd-290-special-topics-in-supply-chain-management-spring-2005	Special Topics in Supply Chain Management	3	COURSE	MIT OpenCourseWare
+P08	popularity	10	https://ocw.mit.edu/courses/15-518-taxes-and-business-strategy-fall-2002	Taxes and Business Strategy	3	COURSE	MIT OpenCourseWare
+P08	keyword	1	https://www.sba.gov/business-guide/plan-your-business	SBA: Plan Your Business	2	GUIDE	U.S. Small Business Administration
+P08	keyword	2	https://fred.stlouisfed.org/	Federal Reserve Economic Data	2	TOOL	Federal Reserve Bank of St. Louis
+P08	keyword	3	https://ocw.mit.edu/courses/15-518-taxes-and-business-strategy-fall-2002	Taxes and Business Strategy	3	COURSE	MIT OpenCourseWare
+P08	keyword	4	https://ocw.mit.edu/courses/15-810-marketing-management-fall-2010	Marketing Management	3	COURSE	MIT OpenCourseWare
+P08	keyword	5	https://www.strategyzer.com/library/the-business-model-canvas	Business Model Canvas	2	RESOURCE	Strategyzer
+P08	keyword	6	https://ocw.mit.edu/courses/1-223j-transportation-policy-strategy-and-management-fall-2004	Transportation Policy, Strategy, and Management	3	COURSE	MIT OpenCourseWare
+P08	keyword	7	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P08	keyword	8	https://www.nhs.uk/better-health/get-active/home-workout-videos/	NHS Home Workout Videos	0	VIDEO	NHS
+P08	keyword	9	https://www.who.int/publications/i/item/9789240015128	WHO Physical Activity Guidelines	0	DOCUMENTATION	World Health Organization
+P08	keyword	10	https://www.nps.gov/findapark/index.htm	National Park Service: Find a Park	0	TOOL	National Park Service
+P08	content	1	https://www.strategyzer.com/library/the-business-model-canvas	Business Model Canvas	2	RESOURCE	Strategyzer
+P08	content	2	https://www.sba.gov/business-guide/plan-your-business	SBA: Plan Your Business	2	GUIDE	U.S. Small Business Administration
+P08	content	3	https://fred.stlouisfed.org/	Federal Reserve Economic Data	2	TOOL	Federal Reserve Bank of St. Louis
+P08	content	4	https://ocw.mit.edu/courses/15-518-taxes-and-business-strategy-fall-2002	Taxes and Business Strategy	3	COURSE	MIT OpenCourseWare
+P08	content	5	https://ocw.mit.edu/courses/15-810-marketing-management-fall-2010	Marketing Management	3	COURSE	MIT OpenCourseWare
+P08	content	6	https://ocw.mit.edu/courses/1-223j-transportation-policy-strategy-and-management-fall-2004	Transportation Policy, Strategy, and Management	3	COURSE	MIT OpenCourseWare
+P08	content	7	https://ocw.mit.edu/courses/15-963-management-accounting-and-control-spring-2007	Management Accounting and Control	3	COURSE	MIT OpenCourseWare
+P08	content	8	https://ocw.mit.edu/courses/11-208-introduction-to-computers-in-public-management-ii-january-iap-2002	Introduction to Computers in Public Management II	3	COURSE	MIT OpenCourseWare
+P08	content	9	https://ocw.mit.edu/courses/15-904-strategic-management-ii-fall-2005	Strategic Management II	3	COURSE	MIT OpenCourseWare
+P08	content	10	https://ocw.mit.edu/courses/res-str-002-data-management-spring-2016	Data Management	3	COURSE	MIT OpenCourseWare
+P08	hybrid	1	https://www.strategyzer.com/library/the-business-model-canvas	Business Model Canvas	2	RESOURCE	Strategyzer
+P08	hybrid	2	https://www.sba.gov/business-guide/plan-your-business	SBA: Plan Your Business	2	GUIDE	U.S. Small Business Administration
+P08	hybrid	3	https://fred.stlouisfed.org/	Federal Reserve Economic Data	2	TOOL	Federal Reserve Bank of St. Louis
+P08	hybrid	4	https://ocw.mit.edu/courses/15-518-taxes-and-business-strategy-fall-2002	Taxes and Business Strategy	3	COURSE	MIT OpenCourseWare
+P08	hybrid	5	https://ocw.mit.edu/courses/15-810-marketing-management-fall-2010	Marketing Management	3	COURSE	MIT OpenCourseWare
+P08	hybrid	6	https://ocw.mit.edu/courses/1-223j-transportation-policy-strategy-and-management-fall-2004	Transportation Policy, Strategy, and Management	3	COURSE	MIT OpenCourseWare
+P08	hybrid	7	https://ocw.mit.edu/courses/15-963-management-accounting-and-control-spring-2007	Management Accounting and Control	3	COURSE	MIT OpenCourseWare
+P08	hybrid	8	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P08	hybrid	9	https://ocw.mit.edu/courses/11-208-introduction-to-computers-in-public-management-ii-january-iap-2002	Introduction to Computers in Public Management II	3	COURSE	MIT OpenCourseWare
+P08	hybrid	10	https://ocw.mit.edu/courses/15-904-strategic-management-ii-fall-2005	Strategic Management II	3	COURSE	MIT OpenCourseWare
+P09	popularity	1	https://www.coursera.org/learn/learning-how-to-learn	Learning How to Learn	3	COURSE	Coursera
+P09	popularity	2	https://play.kotlinlang.org/koans/overview	Kotlin Koans	0	PROJECT	Kotlin
+P09	popularity	3	https://www.learningscientists.org/blog/2016/8/18-1	The Learning Scientists: Six Strategies	3	ARTICLE	The Learning Scientists
+P09	popularity	4	https://docs.ankiweb.net/	Anki Manual	2	DOCUMENTATION	Anki
+P09	popularity	5	https://www.mynextmove.org/explore/ip	My Next Move Interest Profiler	2	TOOL	O*NET
+P09	popularity	6	https://www.todoist.com/productivity-methods	Todoist Productivity Methods	2	GUIDE	Todoist
+P09	popularity	7	https://openstax.org/details/books/psychology-2e	OpenStax Psychology 2e	2	RESOURCE	OpenStax
+P09	popularity	8	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	1	PROJECT	LeetCode
+P09	popularity	9	https://www.nhs.uk/better-health/get-active/home-workout-videos/	NHS Home Workout Videos	0	VIDEO	NHS
+P09	popularity	10	https://www.who.int/publications/i/item/9789240015128	WHO Physical Activity Guidelines	0	DOCUMENTATION	World Health Organization
+P09	keyword	1	https://www.learningscientists.org/blog/2016/8/18-1	The Learning Scientists: Six Strategies	3	ARTICLE	The Learning Scientists
+P09	keyword	2	https://docs.ankiweb.net/	Anki Manual	2	DOCUMENTATION	Anki
+P09	keyword	3	https://www.mynextmove.org/explore/ip	My Next Move Interest Profiler	2	TOOL	O*NET
+P09	keyword	4	https://www.todoist.com/productivity-methods	Todoist Productivity Methods	2	GUIDE	Todoist
+P09	keyword	5	https://openstax.org/details/books/psychology-2e	OpenStax Psychology 2e	2	RESOURCE	OpenStax
+P09	keyword	6	https://www.coursera.org/learn/learning-how-to-learn	Learning How to Learn	3	COURSE	Coursera
+P09	keyword	7	https://ocw.mit.edu/courses/res-cms-155-design-thinking-for-leading-and-learning-spring-2019	Design Thinking for Leading and Learning	3	COURSE	MIT OpenCourseWare
+P09	keyword	8	https://ocw.mit.edu/courses/wgs-693-gender-race-and-the-complexities-of-science-and-technology-a-problem-based-learning-experiment-spring-2009	Gender, Race, and the Complexities of Science and Technology: A Problem-Based Learning Experiment	3	COURSE	MIT OpenCourseWare
+P09	keyword	9	https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026	The Engineering Student’s Guide to Effective Technical Communication	0	COURSE	MIT OpenCourseWare
+P09	keyword	10	https://play.kotlinlang.org/koans/overview	Kotlin Koans	0	PROJECT	Kotlin
+P09	content	1	https://www.coursera.org/learn/learning-how-to-learn	Learning How to Learn	3	COURSE	Coursera
+P09	content	2	https://www.learningscientists.org/blog/2016/8/18-1	The Learning Scientists: Six Strategies	3	ARTICLE	The Learning Scientists
+P09	content	3	https://www.todoist.com/productivity-methods	Todoist Productivity Methods	2	GUIDE	Todoist
+P09	content	4	https://www.mynextmove.org/explore/ip	My Next Move Interest Profiler	2	TOOL	O*NET
+P09	content	5	https://openstax.org/details/books/psychology-2e	OpenStax Psychology 2e	2	RESOURCE	OpenStax
+P09	content	6	https://docs.ankiweb.net/	Anki Manual	2	DOCUMENTATION	Anki
+P09	content	7	https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026	The Engineering Student’s Guide to Effective Technical Communication	0	COURSE	MIT OpenCourseWare
+P09	content	8	https://ocw.mit.edu/courses/res-cms-155-design-thinking-for-leading-and-learning-spring-2019	Design Thinking for Leading and Learning	3	COURSE	MIT OpenCourseWare
+P09	content	9	https://ocw.mit.edu/courses/wgs-693-gender-race-and-the-complexities-of-science-and-technology-a-problem-based-learning-experiment-spring-2009	Gender, Race, and the Complexities of Science and Technology: A Problem-Based Learning Experiment	3	COURSE	MIT OpenCourseWare
+P09	content	10	https://play.kotlinlang.org/koans/overview	Kotlin Koans	0	PROJECT	Kotlin
+P09	hybrid	1	https://docs.ankiweb.net/	Anki Manual	2	DOCUMENTATION	Anki
+P09	hybrid	2	https://www.learningscientists.org/blog/2016/8/18-1	The Learning Scientists: Six Strategies	3	ARTICLE	The Learning Scientists
+P09	hybrid	3	https://www.todoist.com/productivity-methods	Todoist Productivity Methods	2	GUIDE	Todoist
+P09	hybrid	4	https://www.coursera.org/learn/learning-how-to-learn	Learning How to Learn	3	COURSE	Coursera
+P09	hybrid	5	https://www.mynextmove.org/explore/ip	My Next Move Interest Profiler	2	TOOL	O*NET
+P09	hybrid	6	https://openstax.org/details/books/psychology-2e	OpenStax Psychology 2e	2	RESOURCE	OpenStax
+P09	hybrid	7	https://ocw.mit.edu/courses/res-cms-155-design-thinking-for-leading-and-learning-spring-2019	Design Thinking for Leading and Learning	3	COURSE	MIT OpenCourseWare
+P09	hybrid	8	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	1	PROJECT	LeetCode
+P09	hybrid	9	https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026	The Engineering Student’s Guide to Effective Technical Communication	0	COURSE	MIT OpenCourseWare
+P09	hybrid	10	https://ocw.mit.edu/courses/wgs-693-gender-race-and-the-complexities-of-science-and-technology-a-problem-based-learning-experiment-spring-2009	Gender, Race, and the Complexities of Science and Technology: A Problem-Based Learning Experiment	3	COURSE	MIT OpenCourseWare
+P10	popularity	1	https://www.careeronestop.org/	Career Development Toolkit	3	GUIDE	CareerOneStop
+P10	popularity	2	https://play.kotlinlang.org/koans/overview	Kotlin Koans	0	PROJECT	Kotlin
+P10	popularity	3	https://docs.ankiweb.net/	Anki Manual	2	DOCUMENTATION	Anki
+P10	popularity	4	https://ocw.mit.edu/	MIT OpenCourseWare	2	COURSE	MIT OpenCourseWare
+P10	popularity	5	https://www.coursera.org/learn/mindshift	Coursera: Mindshift	2	COURSE	Coursera
+P10	popularity	6	https://grow.google/certificates/	Google Career Certificates	3	COURSE	Google
+P10	popularity	7	https://learn.microsoft.com/en-us/training/	Microsoft Learn Training	2	COURSE	Microsoft Learn
+P10	popularity	8	https://www.careeronestop.org/Toolkit/Skills/skills-matcher.aspx	CareerOneStop Skills Matcher	2	TOOL	CareerOneStop
+P10	popularity	9	https://capd.mit.edu/resources/	MIT Career Advising Resources	3	RESOURCE	MIT
+P10	popularity	10	https://www.coursera.org/specializations/career-success	Coursera Career Success Specialization	3	COURSE	Coursera
+P10	keyword	1	https://www.careeronestop.org/	Career Development Toolkit	3	GUIDE	CareerOneStop
+P10	keyword	2	https://docs.ankiweb.net/	Anki Manual	2	DOCUMENTATION	Anki
+P10	keyword	3	https://ocw.mit.edu/	MIT OpenCourseWare	2	COURSE	MIT OpenCourseWare
+P10	keyword	4	https://www.coursera.org/learn/mindshift	Coursera: Mindshift	2	COURSE	Coursera
+P10	keyword	5	https://grow.google/certificates/	Google Career Certificates	3	COURSE	Google
+P10	keyword	6	https://learn.microsoft.com/en-us/training/	Microsoft Learn Training	2	COURSE	Microsoft Learn
+P10	keyword	7	https://www.careeronestop.org/Toolkit/Skills/skills-matcher.aspx	CareerOneStop Skills Matcher	2	TOOL	CareerOneStop
+P10	keyword	8	https://capd.mit.edu/resources/	MIT Career Advising Resources	3	RESOURCE	MIT
+P10	keyword	9	https://www.coursera.org/specializations/career-success	Coursera Career Success Specialization	3	COURSE	Coursera
+P10	keyword	10	https://www.futurelearn.com/subjects/business-and-management-courses/career-development	FutureLearn Career Development	3	COURSE	FutureLearn
+P10	content	1	https://www.careeronestop.org/	Career Development Toolkit	3	GUIDE	CareerOneStop
+P10	content	2	https://www.coursera.org/learn	Coursera: English for Career Development	3	COURSE	Coursera
+P10	content	3	https://www.futurelearn.com/subjects/business-and-management-courses/career-development	FutureLearn Career Development	3	COURSE	FutureLearn
+P10	content	4	https://www.mindtools.com/	MindTools Career Skills	3	GUIDE	MindTools
+P10	content	5	https://ocw.mit.edu/	MIT OpenCourseWare	2	COURSE	MIT OpenCourseWare
+P10	content	6	https://capd.mit.edu/resources/	MIT Career Advising Resources	3	RESOURCE	MIT
+P10	content	7	https://www.coursera.org/specializations/career-success	Coursera Career Success Specialization	3	COURSE	Coursera
+P10	content	8	https://grow.google/certificates/	Google Career Certificates	3	COURSE	Google
+P10	content	9	https://learn.microsoft.com/en-us/training/	Microsoft Learn Training	2	COURSE	Microsoft Learn
+P10	content	10	https://www.themuse.com/advice	The Muse Career Advice	3	RESOURCE	The Muse
+P10	hybrid	1	https://capd.mit.edu/resources/	MIT Career Advising Resources	3	RESOURCE	MIT
+P10	hybrid	2	https://grow.google/certificates/	Google Career Certificates	3	COURSE	Google
+P10	hybrid	3	https://www.coursera.org/learn/mindshift	Coursera: Mindshift	2	COURSE	Coursera
+P10	hybrid	4	https://www.careeronestop.org/Toolkit/Skills/skills-matcher.aspx	CareerOneStop Skills Matcher	2	TOOL	CareerOneStop
+P10	hybrid	5	https://www.careeronestop.org/	Career Development Toolkit	3	GUIDE	CareerOneStop
+P10	hybrid	6	https://www.coursera.org/learn	Coursera: English for Career Development	3	COURSE	Coursera
+P10	hybrid	7	https://www.futurelearn.com/subjects/business-and-management-courses/career-development	FutureLearn Career Development	3	COURSE	FutureLearn
+P10	hybrid	8	https://play.kotlinlang.org/koans/overview	Kotlin Koans	0	PROJECT	Kotlin
+P10	hybrid	9	https://www.nhs.uk/better-health/get-active/home-workout-videos/	NHS Home Workout Videos	0	VIDEO	NHS
+P10	hybrid	10	https://www.mindtools.com/	MindTools Career Skills	3	GUIDE	MindTools
+P11	popularity	1	https://www.pramp.com/	Technical Interview Preparation	3	RESOURCE	Pramp
+P11	popularity	2	https://play.kotlinlang.org/koans/overview	Kotlin Koans	0	PROJECT	Kotlin
+P11	popularity	3	https://grow.google/certificates/	Google Career Certificates	2	COURSE	Google
+P11	popularity	4	https://www.careeronestop.org/Toolkit/Skills/skills-matcher.aspx	CareerOneStop Skills Matcher	2	TOOL	CareerOneStop
+P11	popularity	5	https://careerservices.fas.harvard.edu/resources/create-a-strong-resume/	Harvard Resume and Cover Letter Guide	3	GUIDE	Harvard FAS
+P11	popularity	6	https://capd.mit.edu/resources/	MIT Career Advising Resources	2	RESOURCE	MIT
+P11	popularity	7	https://biginterview.com/	Big Interview Practice Resources	3	TOOL	Big Interview
+P11	popularity	8	https://grow.google/certificates/interview-warmup/	Google Interview Warmup	3	TOOL	Google
+P11	popularity	9	https://www.linkedin.com/interview-prep/	LinkedIn Interview Preparation	3	TOOL	LinkedIn
+P11	popularity	10	https://www.themuse.com/advice	The Muse Career Advice	2	RESOURCE	The Muse
+P11	keyword	1	https://www.pramp.com/	Technical Interview Preparation	3	RESOURCE	Pramp
+P11	keyword	2	https://grow.google/certificates/	Google Career Certificates	2	COURSE	Google
+P11	keyword	3	https://www.careeronestop.org/Toolkit/Skills/skills-matcher.aspx	CareerOneStop Skills Matcher	2	TOOL	CareerOneStop
+P11	keyword	4	https://capd.mit.edu/resources/	MIT Career Advising Resources	2	RESOURCE	MIT
+P11	keyword	5	https://biginterview.com/	Big Interview Practice Resources	3	TOOL	Big Interview
+P11	keyword	6	https://grow.google/certificates/interview-warmup/	Google Interview Warmup	3	TOOL	Google
+P11	keyword	7	https://www.linkedin.com/interview-prep/	LinkedIn Interview Preparation	3	TOOL	LinkedIn
+P11	keyword	8	https://www.themuse.com/advice	The Muse Career Advice	2	RESOURCE	The Muse
+P11	keyword	9	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	3	PROJECT	LeetCode
+P11	keyword	10	https://github.com/yangshun/tech-interview-handbook	GitHub: Technical Interview Handbook	3	GUIDE	GitHub
+P11	content	1	https://www.pramp.com/	Technical Interview Preparation	3	RESOURCE	Pramp
+P11	content	2	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	3	PROJECT	LeetCode
+P11	content	3	https://www.linkedin.com/interview-prep/	LinkedIn Interview Preparation	3	TOOL	LinkedIn
+P11	content	4	https://biginterview.com/	Big Interview Practice Resources	3	TOOL	Big Interview
+P11	content	5	https://github.com/yangshun/tech-interview-handbook	GitHub: Technical Interview Handbook	3	GUIDE	GitHub
+P11	content	6	https://grow.google/certificates/interview-warmup/	Google Interview Warmup	3	TOOL	Google
+P11	content	7	https://capd.mit.edu/resources/	MIT Career Advising Resources	2	RESOURCE	MIT
+P11	content	8	https://grow.google/certificates/	Google Career Certificates	2	COURSE	Google
+P11	content	9	https://www.themuse.com/advice	The Muse Career Advice	2	RESOURCE	The Muse
+P11	content	10	https://www.careeronestop.org/Toolkit/Skills/skills-matcher.aspx	CareerOneStop Skills Matcher	2	TOOL	CareerOneStop
+P11	hybrid	1	https://grow.google/certificates/interview-warmup/	Google Interview Warmup	3	TOOL	Google
+P11	hybrid	2	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	3	PROJECT	LeetCode
+P11	hybrid	3	https://www.linkedin.com/interview-prep/	LinkedIn Interview Preparation	3	TOOL	LinkedIn
+P11	hybrid	4	https://biginterview.com/	Big Interview Practice Resources	3	TOOL	Big Interview
+P11	hybrid	5	https://github.com/yangshun/tech-interview-handbook	GitHub: Technical Interview Handbook	3	GUIDE	GitHub
+P11	hybrid	6	https://capd.mit.edu/resources/	MIT Career Advising Resources	2	RESOURCE	MIT
+P11	hybrid	7	https://grow.google/certificates/	Google Career Certificates	2	COURSE	Google
+P11	hybrid	8	https://careerservices.fas.harvard.edu/resources/create-a-strong-resume/	Harvard Resume and Cover Letter Guide	3	GUIDE	Harvard FAS
+P11	hybrid	9	https://play.kotlinlang.org/koans/overview	Kotlin Koans	0	PROJECT	Kotlin
+P11	hybrid	10	https://www.nhs.uk/better-health/get-active/home-workout-videos/	NHS Home Workout Videos	0	VIDEO	NHS
+P12	popularity	1	https://www.coursera.org/learn/wharton-communication-skills	Communication Skills at Work	3	COURSE	Coursera
+P12	popularity	2	https://www.toastmasters.org/resources/public-speaking-tips	Toastmasters Public Speaking Tips	3	GUIDE	Toastmasters
+P12	popularity	3	https://biginterview.com/	Big Interview Practice Resources	2	TOOL	Big Interview
+P12	popularity	4	https://open.lib.umn.edu/communication/	University of Minnesota: Communication in the Real World	3	RESOURCE	University of Minnesota
+P12	popularity	5	https://www.open.edu/openlearn/money-business/leadership-management/effective-communication/content-section-overview	OpenLearn: Effective Communication	3	COURSE	The Open University
+P12	popularity	6	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P12	popularity	7	https://www.nhs.uk/better-health/get-active/home-workout-videos/	NHS Home Workout Videos	0	VIDEO	NHS
+P12	popularity	8	https://www.who.int/publications/i/item/9789240015128	WHO Physical Activity Guidelines	0	DOCUMENTATION	World Health Organization
+P12	popularity	9	https://www.nps.gov/findapark/index.htm	National Park Service: Find a Park	0	TOOL	National Park Service
+P12	popularity	10	https://www.exploratorium.edu/learn	Exploratorium Learning Resources	0	RESOURCE	Exploratorium
+P12	keyword	1	https://www.coursera.org/learn/wharton-communication-skills	Communication Skills at Work	3	COURSE	Coursera
+P12	keyword	2	https://www.toastmasters.org/resources/public-speaking-tips	Toastmasters Public Speaking Tips	3	GUIDE	Toastmasters
+P12	keyword	3	https://biginterview.com/	Big Interview Practice Resources	2	TOOL	Big Interview
+P12	keyword	4	https://open.lib.umn.edu/communication/	University of Minnesota: Communication in the Real World	3	RESOURCE	University of Minnesota
+P12	keyword	5	https://www.open.edu/openlearn/money-business/leadership-management/effective-communication/content-section-overview	OpenLearn: Effective Communication	3	COURSE	The Open University
+P12	keyword	6	https://ocw.mit.edu/courses/21g-213-high-intermediate-academic-communication-spring-2004	High-Intermediate Academic Communication	3	COURSE	MIT OpenCourseWare
+P12	keyword	7	https://ocw.mit.edu/courses/12-757-science-and-communication-spring-2005	Science and Communication	3	COURSE	MIT OpenCourseWare
+P12	keyword	8	https://ocw.mit.edu/courses/11-914-planning-communication-spring-2007	Planning Communication	3	COURSE	MIT OpenCourseWare
+P12	keyword	9	https://ocw.mit.edu/courses/11-225-argumentation-and-communication-fall-2006	Argumentation and Communication	3	COURSE	MIT OpenCourseWare
+P12	keyword	10	https://ocw.mit.edu/courses/15-990-architecture-and-communication-in-organizations-fall-2003	Architecture and Communication in Organizations	3	COURSE	MIT OpenCourseWare
+P12	content	1	https://www.coursera.org/learn/wharton-communication-skills	Communication Skills at Work	3	COURSE	Coursera
+P12	content	2	https://www.open.edu/openlearn/money-business/leadership-management/effective-communication/content-section-overview	OpenLearn: Effective Communication	3	COURSE	The Open University
+P12	content	3	https://open.lib.umn.edu/communication/	University of Minnesota: Communication in the Real World	3	RESOURCE	University of Minnesota
+P12	content	4	https://openstax.org/books/college-success/pages/8-1-an-overview-of-communication	8.1 An Overview of Communication	3	ARTICLE	OpenStax
+P12	content	5	https://ocw.mit.edu/courses/11-225-argumentation-and-communication-fall-2006	Argumentation and Communication	3	COURSE	MIT OpenCourseWare
+P12	content	6	https://ocw.mit.edu/courses/sts-014-principles-and-practice-of-science-communication-spring-2006	Principles and Practice of Science Communication	3	COURSE	MIT OpenCourseWare
+P12	content	7	https://ocw.mit.edu/courses/15-280-communication-for-managers-fall-2016	Communication for Managers	3	COURSE	MIT OpenCourseWare
+P12	content	8	https://ocw.mit.edu/courses/15-281-advanced-communication-for-leaders-spring-2016	Advanced Communication for Leaders	3	COURSE	MIT OpenCourseWare
+P12	content	9	https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026	The Engineering Student’s Guide to Effective Technical Communication	0	COURSE	MIT OpenCourseWare
+P12	content	10	https://biginterview.com/	Big Interview Practice Resources	2	TOOL	Big Interview
+P12	hybrid	1	https://www.coursera.org/learn/wharton-communication-skills	Communication Skills at Work	3	COURSE	Coursera
+P12	hybrid	2	https://www.open.edu/openlearn/money-business/leadership-management/effective-communication/content-section-overview	OpenLearn: Effective Communication	3	COURSE	The Open University
+P12	hybrid	3	https://open.lib.umn.edu/communication/	University of Minnesota: Communication in the Real World	3	RESOURCE	University of Minnesota
+P12	hybrid	4	https://ocw.mit.edu/courses/11-225-argumentation-and-communication-fall-2006	Argumentation and Communication	3	COURSE	MIT OpenCourseWare
+P12	hybrid	5	https://ocw.mit.edu/courses/sts-014-principles-and-practice-of-science-communication-spring-2006	Principles and Practice of Science Communication	3	COURSE	MIT OpenCourseWare
+P12	hybrid	6	https://ocw.mit.edu/courses/15-280-communication-for-managers-fall-2016	Communication for Managers	3	COURSE	MIT OpenCourseWare
+P12	hybrid	7	https://ocw.mit.edu/courses/15-281-advanced-communication-for-leaders-spring-2016	Advanced Communication for Leaders	3	COURSE	MIT OpenCourseWare
+P12	hybrid	8	https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026	The Engineering Student’s Guide to Effective Technical Communication	0	COURSE	MIT OpenCourseWare
+P12	hybrid	9	https://www.nhs.uk/better-health/get-active/home-workout-videos/	NHS Home Workout Videos	0	VIDEO	NHS
+P12	hybrid	10	https://biginterview.com/	Big Interview Practice Resources	2	TOOL	Big Interview
+P13	popularity	1	https://www.nhs.uk/live-well/eat-well/	Nutrition Basics	3	GUIDE	NHS
+P13	popularity	2	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P13	popularity	3	https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/the-eatwell-guide/	NHS Eatwell Guide	2	GUIDE	NHS
+P13	popularity	4	https://nutritionsource.hsph.harvard.edu/healthy-eating-plate/	Harvard Healthy Eating Plate	3	GUIDE	Harvard T.H. Chan School of Public Health
+P13	popularity	5	https://www.myplate.gov/myplate-plan	MyPlate Plan	2	TOOL	USDA MyPlate
+P13	popularity	6	https://medlineplus.gov/nutrition.html	MedlinePlus Nutrition	3	GUIDE	U.S. National Library of Medicine
+P13	popularity	7	https://www.cdc.gov/healthy-weight-growth/about/index.html	CDC Healthy Weight	2	GUIDE	CDC
+P13	popularity	8	https://fdc.nal.usda.gov/	USDA FoodData Central	2	TOOL	USDA
+P13	popularity	9	https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/how-to-read-food-labels/	NHS Food Labels	3	GUIDE	NHS
+P13	popularity	10	https://www.who.int/news-room/fact-sheets/detail/healthy-diet	WHO Healthy Diet	3	ARTICLE	World Health Organization
+P13	keyword	1	https://www.nhs.uk/live-well/eat-well/	Nutrition Basics	3	GUIDE	NHS
+P13	keyword	2	https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/the-eatwell-guide/	NHS Eatwell Guide	2	GUIDE	NHS
+P13	keyword	3	https://nutritionsource.hsph.harvard.edu/healthy-eating-plate/	Harvard Healthy Eating Plate	3	GUIDE	Harvard T.H. Chan School of Public Health
+P13	keyword	4	https://www.myplate.gov/myplate-plan	MyPlate Plan	2	TOOL	USDA MyPlate
+P13	keyword	5	https://medlineplus.gov/nutrition.html	MedlinePlus Nutrition	3	GUIDE	U.S. National Library of Medicine
+P13	keyword	6	https://www.cdc.gov/healthy-weight-growth/about/index.html	CDC Healthy Weight	2	GUIDE	CDC
+P13	keyword	7	https://fdc.nal.usda.gov/	USDA FoodData Central	2	TOOL	USDA
+P13	keyword	8	https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/how-to-read-food-labels/	NHS Food Labels	3	GUIDE	NHS
+P13	keyword	9	https://www.who.int/news-room/fact-sheets/detail/healthy-diet	WHO Healthy Diet	3	ARTICLE	World Health Organization
+P13	keyword	10	https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/	NHS Food Guidelines and Labels	3	GUIDE	NHS
+P13	content	1	https://www.nhs.uk/live-well/eat-well/	Nutrition Basics	3	GUIDE	NHS
+P13	content	2	https://medlineplus.gov/nutrition.html	MedlinePlus Nutrition	3	GUIDE	U.S. National Library of Medicine
+P13	content	3	https://www.nutrition.gov/	Nutrition.gov	3	RESOURCE	USDA
+P13	content	4	https://www.who.int/news-room/fact-sheets/detail/healthy-diet	WHO Healthy Diet	3	ARTICLE	World Health Organization
+P13	content	5	https://www.cdc.gov/healthy-weight-growth/about/index.html	CDC Healthy Weight	2	GUIDE	CDC
+P13	content	6	https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/how-to-read-food-labels/	NHS Food Labels	3	GUIDE	NHS
+P13	content	7	https://www.myplate.gov/myplate-plan	MyPlate Plan	2	TOOL	USDA MyPlate
+P13	content	8	https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/the-eatwell-guide/	NHS Eatwell Guide	2	GUIDE	NHS
+P13	content	9	https://fdc.nal.usda.gov/	USDA FoodData Central	2	TOOL	USDA
+P13	content	10	https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/	NHS Food Guidelines and Labels	3	GUIDE	NHS
+P13	hybrid	1	https://nutritionsource.hsph.harvard.edu/healthy-eating-plate/	Harvard Healthy Eating Plate	3	GUIDE	Harvard T.H. Chan School of Public Health
+P13	hybrid	2	https://medlineplus.gov/nutrition.html	MedlinePlus Nutrition	3	GUIDE	U.S. National Library of Medicine
+P13	hybrid	3	https://www.nutrition.gov/	Nutrition.gov	3	RESOURCE	USDA
+P13	hybrid	4	https://www.who.int/news-room/fact-sheets/detail/healthy-diet	WHO Healthy Diet	3	ARTICLE	World Health Organization
+P13	hybrid	5	https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/how-to-read-food-labels/	NHS Food Labels	3	GUIDE	NHS
+P13	hybrid	6	https://www.myplate.gov/myplate-plan	MyPlate Plan	2	TOOL	USDA MyPlate
+P13	hybrid	7	https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/the-eatwell-guide/	NHS Eatwell Guide	2	GUIDE	NHS
+P13	hybrid	8	https://www.nhs.uk/better-health/get-active/home-workout-videos/	NHS Home Workout Videos	0	VIDEO	NHS
+P13	hybrid	9	https://www.who.int/publications/i/item/9789240015128	WHO Physical Activity Guidelines	0	DOCUMENTATION	World Health Organization
+P13	hybrid	10	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P14	popularity	1	https://health.gov/moveyourway/activity-planner	Move Your Way Activity Planner	2	RESOURCE	Move Your Way
+P14	popularity	2	https://docs.ankiweb.net/	Anki Manual	0	DOCUMENTATION	Anki
+P14	popularity	3	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P14	popularity	4	https://www.health.harvard.edu/topics/exercise-and-fitness	Harvard Health: Exercise and Fitness	3	GUIDE	Harvard Health Publishing
+P14	popularity	5	https://www.who.int/news-room/fact-sheets/detail/physical-activity	WHO Physical Activity Fact Sheet	3	ARTICLE	World Health Organization
+P14	popularity	6	https://health.gov/our-work/nutrition-physical-activity/physical-activity-guidelines/current-guidelines	Health.gov Physical Activity Guidelines	3	GUIDE	Move Your Way
+P14	popularity	7	https://www.nhs.uk/live-well/exercise/get-running-with-couch-to-5k/	NHS Couch to 5K	2	COURSE	NHS
+P14	popularity	8	https://www.nhs.uk/live-well/exercise/strength-exercises/	NHS Strength Exercises	2	GUIDE	NHS
+P14	popularity	9	https://medlineplus.gov/exerciseandphysicalfitness.html	MedlinePlus Exercise and Physical Fitness	3	GUIDE	U.S. National Library of Medicine
+P14	popularity	10	https://www.cdc.gov/healthy-weight-growth/about/index.html	CDC Healthy Weight	2	GUIDE	CDC
+P14	keyword	1	https://www.health.harvard.edu/topics/exercise-and-fitness	Harvard Health: Exercise and Fitness	3	GUIDE	Harvard Health Publishing
+P14	keyword	2	https://www.who.int/news-room/fact-sheets/detail/physical-activity	WHO Physical Activity Fact Sheet	3	ARTICLE	World Health Organization
+P14	keyword	3	https://health.gov/our-work/nutrition-physical-activity/physical-activity-guidelines/current-guidelines	Health.gov Physical Activity Guidelines	3	GUIDE	Move Your Way
+P14	keyword	4	https://www.nhs.uk/live-well/exercise/get-running-with-couch-to-5k/	NHS Couch to 5K	2	COURSE	NHS
+P14	keyword	5	https://www.nhs.uk/live-well/exercise/strength-exercises/	NHS Strength Exercises	2	GUIDE	NHS
+P14	keyword	6	https://medlineplus.gov/exerciseandphysicalfitness.html	MedlinePlus Exercise and Physical Fitness	3	GUIDE	U.S. National Library of Medicine
+P14	keyword	7	https://www.cdc.gov/healthy-weight-growth/about/index.html	CDC Healthy Weight	2	GUIDE	CDC
+P14	keyword	8	https://fdc.nal.usda.gov/	USDA FoodData Central	2	TOOL	USDA
+P14	keyword	9	https://www.cdc.gov/physical-activity-basics/benefits/index.html	CDC Physical Activity Benefits	3	GUIDE	CDC
+P14	keyword	10	https://www.nhs.uk/live-well/exercise/	NHS Exercise for Health	3	GUIDE	NHS
+P14	content	1	https://medlineplus.gov/exerciseandphysicalfitness.html	MedlinePlus Exercise and Physical Fitness	3	GUIDE	U.S. National Library of Medicine
+P14	content	2	https://www.health.harvard.edu/topics/exercise-and-fitness	Harvard Health: Exercise and Fitness	3	GUIDE	Harvard Health Publishing
+P14	content	3	https://www.heart.org/en/healthy-living/fitness	American Heart Association Fitness	3	GUIDE	American Heart Association
+P14	content	4	https://health.gov/moveyourway/activity-planner	Move Your Way Activity Planner	2	RESOURCE	Move Your Way
+P14	content	5	https://www.nhs.uk/live-well/exercise/	NHS Exercise for Health	3	GUIDE	NHS
+P14	content	6	https://www.who.int/publications/i/item/9789240015128	WHO Physical Activity Guidelines	3	DOCUMENTATION	World Health Organization
+P14	content	7	https://www.nhs.uk/live-well/exercise/strength-exercises/	NHS Strength Exercises	2	GUIDE	NHS
+P14	content	8	https://www.cdc.gov/healthy-weight-growth/about/index.html	CDC Healthy Weight	2	GUIDE	CDC
+P14	content	9	https://www.cdc.gov/physical-activity-basics/benefits/index.html	CDC Physical Activity Benefits	3	GUIDE	CDC
+P14	content	10	https://www.who.int/news-room/fact-sheets/detail/physical-activity	WHO Physical Activity Fact Sheet	3	ARTICLE	World Health Organization
+P14	hybrid	1	https://www.health.harvard.edu/topics/exercise-and-fitness	Harvard Health: Exercise and Fitness	3	GUIDE	Harvard Health Publishing
+P14	hybrid	2	https://www.nhs.uk/live-well/exercise/get-running-with-couch-to-5k/	NHS Couch to 5K	2	COURSE	NHS
+P14	hybrid	3	https://www.nhs.uk/live-well/exercise/strength-exercises/	NHS Strength Exercises	2	GUIDE	NHS
+P14	hybrid	4	https://www.cdc.gov/physical-activity-basics/benefits/index.html	CDC Physical Activity Benefits	3	GUIDE	CDC
+P14	hybrid	5	https://health.gov/our-work/nutrition-physical-activity/physical-activity-guidelines/current-guidelines	Health.gov Physical Activity Guidelines	3	GUIDE	Move Your Way
+P14	hybrid	6	https://www.nhs.uk/better-health/get-active/home-workout-videos/	NHS Home Workout Videos	3	VIDEO	NHS
+P14	hybrid	7	https://medlineplus.gov/exerciseandphysicalfitness.html	MedlinePlus Exercise and Physical Fitness	3	GUIDE	U.S. National Library of Medicine
+P14	hybrid	8	https://docs.ankiweb.net/	Anki Manual	0	DOCUMENTATION	Anki
+P14	hybrid	9	https://www.heart.org/en/healthy-living/fitness	American Heart Association Fitness	3	GUIDE	American Heart Association
+P14	hybrid	10	https://health.gov/moveyourway/activity-planner	Move Your Way Activity Planner	2	RESOURCE	Move Your Way
+P15	popularity	1	https://www.nhlbi.nih.gov/health/sleep-deprivation/healthy-sleep-habits	Sleep Hygiene	3	GUIDE	NHLBI
+P15	popularity	2	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P15	popularity	3	https://www.nhlbi.nih.gov/health/sleep	NHLBI Sleep Health	3	GUIDE	NHLBI
+P15	popularity	4	https://www.cdc.gov/sleep/about/index.html	CDC About Sleep	3	GUIDE	CDC
+P15	popularity	5	https://www.nhs.uk/live-well/sleep-and-tiredness/	NHS Sleep and Tiredness	3	GUIDE	NHS
+P15	popularity	6	https://medlineplus.gov/sleepdisorders.html	MedlinePlus Sleep Disorders	3	GUIDE	U.S. National Library of Medicine
+P15	popularity	7	https://www.who.int/news-room/fact-sheets/detail/mental-health-at-work	WHO Mental Health at Work	2	ARTICLE	World Health Organization
+P15	popularity	8	https://www.nhs.uk/every-mind-matters/	NHS Every Mind Matters	2	RESOURCE	NHS
+P15	popularity	9	https://mhanational.org/	Mental Health America Screening Tools	2	TOOL	Mental Health America
+P15	popularity	10	https://www.who.int/publications/i/item/9789240003927	WHO Stress Management Guide	2	GUIDE	World Health Organization
+P15	keyword	1	https://www.nhlbi.nih.gov/health/sleep-deprivation/healthy-sleep-habits	Sleep Hygiene	3	GUIDE	NHLBI
+P15	keyword	2	https://www.nhlbi.nih.gov/health/sleep	NHLBI Sleep Health	3	GUIDE	NHLBI
+P15	keyword	3	https://www.cdc.gov/sleep/about/index.html	CDC About Sleep	3	GUIDE	CDC
+P15	keyword	4	https://www.nhs.uk/live-well/sleep-and-tiredness/	NHS Sleep and Tiredness	3	GUIDE	NHS
+P15	keyword	5	https://medlineplus.gov/sleepdisorders.html	MedlinePlus Sleep Disorders	3	GUIDE	U.S. National Library of Medicine
+P15	keyword	6	https://www.who.int/news-room/fact-sheets/detail/mental-health-at-work	WHO Mental Health at Work	2	ARTICLE	World Health Organization
+P15	keyword	7	https://www.nhs.uk/every-mind-matters/	NHS Every Mind Matters	2	RESOURCE	NHS
+P15	keyword	8	https://mhanational.org/	Mental Health America Screening Tools	2	TOOL	Mental Health America
+P15	keyword	9	https://www.who.int/publications/i/item/9789240003927	WHO Stress Management Guide	2	GUIDE	World Health Organization
+P15	keyword	10	https://www.nhs.uk/mental-health/self-help/tips-and-support/mindfulness/	NHS Mindfulness	2	GUIDE	NHS
+P15	content	1	https://www.nhlbi.nih.gov/health/sleep-deprivation/healthy-sleep-habits	Sleep Hygiene	3	GUIDE	NHLBI
+P15	content	2	https://www.cdc.gov/sleep/index.html	CDC Sleep and Sleep Disorders	3	RESOURCE	CDC
+P15	content	3	https://www.cdc.gov/sleep/about/index.html	CDC About Sleep	3	GUIDE	CDC
+P15	content	4	https://medlineplus.gov/sleepdisorders.html	MedlinePlus Sleep Disorders	3	GUIDE	U.S. National Library of Medicine
+P15	content	5	https://www.nhlbi.nih.gov/health/sleep	NHLBI Sleep Health	3	GUIDE	NHLBI
+P15	content	6	https://www.nhs.uk/live-well/sleep-and-tiredness/	NHS Sleep and Tiredness	3	GUIDE	NHS
+P15	content	7	https://openstax.org/books/college-success/pages/11-2-sleep	11.2 Sleep	3	ARTICLE	OpenStax
+P15	content	8	https://www.who.int/news-room/fact-sheets/detail/mental-health-at-work	WHO Mental Health at Work	2	ARTICLE	World Health Organization
+P15	content	9	https://www.who.int/publications/i/item/9789240003927	WHO Stress Management Guide	2	GUIDE	World Health Organization
+P15	content	10	https://www.nhs.uk/mental-health/self-help/tips-and-support/mindfulness/	NHS Mindfulness	2	GUIDE	NHS
+P15	hybrid	1	https://www.nhlbi.nih.gov/health/sleep	NHLBI Sleep Health	3	GUIDE	NHLBI
+P15	hybrid	2	https://www.who.int/publications/i/item/9789240003927	WHO Stress Management Guide	2	GUIDE	World Health Organization
+P15	hybrid	3	https://www.nhlbi.nih.gov/health/sleep-deprivation/healthy-sleep-habits	Sleep Hygiene	3	GUIDE	NHLBI
+P15	hybrid	4	https://www.cdc.gov/sleep/index.html	CDC Sleep and Sleep Disorders	3	RESOURCE	CDC
+P15	hybrid	5	https://www.cdc.gov/sleep/about/index.html	CDC About Sleep	3	GUIDE	CDC
+P15	hybrid	6	https://medlineplus.gov/sleepdisorders.html	MedlinePlus Sleep Disorders	3	GUIDE	U.S. National Library of Medicine
+P15	hybrid	7	https://www.nhs.uk/live-well/sleep-and-tiredness/	NHS Sleep and Tiredness	3	GUIDE	NHS
+P15	hybrid	8	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P15	hybrid	9	https://openstax.org/books/college-success/pages/11-2-sleep	11.2 Sleep	3	ARTICLE	OpenStax
+P15	hybrid	10	https://www.who.int/news-room/fact-sheets/detail/mental-health-at-work	WHO Mental Health at Work	2	ARTICLE	World Health Organization
+P16	popularity	1	https://www.who.int/news-room/fact-sheets/detail/mental-health-strengthening-our-response	Stress and Wellbeing	3	RESOURCE	WHO
+P16	popularity	2	https://docs.ankiweb.net/	Anki Manual	0	DOCUMENTATION	Anki
+P16	popularity	3	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P16	popularity	4	https://www.who.int/news-room/fact-sheets/detail/physical-activity	WHO Physical Activity Fact Sheet	2	ARTICLE	World Health Organization
+P16	popularity	5	https://medlineplus.gov/exerciseandphysicalfitness.html	MedlinePlus Exercise and Physical Fitness	2	GUIDE	U.S. National Library of Medicine
+P16	popularity	6	https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/the-eatwell-guide/	NHS Eatwell Guide	2	GUIDE	NHS
+P16	popularity	7	https://nutritionsource.hsph.harvard.edu/healthy-eating-plate/	Harvard Healthy Eating Plate	2	GUIDE	Harvard T.H. Chan School of Public Health
+P16	popularity	8	https://www.myplate.gov/myplate-plan	MyPlate Plan	2	TOOL	USDA MyPlate
+P16	popularity	9	https://medlineplus.gov/nutrition.html	MedlinePlus Nutrition	2	GUIDE	U.S. National Library of Medicine
+P16	popularity	10	https://www.who.int/news-room/fact-sheets/detail/mental-health-at-work	WHO Mental Health at Work	3	ARTICLE	World Health Organization
+P16	keyword	1	https://www.who.int/news-room/fact-sheets/detail/physical-activity	WHO Physical Activity Fact Sheet	2	ARTICLE	World Health Organization
+P16	keyword	2	https://medlineplus.gov/exerciseandphysicalfitness.html	MedlinePlus Exercise and Physical Fitness	2	GUIDE	U.S. National Library of Medicine
+P16	keyword	3	https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/the-eatwell-guide/	NHS Eatwell Guide	2	GUIDE	NHS
+P16	keyword	4	https://nutritionsource.hsph.harvard.edu/healthy-eating-plate/	Harvard Healthy Eating Plate	2	GUIDE	Harvard T.H. Chan School of Public Health
+P16	keyword	5	https://www.myplate.gov/myplate-plan	MyPlate Plan	2	TOOL	USDA MyPlate
+P16	keyword	6	https://medlineplus.gov/nutrition.html	MedlinePlus Nutrition	2	GUIDE	U.S. National Library of Medicine
+P16	keyword	7	https://www.who.int/news-room/fact-sheets/detail/mental-health-at-work	WHO Mental Health at Work	3	ARTICLE	World Health Organization
+P16	keyword	8	https://mhanational.org/	Mental Health America Screening Tools	3	TOOL	Mental Health America
+P16	keyword	9	https://www.who.int/publications/i/item/9789240003927	WHO Stress Management Guide	3	GUIDE	World Health Organization
+P16	keyword	10	https://yogawithadriene.com/	Yoga With Adriene Foundations	2	VIDEO	Yoga With Adriene
+P16	content	1	https://www.who.int/news-room/fact-sheets/detail/mental-health-at-work	WHO Mental Health at Work	3	ARTICLE	World Health Organization
+P16	content	2	https://www.who.int/publications/i/item/9789240003927	WHO Stress Management Guide	3	GUIDE	World Health Organization
+P16	content	3	https://www.who.int/publications/i/item/9789240015128	WHO Physical Activity Guidelines	2	DOCUMENTATION	World Health Organization
+P16	content	4	https://medlineplus.gov/exerciseandphysicalfitness.html	MedlinePlus Exercise and Physical Fitness	2	GUIDE	U.S. National Library of Medicine
+P16	content	5	https://medlineplus.gov/nutrition.html	MedlinePlus Nutrition	2	GUIDE	U.S. National Library of Medicine
+P16	content	6	https://www.who.int/news-room/fact-sheets/detail/physical-activity	WHO Physical Activity Fact Sheet	2	ARTICLE	World Health Organization
+P16	content	7	https://mhanational.org/	Mental Health America Screening Tools	3	TOOL	Mental Health America
+P16	content	8	https://openstax.org/books/college-success/pages/11-4-taking-care-of-your-mental-health	11.4 Taking Care of Your Mental Health	3	ARTICLE	OpenStax
+P16	content	9	https://www.myplate.gov/myplate-plan	MyPlate Plan	2	TOOL	USDA MyPlate
+P16	content	10	https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/the-eatwell-guide/	NHS Eatwell Guide	2	GUIDE	NHS
+P16	hybrid	1	https://www.who.int/publications/i/item/9789240003927	WHO Stress Management Guide	3	GUIDE	World Health Organization
+P16	hybrid	2	https://nutritionsource.hsph.harvard.edu/healthy-eating-plate/	Harvard Healthy Eating Plate	2	GUIDE	Harvard T.H. Chan School of Public Health
+P16	hybrid	3	https://www.who.int/news-room/fact-sheets/detail/mental-health-at-work	WHO Mental Health at Work	3	ARTICLE	World Health Organization
+P16	hybrid	4	https://www.who.int/publications/i/item/9789240015128	WHO Physical Activity Guidelines	2	DOCUMENTATION	World Health Organization
+P16	hybrid	5	https://medlineplus.gov/exerciseandphysicalfitness.html	MedlinePlus Exercise and Physical Fitness	2	GUIDE	U.S. National Library of Medicine
+P16	hybrid	6	https://medlineplus.gov/nutrition.html	MedlinePlus Nutrition	2	GUIDE	U.S. National Library of Medicine
+P16	hybrid	7	https://www.who.int/news-room/fact-sheets/detail/physical-activity	WHO Physical Activity Fact Sheet	2	ARTICLE	World Health Organization
+P16	hybrid	8	https://docs.ankiweb.net/	Anki Manual	0	DOCUMENTATION	Anki
+P16	hybrid	9	https://openstax.org/books/college-success/pages/11-4-taking-care-of-your-mental-health	11.4 Taking Care of Your Mental Health	3	ARTICLE	OpenStax
+P16	hybrid	10	https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/the-eatwell-guide/	NHS Eatwell Guide	2	GUIDE	NHS
+P17	popularity	1	https://www.canva.com/designschool/	Design Principles for Non-Designers	3	COURSE	Canva Design School
+P17	popularity	2	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P17	popularity	3	https://www.nhs.uk/better-health/get-active/home-workout-videos/	NHS Home Workout Videos	0	VIDEO	NHS
+P17	popularity	4	https://www.who.int/publications/i/item/9789240015128	WHO Physical Activity Guidelines	0	DOCUMENTATION	World Health Organization
+P17	popularity	5	https://www.figma.com/resource-library/	Figma Learn Design	3	GUIDE	Figma
+P17	popularity	6	https://www.moma.org/learn/moma_learning/	MoMA Learning	2	RESOURCE	MoMA
+P17	popularity	7	https://www.nps.gov/findapark/index.htm	National Park Service: Find a Park	0	TOOL	National Park Service
+P17	popularity	8	https://learninglab.si.edu/	Smithsonian Learning Lab	0	RESOURCE	Smithsonian
+P17	popularity	9	https://ocw.mit.edu/courses/4-580-inquiry-into-computation-and-design-fall-2006	Inquiry into Computation and Design	3	COURSE	MIT OpenCourseWare
+P17	popularity	10	https://ocw.mit.edu/courses/4-196-architecture-design-level-ii-cuba-studio-spring-2004	Architecture Design, Level II: Cuba Studio	3	COURSE	MIT OpenCourseWare
+P17	keyword	1	https://www.canva.com/designschool/	Design Principles for Non-Designers	3	COURSE	Canva Design School
+P17	keyword	2	https://www.figma.com/resource-library/	Figma Learn Design	3	GUIDE	Figma
+P17	keyword	3	https://www.moma.org/learn/moma_learning/	MoMA Learning	2	RESOURCE	MoMA
+P17	keyword	4	https://ocw.mit.edu/courses/4-580-inquiry-into-computation-and-design-fall-2006	Inquiry into Computation and Design	3	COURSE	MIT OpenCourseWare
+P17	keyword	5	https://ocw.mit.edu/courses/4-196-architecture-design-level-ii-cuba-studio-spring-2004	Architecture Design, Level II: Cuba Studio	3	COURSE	MIT OpenCourseWare
+P17	keyword	6	https://ocw.mit.edu/courses/11-001j-introduction-to-urban-design-and-development-spring-2006	Introduction to Urban Design and Development	3	COURSE	MIT OpenCourseWare
+P17	keyword	7	https://ocw.mit.edu/courses/cms-608-game-design-spring-2008	Game Design	3	COURSE	MIT OpenCourseWare
+P17	keyword	8	https://ocw.mit.edu/courses/4-638-drawings-numbers-five-centuries-of-digital-design-fall-2002	Drawings & Numbers: Five Centuries of Digital Design	3	COURSE	MIT OpenCourseWare
+P17	keyword	9	https://ocw.mit.edu/courses/4-285-research-topics-in-architecture-citizen-centered-design-of-open-governance-systems-fall-2002	Research Topics in Architecture: Citizen-Centered Design of Open Governance Systems	3	COURSE	MIT OpenCourseWare
+P17	keyword	10	https://ocw.mit.edu/courses/4-155b-architectural-design-level-iii-a-student-center-for-mit-fall-2004	Architectural Design, Level III: A Student Center for MIT	3	COURSE	MIT OpenCourseWare
+P17	content	1	https://www.canva.com/designschool/	Design Principles for Non-Designers	3	COURSE	Canva Design School
+P17	content	2	https://www.figma.com/resource-library/	Figma Learn Design	3	GUIDE	Figma
+P17	content	3	https://ocw.mit.edu/courses/4-580-inquiry-into-computation-and-design-fall-2006	Inquiry into Computation and Design	3	COURSE	MIT OpenCourseWare
+P17	content	4	https://www.moma.org/learn/moma_learning/	MoMA Learning	2	RESOURCE	MoMA
+P17	content	5	https://ocw.mit.edu/courses/11-001j-introduction-to-urban-design-and-development-spring-2006	Introduction to Urban Design and Development	3	COURSE	MIT OpenCourseWare
+P17	content	6	https://ocw.mit.edu/courses/cms-s63-playful-augmented-reality-audio-design-exploration-fall-2019	Playful Augmented Reality Audio Design Exploration	3	COURSE	MIT OpenCourseWare
+P17	content	7	https://ocw.mit.edu/courses/21m-735-technical-design-scenery-mechanisms-and-special-effects-spring-2004	Technical Design: Scenery, Mechanisms, and Special Effects	3	COURSE	MIT OpenCourseWare
+P17	content	8	https://ocw.mit.edu/courses/mas-110-fundamentals-of-computational-media-design-fall-2008	Fundamentals of Computational Media Design	3	COURSE	MIT OpenCourseWare
+P17	content	9	https://ocw.mit.edu/courses/cms-608-game-design-spring-2008	Game Design	3	COURSE	MIT OpenCourseWare
+P17	content	10	https://ocw.mit.edu/courses/4-163j-urban-design-studio-providence-spring-2005	Urban Design Studio: Providence	3	COURSE	MIT OpenCourseWare
+P17	hybrid	1	https://www.figma.com/resource-library/	Figma Learn Design	3	GUIDE	Figma
+P17	hybrid	2	https://www.moma.org/learn/moma_learning/	MoMA Learning	2	RESOURCE	MoMA
+P17	hybrid	3	https://www.canva.com/designschool/	Design Principles for Non-Designers	3	COURSE	Canva Design School
+P17	hybrid	4	https://ocw.mit.edu/courses/4-580-inquiry-into-computation-and-design-fall-2006	Inquiry into Computation and Design	3	COURSE	MIT OpenCourseWare
+P17	hybrid	5	https://ocw.mit.edu/courses/11-001j-introduction-to-urban-design-and-development-spring-2006	Introduction to Urban Design and Development	3	COURSE	MIT OpenCourseWare
+P17	hybrid	6	https://ocw.mit.edu/courses/cms-s63-playful-augmented-reality-audio-design-exploration-fall-2019	Playful Augmented Reality Audio Design Exploration	3	COURSE	MIT OpenCourseWare
+P17	hybrid	7	https://ocw.mit.edu/courses/21m-735-technical-design-scenery-mechanisms-and-special-effects-spring-2004	Technical Design: Scenery, Mechanisms, and Special Effects	3	COURSE	MIT OpenCourseWare
+P17	hybrid	8	https://learninglab.si.edu/	Smithsonian Learning Lab	0	RESOURCE	Smithsonian
+P17	hybrid	9	https://www.nps.gov/findapark/index.htm	National Park Service: Find a Park	0	TOOL	National Park Service
+P17	hybrid	10	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P18	popularity	1	https://www.adobe.com/	Photography Basics	3	GUIDE	Adobe
+P18	popularity	2	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P18	popularity	3	https://www.nhs.uk/better-health/get-active/home-workout-videos/	NHS Home Workout Videos	0	VIDEO	NHS
+P18	popularity	4	https://www.who.int/publications/i/item/9789240015128	WHO Physical Activity Guidelines	0	DOCUMENTATION	World Health Organization
+P18	popularity	5	https://www.adobe.com/learn	Adobe Learn: Creative Cloud	2	GUIDE	Adobe
+P18	popularity	6	https://www.figma.com/resource-library/	Figma Learn Design	2	GUIDE	Figma
+P18	popularity	7	https://unsplash.com/blog/	Unsplash Photography Resources	3	RESOURCE	Unsplash
+P18	popularity	8	https://petapixel.com/	PetaPixel Photography Tutorials	3	RESOURCE	PetaPixel
+P18	popularity	9	https://digital-photography-school.com/	Digital Photography School	3	GUIDE	Digital Photography School
+P18	popularity	10	https://www.nationalgeographic.com/photography	National Geographic Photography	3	RESOURCE	National Geographic
+P18	keyword	1	https://www.adobe.com/	Photography Basics	3	GUIDE	Adobe
+P18	keyword	2	https://www.adobe.com/learn	Adobe Learn: Creative Cloud	2	GUIDE	Adobe
+P18	keyword	3	https://www.figma.com/resource-library/	Figma Learn Design	2	GUIDE	Figma
+P18	keyword	4	https://unsplash.com/blog/	Unsplash Photography Resources	3	RESOURCE	Unsplash
+P18	keyword	5	https://petapixel.com/	PetaPixel Photography Tutorials	3	RESOURCE	PetaPixel
+P18	keyword	6	https://digital-photography-school.com/	Digital Photography School	3	GUIDE	Digital Photography School
+P18	keyword	7	https://www.nationalgeographic.com/photography	National Geographic Photography	3	RESOURCE	National Geographic
+P18	keyword	8	https://www.nps.gov/findapark/index.htm	National Park Service: Find a Park	2	TOOL	National Park Service
+P18	keyword	9	https://ocw.mit.edu/courses/4-341-introduction-to-photography-and-related-media-fall-2007	Introduction to Photography and Related Media	3	COURSE	MIT OpenCourseWare
+P18	keyword	10	https://ocw.mit.edu/courses/11-309j-sites-in-sight-photography-as-inquiry-fall-2003	Sites in Sight: Photography as Inquiry	3	COURSE	MIT OpenCourseWare
+P18	content	1	https://www.adobe.com/	Photography Basics	3	GUIDE	Adobe
+P18	content	2	https://digital-photography-school.com/	Digital Photography School	3	GUIDE	Digital Photography School
+P18	content	3	https://www.nationalgeographic.com/photography	National Geographic Photography	3	RESOURCE	National Geographic
+P18	content	4	https://petapixel.com/	PetaPixel Photography Tutorials	3	RESOURCE	PetaPixel
+P18	content	5	https://unsplash.com/blog/	Unsplash Photography Resources	3	RESOURCE	Unsplash
+P18	content	6	https://ocw.mit.edu/courses/11-309j-sites-in-sight-photography-as-inquiry-fall-2003	Sites in Sight: Photography as Inquiry	3	COURSE	MIT OpenCourseWare
+P18	content	7	https://ocw.mit.edu/courses/11-309j-sensing-place-photography-as-inquiry-fall-2012	Sensing Place: Photography as Inquiry	3	COURSE	MIT OpenCourseWare
+P18	content	8	https://ocw.mit.edu/courses/21g-049-french-photography-spring-2017	French Photography	3	COURSE	MIT OpenCourseWare
+P18	content	9	https://www.figma.com/resource-library/	Figma Learn Design	2	GUIDE	Figma
+P18	content	10	https://www.adobe.com/learn	Adobe Learn: Creative Cloud	2	GUIDE	Adobe
+P18	hybrid	1	https://www.figma.com/resource-library/	Figma Learn Design	2	GUIDE	Figma
+P18	hybrid	2	https://www.adobe.com/learn	Adobe Learn: Creative Cloud	2	GUIDE	Adobe
+P18	hybrid	3	https://petapixel.com/	PetaPixel Photography Tutorials	3	RESOURCE	PetaPixel
+P18	hybrid	4	https://digital-photography-school.com/	Digital Photography School	3	GUIDE	Digital Photography School
+P18	hybrid	5	https://www.nationalgeographic.com/photography	National Geographic Photography	3	RESOURCE	National Geographic
+P18	hybrid	6	https://unsplash.com/blog/	Unsplash Photography Resources	3	RESOURCE	Unsplash
+P18	hybrid	7	https://www.nps.gov/findapark/index.htm	National Park Service: Find a Park	2	TOOL	National Park Service
+P18	hybrid	8	https://www.exploratorium.edu/learn	Exploratorium Learning Resources	0	RESOURCE	Exploratorium
+P18	hybrid	9	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P18	hybrid	10	https://www.adobe.com/	Photography Basics	3	GUIDE	Adobe
+P19	popularity	1	https://www.plainlanguage.gov/guidelines/	Writing in Plain Language	3	GUIDE	PlainLanguage.gov
+P19	popularity	2	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P19	popularity	3	https://www.nhs.uk/better-health/get-active/home-workout-videos/	NHS Home Workout Videos	0	VIDEO	NHS
+P19	popularity	4	https://www.who.int/publications/i/item/9789240015128	WHO Physical Activity Guidelines	0	DOCUMENTATION	World Health Organization
+P19	popularity	5	https://writingcooperative.com/	The Writing Cooperative	3	RESOURCE	The Writing Cooperative
+P19	popularity	6	https://owl.purdue.edu/owl/general_writing/	Purdue OWL General Writing	3	GUIDE	Purdue OWL
+P19	popularity	7	https://hemingwayapp.com/	Hemingway Editor	2	TOOL	Hemingway Editor
+P19	popularity	8	https://www.poetryfoundation.org/poems	Poetry Foundation Poems	3	RESOURCE	Poetry Foundation
+P19	popularity	9	https://www.nps.gov/findapark/index.htm	National Park Service: Find a Park	0	TOOL	National Park Service
+P19	popularity	10	https://www.exploratorium.edu/learn	Exploratorium Learning Resources	0	RESOURCE	Exploratorium
+P19	keyword	1	https://www.plainlanguage.gov/guidelines/	Writing in Plain Language	3	GUIDE	PlainLanguage.gov
+P19	keyword	2	https://writingcooperative.com/	The Writing Cooperative	3	RESOURCE	The Writing Cooperative
+P19	keyword	3	https://owl.purdue.edu/owl/general_writing/	Purdue OWL General Writing	3	GUIDE	Purdue OWL
+P19	keyword	4	https://hemingwayapp.com/	Hemingway Editor	2	TOOL	Hemingway Editor
+P19	keyword	5	https://www.poetryfoundation.org/poems	Poetry Foundation Poems	3	RESOURCE	Poetry Foundation
+P19	keyword	6	https://ocw.mit.edu/courses/21l-003-reading-fiction-imaginary-journeys-fall-2015	Reading Fiction: Imaginary Journeys	3	COURSE	MIT OpenCourseWare
+P19	keyword	7	https://ocw.mit.edu/courses/21w-742j-writing-about-race-narratives-of-multiraciality-fall-2008	Writing About Race: Narratives of Multiraciality	3	COURSE	MIT OpenCourseWare
+P19	keyword	8	https://openstax.org/books/writing-guide/pages/1-5-writing-process-thinking-critically-about-a-text	1.5 Writing Process: Thinking Critically About a “Text”	3	ARTICLE	OpenStax
+P19	keyword	9	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P19	keyword	10	https://www.nhs.uk/better-health/get-active/home-workout-videos/	NHS Home Workout Videos	0	VIDEO	NHS
+P19	content	1	https://www.plainlanguage.gov/guidelines/	Writing in Plain Language	3	GUIDE	PlainLanguage.gov
+P19	content	2	https://writingcooperative.com/	The Writing Cooperative	3	RESOURCE	The Writing Cooperative
+P19	content	3	https://openstax.org/books/writing-guide/pages/1-5-writing-process-thinking-critically-about-a-text	1.5 Writing Process: Thinking Critically About a “Text”	3	ARTICLE	OpenStax
+P19	content	4	https://owl.purdue.edu/owl/general_writing/	Purdue OWL General Writing	3	GUIDE	Purdue OWL
+P19	content	5	https://www.poetryfoundation.org/poems	Poetry Foundation Poems	3	RESOURCE	Poetry Foundation
+P19	content	6	https://hemingwayapp.com/	Hemingway Editor	2	TOOL	Hemingway Editor
+P19	content	7	https://ocw.mit.edu/courses/21w-742j-writing-about-race-narratives-of-multiraciality-fall-2008	Writing About Race: Narratives of Multiraciality	3	COURSE	MIT OpenCourseWare
+P19	content	8	https://ocw.mit.edu/courses/21w-758-genre-fiction-workshop-fantasy-fall-2016	Genre Fiction Workshop: Fantasy	3	COURSE	MIT OpenCourseWare
+P19	content	9	https://ocw.mit.edu/courses/21l-019-introduction-to-european-and-latin-american-fiction-great-books-on-the-page-and-on-the-screen-spring-2017	Introduction to European and Latin American Fiction: Great Books on the Page and on the Screen	3	COURSE	MIT OpenCourseWare
+P19	content	10	https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026	The Engineering Student’s Guide to Effective Technical Communication	0	COURSE	MIT OpenCourseWare
+P19	hybrid	1	https://writingcooperative.com/	The Writing Cooperative	3	RESOURCE	The Writing Cooperative
+P19	hybrid	2	https://owl.purdue.edu/owl/general_writing/	Purdue OWL General Writing	3	GUIDE	Purdue OWL
+P19	hybrid	3	https://hemingwayapp.com/	Hemingway Editor	2	TOOL	Hemingway Editor
+P19	hybrid	4	https://openstax.org/books/writing-guide/pages/1-5-writing-process-thinking-critically-about-a-text	1.5 Writing Process: Thinking Critically About a “Text”	3	ARTICLE	OpenStax
+P19	hybrid	5	https://www.poetryfoundation.org/poems	Poetry Foundation Poems	3	RESOURCE	Poetry Foundation
+P19	hybrid	6	https://www.plainlanguage.gov/guidelines/	Writing in Plain Language	3	GUIDE	PlainLanguage.gov
+P19	hybrid	7	https://ocw.mit.edu/courses/21w-742j-writing-about-race-narratives-of-multiraciality-fall-2008	Writing About Race: Narratives of Multiraciality	3	COURSE	MIT OpenCourseWare
+P19	hybrid	8	https://www.exploratorium.edu/learn	Exploratorium Learning Resources	0	RESOURCE	Exploratorium
+P19	hybrid	9	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P19	hybrid	10	https://ocw.mit.edu/courses/21w-758-genre-fiction-workshop-fantasy-fall-2016	Genre Fiction Workshop: Fantasy	3	COURSE	MIT OpenCourseWare
+P20	popularity	1	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P20	popularity	2	https://www.nhs.uk/better-health/get-active/home-workout-videos/	NHS Home Workout Videos	0	VIDEO	NHS
+P20	popularity	3	https://www.who.int/publications/i/item/9789240015128	WHO Physical Activity Guidelines	0	DOCUMENTATION	World Health Organization
+P20	popularity	4	https://www.khanacademy.org/computing/pixar	Pixar in a Box	2	COURSE	Khan Academy and Pixar
+P20	popularity	5	https://www.blender.org/support/tutorials/	Blender Tutorials	2	GUIDE	Blender
+P20	popularity	6	https://procreate.com/handbook/procreate	Procreate Handbook	2	GUIDE	Procreate
+P20	popularity	7	https://hemingwayapp.com/	Hemingway Editor	0	TOOL	Hemingway Editor
+P20	popularity	8	https://nanowrimo.org/	NaNoWriMo Resources	2	RESOURCE	National Novel Writing Month
+P20	popularity	9	https://www.poetryfoundation.org/poems	Poetry Foundation Poems	2	RESOURCE	Poetry Foundation
+P20	popularity	10	https://www.gutenberg.org/	Project Gutenberg	2	RESOURCE	Project Gutenberg
+P20	keyword	1	https://www.khanacademy.org/computing/pixar	Pixar in a Box	2	COURSE	Khan Academy and Pixar
+P20	keyword	2	https://www.blender.org/support/tutorials/	Blender Tutorials	2	GUIDE	Blender
+P20	keyword	3	https://procreate.com/handbook/procreate	Procreate Handbook	2	GUIDE	Procreate
+P20	keyword	4	https://nanowrimo.org/	NaNoWriMo Resources	2	RESOURCE	National Novel Writing Month
+P20	keyword	5	https://www.poetryfoundation.org/poems	Poetry Foundation Poems	2	RESOURCE	Poetry Foundation
+P20	keyword	6	https://www.gutenberg.org/	Project Gutenberg	2	RESOURCE	Project Gutenberg
+P20	keyword	7	https://www.atlasobscura.com/places	Atlas Obscura Places	2	RESOURCE	Atlas Obscura
+P20	keyword	8	https://www.nps.gov/findapark/index.htm	National Park Service: Find a Park	2	TOOL	National Park Service
+P20	keyword	9	https://support.google.com/maps/answer/144339	Google Maps Trip Planning	2	GUIDE	Google Maps Help
+P20	keyword	10	https://learninglab.si.edu/	Smithsonian Learning Lab	2	RESOURCE	Smithsonian
+P20	content	1	https://www.gutenberg.org/	Project Gutenberg	2	RESOURCE	Project Gutenberg
+P20	content	2	https://procreate.com/handbook/procreate	Procreate Handbook	2	GUIDE	Procreate
+P20	content	3	https://www.poetryfoundation.org/poems	Poetry Foundation Poems	2	RESOURCE	Poetry Foundation
+P20	content	4	https://nanowrimo.org/	NaNoWriMo Resources	2	RESOURCE	National Novel Writing Month
+P20	content	5	https://www.exploratorium.edu/learn	Exploratorium Learning Resources	2	RESOURCE	Exploratorium
+P20	content	6	https://www.blender.org/support/tutorials/	Blender Tutorials	2	GUIDE	Blender
+P20	content	7	https://learninglab.si.edu/	Smithsonian Learning Lab	2	RESOURCE	Smithsonian
+P20	content	8	https://www.khanacademy.org/computing/pixar	Pixar in a Box	2	COURSE	Khan Academy and Pixar
+P20	content	9	https://support.google.com/maps/answer/144339	Google Maps Trip Planning	2	GUIDE	Google Maps Help
+P20	content	10	https://www.nps.gov/findapark/index.htm	National Park Service: Find a Park	2	TOOL	National Park Service
+P20	hybrid	1	https://www.gutenberg.org/	Project Gutenberg	2	RESOURCE	Project Gutenberg
+P20	hybrid	2	https://www.khanacademy.org/computing/pixar	Pixar in a Box	2	COURSE	Khan Academy and Pixar
+P20	hybrid	3	https://procreate.com/handbook/procreate	Procreate Handbook	2	GUIDE	Procreate
+P20	hybrid	4	https://www.poetryfoundation.org/poems	Poetry Foundation Poems	2	RESOURCE	Poetry Foundation
+P20	hybrid	5	https://nanowrimo.org/	NaNoWriMo Resources	2	RESOURCE	National Novel Writing Month
+P20	hybrid	6	https://www.exploratorium.edu/learn	Exploratorium Learning Resources	2	RESOURCE	Exploratorium
+P20	hybrid	7	https://www.blender.org/support/tutorials/	Blender Tutorials	2	GUIDE	Blender
+P20	hybrid	8	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode Interview Preparation	0	PROJECT	LeetCode
+P20	hybrid	9	https://learninglab.si.edu/	Smithsonian Learning Lab	2	RESOURCE	Smithsonian
+P20	hybrid	10	https://support.google.com/maps/answer/144339	Google Maps Trip Planning	2	GUIDE	Google Maps Help

@@ -1,4 +1,7 @@
 :root{--bg-primary:#1a1d22;--bg-secondary:#24282f;--surface-primary:#2b3038;--surface-elevated:#323842;--text-primary:#f7f6f2;--text-secondary:#c3c9d2;--text-muted:#b4bdc9;--accent-primary:#c98765;--accent-hover:#dca080;--accent-subtle:rgba(201,135,101,.12);--border-primary:#56606d;--border-subtle:#434b57;--focus-ring:#e6ad8d;--green:#c98765;--recom-text:#f7f6f2}
+/* Automated checks found legacy muted colors below 4.5:1 on graphite surfaces. */
+#landingPage .landing-footer > small,#appShell .side-label,#appShell .suggested-step-copy span,#appShell .path-disclaimer,#appShell .dashboard-footer{color:var(--text-muted)}
+button.text-link{background:transparent;border:0}
 body,button,input,select,textarea,#appShell,#landingPage{font-family:Geist,Arial,sans-serif!important}
 body,#landingPage,#appShell{background:var(--bg-primary)!important;color:var(--text-primary)!important}
 h1,h2,h3,h4,#landingPage .hero-title,#appShell .goal-next-copy h3,#appShell .item-content h3{font-family:Newsreader,Georgia,serif!important;font-weight:500}

@@ -233,7 +233,7 @@ npm run test:e2e -- --workers=1
 npm run test:e2e -- --workers=2
 ```
 
-Use `sh mvnw` on Linux. [Final measured results and coverage](docs/code-quality/README.md) · [Static analysis and reproduction commands](docs/testing/README.md). Browser tests create isolated Compose databases. Configuring CI does not establish a passing remote run; check its actual status.
+Use `sh mvnw` on Linux. [Current measured technical results and coverage](docs/technical-quality/README.md) · [Static analysis and reproduction commands](docs/testing/README.md). Browser tests create isolated Compose databases. Configuring CI does not establish a passing remote run; check its actual status.
 
 ## Code quality
 
@@ -249,7 +249,7 @@ The implementation uses session rotation, persisted authentication versions, own
 
 ## Known limitations and future scope
 
-Provider concentration, variable metadata and changing external links limit the catalog. Historical NDCG uses seven assistant-judged queries from the older 1,665-import subset; no expanded-catalog ranking improvement or learning gain is claimed. OULAD is a separate offline experiment. Sessions, rate limits and caches are process-local. Some substring filters scan bounded catalogs. Journeys are suggestions, not validated curricula.
+Provider concentration, variable metadata and changing external links limit the catalog. The [current evaluation](docs/technical-quality/recommendations.md) uses twenty editorial metadata-proxy profiles and 281 judged resources, with explicit sampling and lexical-rubric bias. It establishes no human learning gain or before/after ranking improvement. The older seven-query experiment and OULAD remain separate historical/offline results. Sessions, rate limits and caches are process-local. Some substring filters scan bounded catalogs. Journeys are suggestions, not validated curricula.
 
 ## License and data attribution
 

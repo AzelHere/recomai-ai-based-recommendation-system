@@ -7,8 +7,6 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
-import java.sql.PreparedStatement;
-import java.sql.Statement;
 import java.util.Optional;
 import java.util.OptionalInt;
 
@@ -75,12 +73,12 @@ public class JdbcUserDao implements UserDao {
                 """;
         KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbcTemplate.update(connection -> {
-            PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            return com.guvi.recommendationsystem.dao.JdbcStatements.generated(connection, sql, statement -> {
             statement.setString(1, username);
             statement.setString(2, email);
             statement.setString(3, passwordHash);
             statement.setString(4, displayName);
-            return statement;
+            });
         }, keyHolder);
 
         Number generatedId = keyHolder.getKey();

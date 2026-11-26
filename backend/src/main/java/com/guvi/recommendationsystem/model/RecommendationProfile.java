@@ -8,4 +8,9 @@ public record RecommendationProfile(
         List<UserInterest> interests,
         long interactionCount,
         long feedbackCount) {
+    public RecommendationProfile {
+        categoryPreferences = categoryPreferences == null ? null : java.util.Collections.unmodifiableList(new java.util.ArrayList<>(categoryPreferences));
+        interests = interests == null ? null : java.util.Collections.unmodifiableList(new java.util.ArrayList<>(interests));
+    }
+
 }

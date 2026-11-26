@@ -1,0 +1,108 @@
+{
+  "mavenTests": {
+    "passed": 195,
+    "failed": 0,
+    "skipped": 0
+  },
+  "mavenOnlyCoverage": {
+    "INSTRUCTION": {
+      "covered": 9624,
+      "missed": 18286
+    },
+    "BRANCH": {
+      "covered": 861,
+      "missed": 1619
+    },
+    "LINE": {
+      "covered": 1481,
+      "missed": 2065
+    },
+    "COMPLEXITY": {
+      "covered": 643,
+      "missed": 1535
+    },
+    "METHOD": {
+      "covered": 386,
+      "missed": 549
+    },
+    "CLASS": {
+      "covered": 122,
+      "missed": 85
+    }
+  },
+  "integrationCoverage": {
+    "INSTRUCTION": {
+      "covered": 19218,
+      "missed": 8692
+    },
+    "BRANCH": {
+      "covered": 1371,
+      "missed": 1109
+    },
+    "LINE": {
+      "covered": 2723,
+      "missed": 823
+    },
+    "COMPLEXITY": {
+      "covered": 1200,
+      "missed": 978
+    },
+    "METHOD": {
+      "covered": 760,
+      "missed": 175
+    },
+    "CLASS": {
+      "covered": 192,
+      "missed": 15
+    }
+  },
+  "staticAnalysis": {
+    "before": 175,
+    "after": 112,
+    "beforeTypes": {
+      "EI_EXPOSE_REP2": 116,
+      "NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE": 17,
+      "OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE": 12,
+      "EI_EXPOSE_REP": 25,
+      "SWL_SLEEP_WITH_LOCK_HELD": 1,
+      "VA_FORMAT_STRING_USES_NEWLINE": 2,
+      "BX_UNBOXED_AND_COERCED_FOR_TERNARY_OPERATOR": 1,
+      "CT_CONSTRUCTOR_THROW": 1
+    },
+    "afterTypes": {
+      "EI_EXPOSE_REP2": 91,
+      "NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE": 17,
+      "SWL_SLEEP_WITH_LOCK_HELD": 1,
+      "VA_FORMAT_STRING_USES_NEWLINE": 2,
+      "CT_CONSTRUCTOR_THROW": 1
+    },
+    "resolved": 63,
+    "suppressionsAdded": 0
+  },
+  "optionalEvidenceTests": {
+    "passed": 3,
+    "failed": 0,
+    "viewports": [
+      1366,
+      1440,
+      1536,
+      1920,
+      2560
+    ]
+  },
+  "preservation": {
+    "exactRowsCompared": true,
+    "tables": 30,
+    "catalog": 2365,
+    "articles": 505,
+    "appliedMigrationFilesUnchanged": 18,
+    "privateFingerprintsPublished": false
+  },
+  "browserWorkers2": {
+    "passed": 32,
+    "failed": 0,
+    "skipped": 3
+  },
+  "browserWorkers1": "Final retry-after-aware run in progress; final evidence ZIP records outcome",
+  "remoteCi": "Verify the published commit through the repository Actions page; local checks do not establish remote success."
+}

@@ -1,0 +1,7 @@
+ARG APP_IMAGE=recomai-technical:local
+FROM maven:3.9.16-eclipse-temurin-21 AS agent
+RUN --mount=type=cache,target=/root/.m2 mvn -B dependency:copy -Dartifact=org.jacoco:org.jacoco.agent:0.8.14:jar:runtime -DoutputDirectory=/agent
+FROM ${APP_IMAGE}
+COPY --from=agent /agent/org.jacoco.agent-0.8.14-runtime.jar /opt/jacocoagent.jar
+# File output only: no remotely accessible agent listener. This image is for isolated tests.
+ENV JAVA_TOOL_OPTIONS="-javaagent:/opt/jacocoagent.jar=destfile=/tmp/jacoco-e2e.exec,append=true,sessionid=recom-ai-e2e"

@@ -7,6 +7,10 @@ import java.text.Normalizer;
 public record EducationalResource(String sourceId, String externalId, String title, String description,
         String canonicalUrl, String categoryCode, String resourceType, List<String> topics,
         String language, String license, String attribution, String metadataOrigin) {
+    public EducationalResource {
+        topics = topics == null ? null : java.util.Collections.unmodifiableList(new java.util.ArrayList<>(topics));
+    }
+
     public static String text(String input) {
         if(input==null)return null;
         return Normalizer.normalize(input.replaceAll("(?is)<(script|style)[^>]*>.*?</\\1>"," ")

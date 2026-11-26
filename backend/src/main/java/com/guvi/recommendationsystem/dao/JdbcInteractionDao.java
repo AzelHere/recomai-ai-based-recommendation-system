@@ -10,8 +10,6 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
-import java.sql.PreparedStatement;
-import java.sql.Statement;
 import java.util.List;
 import java.util.Optional;
 
@@ -35,14 +33,14 @@ public class JdbcInteractionDao implements InteractionDao {
     public Interaction insert(long userId, long itemId, InteractionType type) {
         KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbcTemplate.update(connection -> {
-            PreparedStatement statement = connection.prepareStatement("""
+            return com.guvi.recommendationsystem.dao.JdbcStatements.generated(connection, """
                     INSERT INTO interactions (user_id, item_id, interaction_type)
                     VALUES (?, ?, ?)
-                    """, Statement.RETURN_GENERATED_KEYS);
+                    """, statement -> {
             statement.setLong(1, userId);
             statement.setLong(2, itemId);
             statement.setString(3, type.name());
-            return statement;
+            });
         }, keyHolder);
 
         Number generatedId = keyHolder.getKey();
@@ -69,17 +67,17 @@ public class JdbcInteractionDao implements InteractionDao {
         try {
             KeyHolder keyHolder = new GeneratedKeyHolder();
             jdbcTemplate.update(connection -> {
-                PreparedStatement statement = connection.prepareStatement("""
+                return com.guvi.recommendationsystem.dao.JdbcStatements.generated(connection, """
                         INSERT INTO interactions (user_id, item_id, interaction_type, search_query, request_id)
                         VALUES (?, ?, ?, ?, ?)
-                        """, Statement.RETURN_GENERATED_KEYS);
+                        """, statement -> {
                 statement.setLong(1, userId);
                 if (itemId == null) statement.setNull(2, java.sql.Types.BIGINT);
                 else statement.setLong(2, itemId);
                 statement.setString(3, type.name());
                 statement.setString(4, query);
                 statement.setString(5, requestId);
-                return statement;
+                });
             }, keyHolder);
             Number generatedId = keyHolder.getKey();
             if (generatedId == null) throw new IllegalStateException("The database did not return the new interaction ID.");
@@ -96,13 +94,13 @@ public class JdbcInteractionDao implements InteractionDao {
     public Interaction insertSearch(long userId, String query) {
         KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbcTemplate.update(connection -> {
-            PreparedStatement statement = connection.prepareStatement("""
+            return com.guvi.recommendationsystem.dao.JdbcStatements.generated(connection, """
                     INSERT INTO interactions (user_id, interaction_type, search_query)
                     VALUES (?, 'SEARCH', ?)
-                    """, Statement.RETURN_GENERATED_KEYS);
+                    """, statement -> {
             statement.setLong(1, userId);
             statement.setString(2, query);
-            return statement;
+            });
         }, keyHolder);
 
         Number generatedId = keyHolder.getKey();

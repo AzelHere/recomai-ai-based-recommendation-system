@@ -8,7 +8,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import java.sql.Statement;
 import java.time.LocalDateTime;
 import java.util.*;
 
@@ -24,7 +23,12 @@ public class LearningJourneyService {
     public record CreateRequest(String title,OnboardingPurpose goal,long categoryId,Integer steps,String requestId,String topic) { }
     public record Header(long journeyId,String title,OnboardingPurpose goal,Long categoryId,String status,String preferenceSnapshot,LocalDateTime createdAt,LocalDateTime updatedAt) { }
     public record Step(long stepId,int position,Long itemId,String title,String rationale,String status,LocalDateTime completedAt,boolean available,CatalogItem resource) { }
-    public record Journey(Header journey,List<Step> steps,int completedSteps,int totalSteps,int completionPercent,Long currentStepId,List<Map<String,Object>> replacements) { }
+    public record Journey(Header journey,List<Step> steps,int completedSteps,int totalSteps,int completionPercent,Long currentStepId,List<Map<String,Object>> replacements) {
+    public Journey {
+        steps = steps == null ? null : java.util.Collections.unmodifiableList(new java.util.ArrayList<>(steps));
+        replacements = replacements == null ? null : java.util.Collections.unmodifiableList(new java.util.ArrayList<>(replacements));
+    }
+ }
     private Header header(long userId,long id,boolean lock) {
         if(id<1)throw new InvalidUserInputException("Journey ID must be positive.");
         return jdbc.query("SELECT journey_id,title,goal,category_id,status,preference_snapshot,created_at,updated_at FROM learning_journeys WHERE user_id=? AND journey_id=?"+(lock?" FOR UPDATE":""),(rs,n)->mapHeader(rs),userId,id).stream().findFirst().orElseThrow(()->new UserNotFoundException("Journey was not found."));
@@ -79,7 +83,7 @@ public class LearningJourneyService {
         if(selected.isEmpty())throw new InvalidUserInputException("No eligible resources remain for this area. Choose another area or return later.");
         String snapshot=jdbc.queryForObject("SELECT JSON_OBJECT('requestedTopic',?,'onboardingPurpose',(SELECT purpose FROM user_onboarding WHERE user_id=?),'onboardingCategoryId',(SELECT category_id FROM user_onboarding WHERE user_id=?),'interestIds',COALESCE((SELECT JSON_ARRAYAGG(interest_id) FROM user_interests WHERE user_id=?),JSON_ARRAY()))",String.class,topic,userId,userId,userId);
         var key=new GeneratedKeyHolder();
-        jdbc.update(connection->{var stmt=connection.prepareStatement("INSERT INTO learning_journeys(user_id,title,goal,category_id,preference_snapshot,request_id,request_hash) VALUES(?,?,?,?,?,?,?)",Statement.RETURN_GENERATED_KEYS);stmt.setLong(1,userId);stmt.setString(2,title);stmt.setString(3,request.goal().name());stmt.setLong(4,request.categoryId());stmt.setString(5,snapshot);stmt.setString(6,request.requestId());stmt.setString(7,hash);return stmt;},key);
+        jdbc.update(connection->{return com.guvi.recommendationsystem.dao.JdbcStatements.generated(connection, "INSERT INTO learning_journeys(user_id,title,goal,category_id,preference_snapshot,request_id,request_hash) VALUES(?,?,?,?,?,?,?)", stmt -> {stmt.setLong(1,userId);stmt.setString(2,title);stmt.setString(3,request.goal().name());stmt.setLong(4,request.categoryId());stmt.setString(5,snapshot);stmt.setString(6,request.requestId());stmt.setString(7,hash);});},key);
         long id=Objects.requireNonNull(key.getKey()).longValue();int position=1;
         for(var draft:selected)jdbc.update("INSERT INTO learning_journey_steps(journey_id,item_id,position,title_snapshot,rationale) VALUES(?,?,?,?,?)",id,draft.itemId(),position++,draft.itemTitle(),draft.reason()+" Suggested sequence using your profile and chosen area; prerequisites are not verified.");
         return get(userId,id);

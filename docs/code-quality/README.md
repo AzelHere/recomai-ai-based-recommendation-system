@@ -1,5 +1,7 @@
 # Recom AI code quality and publication audit
 
+This page preserves the earlier publication baseline. For the subsequent 195-test audit, 112 remaining SpotBugs findings and separately measured integration coverage, see [current technical verification](../technical-quality/README.md).
+
 Recorded on 26 November 2026. This is a bounded source, bytecode and regression audit, not a guarantee that every defect has been found.
 
 ## Scope and initial state

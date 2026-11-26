@@ -1,0 +1,466 @@
+profile_id,canonical_url,grade,rationale,resource_type,difficulty
+P01,https://learn.microsoft.com/en-us/azure/developer/java/fundamentals/java-azure-tools,3,Title matches declared topical intent,ARTICLE,UNKNOWN
+P01,https://dev.java/learn/,3,Title matches declared topical intent,GUIDE,BEGINNER
+P01,https://ocw.mit.edu/courses/6-092-java-preparation-for-6-170-january-iap-2006,3,Title matches declared topical intent,COURSE,UNKNOWN
+P01,https://spring.io/guides/gs/rest-service/,1,Description supplies weaker topical evidence,DOCUMENTATION,BEGINNER
+P01,https://ocw.mit.edu/courses/6-092-introduction-to-programming-in-java-january-iap-2010,3,Title matches declared topical intent,COURSE,UNKNOWN
+P01,https://learn.microsoft.com/en-us/azure/developer/java/fundamentals/java-support-on-azure,3,Title matches declared topical intent,ARTICLE,UNKNOWN
+P01,https://learn.microsoft.com/en-us/azure/developer/java/fundamentals/java-jdk-install,3,Title matches declared topical intent,ARTICLE,UNKNOWN
+P01,https://learn.microsoft.com/en-us/azure/developer/java/fundamentals/java-azure-keyvault-ssl-integration-jvm,3,Title matches declared topical intent,ARTICLE,UNKNOWN
+P01,https://learn.microsoft.com/en-us/azure/developer/java/fundamentals/java-azure-keyvault-tomcat-integration,3,Title matches declared topical intent,ARTICLE,UNKNOWN
+P01,https://learn.microsoft.com/en-us/azure/developer/java/fundamentals/java-get-started-with-logzio,3,Title matches declared topical intent,ARTICLE,UNKNOWN
+P01,https://openstax.org/books/introduction-computer-science/pages/7-1-programming-language-foundations,2,Explicit controlled topic matches intent,ARTICLE,UNKNOWN
+P01,https://ocw.mit.edu/courses/6-088-introduction-to-c-memory-management-and-c-object-oriented-programming-january-iap-2010,1,Description supplies weaker topical evidence,COURSE,UNKNOWN
+P01,https://ocw.mit.edu/courses/mas-961-numeric-photography-fall-1998,1,Description supplies weaker topical evidence,COURSE,UNKNOWN
+P01,https://ocw.mit.edu/courses/6-370-the-battlecode-programming-competition-january-iap-2013,1,Description supplies weaker topical evidence,COURSE,UNKNOWN
+P01,https://ocw.mit.edu/courses/1-00-introduction-to-computers-and-engineering-problem-solving-spring-2012,1,Description supplies weaker topical evidence,COURSE,UNKNOWN
+P01,https://ocw.mit.edu/courses/20-453j-biomedical-information-technology-fall-2008,1,Description supplies weaker topical evidence,COURSE,UNKNOWN
+P01,https://medlineplus.gov/genetics/understanding/traits/height,0,Different primary category or no matching topical evidence,ARTICLE,UNKNOWN
+P01,https://medlineplus.gov/cholesterol.html,0,Different primary category or no matching topical evidence,GUIDE,UNKNOWN
+P01,https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026,0,Different primary category or no matching topical evidence,COURSE,UNKNOWN
+P01,https://www.exploratorium.edu/learn,0,Different primary category or no matching topical evidence,RESOURCE,BEGINNER
+P01,https://www.nps.gov/findapark/index.htm,0,Different primary category or no matching topical evidence,TOOL,BEGINNER
+P01,https://www.who.int/publications/i/item/9789240015128,0,Different primary category or no matching topical evidence,DOCUMENTATION,INTERMEDIATE
+P01,https://www.nhs.uk/better-health/get-active/home-workout-videos/,0,Different primary category or no matching topical evidence,VIDEO,BEGINNER
+P01,https://leetcode.com/explore/interview/card/top-interview-questions-easy/,0,Different primary category or no matching topical evidence,PROJECT,INTERMEDIATE
+P02,https://learn.microsoft.com/en-us/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview,3,Title matches declared topical intent,ARTICLE,UNKNOWN
+P02,https://ocw.mit.edu/courses/1-264j-database-internet-and-systems-integration-technologies-fall-2013,2,Explicit controlled topic matches intent,COURSE,UNKNOWN
+P02,https://openstax.org/books/introduction-computer-science/pages/8-3-relational-database-management-systems,3,Title matches declared topical intent,ARTICLE,UNKNOWN
+P02,https://ocw.mit.edu/courses/11-521-spatial-database-management-and-advanced-geographic-information-systems-spring-2003,2,Explicit controlled topic matches intent,COURSE,UNKNOWN
+P02,https://ocw.mit.edu/courses/1-204-computer-algorithms-in-systems-engineering-spring-2010,1,Description supplies weaker topical evidence,COURSE,UNKNOWN
+P02,https://openstax.org/books/introduction-computer-science/pages/8-4-nonrelational-database-management-systems,1,Description supplies weaker topical evidence,ARTICLE,UNKNOWN
+P02,https://medlineplus.gov/genetics/understanding/traits/height,0,Different primary category or no matching topical evidence,ARTICLE,UNKNOWN
+P02,https://medlineplus.gov/cholesterol.html,0,Different primary category or no matching topical evidence,GUIDE,UNKNOWN
+P02,https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026,0,Different primary category or no matching topical evidence,COURSE,UNKNOWN
+P02,https://www.exploratorium.edu/learn,0,Different primary category or no matching topical evidence,RESOURCE,BEGINNER
+P02,https://www.nps.gov/findapark/index.htm,0,Different primary category or no matching topical evidence,TOOL,BEGINNER
+P02,https://www.who.int/publications/i/item/9789240015128,0,Different primary category or no matching topical evidence,DOCUMENTATION,INTERMEDIATE
+P02,https://www.nhs.uk/better-health/get-active/home-workout-videos/,0,Different primary category or no matching topical evidence,VIDEO,BEGINNER
+P02,https://leetcode.com/explore/interview/card/top-interview-questions-easy/,0,Different primary category or no matching topical evidence,PROJECT,INTERMEDIATE
+P03,https://openstax.org/books/introduction-computer-science/pages/1-3-computer-science-and-the-future-of-society,1,Description supplies weaker topical evidence,ARTICLE,UNKNOWN
+P03,https://developers.google.com/machine-learning/crash-course,3,Title matches declared topical intent,COURSE,INTERMEDIATE
+P03,https://ocw.mit.edu/courses/15-097-prediction-machine-learning-and-statistics-spring-2012,3,Title matches declared topical intent,COURSE,UNKNOWN
+P03,https://ocw.mit.edu/courses/10-01-ethics-for-engineers-artificial-intelligence-spring-2020,3,Title matches declared topical intent,COURSE,UNKNOWN
+P03,https://ocw.mit.edu/courses/6-s897-machine-learning-for-healthcare-spring-2019,3,Title matches declared topical intent,COURSE,UNKNOWN
+P03,https://ocw.mit.edu/courses/6-825-techniques-in-artificial-intelligence-sma-5504-fall-2002,3,Title matches declared topical intent,COURSE,UNKNOWN
+P03,https://ocw.mit.edu/courses/6-s062-generative-artificial-intelligence-in-k12-education-fall-2023,3,Title matches declared topical intent,COURSE,UNKNOWN
+P03,https://ocw.mit.edu/courses/6-034-artificial-intelligence-spring-2005,3,Title matches declared topical intent,COURSE,UNKNOWN
+P03,https://ocw.mit.edu/courses/hst-947-medical-artificial-intelligence-spring-2005,3,Title matches declared topical intent,COURSE,UNKNOWN
+P03,https://ocw.mit.edu/courses/6-867-machine-learning-fall-2006,3,Title matches declared topical intent,COURSE,UNKNOWN
+P03,https://ocw.mit.edu/courses/6-036-introduction-to-machine-learning-fall-2020,3,Title matches declared topical intent,COURSE,UNKNOWN
+P03,https://ocw.mit.edu/courses/18-657-mathematics-of-machine-learning-fall-2015,3,Title matches declared topical intent,COURSE,UNKNOWN
+P03,https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018,3,Title matches declared topical intent,COURSE,UNKNOWN
+P03,https://ocw.mit.edu/courses/6-s980-machine-learning-for-inverse-graphics-fall-2022,3,Title matches declared topical intent,COURSE,UNKNOWN
+P03,https://ocw.mit.edu/courses/res-ec-001-exploring-fairness-in-machine-learning-for-international-development-spring-2020,3,Title matches declared topical intent,COURSE,UNKNOWN
+P03,https://ocw.mit.edu/courses/res-ll-005-mathematics-of-big-data-and-machine-learning-january-iap-2020,3,Title matches declared topical intent,COURSE,UNKNOWN
+P03,https://medlineplus.gov/genetics/understanding/traits/height,0,Different primary category or no matching topical evidence,ARTICLE,UNKNOWN
+P03,https://medlineplus.gov/cholesterol.html,0,Different primary category or no matching topical evidence,GUIDE,UNKNOWN
+P03,https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026,0,Different primary category or no matching topical evidence,COURSE,UNKNOWN
+P03,https://www.exploratorium.edu/learn,0,Different primary category or no matching topical evidence,RESOURCE,BEGINNER
+P03,https://www.nps.gov/findapark/index.htm,0,Different primary category or no matching topical evidence,TOOL,BEGINNER
+P03,https://www.who.int/publications/i/item/9789240015128,0,Different primary category or no matching topical evidence,DOCUMENTATION,INTERMEDIATE
+P03,https://www.nhs.uk/better-health/get-active/home-workout-videos/,0,Different primary category or no matching topical evidence,VIDEO,BEGINNER
+P03,https://leetcode.com/explore/interview/card/top-interview-questions-easy/,0,Different primary category or no matching topical evidence,PROJECT,INTERMEDIATE
+P04,https://openstax.org/books/introduction-computer-science/pages/6-6-reliability-and-security,3,Title matches declared topical intent,ARTICLE,UNKNOWN
+P04,https://owasp.org/www-project-web-security-testing-guide/,3,Title matches declared topical intent,GUIDE,ADVANCED
+P04,https://portswigger.net/web-security,3,Title matches declared topical intent,COURSE,INTERMEDIATE
+P04,https://owasp.org/www-project-top-ten/,2,Explicit controlled topic matches intent,DOCUMENTATION,INTERMEDIATE
+P04,https://www.nist.gov/cyberframework,3,Title matches declared topical intent,GUIDE,INTERMEDIATE
+P04,https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014,3,Title matches declared topical intent,COURSE,UNKNOWN
+P04,https://ocw.mit.edu/courses/6-857-network-and-computer-security-spring-2014,3,Title matches declared topical intent,COURSE,UNKNOWN
+P04,https://ocw.mit.edu/courses/6-5950-secure-hardware-design-spring-2025,3,Title matches declared topical intent,COURSE,UNKNOWN
+P04,https://openstax.org/books/introduction-computer-science/pages/14-2-cybersecurity-deep-dive,3,Title matches declared topical intent,ARTICLE,UNKNOWN
+P04,https://skillbuilder.aws/,2,Explicit controlled topic matches intent,COURSE,BEGINNER
+P04,https://learn.microsoft.com/,2,Explicit controlled topic matches intent,COURSE,BEGINNER
+P04,https://www.cloudskillsboost.google/,2,Explicit controlled topic matches intent,COURSE,INTERMEDIATE
+P04,https://linuxjourney.com/,2,Explicit controlled topic matches intent,GUIDE,BEGINNER
+P04,https://cheatsheetseries.owasp.org/,2,Explicit controlled topic matches intent,DOCUMENTATION,INTERMEDIATE
+P04,https://ocw.mit.edu/courses/1-264j-database-internet-and-systems-integration-technologies-fall-2013,1,Description supplies weaker topical evidence,COURSE,UNKNOWN
+P04,https://ocw.mit.edu/courses/6-829-computer-networks-fall-2002,1,Description supplies weaker topical evidence,COURSE,UNKNOWN
+P04,https://medlineplus.gov/genetics/understanding/traits/height,0,Different primary category or no matching topical evidence,ARTICLE,UNKNOWN
+P04,https://medlineplus.gov/cholesterol.html,0,Different primary category or no matching topical evidence,GUIDE,UNKNOWN
+P04,https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026,0,Different primary category or no matching topical evidence,COURSE,UNKNOWN
+P04,https://www.exploratorium.edu/learn,0,Different primary category or no matching topical evidence,RESOURCE,BEGINNER
+P04,https://www.nps.gov/findapark/index.htm,0,Different primary category or no matching topical evidence,TOOL,BEGINNER
+P04,https://www.who.int/publications/i/item/9789240015128,0,Different primary category or no matching topical evidence,DOCUMENTATION,INTERMEDIATE
+P04,https://www.nhs.uk/better-health/get-active/home-workout-videos/,0,Different primary category or no matching topical evidence,VIDEO,BEGINNER
+P04,https://leetcode.com/explore/interview/card/top-interview-questions-easy/,0,Different primary category or no matching topical evidence,PROJECT,INTERMEDIATE
+P05,https://openstax.org/books/principles-finance/pages/6-1-ratios-condensing-information-into-smaller-pieces,1,Description supplies weaker topical evidence,ARTICLE,UNKNOWN
+P05,https://www.consumerfinance.gov/consumer-tools/educator-tools/,3,Title matches declared topical intent,GUIDE,BEGINNER
+P05,https://www.khanacademy.org/college-careers-more/personal-finance,3,Title matches declared topical intent,COURSE,BEGINNER
+P05,https://www.finra.org/investors/,2,Explicit controlled topic matches intent,RESOURCE,INTERMEDIATE
+P05,https://www.consumerfinance.gov/consumer-tools/,2,Explicit controlled topic matches intent,TOOL,BEGINNER
+P05,https://www.investor.gov/introduction-investing,3,Title matches declared topical intent,GUIDE,BEGINNER
+P05,https://www.consumerfinance.gov/,3,Title matches declared topical intent,GUIDE,BEGINNER
+P05,https://www.finra.org/investors/investing/investing-basics,3,Title matches declared topical intent,GUIDE,BEGINNER
+P05,https://www.investor.gov/,3,Title matches declared topical intent,GUIDE,BEGINNER
+P05,https://www.schwab.com/learn/story/investing-basics,3,Title matches declared topical intent,GUIDE,BEGINNER
+P05,https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/,2,Explicit controlled topic matches intent,GUIDE,BEGINNER
+P05,https://www.fdic.gov/consumer-resource-center/money-smart,2,Explicit controlled topic matches intent,COURSE,BEGINNER
+P05,https://investor.vanguard.com/investor-resources-education,2,Explicit controlled topic matches intent,RESOURCE,INTERMEDIATE
+P05,https://corporatefinanceinstitute.com/resources/accounting/,2,Explicit controlled topic matches intent,GUIDE,INTERMEDIATE
+P05,https://www.khanacademy.org/economics-finance-domain/core-finance/taxes-topic,2,Explicit controlled topic matches intent,COURSE,BEGINNER
+P05,https://fred.stlouisfed.org/,2,Explicit controlled topic matches intent,TOOL,INTERMEDIATE
+P05,https://medlineplus.gov/genetics/understanding/traits/height,0,Different primary category or no matching topical evidence,ARTICLE,UNKNOWN
+P05,https://medlineplus.gov/cholesterol.html,0,Different primary category or no matching topical evidence,GUIDE,UNKNOWN
+P05,https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026,0,Different primary category or no matching topical evidence,COURSE,UNKNOWN
+P05,https://www.exploratorium.edu/learn,0,Different primary category or no matching topical evidence,RESOURCE,BEGINNER
+P05,https://www.nps.gov/findapark/index.htm,0,Different primary category or no matching topical evidence,TOOL,BEGINNER
+P05,https://www.who.int/publications/i/item/9789240015128,0,Different primary category or no matching topical evidence,DOCUMENTATION,INTERMEDIATE
+P05,https://www.nhs.uk/better-health/get-active/home-workout-videos/,0,Different primary category or no matching topical evidence,VIDEO,BEGINNER
+P05,https://leetcode.com/explore/interview/card/top-interview-questions-easy/,0,Different primary category or no matching topical evidence,PROJECT,INTERMEDIATE
+P06,https://www.shopify.com/blog/how-to-start-an-online-store,2,Explicit controlled topic matches intent,ARTICLE,BEGINNER
+P06,https://www.sba.gov/business-guide/plan-your-business,2,Explicit controlled topic matches intent,GUIDE,BEGINNER
+P06,https://www.startupschool.org/,3,Title matches declared topical intent,COURSE,BEGINNER
+P06,https://www.strategyzer.com/,3,Title matches declared topical intent,RESOURCE,BEGINNER
+P06,https://www.ycombinator.com/library,3,Title matches declared topical intent,RESOURCE,INTERMEDIATE
+P06,https://ocw.mit.edu/courses/15-615-law-for-the-entrepreneur-and-manager-spring-2003,3,Title matches declared topical intent,COURSE,UNKNOWN
+P06,https://www.sba.gov/business-guide/launch-your-business,2,Explicit controlled topic matches intent,GUIDE,BEGINNER
+P06,https://www.sba.gov/business-guide/manage-your-business,2,Explicit controlled topic matches intent,GUIDE,INTERMEDIATE
+P06,https://www.score.org/resource/business-plan-template-startup-business,2,Explicit controlled topic matches intent,RESOURCE,BEGINNER
+P06,https://openstax.org/details/books/entrepreneurship,2,Explicit controlled topic matches intent,RESOURCE,BEGINNER
+P06,https://www.coursera.org/,2,Explicit controlled topic matches intent,COURSE,INTERMEDIATE
+P06,https://entrepreneurship.mit.edu/,2,Explicit controlled topic matches intent,RESOURCE,INTERMEDIATE
+P06,https://www.strategyzer.com/library/the-value-proposition-canvas,2,Explicit controlled topic matches intent,GUIDE,INTERMEDIATE
+P06,https://ocw.mit.edu/courses/res-solvex-business-and-impact-planning-for-social-enterprises-0-solvex-summer-2021,2,Explicit controlled topic matches intent,COURSE,UNKNOWN
+P06,https://ocw.mit.edu/courses/15-394-designing-and-leading-the-entrepreneurial-organization-spring-2003,2,Explicit controlled topic matches intent,COURSE,UNKNOWN
+P06,https://ocw.mit.edu/courses/15-963-advanced-strategy-spring-2008,2,Explicit controlled topic matches intent,COURSE,UNKNOWN
+P06,https://medlineplus.gov/genetics/understanding/traits/height,0,Different primary category or no matching topical evidence,ARTICLE,UNKNOWN
+P06,https://medlineplus.gov/cholesterol.html,0,Different primary category or no matching topical evidence,GUIDE,UNKNOWN
+P06,https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026,0,Different primary category or no matching topical evidence,COURSE,UNKNOWN
+P06,https://www.exploratorium.edu/learn,0,Different primary category or no matching topical evidence,RESOURCE,BEGINNER
+P06,https://www.nps.gov/findapark/index.htm,0,Different primary category or no matching topical evidence,TOOL,BEGINNER
+P06,https://www.who.int/publications/i/item/9789240015128,0,Different primary category or no matching topical evidence,DOCUMENTATION,INTERMEDIATE
+P06,https://www.nhs.uk/better-health/get-active/home-workout-videos/,0,Different primary category or no matching topical evidence,VIDEO,BEGINNER
+P06,https://leetcode.com/explore/interview/card/top-interview-questions-easy/,0,Different primary category or no matching topical evidence,PROJECT,INTERMEDIATE
+P07,https://www.shopify.com/blog/how-to-start-an-online-store,2,Explicit controlled topic matches intent,ARTICLE,BEGINNER
+P07,https://mailchimp.com/,3,Title matches declared topical intent,GUIDE,BEGINNER
+P07,https://academy.hubspot.com/courses/digital-marketing,3,Title matches declared topical intent,COURSE,BEGINNER
+P07,https://data.worldbank.org/,2,Explicit controlled topic matches intent,TOOL,INTERMEDIATE
+P07,https://academy.hubspot.com/courses/content-marketing,3,Title matches declared topical intent,COURSE,BEGINNER
+P07,https://academy.hubspot.com/courses/inbound-marketing,3,Title matches declared topical intent,COURSE,BEGINNER
+P07,https://learndigital.withgoogle.com/digitalgarage,3,Title matches declared topical intent,COURSE,BEGINNER
+P07,https://ocw.mit.edu/courses/15-810-marketing-management-analytics-frameworks-and-applications-fall-2015,3,Title matches declared topical intent,COURSE,UNKNOWN
+P07,https://ocw.mit.edu/courses/15-810-marketing-management-fall-2010,3,Title matches declared topical intent,COURSE,UNKNOWN
+P07,https://ocw.mit.edu/courses/15-822-strategic-marketing-measurement-fall-2002,3,Title matches declared topical intent,COURSE,UNKNOWN
+P07,https://ocw.mit.edu/courses/21a-336-marketing-microchips-and-mcdonalds-debating-globalization-spring-2004,3,Title matches declared topical intent,COURSE,UNKNOWN
+P07,https://ocw.mit.edu/courses/15-834-marketing-strategy-spring-2003,3,Title matches declared topical intent,COURSE,UNKNOWN
+P07,https://ocw.mit.edu/courses/15-835-entrepreneurial-marketing-spring-2002,3,Title matches declared topical intent,COURSE,UNKNOWN
+P07,https://ocw.mit.edu/courses/15-840-special-seminar-in-marketing-marketing-management-spring-2004,3,Title matches declared topical intent,COURSE,UNKNOWN
+P07,https://www.sba.gov/business-guide/manage-your-business,2,Explicit controlled topic matches intent,GUIDE,INTERMEDIATE
+P07,https://www.strategyzer.com/library/the-value-proposition-canvas,2,Explicit controlled topic matches intent,GUIDE,INTERMEDIATE
+P07,https://medlineplus.gov/genetics/understanding/traits/height,0,Different primary category or no matching topical evidence,ARTICLE,UNKNOWN
+P07,https://medlineplus.gov/cholesterol.html,0,Different primary category or no matching topical evidence,GUIDE,UNKNOWN
+P07,https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026,0,Different primary category or no matching topical evidence,COURSE,UNKNOWN
+P07,https://www.exploratorium.edu/learn,0,Different primary category or no matching topical evidence,RESOURCE,BEGINNER
+P07,https://www.nps.gov/findapark/index.htm,0,Different primary category or no matching topical evidence,TOOL,BEGINNER
+P07,https://www.who.int/publications/i/item/9789240015128,0,Different primary category or no matching topical evidence,DOCUMENTATION,INTERMEDIATE
+P07,https://www.nhs.uk/better-health/get-active/home-workout-videos/,0,Different primary category or no matching topical evidence,VIDEO,BEGINNER
+P07,https://leetcode.com/explore/interview/card/top-interview-questions-easy/,0,Different primary category or no matching topical evidence,PROJECT,INTERMEDIATE
+P08,https://openstax.org/books/principles-finance/pages/2-2-relationship-between-shareholders-and-company-management,3,Title matches declared topical intent,ARTICLE,UNKNOWN
+P08,https://www.sba.gov/business-guide/plan-your-business,2,Explicit controlled topic matches intent,GUIDE,BEGINNER
+P08,https://ocw.mit.edu/courses/esd-290-special-topics-in-supply-chain-management-spring-2005,3,Title matches declared topical intent,COURSE,UNKNOWN
+P08,https://www.strategyzer.com/library/the-business-model-canvas,2,Explicit controlled topic matches intent,RESOURCE,BEGINNER
+P08,https://fred.stlouisfed.org/,2,Explicit controlled topic matches intent,TOOL,INTERMEDIATE
+P08,https://ocw.mit.edu/courses/15-518-taxes-and-business-strategy-fall-2002,3,Title matches declared topical intent,COURSE,UNKNOWN
+P08,https://ocw.mit.edu/courses/15-810-marketing-management-analytics-frameworks-and-applications-fall-2015,3,Title matches declared topical intent,COURSE,UNKNOWN
+P08,https://ocw.mit.edu/courses/1-040-project-management-spring-2009,3,Title matches declared topical intent,COURSE,UNKNOWN
+P08,https://ocw.mit.edu/courses/res-str-002-data-management-spring-2016,3,Title matches declared topical intent,COURSE,UNKNOWN
+P08,https://ocw.mit.edu/courses/15-778-management-of-supply-networks-for-products-and-services-summer-2004,3,Title matches declared topical intent,COURSE,UNKNOWN
+P08,https://ocw.mit.edu/courses/15-904-strategic-management-ii-fall-2005,3,Title matches declared topical intent,COURSE,UNKNOWN
+P08,https://ocw.mit.edu/courses/11-208-introduction-to-computers-in-public-management-ii-january-iap-2002,3,Title matches declared topical intent,COURSE,UNKNOWN
+P08,https://ocw.mit.edu/courses/1-223j-transportation-policy-strategy-and-management-fall-2004,3,Title matches declared topical intent,COURSE,UNKNOWN
+P08,https://ocw.mit.edu/courses/15-810-marketing-management-fall-2010,3,Title matches declared topical intent,COURSE,UNKNOWN
+P08,https://ocw.mit.edu/courses/15-963-management-accounting-and-control-spring-2007,3,Title matches declared topical intent,COURSE,UNKNOWN
+P08,https://ocw.mit.edu/courses/1-259j-transit-management-fall-2006,3,Title matches declared topical intent,COURSE,UNKNOWN
+P08,https://medlineplus.gov/genetics/understanding/traits/height,0,Different primary category or no matching topical evidence,ARTICLE,UNKNOWN
+P08,https://medlineplus.gov/cholesterol.html,0,Different primary category or no matching topical evidence,GUIDE,UNKNOWN
+P08,https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026,0,Different primary category or no matching topical evidence,COURSE,UNKNOWN
+P08,https://www.exploratorium.edu/learn,0,Different primary category or no matching topical evidence,RESOURCE,BEGINNER
+P08,https://www.nps.gov/findapark/index.htm,0,Different primary category or no matching topical evidence,TOOL,BEGINNER
+P08,https://www.who.int/publications/i/item/9789240015128,0,Different primary category or no matching topical evidence,DOCUMENTATION,INTERMEDIATE
+P08,https://www.nhs.uk/better-health/get-active/home-workout-videos/,0,Different primary category or no matching topical evidence,VIDEO,BEGINNER
+P08,https://leetcode.com/explore/interview/card/top-interview-questions-easy/,0,Different primary category or no matching topical evidence,PROJECT,INTERMEDIATE
+P09,https://www.learningscientists.org/blog/2016/8/18-1,3,Title matches declared topical intent,ARTICLE,BEGINNER
+P09,https://www.todoist.com/productivity-methods,2,Explicit controlled topic matches intent,GUIDE,BEGINNER
+P09,https://www.coursera.org/learn/learning-how-to-learn,3,Title matches declared topical intent,COURSE,BEGINNER
+P09,https://openstax.org/details/books/psychology-2e,2,Explicit controlled topic matches intent,RESOURCE,INTERMEDIATE
+P09,https://www.mynextmove.org/explore/ip,2,Explicit controlled topic matches intent,TOOL,BEGINNER
+P09,https://docs.ankiweb.net/,2,Explicit controlled topic matches intent,DOCUMENTATION,BEGINNER
+P09,https://leetcode.com/explore/interview/card/top-interview-questions-easy/,1,Description supplies weaker topical evidence,PROJECT,INTERMEDIATE
+P09,https://ocw.mit.edu/courses/res-cms-155-design-thinking-for-leading-and-learning-spring-2019,3,Title matches declared topical intent,COURSE,UNKNOWN
+P09,https://ocw.mit.edu/courses/res-bloss-blended-learning-open-source-science-or-math-studies-blossoms-spring-2010,3,Title matches declared topical intent,COURSE,UNKNOWN
+P09,https://ocw.mit.edu/courses/21a-150-teaching-and-learning-cross-cultural-perspectives-fall-2014,3,Title matches declared topical intent,COURSE,UNKNOWN
+P09,https://ocw.mit.edu/courses/wgs-693-gender-race-and-the-complexities-of-science-and-technology-a-problem-based-learning-experiment-spring-2009,3,Title matches declared topical intent,COURSE,UNKNOWN
+P09,https://ocw.mit.edu/courses/mas-962-the-nature-of-constructionist-learning-spring-2003,3,Title matches declared topical intent,COURSE,UNKNOWN
+P09,https://ocw.mit.edu/courses/es-291-learning-seminar-experiments-in-education-spring-2003,3,Title matches declared topical intent,COURSE,UNKNOWN
+P09,https://ocw.mit.edu/courses/mas-714j-technologies-for-creative-learning-fall-2009,3,Title matches declared topical intent,COURSE,UNKNOWN
+P09,https://ocw.mit.edu/courses/cms-595-learning-media-and-technology-spring-2024,3,Title matches declared topical intent,COURSE,UNKNOWN
+P09,https://ocw.mit.edu/courses/cms-s61-steam-learning-architecture-a-framework-for-educational-innovation-spring-2024,3,Title matches declared topical intent,COURSE,UNKNOWN
+P09,https://medlineplus.gov/genetics/understanding/traits/height,0,Different primary category or no matching topical evidence,ARTICLE,UNKNOWN
+P09,https://medlineplus.gov/cholesterol.html,0,Different primary category or no matching topical evidence,GUIDE,UNKNOWN
+P09,https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026,0,Different primary category or no matching topical evidence,COURSE,UNKNOWN
+P09,https://www.exploratorium.edu/learn,0,Different primary category or no matching topical evidence,RESOURCE,BEGINNER
+P09,https://www.nps.gov/findapark/index.htm,0,Different primary category or no matching topical evidence,TOOL,BEGINNER
+P09,https://www.who.int/publications/i/item/9789240015128,0,Different primary category or no matching topical evidence,DOCUMENTATION,INTERMEDIATE
+P09,https://www.nhs.uk/better-health/get-active/home-workout-videos/,0,Different primary category or no matching topical evidence,VIDEO,BEGINNER
+P09,https://play.kotlinlang.org/koans/overview,0,Different primary category or no matching topical evidence,PROJECT,BEGINNER
+P10,https://openstax.org/books/college-success/pages/12-1-why-worry-about-a-career-while-im-in-college,3,Title matches declared topical intent,ARTICLE,UNKNOWN
+P10,https://www.careeronestop.org/,3,Title matches declared topical intent,GUIDE,BEGINNER
+P10,https://grow.google/certificates/,3,Title matches declared topical intent,COURSE,BEGINNER
+P10,https://capd.mit.edu/resources/,3,Title matches declared topical intent,RESOURCE,BEGINNER
+P10,https://www.careeronestop.org/Toolkit/Skills/skills-matcher.aspx,2,Explicit controlled topic matches intent,TOOL,BEGINNER
+P10,https://docs.ankiweb.net/,2,Explicit controlled topic matches intent,DOCUMENTATION,BEGINNER
+P10,https://leetcode.com/explore/interview/card/top-interview-questions-easy/,2,Explicit controlled topic matches intent,PROJECT,INTERMEDIATE
+P10,https://www.coursera.org/specializations/career-success,3,Title matches declared topical intent,COURSE,BEGINNER
+P10,https://www.futurelearn.com/subjects/business-and-management-courses/career-development,3,Title matches declared topical intent,COURSE,BEGINNER
+P10,https://www.mindtools.com/,3,Title matches declared topical intent,GUIDE,INTERMEDIATE
+P10,https://www.themuse.com/advice,3,Title matches declared topical intent,RESOURCE,BEGINNER
+P10,https://www.coursera.org/learn,3,Title matches declared topical intent,COURSE,BEGINNER
+P10,https://openstax.org/books/college-success/pages/12-2-your-map-to-success-the-career-planning-cycle,3,Title matches declared topical intent,ARTICLE,UNKNOWN
+P10,https://ocw.mit.edu/,2,Explicit controlled topic matches intent,COURSE,INTERMEDIATE
+P10,https://www.coursera.org/learn/mindshift,2,Explicit controlled topic matches intent,COURSE,BEGINNER
+P10,https://learn.microsoft.com/en-us/training/,2,Explicit controlled topic matches intent,COURSE,BEGINNER
+P10,https://medlineplus.gov/genetics/understanding/traits/height,0,Different primary category or no matching topical evidence,ARTICLE,UNKNOWN
+P10,https://medlineplus.gov/cholesterol.html,0,Different primary category or no matching topical evidence,GUIDE,UNKNOWN
+P10,https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026,0,Different primary category or no matching topical evidence,COURSE,UNKNOWN
+P10,https://www.exploratorium.edu/learn,0,Different primary category or no matching topical evidence,RESOURCE,BEGINNER
+P10,https://www.nps.gov/findapark/index.htm,0,Different primary category or no matching topical evidence,TOOL,BEGINNER
+P10,https://www.who.int/publications/i/item/9789240015128,0,Different primary category or no matching topical evidence,DOCUMENTATION,INTERMEDIATE
+P10,https://www.nhs.uk/better-health/get-active/home-workout-videos/,0,Different primary category or no matching topical evidence,VIDEO,BEGINNER
+P10,https://play.kotlinlang.org/koans/overview,0,Different primary category or no matching topical evidence,PROJECT,BEGINNER
+P11,https://careerservices.fas.harvard.edu/resources/create-a-strong-resume/,3,Title matches declared topical intent,GUIDE,BEGINNER
+P11,https://grow.google/certificates/,2,Explicit controlled topic matches intent,COURSE,BEGINNER
+P11,https://www.pramp.com/,3,Title matches declared topical intent,RESOURCE,INTERMEDIATE
+P11,https://biginterview.com/,3,Title matches declared topical intent,TOOL,BEGINNER
+P11,https://leetcode.com/explore/interview/card/top-interview-questions-easy/,3,Title matches declared topical intent,PROJECT,INTERMEDIATE
+P11,https://grow.google/certificates/interview-warmup/,3,Title matches declared topical intent,TOOL,BEGINNER
+P11,https://www.linkedin.com/interview-prep/,3,Title matches declared topical intent,TOOL,BEGINNER
+P11,https://github.com/yangshun/tech-interview-handbook,3,Title matches declared topical intent,GUIDE,INTERMEDIATE
+P11,https://www.careeronestop.org/Toolkit/Skills/skills-matcher.aspx,2,Explicit controlled topic matches intent,TOOL,BEGINNER
+P11,https://capd.mit.edu/resources/,2,Explicit controlled topic matches intent,RESOURCE,BEGINNER
+P11,https://www.themuse.com/advice,2,Explicit controlled topic matches intent,RESOURCE,BEGINNER
+P11,https://ocw.mit.edu/courses/res-tll-005-how-to-speak-january-iap-2018,1,Description supplies weaker topical evidence,COURSE,UNKNOWN
+P11,https://medlineplus.gov/genetics/understanding/traits/height,0,Different primary category or no matching topical evidence,ARTICLE,UNKNOWN
+P11,https://medlineplus.gov/cholesterol.html,0,Different primary category or no matching topical evidence,GUIDE,UNKNOWN
+P11,https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026,0,Different primary category or no matching topical evidence,COURSE,UNKNOWN
+P11,https://www.exploratorium.edu/learn,0,Different primary category or no matching topical evidence,RESOURCE,BEGINNER
+P11,https://www.nps.gov/findapark/index.htm,0,Different primary category or no matching topical evidence,TOOL,BEGINNER
+P11,https://www.who.int/publications/i/item/9789240015128,0,Different primary category or no matching topical evidence,DOCUMENTATION,INTERMEDIATE
+P11,https://www.nhs.uk/better-health/get-active/home-workout-videos/,0,Different primary category or no matching topical evidence,VIDEO,BEGINNER
+P11,https://play.kotlinlang.org/koans/overview,0,Different primary category or no matching topical evidence,PROJECT,BEGINNER
+P12,https://openstax.org/books/college-success/pages/8-1-an-overview-of-communication,3,Title matches declared topical intent,ARTICLE,UNKNOWN
+P12,https://www.toastmasters.org/resources/public-speaking-tips,3,Title matches declared topical intent,GUIDE,BEGINNER
+P12,https://www.coursera.org/learn/wharton-communication-skills,3,Title matches declared topical intent,COURSE,BEGINNER
+P12,https://open.lib.umn.edu/communication/,3,Title matches declared topical intent,RESOURCE,INTERMEDIATE
+P12,https://biginterview.com/,2,Explicit controlled topic matches intent,TOOL,BEGINNER
+P12,https://www.open.edu/openlearn/money-business/leadership-management/effective-communication/content-section-overview,3,Title matches declared topical intent,COURSE,BEGINNER
+P12,https://ocw.mit.edu/courses/21g-213-high-intermediate-academic-communication-spring-2004,3,Title matches declared topical intent,COURSE,UNKNOWN
+P12,https://ocw.mit.edu/courses/12-757-science-and-communication-spring-2005,3,Title matches declared topical intent,COURSE,UNKNOWN
+P12,https://ocw.mit.edu/courses/11-914-planning-communication-spring-2007,3,Title matches declared topical intent,COURSE,UNKNOWN
+P12,https://ocw.mit.edu/courses/11-225-argumentation-and-communication-fall-2006,3,Title matches declared topical intent,COURSE,UNKNOWN
+P12,https://ocw.mit.edu/courses/15-990-architecture-and-communication-in-organizations-fall-2003,3,Title matches declared topical intent,COURSE,UNKNOWN
+P12,https://ocw.mit.edu/courses/sts-014-principles-and-practice-of-science-communication-spring-2006,3,Title matches declared topical intent,COURSE,UNKNOWN
+P12,https://ocw.mit.edu/courses/15-281-advanced-communication-for-leaders-spring-2016,3,Title matches declared topical intent,COURSE,UNKNOWN
+P12,https://ocw.mit.edu/courses/15-280-communication-for-managers-fall-2016,3,Title matches declared topical intent,COURSE,UNKNOWN
+P12,https://ocw.mit.edu/courses/11-423-information-and-communication-technologies-in-community-development-spring-2004,3,Title matches declared topical intent,COURSE,UNKNOWN
+P12,https://ocw.mit.edu/courses/sts-460-histories-of-information-communication-and-computing-technologies-spring-2015,3,Title matches declared topical intent,COURSE,UNKNOWN
+P12,https://medlineplus.gov/genetics/understanding/traits/height,0,Different primary category or no matching topical evidence,ARTICLE,UNKNOWN
+P12,https://medlineplus.gov/cholesterol.html,0,Different primary category or no matching topical evidence,GUIDE,UNKNOWN
+P12,https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026,0,Different primary category or no matching topical evidence,COURSE,UNKNOWN
+P12,https://www.exploratorium.edu/learn,0,Different primary category or no matching topical evidence,RESOURCE,BEGINNER
+P12,https://www.nps.gov/findapark/index.htm,0,Different primary category or no matching topical evidence,TOOL,BEGINNER
+P12,https://www.who.int/publications/i/item/9789240015128,0,Different primary category or no matching topical evidence,DOCUMENTATION,INTERMEDIATE
+P12,https://www.nhs.uk/better-health/get-active/home-workout-videos/,0,Different primary category or no matching topical evidence,VIDEO,BEGINNER
+P12,https://leetcode.com/explore/interview/card/top-interview-questions-easy/,0,Different primary category or no matching topical evidence,PROJECT,INTERMEDIATE
+P13,https://www.who.int/news-room/fact-sheets/detail/healthy-diet,3,Title matches declared topical intent,ARTICLE,BEGINNER
+P13,https://www.nhs.uk/live-well/eat-well/,3,Title matches declared topical intent,GUIDE,BEGINNER
+P13,https://www.nutrition.gov/,3,Title matches declared topical intent,RESOURCE,BEGINNER
+P13,https://www.myplate.gov/myplate-plan,2,Explicit controlled topic matches intent,TOOL,BEGINNER
+P13,https://nutritionsource.hsph.harvard.edu/healthy-eating-plate/,3,Title matches declared topical intent,GUIDE,BEGINNER
+P13,https://medlineplus.gov/nutrition.html,3,Title matches declared topical intent,GUIDE,BEGINNER
+P13,https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/how-to-read-food-labels/,3,Title matches declared topical intent,GUIDE,BEGINNER
+P13,https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/,3,Title matches declared topical intent,GUIDE,BEGINNER
+P13,https://medlineplus.gov/childnutrition.html,3,Title matches declared topical intent,GUIDE,UNKNOWN
+P13,https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/the-eatwell-guide/,2,Explicit controlled topic matches intent,GUIDE,BEGINNER
+P13,https://www.cdc.gov/healthy-weight-growth/about/index.html,2,Explicit controlled topic matches intent,GUIDE,BEGINNER
+P13,https://fdc.nal.usda.gov/,2,Explicit controlled topic matches intent,TOOL,INTERMEDIATE
+P13,https://medlineplus.gov/adhesions.html,1,Description supplies weaker topical evidence,GUIDE,UNKNOWN
+P13,https://medlineplus.gov/adrenalglanddisorders.html,1,Description supplies weaker topical evidence,GUIDE,UNKNOWN
+P13,https://medlineplus.gov/allergy.html,1,Description supplies weaker topical evidence,GUIDE,UNKNOWN
+P13,https://medlineplus.gov/alzheimerscaregivers.html,1,Description supplies weaker topical evidence,GUIDE,UNKNOWN
+P13,https://medlineplus.gov/genetics/understanding/traits/handedness,0,Different primary category or no matching topical evidence,ARTICLE,UNKNOWN
+P13,https://medlineplus.gov/chlamydiainfections.html,0,Different primary category or no matching topical evidence,GUIDE,UNKNOWN
+P13,https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026,0,Different primary category or no matching topical evidence,COURSE,UNKNOWN
+P13,https://www.exploratorium.edu/learn,0,Different primary category or no matching topical evidence,RESOURCE,BEGINNER
+P13,https://www.nps.gov/findapark/index.htm,0,Different primary category or no matching topical evidence,TOOL,BEGINNER
+P13,https://www.who.int/publications/i/item/9789240015128,0,Different primary category or no matching topical evidence,DOCUMENTATION,INTERMEDIATE
+P13,https://www.nhs.uk/better-health/get-active/home-workout-videos/,0,Different primary category or no matching topical evidence,VIDEO,BEGINNER
+P13,https://leetcode.com/explore/interview/card/top-interview-questions-easy/,0,Different primary category or no matching topical evidence,PROJECT,INTERMEDIATE
+P14,https://www.who.int/news-room/fact-sheets/detail/physical-activity,3,Title matches declared topical intent,ARTICLE,BEGINNER
+P14,https://www.health.harvard.edu/topics/exercise-and-fitness,3,Title matches declared topical intent,GUIDE,BEGINNER
+P14,https://www.nhs.uk/live-well/exercise/get-running-with-couch-to-5k/,2,Explicit controlled topic matches intent,COURSE,BEGINNER
+P14,https://health.gov/moveyourway/activity-planner,2,Explicit controlled topic matches intent,RESOURCE,BEGINNER
+P14,https://fdc.nal.usda.gov/,2,Explicit controlled topic matches intent,TOOL,INTERMEDIATE
+P14,https://www.who.int/publications/i/item/9789240015128,3,Title matches declared topical intent,DOCUMENTATION,INTERMEDIATE
+P14,https://www.nhs.uk/better-health/get-active/home-workout-videos/,3,Title matches declared topical intent,VIDEO,BEGINNER
+P14,https://health.gov/our-work/nutrition-physical-activity/physical-activity-guidelines/current-guidelines,3,Title matches declared topical intent,GUIDE,BEGINNER
+P14,https://medlineplus.gov/exerciseandphysicalfitness.html,3,Title matches declared topical intent,GUIDE,BEGINNER
+P14,https://www.cdc.gov/physical-activity-basics/benefits/index.html,3,Title matches declared topical intent,GUIDE,INTERMEDIATE
+P14,https://www.nhs.uk/live-well/exercise/,3,Title matches declared topical intent,GUIDE,BEGINNER
+P14,https://www.heart.org/en/healthy-living/fitness,3,Title matches declared topical intent,GUIDE,BEGINNER
+P14,https://medlineplus.gov/benefitsofexercise.html,3,Title matches declared topical intent,GUIDE,UNKNOWN
+P14,https://www.nhs.uk/live-well/exercise/strength-exercises/,2,Explicit controlled topic matches intent,GUIDE,BEGINNER
+P14,https://www.cdc.gov/healthy-weight-growth/about/index.html,2,Explicit controlled topic matches intent,GUIDE,BEGINNER
+P14,https://yogawithadriene.com/,2,Explicit controlled topic matches intent,VIDEO,BEGINNER
+P14,https://medlineplus.gov/genetics/understanding/traits/height,0,Different primary category or no matching topical evidence,ARTICLE,UNKNOWN
+P14,https://medlineplus.gov/cholera.html,0,Different primary category or no matching topical evidence,GUIDE,UNKNOWN
+P14,https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026,0,Different primary category or no matching topical evidence,COURSE,UNKNOWN
+P14,https://www.exploratorium.edu/learn,0,Different primary category or no matching topical evidence,RESOURCE,BEGINNER
+P14,https://www.nps.gov/findapark/index.htm,0,Different primary category or no matching topical evidence,TOOL,BEGINNER
+P14,https://docs.ankiweb.net/,0,Different primary category or no matching topical evidence,DOCUMENTATION,BEGINNER
+P14,https://leetcode.com/explore/interview/card/top-interview-questions-easy/,0,Different primary category or no matching topical evidence,PROJECT,INTERMEDIATE
+P15,https://openstax.org/books/college-success/pages/11-2-sleep,3,Title matches declared topical intent,ARTICLE,UNKNOWN
+P15,https://www.nhlbi.nih.gov/health/sleep-deprivation/healthy-sleep-habits,3,Title matches declared topical intent,GUIDE,BEGINNER
+P15,https://www.cdc.gov/sleep/index.html,3,Title matches declared topical intent,RESOURCE,BEGINNER
+P15,https://mhanational.org/,2,Explicit controlled topic matches intent,TOOL,BEGINNER
+P15,https://www.nhlbi.nih.gov/health/sleep,3,Title matches declared topical intent,GUIDE,BEGINNER
+P15,https://www.cdc.gov/sleep/about/index.html,3,Title matches declared topical intent,GUIDE,BEGINNER
+P15,https://www.nhs.uk/live-well/sleep-and-tiredness/,3,Title matches declared topical intent,GUIDE,BEGINNER
+P15,https://medlineplus.gov/sleepdisorders.html,3,Title matches declared topical intent,GUIDE,INTERMEDIATE
+P15,https://www.who.int/news-room/fact-sheets/detail/mental-health-at-work,2,Explicit controlled topic matches intent,ARTICLE,BEGINNER
+P15,https://www.nhs.uk/every-mind-matters/,2,Explicit controlled topic matches intent,RESOURCE,BEGINNER
+P15,https://www.who.int/publications/i/item/9789240003927,2,Explicit controlled topic matches intent,GUIDE,BEGINNER
+P15,https://www.nhs.uk/mental-health/self-help/tips-and-support/mindfulness/,2,Explicit controlled topic matches intent,GUIDE,BEGINNER
+P15,https://www.nhs.uk/mental-health/self-help/guides-tools-and-activities/,2,Explicit controlled topic matches intent,RESOURCE,BEGINNER
+P15,https://medlineplus.gov/adenoids.html,1,Description supplies weaker topical evidence,GUIDE,UNKNOWN
+P15,https://medlineplus.gov/alzheimersdisease.html,1,Description supplies weaker topical evidence,GUIDE,UNKNOWN
+P15,https://medlineplus.gov/amyotrophiclateralsclerosis.html,1,Description supplies weaker topical evidence,GUIDE,UNKNOWN
+P15,https://medlineplus.gov/genetics/understanding/traits/height,0,Different primary category or no matching topical evidence,ARTICLE,UNKNOWN
+P15,https://medlineplus.gov/cholesterol.html,0,Different primary category or no matching topical evidence,GUIDE,UNKNOWN
+P15,https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026,0,Different primary category or no matching topical evidence,COURSE,UNKNOWN
+P15,https://www.exploratorium.edu/learn,0,Different primary category or no matching topical evidence,RESOURCE,BEGINNER
+P15,https://www.nps.gov/findapark/index.htm,0,Different primary category or no matching topical evidence,TOOL,BEGINNER
+P15,https://www.who.int/publications/i/item/9789240015128,0,Different primary category or no matching topical evidence,DOCUMENTATION,INTERMEDIATE
+P15,https://www.nhs.uk/better-health/get-active/home-workout-videos/,0,Different primary category or no matching topical evidence,VIDEO,BEGINNER
+P15,https://leetcode.com/explore/interview/card/top-interview-questions-easy/,0,Different primary category or no matching topical evidence,PROJECT,INTERMEDIATE
+P16,https://www.who.int/news-room/fact-sheets/detail/mental-health-at-work,3,Title matches declared topical intent,ARTICLE,BEGINNER
+P16,https://www.who.int/publications/i/item/9789240003927,3,Title matches declared topical intent,GUIDE,BEGINNER
+P16,https://ocw.mit.edu/courses/2-785j-cell-matrix-mechanics-fall-2014,1,Description supplies weaker topical evidence,COURSE,UNKNOWN
+P16,https://www.who.int/news-room/fact-sheets/detail/mental-health-strengthening-our-response,3,Title matches declared topical intent,RESOURCE,ALL_LEVELS
+P16,https://mhanational.org/,3,Title matches declared topical intent,TOOL,BEGINNER
+P16,https://www.who.int/publications/i/item/9789240015128,2,Explicit controlled topic matches intent,DOCUMENTATION,INTERMEDIATE
+P16,https://yogawithadriene.com/,2,Explicit controlled topic matches intent,VIDEO,BEGINNER
+P16,https://www.nhs.uk/mental-health/self-help/guides-tools-and-activities/,3,Title matches declared topical intent,RESOURCE,BEGINNER
+P16,https://medlineplus.gov/childmentalhealth.html,3,Title matches declared topical intent,GUIDE,UNKNOWN
+P16,https://openstax.org/books/college-success/pages/11-4-taking-care-of-your-mental-health,3,Title matches declared topical intent,ARTICLE,UNKNOWN
+P16,https://www.who.int/news-room/fact-sheets/detail/physical-activity,2,Explicit controlled topic matches intent,ARTICLE,BEGINNER
+P16,https://medlineplus.gov/exerciseandphysicalfitness.html,2,Explicit controlled topic matches intent,GUIDE,BEGINNER
+P16,https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/the-eatwell-guide/,2,Explicit controlled topic matches intent,GUIDE,BEGINNER
+P16,https://nutritionsource.hsph.harvard.edu/healthy-eating-plate/,2,Explicit controlled topic matches intent,GUIDE,BEGINNER
+P16,https://www.myplate.gov/myplate-plan,2,Explicit controlled topic matches intent,TOOL,BEGINNER
+P16,https://medlineplus.gov/nutrition.html,2,Explicit controlled topic matches intent,GUIDE,BEGINNER
+P16,https://medlineplus.gov/genetics/understanding/traits/height,0,Different primary category or no matching topical evidence,ARTICLE,UNKNOWN
+P16,https://medlineplus.gov/cholera.html,0,Different primary category or no matching topical evidence,GUIDE,UNKNOWN
+P16,https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026,0,Different primary category or no matching topical evidence,COURSE,UNKNOWN
+P16,https://www.exploratorium.edu/learn,0,Different primary category or no matching topical evidence,RESOURCE,BEGINNER
+P16,https://www.nps.gov/findapark/index.htm,0,Different primary category or no matching topical evidence,TOOL,BEGINNER
+P16,https://docs.ankiweb.net/,0,Different primary category or no matching topical evidence,DOCUMENTATION,BEGINNER
+P16,https://www.nhs.uk/better-health/get-active/home-workout-videos/,0,Different primary category or no matching topical evidence,VIDEO,BEGINNER
+P16,https://leetcode.com/explore/interview/card/top-interview-questions-easy/,0,Different primary category or no matching topical evidence,PROJECT,INTERMEDIATE
+P17,https://www.figma.com/resource-library/,3,Title matches declared topical intent,GUIDE,BEGINNER
+P17,https://www.canva.com/designschool/,3,Title matches declared topical intent,COURSE,BEGINNER
+P17,https://www.moma.org/learn/moma_learning/,2,Explicit controlled topic matches intent,RESOURCE,BEGINNER
+P17,https://ocw.mit.edu/courses/4-580-inquiry-into-computation-and-design-fall-2006,3,Title matches declared topical intent,COURSE,UNKNOWN
+P17,https://ocw.mit.edu/courses/4-196-architecture-design-level-ii-cuba-studio-spring-2004,3,Title matches declared topical intent,COURSE,UNKNOWN
+P17,https://ocw.mit.edu/courses/11-001j-introduction-to-urban-design-and-development-spring-2006,3,Title matches declared topical intent,COURSE,UNKNOWN
+P17,https://ocw.mit.edu/courses/cms-608-game-design-spring-2008,3,Title matches declared topical intent,COURSE,UNKNOWN
+P17,https://ocw.mit.edu/courses/4-638-drawings-numbers-five-centuries-of-digital-design-fall-2002,3,Title matches declared topical intent,COURSE,UNKNOWN
+P17,https://ocw.mit.edu/courses/4-285-research-topics-in-architecture-citizen-centered-design-of-open-governance-systems-fall-2002,3,Title matches declared topical intent,COURSE,UNKNOWN
+P17,https://ocw.mit.edu/courses/4-155b-architectural-design-level-iii-a-student-center-for-mit-fall-2004,3,Title matches declared topical intent,COURSE,UNKNOWN
+P17,https://ocw.mit.edu/courses/21m-735-technical-design-scenery-mechanisms-and-special-effects-spring-2004,3,Title matches declared topical intent,COURSE,UNKNOWN
+P17,https://ocw.mit.edu/courses/cms-s63-playful-augmented-reality-audio-design-exploration-fall-2019,3,Title matches declared topical intent,COURSE,UNKNOWN
+P17,https://ocw.mit.edu/courses/1-561-motion-based-design-fall-2003,3,Title matches declared topical intent,COURSE,UNKNOWN
+P17,https://ocw.mit.edu/courses/4-163j-urban-design-studio-providence-spring-2005,3,Title matches declared topical intent,COURSE,UNKNOWN
+P17,https://ocw.mit.edu/courses/mas-110-fundamentals-of-computational-media-design-fall-2008,3,Title matches declared topical intent,COURSE,UNKNOWN
+P17,https://ocw.mit.edu/courses/4-123-architectural-design-level-i-perceptions-and-processes-fall-2003,3,Title matches declared topical intent,COURSE,UNKNOWN
+P17,https://medlineplus.gov/genetics/understanding/traits/height,0,Different primary category or no matching topical evidence,ARTICLE,UNKNOWN
+P17,https://medlineplus.gov/cholesterol.html,0,Different primary category or no matching topical evidence,GUIDE,UNKNOWN
+P17,https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026,0,Different primary category or no matching topical evidence,COURSE,UNKNOWN
+P17,https://learninglab.si.edu/,0,Different primary category or no matching topical evidence,RESOURCE,BEGINNER
+P17,https://www.nps.gov/findapark/index.htm,0,Different primary category or no matching topical evidence,TOOL,BEGINNER
+P17,https://www.who.int/publications/i/item/9789240015128,0,Different primary category or no matching topical evidence,DOCUMENTATION,INTERMEDIATE
+P17,https://www.nhs.uk/better-health/get-active/home-workout-videos/,0,Different primary category or no matching topical evidence,VIDEO,BEGINNER
+P17,https://leetcode.com/explore/interview/card/top-interview-questions-easy/,0,Different primary category or no matching topical evidence,PROJECT,INTERMEDIATE
+P18,https://www.adobe.com/,3,Title matches declared topical intent,GUIDE,BEGINNER
+P18,https://ocw.mit.edu/courses/4-341-introduction-to-photography-and-related-media-fall-2007,3,Title matches declared topical intent,COURSE,UNKNOWN
+P18,https://unsplash.com/blog/,3,Title matches declared topical intent,RESOURCE,BEGINNER
+P18,https://www.nps.gov/findapark/index.htm,2,Explicit controlled topic matches intent,TOOL,BEGINNER
+P18,https://petapixel.com/,3,Title matches declared topical intent,RESOURCE,INTERMEDIATE
+P18,https://digital-photography-school.com/,3,Title matches declared topical intent,GUIDE,BEGINNER
+P18,https://www.nationalgeographic.com/photography,3,Title matches declared topical intent,RESOURCE,INTERMEDIATE
+P18,https://ocw.mit.edu/courses/11-309j-sites-in-sight-photography-as-inquiry-fall-2003,3,Title matches declared topical intent,COURSE,UNKNOWN
+P18,https://ocw.mit.edu/courses/21l-701-literary-interpretation-literature-and-photography-the-image-fall-2005,3,Title matches declared topical intent,COURSE,UNKNOWN
+P18,https://ocw.mit.edu/courses/21a-348-photography-and-truth-spring-2008,3,Title matches declared topical intent,COURSE,UNKNOWN
+P18,https://ocw.mit.edu/courses/21g-049-french-photography-spring-2017,3,Title matches declared topical intent,COURSE,UNKNOWN
+P18,https://ocw.mit.edu/courses/4-343-photography-and-related-media-fall-2002,3,Title matches declared topical intent,COURSE,UNKNOWN
+P18,https://ocw.mit.edu/courses/4-341-introduction-to-photography-fall-2002,3,Title matches declared topical intent,COURSE,UNKNOWN
+P18,https://ocw.mit.edu/courses/11-309j-sensing-place-photography-as-inquiry-fall-2012,3,Title matches declared topical intent,COURSE,UNKNOWN
+P18,https://www.adobe.com/learn,2,Explicit controlled topic matches intent,GUIDE,BEGINNER
+P18,https://www.figma.com/resource-library/,2,Explicit controlled topic matches intent,GUIDE,BEGINNER
+P18,https://medlineplus.gov/genetics/understanding/traits/height,0,Different primary category or no matching topical evidence,ARTICLE,UNKNOWN
+P18,https://medlineplus.gov/cholesterol.html,0,Different primary category or no matching topical evidence,GUIDE,UNKNOWN
+P18,https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026,0,Different primary category or no matching topical evidence,COURSE,UNKNOWN
+P18,https://www.exploratorium.edu/learn,0,Different primary category or no matching topical evidence,RESOURCE,BEGINNER
+P18,https://hemingwayapp.com/,0,Different primary category or no matching topical evidence,TOOL,BEGINNER
+P18,https://www.who.int/publications/i/item/9789240015128,0,Different primary category or no matching topical evidence,DOCUMENTATION,INTERMEDIATE
+P18,https://www.nhs.uk/better-health/get-active/home-workout-videos/,0,Different primary category or no matching topical evidence,VIDEO,BEGINNER
+P18,https://leetcode.com/explore/interview/card/top-interview-questions-easy/,0,Different primary category or no matching topical evidence,PROJECT,INTERMEDIATE
+P19,https://openstax.org/books/writing-guide/pages/1-5-writing-process-thinking-critically-about-a-text,3,Title matches declared topical intent,ARTICLE,UNKNOWN
+P19,https://www.plainlanguage.gov/guidelines/,3,Title matches declared topical intent,GUIDE,BEGINNER
+P19,https://ocw.mit.edu/courses/21g-010-introduction-to-european-and-latin-american-fiction-fall-2006,3,Title matches declared topical intent,COURSE,UNKNOWN
+P19,https://writingcooperative.com/,3,Title matches declared topical intent,RESOURCE,BEGINNER
+P19,https://hemingwayapp.com/,2,Explicit controlled topic matches intent,TOOL,BEGINNER
+P19,https://owl.purdue.edu/owl/general_writing/,3,Title matches declared topical intent,GUIDE,BEGINNER
+P19,https://www.poetryfoundation.org/poems,3,Title matches declared topical intent,RESOURCE,INTERMEDIATE
+P19,https://ocw.mit.edu/courses/21l-003-reading-fiction-imaginary-journeys-fall-2015,3,Title matches declared topical intent,COURSE,UNKNOWN
+P19,https://ocw.mit.edu/courses/21w-763j-transmedia-storytelling-modern-science-fiction-spring-2014,3,Title matches declared topical intent,COURSE,UNKNOWN
+P19,https://ocw.mit.edu/courses/21l-704-studies-in-poetry-does-poetry-matter-fall-2002,3,Title matches declared topical intent,COURSE,UNKNOWN
+P19,https://ocw.mit.edu/courses/21w-758-genre-fiction-workshop-fantasy-fall-2016,3,Title matches declared topical intent,COURSE,UNKNOWN
+P19,https://ocw.mit.edu/courses/21l-019-introduction-to-european-and-latin-american-fiction-great-books-on-the-page-and-on-the-screen-spring-2017,3,Title matches declared topical intent,COURSE,UNKNOWN
+P19,https://ocw.mit.edu/courses/21l-003-2-reading-fiction-fall-2006,3,Title matches declared topical intent,COURSE,UNKNOWN
+P19,https://ocw.mit.edu/courses/21w-742j-writing-about-race-narratives-of-multiraciality-fall-2008,3,Title matches declared topical intent,COURSE,UNKNOWN
+P19,https://ocw.mit.edu/courses/21l-704-studies-in-poetry-20th-century-irish-poetry-the-shadow-of-w-b-yeats-spring-2008,3,Title matches declared topical intent,COURSE,UNKNOWN
+P19,https://ocw.mit.edu/courses/21l-701-literary-interpretation-interpreting-poetry-fall-2003,3,Title matches declared topical intent,COURSE,UNKNOWN
+P19,https://medlineplus.gov/genetics/understanding/traits/height,0,Different primary category or no matching topical evidence,ARTICLE,UNKNOWN
+P19,https://medlineplus.gov/cholesterol.html,0,Different primary category or no matching topical evidence,GUIDE,UNKNOWN
+P19,https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026,0,Different primary category or no matching topical evidence,COURSE,UNKNOWN
+P19,https://www.exploratorium.edu/learn,0,Different primary category or no matching topical evidence,RESOURCE,BEGINNER
+P19,https://www.nps.gov/findapark/index.htm,0,Different primary category or no matching topical evidence,TOOL,BEGINNER
+P19,https://www.who.int/publications/i/item/9789240015128,0,Different primary category or no matching topical evidence,DOCUMENTATION,INTERMEDIATE
+P19,https://www.nhs.uk/better-health/get-active/home-workout-videos/,0,Different primary category or no matching topical evidence,VIDEO,BEGINNER
+P19,https://leetcode.com/explore/interview/card/top-interview-questions-easy/,0,Different primary category or no matching topical evidence,PROJECT,INTERMEDIATE
+P20,https://www.blender.org/support/tutorials/,2,Explicit controlled topic matches intent,GUIDE,INTERMEDIATE
+P20,https://ocw.mit.edu/courses/21m-715-the-craft-of-costume-design-fall-2009,3,Title matches declared topical intent,COURSE,UNKNOWN
+P20,https://nanowrimo.org/,2,Explicit controlled topic matches intent,RESOURCE,BEGINNER
+P20,https://www.nps.gov/findapark/index.htm,2,Explicit controlled topic matches intent,TOOL,BEGINNER
+P20,https://www.khanacademy.org/computing/pixar,2,Explicit controlled topic matches intent,COURSE,BEGINNER
+P20,https://procreate.com/handbook/procreate,2,Explicit controlled topic matches intent,GUIDE,BEGINNER
+P20,https://www.poetryfoundation.org/poems,2,Explicit controlled topic matches intent,RESOURCE,INTERMEDIATE
+P20,https://www.gutenberg.org/,2,Explicit controlled topic matches intent,RESOURCE,BEGINNER
+P20,https://www.atlasobscura.com/places,2,Explicit controlled topic matches intent,RESOURCE,BEGINNER
+P20,https://support.google.com/maps/answer/144339,2,Explicit controlled topic matches intent,GUIDE,BEGINNER
+P20,https://learninglab.si.edu/,2,Explicit controlled topic matches intent,RESOURCE,BEGINNER
+P20,https://www.exploratorium.edu/learn,2,Explicit controlled topic matches intent,RESOURCE,BEGINNER
+P20,https://ocw.mit.edu/courses/es-272-culture-tech-spring-2003,1,Description supplies weaker topical evidence,COURSE,UNKNOWN
+P20,https://ocw.mit.edu/courses/21w-759-writing-science-fiction-spring-2016,1,Description supplies weaker topical evidence,COURSE,UNKNOWN
+P20,https://ocw.mit.edu/courses/21l-707-reading-cookbooks-from-the-forme-of-cury-to-the-smitten-kitchen-spring-2017,1,Description supplies weaker topical evidence,COURSE,UNKNOWN
+P20,https://ocw.mit.edu/courses/21l-010-writing-with-shakespeare-fall-2010,1,Description supplies weaker topical evidence,COURSE,UNKNOWN
+P20,https://medlineplus.gov/genetics/understanding/traits/height,0,Different primary category or no matching topical evidence,ARTICLE,UNKNOWN
+P20,https://medlineplus.gov/cholesterol.html,0,Different primary category or no matching topical evidence,GUIDE,UNKNOWN
+P20,https://ocw.mit.edu/courses/res-16-9960-the-engineering-students-guide-to-effective-technical-communication-spring-2026,0,Different primary category or no matching topical evidence,COURSE,UNKNOWN
+P20,https://whc.unesco.org/en/list/,0,Different primary category or no matching topical evidence,RESOURCE,BEGINNER
+P20,https://hemingwayapp.com/,0,Different primary category or no matching topical evidence,TOOL,BEGINNER
+P20,https://www.who.int/publications/i/item/9789240015128,0,Different primary category or no matching topical evidence,DOCUMENTATION,INTERMEDIATE
+P20,https://www.nhs.uk/better-health/get-active/home-workout-videos/,0,Different primary category or no matching topical evidence,VIDEO,BEGINNER
+P20,https://leetcode.com/explore/interview/card/top-interview-questions-easy/,0,Different primary category or no matching topical evidence,PROJECT,INTERMEDIATE

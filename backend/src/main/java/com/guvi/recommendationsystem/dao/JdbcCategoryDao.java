@@ -7,8 +7,6 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
-import java.sql.PreparedStatement;
-import java.sql.Statement;
 import java.util.List;
 import java.util.Optional;
 
@@ -78,12 +76,11 @@ public class JdbcCategoryDao implements CategoryDao {
     public Category insert(String name, String description) {
         KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbcTemplate.update(connection -> {
-            PreparedStatement statement = connection.prepareStatement(
-                    "INSERT INTO categories (name, description) VALUES (?, ?)",
-                    Statement.RETURN_GENERATED_KEYS);
+            return com.guvi.recommendationsystem.dao.JdbcStatements.generated(connection,
+                    "INSERT INTO categories (name, description) VALUES (?, ?)", statement -> {
             statement.setString(1, name);
             statement.setString(2, description);
-            return statement;
+            });
         }, keyHolder);
         Number generatedId = keyHolder.getKey();
         if (generatedId == null) {

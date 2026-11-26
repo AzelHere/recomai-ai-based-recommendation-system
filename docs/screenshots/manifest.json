@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-26T13:57:07.805Z",
+  "capturedAt": "2026-11-26T19:31:38.089Z",
   "application": "Recom AI",
   "fixture": "Isolated generated demonstration account; no private database",
   "errors": [],
@@ -20,97 +20,97 @@
       "file": "03-learning-goals.png",
       "width": 1440,
       "height": 900,
-      "sha256": "80af4f9feea6e2e2dccc79a35a90120817ebd68b3a09847955bfce736a13e14e"
+      "sha256": "7f606edb792b26618833309a5d1ba0afd7e96031d40c07de9f350105133c8783"
     },
     {
       "file": "04-interest-selection.png",
       "width": 1440,
       "height": 900,
-      "sha256": "0934311eea6d482dd5eadf0453eded8072a4a91bf35c12172c5ccf5d53f61809"
+      "sha256": "f3fb1b9ad50c9f2c99cd55b828acc3007c2d4286aba7f778eb1e43f3833f0e73"
     },
     {
       "file": "05-personalized-recommendations.png",
       "width": 1440,
       "height": 900,
-      "sha256": "156087ad2ed512976b48d7b2cbf8fed128fade2226c9f0971d54ab7c4b521c22"
+      "sha256": "43c8f7c77c09aa54660da24244538b4c862705a246dfdaf5b4852f3d5c29ed60"
     },
     {
       "file": "06-recommendation-explanation.png",
       "width": 1440,
       "height": 900,
-      "sha256": "9aa34cf7932b6a71d8051610ffeff78d480d1591ba8b6451282a1197deeb43ab"
+      "sha256": "7f1ea70778e34f01befc8477683a627378ca27ebbf62a9043f27a10e2c046d18"
     },
     {
       "file": "07-explore-catalog.png",
       "width": 1440,
       "height": 900,
-      "sha256": "90c6fadf2ef2ba959852089676314c1881b3dc8a2b95562ade5f64397d7cbf5d"
+      "sha256": "39a84ca89b877637c90cb89f926655ef71de34de6fcffd8082d384c2af354d35"
     },
     {
       "file": "08-articles-filter.png",
       "width": 1440,
       "height": 900,
-      "sha256": "32c891a7cbe386cf26116602b80e0ab297fcbae7c20c96d06a1b3d4192e8b3ec"
+      "sha256": "842e994a45f3b571f0f60cd5cd13b55e262f3bfc91fd8e9f0653d37bcc6a9115"
     },
     {
       "file": "09-search-and-filters.png",
       "width": 1440,
       "height": 900,
-      "sha256": "6bbf53c90d6b34921d9fa39730b4f287089e7131df9d8e12b3ba8c9573c67873"
+      "sha256": "587c253ef75366b9a45177459a860e4ae35d32dcf0bb019e99b66a4a423d4a97"
     },
     {
       "file": "18-resource-provenance.png",
       "width": 1440,
       "height": 900,
-      "sha256": "4b2d65a3164cff7f02823cf7967fc24466a4ed92e84cc40fb436021dd9004d2c"
+      "sha256": "b68908d0e7a2b0b311a066e7d31fc40678fe19e04c97805e0bf2371a0a20bf22"
     },
     {
       "file": "10-saved-resources.png",
       "width": 1440,
       "height": 900,
-      "sha256": "b16d4989efb56d8bccdb752115b218caf2b7d0a39979824d326b7b58fbc0093a"
+      "sha256": "868da3ea487403b4e731ddc8c01e30553ab87b5db7fb8851aa188c8acb5375c1"
     },
     {
       "file": "11-collections.png",
       "width": 1440,
       "height": 900,
-      "sha256": "c4664159f8f38f9d44553d8286ad9932a6615cf4ced918ab9a088ed0fafe8bac"
+      "sha256": "e7f54acf9665365962b389456b199e84575373d81abd7064638bca76477955ad"
     },
     {
       "file": "12-learning-journey.png",
       "width": 1440,
       "height": 900,
-      "sha256": "157ac6168477e465dd4c0fd15699a6677ff463dce241e678a93e5f9b70475c2a"
+      "sha256": "d59bd8d5c634ef6a8482d93c94e97d10c9b47e878aa82ffb9f209508a7e01c57"
     },
     {
       "file": "13-learning-progress.png",
       "width": 1440,
       "height": 900,
-      "sha256": "c141c7c497083afa1d925e52b28e882725a17d7b57941ec2b8d0c547a690bd0b"
+      "sha256": "4ad61f395ea2e1372d195282d7fdef6aea724dd35aa01ea1f7fce85194190a20"
     },
     {
       "file": "14-activity-history.png",
       "width": 1440,
       "height": 900,
-      "sha256": "f63abc257ad26fb391ca7b943a01500580c021cd4052a882459b04c2379ed4bd"
+      "sha256": "f9e9e80c47e4f8caac161e641dab4d8cc184f1632458f7306e10d1097e4e761c"
     },
     {
       "file": "15-profile-settings.png",
       "width": 1440,
       "height": 900,
-      "sha256": "d6fd9478e1d2738871aeafbe8485f4450fba170d75b6d8a38f541715e1915318"
+      "sha256": "2da258a5247c93a38ea9733fdf25b45db281a9e6fdc3fceadb0f3bc919e6312c"
     },
     {
       "file": "16-admin-dashboard.png",
       "width": 1440,
       "height": 900,
-      "sha256": "8e5a49d39ccddeeb3fe36a5bd219d751fe0c31edf0486daec4a7e71925368192"
+      "sha256": "ea793c1a737c0b514ae6ba821f7e8e8f8d3a499bbbc2b8b9d1485bcd4d2513ab"
     },
     {
       "file": "17-catalog-management.png",
       "width": 1440,
       "height": 900,
-      "sha256": "71401747861e1d5481861b148aad5b5363ffd708ced4868255964e4b64c157f7"
+      "sha256": "412c5eb7d9e303ff10e700b62806d1305e42e34cae8d9dca0619b76f84ca23a3"
     }
   ]
 }

@@ -89,5 +89,9 @@ public class WorkspaceReadService {
         return new ActivityPage(rows.stream().map(row->new ActivityEntry(row.interactionId(),row.itemId(),row.type(),row.occurredAt(),row.searchQuery(),resources.get(row.itemId()))).toList(),next,more,total);
     }
     public record ActivityEntry(long interactionId,Long itemId,InteractionType type,LocalDateTime occurredAt,String searchQuery,CatalogItem resource) { }
-    public record ActivityPage(List<ActivityEntry> items,String nextCursor,boolean hasMore,long totalItems) { }
+    public record ActivityPage(List<ActivityEntry> items,String nextCursor,boolean hasMore,long totalItems) {
+    public ActivityPage {
+        items = items == null ? null : java.util.Collections.unmodifiableList(new java.util.ArrayList<>(items));
+    }
+ }
 }

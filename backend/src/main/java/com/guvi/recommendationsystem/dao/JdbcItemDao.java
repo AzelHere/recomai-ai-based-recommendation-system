@@ -11,8 +11,6 @@ import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
-import java.sql.PreparedStatement;
-import java.sql.Statement;
 import java.util.List;
 import java.util.Optional;
 import java.util.ArrayList;
@@ -271,7 +269,7 @@ public class JdbcItemDao implements ItemDao {
                 """;
         KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbcTemplate.update(connection -> {
-            PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            return com.guvi.recommendationsystem.dao.JdbcStatements.generated(connection, sql, statement -> {
             statement.setLong(1, categoryId);
             statement.setString(2, title);
             statement.setString(3, description);
@@ -284,7 +282,7 @@ public class JdbcItemDao implements ItemDao {
             else statement.setInt(9, estimatedMinutes);
             statement.setBigDecimal(10, qualityScore);
             statement.setBoolean(11, editorPick);
-            return statement;
+            });
         }, keyHolder);
         Number generatedId = keyHolder.getKey();
         if (generatedId == null) {

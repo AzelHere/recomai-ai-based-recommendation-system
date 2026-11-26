@@ -12,11 +12,15 @@ public class IngestionController {
     private final CatalogMaintenance maintenance;
     private final SessionAccess sessions;
     public IngestionController(CatalogIngestionService service,CatalogMaintenance maintenance,SessionAccess sessions){this.service=service;this.maintenance=maintenance;this.sessions=sessions;}
-    public record ImportRequest(List<EducationalResource> resources,String expectedSha256) { }
+    public record ImportRequest(List<EducationalResource> resources,String expectedSha256) {
+    public ImportRequest {
+        resources = resources == null ? null : java.util.Collections.unmodifiableList(new java.util.ArrayList<>(resources));
+    }
+ }
     @GetMapping("/items/{id}/provenance")
     public Map<String,Object> provenance(@PathVariable long id){return service.provenance(id);}
     @GetMapping("/admin/ingestion")
-    public Map<String,Object> overview(HttpServletRequest request){sessions.requireAdmin(request);return Map.of("sources",service.sources(),"statistics",service.stats(),"batches",service.history(),"reviews",service.reviews(),"maintenance",maintenance.status());}
+    public Map<String,Object> overview(HttpServletRequest request){sessions.requireAdmin(request);return Map.of("sources",service.sources(),"statistics",service.stats(),"batches",service.history(),"reviews",service.reviews(),"linkHealth",service.linkHealth(),"maintenance",maintenance.status());}
     @PostMapping("/admin/ingestion/preview")
     public CatalogIngestionService.Preview preview(@RequestBody ImportRequest input,HttpServletRequest request){sessions.requireAdmin(request);return service.preview(input.resources());}
     @PostMapping("/admin/ingestion/commit")

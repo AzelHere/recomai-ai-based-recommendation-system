@@ -7,8 +7,6 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
-import java.sql.PreparedStatement;
-import java.sql.Statement;
 import java.util.List;
 import java.util.Optional;
 
@@ -46,14 +44,14 @@ public class JdbcFeedbackDao implements FeedbackDao {
     public Feedback insert(long userId, long itemId, int rating, String comment) {
         KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbcTemplate.update(connection -> {
-            PreparedStatement statement = connection.prepareStatement("""
+            return com.guvi.recommendationsystem.dao.JdbcStatements.generated(connection, """
                     INSERT INTO feedback (user_id, item_id, rating, comment) VALUES (?, ?, ?, ?)
-                    """, Statement.RETURN_GENERATED_KEYS);
+                    """, statement -> {
             statement.setLong(1, userId);
             statement.setLong(2, itemId);
             statement.setInt(3, rating);
             statement.setString(4, comment);
-            return statement;
+            });
         }, keyHolder);
         Number id = keyHolder.getKey();
         if (id == null) {

@@ -31,8 +31,7 @@ public final class SourceHttp {
         byte[] b=address.getAddress();
         if (address.isAnyLocalAddress() || address.isLoopbackAddress() || address.isLinkLocalAddress()
                 || address.isSiteLocalAddress() || address.isMulticastAddress()
-                || (b.length==16 && ((b[0]&0xfe)==0xfc))
-                || (b.length==16 && ((b[0]&0xe0)!=0x20 || ((b[0]&255)==0x20 && (b[1]&255)==1 && (b[2]&255)==0x0d && (b[3]&255)==0xb8)))
+                || (b.length==16 && unsafeIpv6(b))
                 || (b.length==4 && ((b[0]&255)==0 || (b[0]&255)==127 || (b[0]&255)>=224
                 || ((b[0]&255)==192 && (b[1]&255)==0)
                 || ((b[0]&255)==198 && ((b[1]&255)==18 || (b[1]&255)==19 || (b[1]&255)==51 && (b[2]&255)==100))
@@ -42,7 +41,23 @@ public final class SourceHttp {
             throw new IllegalArgumentException("Private or reserved source destination rejected.");
     }
 
-    public record Result(int status, URI destination, byte[] body) { }
+    /** Fixed publisher hosts must resolve to ordinary global unicast, not protocol/tunnel or documentation space.
+     * IANA special-purpose registry: 2001::/23, 2001:db8::/32, 2002::/16 and 3fff::/20.
+     * Rejecting transition networks also avoids treating embedded private IPv4 addresses as public destinations.
+     */
+    private static boolean unsafeIpv6(byte[] address) {
+        int first=address[0]&255, second=address[1]&255, third=address[2]&255, fourth=address[3]&255;
+        return (first&0xe0)!=0x20
+                || first==0x20 && second==1 && (third&0xfe)==0
+                || first==0x20 && second==1 && third==0x0d && fourth==0xb8
+                || first==0x20 && second==2
+                || first==0x3f && second==0xff && (third&0xf0)==0;
+    }
+
+    public record Result(int status, URI destination, byte[] body) {
+        public Result { body = body.clone(); }
+        @Override public byte[] body() { return body.clone(); }
+    }
 
     public synchronized Result request(String url, boolean head, int maxBytes) throws Exception {
         if(maxBytes<0 || maxBytes>60_000_000)throw new IllegalArgumentException("Invalid source response limit.");

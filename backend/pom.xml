@@ -93,7 +93,7 @@
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.14</version>
                 <executions>
-                    <execution><goals><goal>prepare-agent</goal></goals></execution>
+                    <execution><goals><goal>prepare-agent</goal></goals><configuration><sessionId>recom-ai-jvm-tests</sessionId></configuration></execution>
                     <execution><id>coverage-report</id><phase>verify</phase><goals><goal>report</goal></goals></execution>
                 </executions>
             </plugin>

@@ -1,0 +1,24 @@
+[
+  {
+    "stage": "before",
+    "image": "sha256:9b7c7fd70b74bfe1891355943b9073f6a4fd429cb986a197a1adf091f029a87d",
+    "matches": 161,
+    "uniqueAdvisories": 67,
+    "severity": {
+      "MEDIUM": 149,
+      "LOW": 12
+    },
+    "availableFixMatches": 86
+  },
+  {
+    "stage": "after",
+    "image": "sha256:11bfb4c9ecdc1fe4a965bfafa116b0266176ae7bdcb44ba2dfd8ac8429370cac",
+    "matches": 75,
+    "uniqueAdvisories": 38,
+    "severity": {
+      "MEDIUM": 63,
+      "LOW": 12
+    },
+    "availableFixMatches": 0
+  }
+]

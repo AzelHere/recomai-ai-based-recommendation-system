@@ -12,7 +12,7 @@ npm run test:e2e -- --workers=2
 
 On Linux use `sh mvnw`. Windows uses installed Edge by default; set `PLAYWRIGHT_CHANNEL=chromium` to use Playwright's Chromium. The isolated runner creates a unique Compose project, database and local ports. It never uses the development database. Containers stop afterwards; volumes are retained, not deleted. See [coverage and final results](../code-quality/README.md).
 
-JaCoCo 0.8.14 runs with `verify`; open `backend/target/site/jacoco/index.html`. It covers the Maven JVM tests, not browser execution inside Docker. No important packages are excluded and no artificial coverage threshold is claimed.
+JaCoCo 0.8.14 runs with `verify`; open `backend/target/site/jacoco/index.html`. It covers the Maven JVM tests. [Separate instrumented browser coverage](../technical-quality/coverage.md) now measures real-database application execution and is clearly distinguished from Maven-only coverage. No production packages are excluded. CI uploads both types of execution evidence and rejects new/unreviewed SpotBugs findings against the explicit finding register.
 
 Static analysis (portable container invocation avoids the Windows-space-path plugin issue):
 
