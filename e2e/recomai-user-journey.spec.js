@@ -1,4 +1,5 @@
 import { onboardingStage } from './onboarding-helper.js';
+import { signInFixture } from './account-fixture.js';
 import { test, expect } from '@playwright/test';
 import { createHash } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
@@ -843,6 +844,7 @@ test('a new user sees an honest cold-start message before any behavior exists', 
 });
 
 test('exploration API persists per account across sign-in', async ({ playwright, baseURL }) => {
+  test.setTimeout(90000);
   const a = await playwright.request.newContext({ baseURL });
   const b = await playwright.request.newContext({ baseURL });
   const endpoint = '/api/users/me/recommendations/exploration';
@@ -867,15 +869,7 @@ test('exploration API persists per account across sign-in', async ({ playwright,
     }
     await a.post('/api/auth/logout');
     const credentials = { email: 'tastea' + suffix + '@example.test', password };
-    let login = await a.post('/api/auth/login', { data: credentials });
-    // All workers share a real IP limit. Honor its explicit backoff once during fixture sign-in.
-    if (login.status() === 429) {
-      const seconds = Number(login.headers()['retry-after']);
-      expect(Number.isInteger(seconds) && seconds >= 1 && seconds <= 20).toBeTruthy();
-      console.log('Shared fixture IP reached the real login limit; honoring Retry-After ' + seconds + 's once.');
-      await new Promise(resolve => setTimeout(resolve, (seconds + 0.1) * 1000));
-      login = await a.post('/api/auth/login', { data: credentials });
-    }
+    const login = await signInFixture(a, credentials);
     expect(login.ok()).toBeTruthy();
     expect(await (await a.get(endpoint)).json()).toEqual({ value: 100 });
   } finally {
