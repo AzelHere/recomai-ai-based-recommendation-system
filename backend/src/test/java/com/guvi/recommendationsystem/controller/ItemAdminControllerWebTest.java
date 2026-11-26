@@ -30,6 +30,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(ItemController.class)
 @Import({SessionAccess.class, ApiExceptionHandler.class})
 class ItemAdminControllerWebTest {
+    @MockitoBean private com.guvi.recommendationsystem.service.AdminCatalogService adminCatalog;
+    @MockitoBean private com.guvi.recommendationsystem.service.AdminWriteService writes;
     @Autowired private MockMvc mockMvc;
     @MockitoBean private ItemService itemService;
     @MockitoBean private CatalogCsvService catalogCsvService;

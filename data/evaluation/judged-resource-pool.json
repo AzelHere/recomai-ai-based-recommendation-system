@@ -1,0 +1,619 @@
+[
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "3554",
+    "title": "Java Preparation for 6.170",
+    "description": "This course focuses on introducing the language, libraries, tools and concepts of Javaᵀᴹ. The course is specifically targeted at students who intend to take 6.170 in the following term and feel they would struggle because they lack the necessary background. Topics include: Object-oriented programming, primitives, arrays, objects, inheritance, interfaces, polymorphism, hashing, data structures, collections, nested classes, floating point precision, defensive programming, and depth-first search algorithm.",
+    "canonicalUrl": "https://ocw.mit.edu/courses/6-092-java-preparation-for-6-170-january-iap-2006",
+    "categoryCode": "TECHNOLOGY",
+    "resourceType": "COURSE",
+    "topics": [
+      "Computer Science",
+      "Engineering",
+      "Programming Languages",
+      "Software Design and Engineering"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Corey McCaffrey, Justin Mazzola Paluska, Lucy Mendel, Ray He, Robert Toscano, Scott Ostler. Java Preparation for 6.170. Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "5065",
+    "title": "Introduction to Programming in Java",
+    "description": "This course is an introduction to software engineering, using the Java™ programming language. It covers concepts useful to 6.005. Students will learn the fundamentals of Java. The focus is on developing high quality, working software that solves real problems. The course is designed for students with some programming experience, but if you have none and are motivated you will do fine. Students who have taken 6.005 should not take this course. Each class is composed of one hour of lecture and one hour of assisted lab work. This course is offered during the Independent Activities Period (IAP), which is a special 4-week term at MIT that runs from the first week of January until the end of the month.",
+    "canonicalUrl": "https://ocw.mit.edu/courses/6-092-introduction-to-programming-in-java-january-iap-2010",
+    "categoryCode": "TECHNOLOGY",
+    "resourceType": "COURSE",
+    "topics": [
+      "Computer Science",
+      "Engineering",
+      "Programming Languages",
+      "Software Design and Engineering"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Evan Jones, Adam Marcus, Eugene Wu. Introduction to Programming in Java. Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "4214",
+    "title": "Introduction to Algorithms",
+    "description": "This course provides an introduction to mathematical modeling of computational problems. It covers the common algorithms, algorithmic paradigms, and data structures used to solve these problems. The course emphasizes the relationship between algorithms and programming, and introduces basic performance measures and analysis techniques for these problems.",
+    "canonicalUrl": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011",
+    "categoryCode": "TECHNOLOGY",
+    "resourceType": "COURSE",
+    "topics": [
+      "Algorithms and Data Structures",
+      "Computer Science",
+      "Engineering"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Prof. Erik Demaine, Prof. Srini Devadas. Introduction to Algorithms. Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "4273",
+    "title": "Design and Analysis of Algorithms",
+    "description": "Techniques for the design and analysis of efficient algorithms, emphasizing methods useful in practice. Topics include sorting; search trees, heaps, and hashing; divide-and-conquer; dynamic programming; greedy algorithms; amortized analysis; graph algorithms; and shortest paths. Advanced topics may include network flow, computational geometry, number-theoretic algorithms, polynomial and matrix calculations, caching, and parallel computing.",
+    "canonicalUrl": "https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2012",
+    "categoryCode": "TECHNOLOGY",
+    "resourceType": "COURSE",
+    "topics": [
+      "Algorithms and Data Structures",
+      "Computer Science",
+      "Engineering"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Prof. Dana Moshkovitz, Prof. Bruce Tidor. Design and Analysis of Algorithms. Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "4156",
+    "title": "Advanced Data Structures",
+    "description": "Data structures play a central role in modern computer science. You interact with data structures even more often than with algorithms (think Google, your mail server, and even your network routers). In addition, data structures are essential building blocks in obtaining efficient algorithms. This course covers major results and current directions of research in data structure. Acknowledgments Thanks to videographers Martin Demaine and Justin Zhang.",
+    "canonicalUrl": "https://ocw.mit.edu/courses/6-851-advanced-data-structures-spring-2012",
+    "categoryCode": "TECHNOLOGY",
+    "resourceType": "COURSE",
+    "topics": [
+      "Algorithms and Data Structures",
+      "Computer Science",
+      "Engineering"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Prof. Erik Demaine. Advanced Data Structures. Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "4505",
+    "title": "Database Systems",
+    "description": "This course relies on primary readings from the database community to introduce graduate students to the foundations of database systems, focusing on basics such as the relational algebra and data model, schema normalization, query optimization, and transactions. It is designed for students who have taken 6.033 (or equivalent); no prior database experience is assumed, though students who have taken an undergraduate course in databases are encouraged to attend.",
+    "canonicalUrl": "https://ocw.mit.edu/courses/6-830-database-systems-fall-2010",
+    "categoryCode": "TECHNOLOGY",
+    "resourceType": "COURSE",
+    "topics": [
+      "Algorithms and Data Structures",
+      "Business",
+      "Computer Science",
+      "Data Mining",
+      "Engineering",
+      "Information Technology",
+      "Software Design and Engineering"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Prof. Samuel Madden, Prof. Robert Morris, Prof. Michael Stonebraker, Dr. Carlo Curino. Database Systems. Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "3457",
+    "title": "Spatial Database Management and Advanced Geographic Information Systems",
+    "description": "This semester long subject (11.521) is divided into two halves. The first half focuses on learning spatial database management techniques and methods and the second half focuses on using these skills to address a ‘real world,’ client-oriented planning problem. The first half of the semester may be taken separately using the class number 11.523 and the second half may be taken separately as 11.524. In order to help shape and utilize the information infrastructure that will support the management and development of our metropolitan areas, planners need a basic understanding of the tools and technology for querying, analyzing, and sharing complex databases and maps. Managing online access to large and constantly-changing spatial datasets can be a powerful aid to planning and can facilitate inter-agency cooperation and collaboration in an increasingly decentralized world. But it requires the use of knowledge representation methods, client-server technologies and access control issues that are quite different from what are needed to model and visualize standalone datasets on a personal computer. Hence, planners should acquire basic skills in database management, digital spatial data analysis, and networking. The 11.523 portion of the semester addresses these issues while retaining a focus on planning (rather than on computer science). This is an intensive, hands-on class that stresses learning by doing. Exercises and examples involving real-world data, maps, and images are used to develop skills with database query languages and the design development and use of structured databases. Class work utilizes web tools, GIS, and database software with lab exercises primarily on the new high-performance PC computing cluster. Specifically, we will access an Oracle 8i database using SQL (structured query language) and use ArcView for GIS. Each week there are two sixty to ninety-minute classes plus another 90+ minute hands-on lab in electronic classrooms. Class lectures will focus on concepts and case discussion, the scheduled lab time focuses on computer mechanics and skill building. Specific topics during 11.523 include: finding, understanding and structuring digital spatial data that are available on the Internet using various browsing, visualization, and data management tools; considerable work with relational database technologies and the Structured Query Language (SQL) to design, construct, query, and update urban planning databases; some experience with so-called ‘client/server’ and ’enterprise GIS’ technologies for facilitating distributed access to complex spatial data and urban planning applications; advanced GIS topics such as 3D visualizations and geospatial web services. The 11.524 portion of the semester will treat the classroom like a professional planning office, working as a team to produce a two deliverables for their client, Lawrence Community Works, Inc. (LCW), a community development corporation located in the City of Lawrence, Massachusetts. LCW and DUSP recently agreed to work together for the next five years to design and implement a multi-tier web-based planning system that promotes democratic involvement and informs community development projects. Your involvement this semester is critical, because the implementation plan that you craft this semester will serve as the road map for both organizations for years to come and the simple web-based planning tool that you design will engage stakeholders by giving them a better sense of how technologies can aid decision-making processes. To assist you with the more technical aspects of the project, we hired Robert Cheetham, President of Azavea, Inc. (http://www.azavea.com/ ), to provide exactly 100 hours of consultancy services. Through their project work, students will enhance important professional skills by: formulating an implementation plan for a real client; designing a simple web-based tool for understanding problems; engaging constituents and stakeholders in a real setting; integrating theory and practice by evaluating the role of technology in community development; learning to communicate effectively within a group and with a professional consultant; working with such tools as the WWW, Access, ArcView, ArcIMS, SDE, etc.",
+    "canonicalUrl": "https://ocw.mit.edu/courses/11-521-spatial-database-management-and-advanced-geographic-information-systems-spring-2003",
+    "categoryCode": "TECHNOLOGY",
+    "resourceType": "COURSE",
+    "topics": [
+      "Business",
+      "Civil Engineering",
+      "Community Development",
+      "Computer Science",
+      "Data Mining",
+      "Engineering",
+      "Graphics and Visualization",
+      "Information Technology",
+      "Social Science",
+      "Sociology",
+      "Surveying",
+      "Urban Planning",
+      "Urban Studies"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Prof. Joseph Ferreira, Prof. Lorlene Hoyt. Spatial Database Management and Advanced Geographic Information Systems. Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "3384",
+    "title": "Database, Internet, and Systems Integration Technologies",
+    "description": "This course addresses information technology fundamentals, including project management and software processes, data modeling, UML, relational databases and SQL. Topics covered include internet technologies, such as XML, web services, and service-oriented architectures. This course provides an introduction to security and presents the fundamentals of telecommunications and includes a project that involves requirements / design, data model, database implementation, website, security and data network. No prior programming experience required.",
+    "canonicalUrl": "https://ocw.mit.edu/courses/1-264j-database-internet-and-systems-integration-technologies-fall-2013",
+    "categoryCode": "TECHNOLOGY",
+    "resourceType": "COURSE",
+    "topics": [
+      "Business",
+      "Computer Science",
+      "Data Mining",
+      "Engineering",
+      "Information Technology",
+      "Software Design and Engineering"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Dr. George Kocur. Database, Internet, and Systems Integration Technologies. Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "4212",
+    "title": "Introduction to Machine Learning",
+    "description": "This course introduces principles, algorithms, and applications of machine learning from the point of view of modeling and prediction. It includes formulation of learning problems and concepts of representation, over-fitting, and generalization. These concepts are exercised in supervised learning and reinforcement learning, with applications to images and to temporal sequences. This course is part of the Open Learning Library, which is free to use. You have the option to sign up and enroll in the course if you want to track your progress, or you can view and use all the materials without enrolling.",
+    "canonicalUrl": "https://ocw.mit.edu/courses/6-036-introduction-to-machine-learning-fall-2020",
+    "categoryCode": "TECHNOLOGY",
+    "resourceType": "COURSE",
+    "topics": [
+      "Algorithms and Data Structures",
+      "Artificial Intelligence",
+      "Computer Science",
+      "Engineering"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Prof. Leslie Kaelbling, Prof. Tomás Lozano-Pérez, Prof. Isaac Chuang, Prof. Duane Boning. Introduction to Machine Learning. Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "3355",
+    "title": "Prediction: Machine Learning and Statistics",
+    "description": "Prediction is at the heart of almost every scientific discipline, and the study of generalization (that is, prediction) from data is the central topic of machine learning and statistics, and more generally, data mining. Machine learning and statistical methods are used throughout the scientific world for their use in handling the “information overload” that characterizes our current digital age. Machine learning developed from the artificial intelligence community, mainly within the last 30 years, at the same time that statistics has made major advances due to the availability of modern computing. However, parts of these two fields aim at the same goal, that is, of prediction from data. This course provides a selection of the most important topics from both of these subjects.",
+    "canonicalUrl": "https://ocw.mit.edu/courses/15-097-prediction-machine-learning-and-statistics-spring-2012",
+    "categoryCode": "TECHNOLOGY",
+    "resourceType": "COURSE",
+    "topics": [
+      "Algorithms and Data Structures",
+      "Applied Mathematics",
+      "Artificial Intelligence",
+      "Computer Science",
+      "Engineering",
+      "Mathematics",
+      "Probability and Statistics"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Prof. Cynthia Rudin. Prediction: Machine Learning and Statistics. Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "4134",
+    "title": "Machine Learning",
+    "description": "6.867 is an introductory course on machine learning which gives an overview of many concepts, techniques, and algorithms in machine learning, beginning with topics such as classification and linear regression and ending up with more recent topics such as boosting, support vector machines, hidden Markov models, and Bayesian networks. The course will give the student the basic ideas and intuition behind modern machine learning methods as well as a bit more formal understanding of how, why, and when they work. The underlying theme in the course is statistical inference as it provides the foundation for most of the methods covered.",
+    "canonicalUrl": "https://ocw.mit.edu/courses/6-867-machine-learning-fall-2006",
+    "categoryCode": "TECHNOLOGY",
+    "resourceType": "COURSE",
+    "topics": [
+      "Algorithms and Data Structures",
+      "Artificial Intelligence",
+      "Cognitive Science",
+      "Computer Science",
+      "Engineering",
+      "Mathematics",
+      "Probability and Statistics",
+      "Science"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Rohit Singh, Prof. Tommi Jaakkola, Ali Mohammad. Machine Learning. Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "3588",
+    "title": "Machine Learning for Healthcare",
+    "description": "This course introduces students to machine learning in healthcare, including the nature of clinical data and the use of machine learning for risk stratification, disease progression modeling, precision medicine, diagnosis, subtype discovery, and improving clinical workflows.",
+    "canonicalUrl": "https://ocw.mit.edu/courses/6-s897-machine-learning-for-healthcare-spring-2019",
+    "categoryCode": "TECHNOLOGY",
+    "resourceType": "COURSE",
+    "topics": [
+      "Artificial Intelligence",
+      "Computer Science",
+      "Engineering",
+      "Health and Medicine",
+      "Human-Computer Interfaces",
+      "Medical Imaging",
+      "Public Health"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Prof. Peter Szolovits, Prof. David Sontag. Machine Learning for Healthcare. Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "5535",
+    "title": "Finance Theory I",
+    "description": "This course introduces the core theory of modern financial economics and financial management, with a focus on capital markets and investments. Topics include functions of capital markets and financial intermediaries, asset valuation, fixed-income securities, common stocks, capital budgeting, diversification and portfolio selection, equilibrium pricing of risky assets, the theory of efficient markets, and an introduction to derivatives and options.",
+    "canonicalUrl": "https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008",
+    "categoryCode": "BUSINESS_FINANCE",
+    "resourceType": "COURSE",
+    "topics": [
+      "Business",
+      "Economics",
+      "Finance",
+      "Financial Economics",
+      "Social Science"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Prof. Andrew Lo. Finance Theory I. Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "5208",
+    "title": "Financial Accounting",
+    "description": "Our goal is to help you develop a framework for understanding financial, managerial, and tax reports. The course goal is divided into five subordinate challenges that can help you organize the way you learn accounting: The record keeping and reporting challenge The computation challenge The judgment challenge The usage challenge The search challenge The course adopts a decision-maker perspective of accounting by emphasizing the relation between accounting data and the underlying economic events generating them. Restricted to first-year Sloan MBA students. Acknowledgements Acknowledgment is hereby given to Professor G. Peter Wilson for his authorship of the following content in this course: The Five Challenges (see Syllabus and Lecture 1) “What Do Intel and Accountants Have in Common?” (see Lecture 1) A Conceptual Framework for Financial Accounting (see Lecture 1)",
+    "canonicalUrl": "https://ocw.mit.edu/courses/15-515-financial-accounting-fall-2003",
+    "categoryCode": "BUSINESS_FINANCE",
+    "resourceType": "COURSE",
+    "topics": [
+      "Accounting",
+      "Business",
+      "Finance",
+      "Management"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Prof. George Plesko, Prof. Kin Lo, Prof. Richard Frankel. Financial Accounting. Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "4182",
+    "title": "Finance Theory II",
+    "description": "The objective of this course is to learn the financial tools needed to make good business decisions. The course presents the basic insights of corporate finance theory, but emphasizes the application of theory to real business decisions. Each session involves class discussion, some centered on lectures and others around business cases.",
+    "canonicalUrl": "https://ocw.mit.edu/courses/15-402-finance-theory-ii-spring-2003",
+    "categoryCode": "BUSINESS_FINANCE",
+    "resourceType": "COURSE",
+    "topics": [
+      "Business",
+      "Economics",
+      "Finance",
+      "Financial Economics",
+      "Social Science"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Prof. Dirk Jenter, Prof. Katharina Lewellen. Finance Theory II. Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "3764",
+    "title": "Entrepreneurial Finance",
+    "description": "15.431 Entrepreneurial Finance examines the elements of entrepreneurial finance, focusing on technology-based start-up ventures and the early stages of company development. The course addresses key questions which challenge all entrepreneurs: how much money can and should be raised; when should it be raised and from whom; what is a reasonable valuation of the company; and how should funding, employment contracts and exit decisions be structured. It aims to prepare students for these decisions, both as entrepreneurs and venture capitalists. In addition, the course includes an in-depth analysis of the structure of the private equity industry.",
+    "canonicalUrl": "https://ocw.mit.edu/courses/15-431-entrepreneurial-finance-spring-2011",
+    "categoryCode": "BUSINESS_FINANCE",
+    "resourceType": "COURSE",
+    "topics": [
+      "Business",
+      "Economics",
+      "Entrepreneurship",
+      "Finance",
+      "Financial Economics",
+      "Social Science"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Prof. Antoinette Schoar. Entrepreneurial Finance. Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "3451",
+    "title": "High-Intermediate Academic Communication",
+    "description": "The goal of this course is to review grammar and develop vocabulary building strategies to refine oral and written expression. Speaking and writing assignments are designed to expand communicative competence. Assignments are based on models and materials drawn from contemporary media (newspapers and magazines, television, Web). The models, materials, topics and assignments vary from semester to semester.",
+    "canonicalUrl": "https://ocw.mit.edu/courses/21g-213-high-intermediate-academic-communication-spring-2004",
+    "categoryCode": "LEARNING_CAREER",
+    "resourceType": "COURSE",
+    "topics": [
+      "Academic Writing",
+      "Communication",
+      "Fine Arts",
+      "Humanities",
+      "Literature",
+      "Media Studies",
+      "Social Science"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Isaiah WonHo Yoo. High-Intermediate Academic Communication. Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "3310",
+    "title": "Science Writing and New Media: Communicating Science to the Public",
+    "description": "This course provides an introduction to writing about science (including medicine, technology, and engineering) for general readers. With a strong emphasis in background research, this course will help students build a foundation for strong science writing. Students will read works by accomplished science writers. Each assignment will focus on a different popular form, such as news articles, interviews, essays, and short features.",
+    "canonicalUrl": "https://ocw.mit.edu/courses/21w-035-science-writing-and-new-media-communicating-science-to-the-public-fall-2016",
+    "categoryCode": "LEARNING_CAREER",
+    "resourceType": "COURSE",
+    "topics": [
+      "Academic Writing",
+      "History",
+      "History of Science and Technology",
+      "Humanities",
+      "Literature",
+      "Nonfiction Prose",
+      "Periodic Literature",
+      "Technical Writing"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Jared David Berezin. Science Writing and New Media: Communicating Science to the Public. Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "3465",
+    "title": "Graduate Technical Writing Workshop",
+    "description": "This course is designed to improve the student’s ability to communicate technical information. It covers the basics of working with sources, including summarizing and paraphrasing, synthesizing source materials, citing, quoting, and avoiding plagiarism. It also covers how to write an abstract and a literature review. In addition, we will cover communication concepts, tools, and strategies that can help you understand how engineering texts work, and how you can make your texts work more effectively. This course is limited to MIT graduate engineering students based on results of the Graduate Writing Exam.",
+    "canonicalUrl": "https://ocw.mit.edu/courses/21w-794-graduate-technical-writing-workshop-january-iap-2019",
+    "categoryCode": "LEARNING_CAREER",
+    "resourceType": "COURSE",
+    "topics": [
+      "Academic Writing",
+      "Humanities",
+      "Literature",
+      "Technical Writing"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Caroline Beimford, Dr. Andreas Karatsolis, Dr. Suzanne T. Lane, Dr. Leslie Ann Roldan, Dr. Jessie Stickgold-Sarah. Graduate Technical Writing Workshop. Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "5613",
+    "title": "Oral Communication in the Earth, Atmospheric, and Planetary Sciences",
+    "description": "This course focuses on developing oral presentation skills through practice, self-evaluation, and in-class feedback. Topics include slide preparation, answering difficult questions, explaining technical details and presenting to a general audience.",
+    "canonicalUrl": "https://ocw.mit.edu/courses/12-445-oral-communication-in-the-earth-atmospheric-and-planetary-sciences-fall-2010",
+    "categoryCode": "LEARNING_CAREER",
+    "resourceType": "COURSE",
+    "topics": [
+      "Communication",
+      "Humanities",
+      "Literature",
+      "Rhetoric",
+      "Social Science"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Prof. Alison Malcolm. Oral Communication in the Earth, Atmospheric, and Planetary Sciences. Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "3861",
+    "title": "Introduction to Photography and Related Media",
+    "description": "This course provides practical instruction in the fundamentals of analog and digital SLR and medium/large format camera operation, film exposure and development, black and white darkroom techniques, digital imaging, and studio lighting. This semester we will explore the MIT Department of Brain and Cognitive Sciences for our theme- and site-specific term project, which provides opportunities to develop technical skills and experimental photographic techniques, and for personal artistic exploration. Final projects will be presented on site in exhibition format. Work in progress is continuously presented and discussed in a critical forum. Lectures, readings, visiting professionals, group discussions, and site visits encourage aesthetic appreciation of the medium and a deeper understanding of our semester theme, as well as a critical awareness of how images in our culture are produced and constructed.",
+    "canonicalUrl": "https://ocw.mit.edu/courses/4-341-introduction-to-photography-and-related-media-fall-2007",
+    "categoryCode": "CREATIVE_LIFESTYLE",
+    "resourceType": "COURSE",
+    "topics": [
+      "Fine Arts",
+      "Media Studies",
+      "Photography",
+      "Visual Arts"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Reilly Rabitaille, Sadia Shirazi, Adele Phillips, Andrea Frank. Introduction to Photography and Related Media. Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "4095",
+    "title": "Numeric Photography",
+    "description": "The aim of the students from the Numeric Photography class at the MIT Media Laboratory was to present an exhibition of digital artworks which blend photography and computation, in the context of scene capture, image play, and interaction. Equipped with low end digital cameras, students created weekly software projects to explore aesthetic issues in signal processing and interaction design. The results are more than a hundred Java® applets, many of which are interactive, that suggest new avenues for image play on the computer. These weekly exercises led to the final product, an exhibition of the student work.",
+    "canonicalUrl": "https://ocw.mit.edu/courses/mas-961-numeric-photography-fall-1998",
+    "categoryCode": "TECHNOLOGY",
+    "resourceType": "COURSE",
+    "topics": [
+      "Computer Science",
+      "Digital Media",
+      "Engineering",
+      "Fine Arts",
+      "Media Studies",
+      "Photography",
+      "Software Design and Engineering",
+      "Visual Arts"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Prof. John Maeda. Numeric Photography. Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "4098",
+    "title": "Sites in Sight: Photography as Inquiry",
+    "description": "This course explores photography as a disciplined way of seeing, of investigating landscapes and expressing ideas. Readings, observations, and photographs form the basis of discussions on landscape, light, significant detail, place, poetics, narrative, and how photography can inform design and planning, among other issues.",
+    "canonicalUrl": "https://ocw.mit.edu/courses/11-309j-sites-in-sight-photography-as-inquiry-fall-2003",
+    "categoryCode": "CREATIVE_LIFESTYLE",
+    "resourceType": "COURSE",
+    "topics": [
+      "Architecture",
+      "Environmental Design",
+      "Fine Arts",
+      "Photography",
+      "Social Science",
+      "Urban Planning",
+      "Urban Studies",
+      "Visual Arts"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Prof. Anne Whiston Spirn. Sites in Sight: Photography as Inquiry. Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "3332",
+    "title": "Design Thinking for Leading and Learning",
+    "description": "How do we prepare K-12 students and learning communities to be as successful as possible? If future jobs require creativity, problem-solving, and communication, how do we teach these skills in meaningful ways? How do we bring together passionate school leaders to create systemic solutions to educational challenges? Come explore these questions and more in Design Thinking for Leading and Learning. The course is organized into three sections that combine design thinking content with real-world education examples, as well as opportunities for learners to apply concepts in their own setting. This course is part of the Open Learning Library, which is free to use. You have the option to sign up and enroll in the course if you want to track your progress, or you can view and use all the materials without enrolling.",
+    "canonicalUrl": "https://ocw.mit.edu/courses/res-cms-155-design-thinking-for-leading-and-learning-spring-2019",
+    "categoryCode": "LEARNING_CAREER",
+    "resourceType": "COURSE",
+    "topics": [
+      "Education Policy",
+      "Educational Technology",
+      "Teaching and Education"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Prof. Justin Reich, Elizabeth Huttner-Loan, Alyssa Napier. Design Thinking for Leading and Learning. Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "3372",
+    "title": "High Speed Communication Circuits",
+    "description": "6.776 covers circuit level design issues of high speed communication systems, with primary focus being placed on wireless and broadband data link applications. Specific circuit topics include transmission lines, high speed and low noise amplifiers, VCO’s, mixers, power amps, high speed digital circuits, and frequency synthesizers. In addition to learning analysis skills for the above items, students will gain a significant amount of experience in simulating RF circuits in SPICE and also building RF circuits within a lab project.",
+    "canonicalUrl": "https://ocw.mit.edu/courses/6-776-high-speed-communication-circuits-spring-2005",
+    "categoryCode": "TECHNOLOGY",
+    "resourceType": "COURSE",
+    "topics": [
+      "Computer Networks",
+      "Computer Science",
+      "Digital Systems",
+      "Electrical Engineering",
+      "Engineering",
+      "Signal Processing",
+      "Telecommunications"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Prof. Hae-Seung Lee, Prof. Michael Perrott. High Speed Communication Circuits. Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "3486",
+    "title": "Communications and Information Policy",
+    "description": "This course provides an introduction to the technology and policy context of public communications networks, through critical discussion of current issues in communications policy and their historical roots. The course focuses on underlying rationales and models for government involvement and the complex dynamics introduced by co-evolving technologies, industry structure, and public policy objectives. Cases drawn from cellular, fixed-line, and Internet applications include evolution of spectrum policy and current proposals for reform; the migration to broadband and implications for universal service policies; and property rights associated with digital content. The course lays a foundation for thesis research in this domain.",
+    "canonicalUrl": "https://ocw.mit.edu/courses/esd-68j-communications-and-information-policy-spring-2006",
+    "categoryCode": "LEARNING_CAREER",
+    "resourceType": "COURSE",
+    "topics": [
+      "Communication",
+      "Electrical Engineering",
+      "Engineering",
+      "Public Administration",
+      "Science and Technology Policy",
+      "Social Science",
+      "Telecommunications"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Dr. David D. Clark, Dr. Frank Field, Sharon E. Gillett, Dr. William Lehr. Communications and Information Policy. Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "3733",
+    "title": "Principles of Oceanographic Instrument Systems -- Sensors and Measurements (13.998)",
+    "description": "This course introduces theoretical and practical principles of design of oceanographic sensor systems. Topics include: transducer characteristics for acoustic, current, temperature, pressure, electric, magnetic, gravity, salinity, velocity, heat flow, and optical devices; limitations on these devices imposed by ocean environments; signal conditioning and recording; noise, sensitivity, and sampling limitations; and standards. Lectures by experts cover the principles of state-of-the-art systems being used in physical oceanography, geophysics, submersibles, acoustics. For lab work, day cruises in local waters allow students to prepare, deploy and analyze observations from standard oceanographic instruments.",
+    "canonicalUrl": "https://ocw.mit.edu/courses/2-693-principles-of-oceanographic-instrument-systems-sensors-and-measurements-13-998-spring-2004",
+    "categoryCode": "TECHNOLOGY",
+    "resourceType": "COURSE",
+    "topics": [
+      "Earth Science",
+      "Electrical Engineering",
+      "Engineering",
+      "Environmental Science",
+      "Ocean Engineering",
+      "Ocean Exploration",
+      "Oceanography",
+      "Science",
+      "Signal Processing"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Dr. James D. Irish, Dr. Albert J. Williams. Principles of Oceanographic Instrument Systems -- Sensors and Measurements (13.998). Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "mit-ocw",
+    "externalId": "3684",
+    "title": "Introduction to C Memory Management and C++ Object-Oriented Programming",
+    "description": "Ever hang your head in shame after your Python program wasn’t as fast as your friend’s C program? Ever wish you could use objects without having to use Java? Join us for this fun introduction to C and C++! We will take you through a tour that will start with writing simple C programs, go deep into the caves of C memory manipulation, resurface with an introduction to using C++ classes, dive deeper into advanced C++ class use and the C++ Standard Template Libraries. We’ll wrap up by teaching you some tricks of the trade that you may need for tech interviews. We see this as a “C/C++ empowerment” course: we want you to come away understanding why you would want to use C over another language (control over memory, probably for performance reasons), why you would want to use C++ rather than C (objects), and how to be useful in C and C++. This course is offered during the Independent Activities Period (IAP), which is a special 4-week term at MIT that runs from the first week of January until the end of the month.",
+    "canonicalUrl": "https://ocw.mit.edu/courses/6-088-introduction-to-c-memory-management-and-c-object-oriented-programming-january-iap-2010",
+    "categoryCode": "TECHNOLOGY",
+    "resourceType": "COURSE",
+    "topics": [
+      "Computer Science",
+      "Engineering",
+      "Programming Languages",
+      "Software Design and Engineering"
+    ],
+    "language": null,
+    "license": "CC-BY-NC-SA-4.0",
+    "attribution": "Eunsuk Kang, Jean Yang. Introduction to C Memory Management and C++ Object-Oriented Programming. Massachusetts Institute of Technology: MIT OpenCourseWare. https://ocw.mit.edu/ — CC BY-NC-SA 4.0.",
+    "metadataOrigin": "title,description,url,topics:provider; description:plain-text-converted; category:derived from official OCW subjects; difficulty,duration,language:unknown"
+  },
+  {
+    "sourceId": "medlineplus",
+    "externalId": "3083",
+    "title": "Child Nutrition",
+    "description": "A healthy diet helps children grow and learn. It also helps prevent obesity and weight-related diseases, such as diabetes. To give your child a nutritious diet: Make half of what is on your child's plate fruits and vegetables Choose healthy sources of protein, such as lean meat, nuts, and eggs Serve whole-grain breads and cereals because they are high in fiber. Reduce refined grains. Broil, grill, or steam foods instead of frying them Limit fast food and junk food Offer water or milk instead of sugary fruit drinks and sodas Learn about your children's nutrient requirements. Some of them, such as the requirements for iron and calcium, change as your child ages. NIH: National Institute of Diabetes and Digestive and Kidney Diseases",
+    "canonicalUrl": "https://medlineplus.gov/childnutrition.html",
+    "categoryCode": "HEALTH_FITNESS",
+    "resourceType": "GUIDE",
+    "topics": [
+      "Children and Teenagers",
+      "Food and Nutrition"
+    ],
+    "language": "en",
+    "license": "US-GOV-PUBLIC-DOMAIN",
+    "attribution": "Source: MedlinePlus, National Library of Medicine. General health education; not personalized medical advice.",
+    "metadataOrigin": "title,url,description,language,topics:provider; description:plain-text-converted; category:derived; difficulty,duration:unknown"
+  },
+  {
+    "sourceId": "medlineplus",
+    "externalId": "3162",
+    "title": "Child Mental Health",
+    "description": "It's important to recognize and treat mental illnesses in children early on. Once mental illness develops, it becomes a regular part of your child's behavior. This makes it more difficult to treat. But it's not always easy to know when your child has a serious problem. Everyday stresses can cause changes in your child's behavior. For example, getting a new brother or sister or going to a new school may cause a child to temporarily act out. Warning signs that it might be a more serious problem include: Problems in more than one setting (at school, at home, with peers) Changes in appetite or sleep Social withdrawal or fear of things he or she did not used to be not afraid of Returning to behaviors more common in younger children, such as bedwetting Signs of being upset, such as sadness or tearfulness Signs of self-destructive behavior, such as head-banging or suddenly getting hurt often Repeated thoughts of death To diagnose mental health problems, the doctor or mental health specialist looks at your child's signs and symptoms, medical history, and family history. Treatments include medicines and talk therapy. NIH: National Institute of Mental Health",
+    "canonicalUrl": "https://medlineplus.gov/childmentalhealth.html",
+    "categoryCode": "HEALTH_FITNESS",
+    "resourceType": "GUIDE",
+    "topics": [
+      "Children and Teenagers",
+      "Mental Health and Behavior"
+    ],
+    "language": "en",
+    "license": "US-GOV-PUBLIC-DOMAIN",
+    "attribution": "Source: MedlinePlus, National Library of Medicine. General health education; not personalized medical advice.",
+    "metadataOrigin": "title,url,description,language,topics:provider; description:plain-text-converted; category:derived; difficulty,duration:unknown"
+  }
+]

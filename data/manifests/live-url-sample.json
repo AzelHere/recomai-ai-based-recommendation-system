@@ -1,0 +1,177 @@
+[ {
+  "urlStatus" : "REDIRECTED",
+  "finalUrl" : "https://ocw.mit.edu/courses/11-165-infrastructure-and-energy-technology-challenges-fall-2011/",
+  "externalId" : "3308",
+  "url" : "https://ocw.mit.edu/courses/11-165-infrastructure-and-energy-technology-challenges-fall-2011",
+  "sourceId" : "mit-ocw",
+  "httpStatus" : 200,
+  "checkedAt" : "2026-11-24T16:53:40.878810200Z"
+}, {
+  "urlStatus" : "REDIRECTED",
+  "finalUrl" : "https://ocw.mit.edu/courses/ec-s11-engineering-capacity-in-community-based-healthcare-fall-2005/",
+  "externalId" : "3309",
+  "url" : "https://ocw.mit.edu/courses/ec-s11-engineering-capacity-in-community-based-healthcare-fall-2005",
+  "sourceId" : "mit-ocw",
+  "httpStatus" : 200,
+  "checkedAt" : "2026-11-24T16:53:42.589286600Z"
+}, {
+  "urlStatus" : "REDIRECTED",
+  "finalUrl" : "https://ocw.mit.edu/courses/21w-035-science-writing-and-new-media-communicating-science-to-the-public-fall-2016/",
+  "externalId" : "3310",
+  "url" : "https://ocw.mit.edu/courses/21w-035-science-writing-and-new-media-communicating-science-to-the-public-fall-2016",
+  "sourceId" : "mit-ocw",
+  "httpStatus" : 200,
+  "checkedAt" : "2026-11-24T16:53:44.641572100Z"
+}, {
+  "urlStatus" : "REDIRECTED",
+  "finalUrl" : "https://ocw.mit.edu/courses/21h-343j-making-books-the-renaissance-and-today-spring-2016/",
+  "externalId" : "3311",
+  "url" : "https://ocw.mit.edu/courses/21h-343j-making-books-the-renaissance-and-today-spring-2016",
+  "sourceId" : "mit-ocw",
+  "httpStatus" : 200,
+  "checkedAt" : "2026-11-24T16:53:46.571495900Z"
+}, {
+  "urlStatus" : "REDIRECTED",
+  "finalUrl" : "https://ocw.mit.edu/courses/21h-101-american-history-to-1865-fall-2010/",
+  "externalId" : "3314",
+  "url" : "https://ocw.mit.edu/courses/21h-101-american-history-to-1865-fall-2010",
+  "sourceId" : "mit-ocw",
+  "httpStatus" : 200,
+  "checkedAt" : "2026-11-24T16:53:48.618305200Z"
+}, {
+  "urlStatus" : "REDIRECTED",
+  "finalUrl" : "https://ocw.mit.edu/courses/17-509-social-movements-in-comparative-perspective-spring-2005/",
+  "externalId" : "3316",
+  "url" : "https://ocw.mit.edu/courses/17-509-social-movements-in-comparative-perspective-spring-2005",
+  "sourceId" : "mit-ocw",
+  "httpStatus" : 200,
+  "checkedAt" : "2026-11-24T16:53:50.620444700Z"
+}, {
+  "urlStatus" : "REDIRECTED",
+  "finalUrl" : "https://ocw.mit.edu/courses/21g-010-introduction-to-european-and-latin-american-fiction-fall-2006/",
+  "externalId" : "3317",
+  "url" : "https://ocw.mit.edu/courses/21g-010-introduction-to-european-and-latin-american-fiction-fall-2006",
+  "sourceId" : "mit-ocw",
+  "httpStatus" : 200,
+  "checkedAt" : "2026-11-24T16:53:52.683177300Z"
+}, {
+  "urlStatus" : "REDIRECTED",
+  "finalUrl" : "https://ocw.mit.edu/courses/21h-132-the-ancient-world-rome-spring-2017/",
+  "externalId" : "3318",
+  "url" : "https://ocw.mit.edu/courses/21h-132-the-ancient-world-rome-spring-2017",
+  "sourceId" : "mit-ocw",
+  "httpStatus" : 200,
+  "checkedAt" : "2026-11-24T16:53:54.671985400Z"
+}, {
+  "urlStatus" : "REDIRECTED",
+  "finalUrl" : "https://ocw.mit.edu/courses/4-205-analysis-of-contemporary-architecture-fall-2009/",
+  "externalId" : "3319",
+  "url" : "https://ocw.mit.edu/courses/4-205-analysis-of-contemporary-architecture-fall-2009",
+  "sourceId" : "mit-ocw",
+  "httpStatus" : 200,
+  "checkedAt" : "2026-11-24T16:53:56.665042500Z"
+}, {
+  "urlStatus" : "REDIRECTED",
+  "finalUrl" : "https://ocw.mit.edu/courses/21l-708-technologies-of-humanism-spring-2003/",
+  "externalId" : "3323",
+  "url" : "https://ocw.mit.edu/courses/21l-708-technologies-of-humanism-spring-2003",
+  "sourceId" : "mit-ocw",
+  "httpStatus" : 200,
+  "checkedAt" : "2026-11-24T16:53:59.391261800Z"
+}, {
+  "urlStatus" : "ACCESSIBLE",
+  "finalUrl" : "https://medlineplus.gov/a1c.html",
+  "externalId" : "6308",
+  "url" : "https://medlineplus.gov/a1c.html",
+  "sourceId" : "medlineplus",
+  "httpStatus" : 200,
+  "checkedAt" : "2026-11-24T16:54:00.310326200Z"
+}, {
+  "urlStatus" : "ACCESSIBLE",
+  "finalUrl" : "https://medlineplus.gov/abdominalpain.html",
+  "externalId" : "3061",
+  "url" : "https://medlineplus.gov/abdominalpain.html",
+  "sourceId" : "medlineplus",
+  "httpStatus" : 200,
+  "checkedAt" : "2026-11-24T16:54:00.613726400Z"
+}, {
+  "urlStatus" : "ACCESSIBLE",
+  "finalUrl" : "https://medlineplus.gov/abortion.html",
+  "externalId" : "122",
+  "url" : "https://medlineplus.gov/abortion.html",
+  "sourceId" : "medlineplus",
+  "httpStatus" : 200,
+  "checkedAt" : "2026-11-24T16:54:01.991818500Z"
+}, {
+  "urlStatus" : "ACCESSIBLE",
+  "finalUrl" : "https://medlineplus.gov/abscess.html",
+  "externalId" : "3063",
+  "url" : "https://medlineplus.gov/abscess.html",
+  "sourceId" : "medlineplus",
+  "httpStatus" : 200,
+  "checkedAt" : "2026-11-24T16:54:02.632809200Z"
+}, {
+  "urlStatus" : "ACCESSIBLE",
+  "finalUrl" : "https://medlineplus.gov/acne.html",
+  "externalId" : "124",
+  "url" : "https://medlineplus.gov/acne.html",
+  "sourceId" : "medlineplus",
+  "httpStatus" : 200,
+  "checkedAt" : "2026-11-24T16:54:03.979750400Z"
+}, {
+  "urlStatus" : "ACCESSIBLE",
+  "finalUrl" : "https://medlineplus.gov/acousticneuroma.html",
+  "externalId" : "1624",
+  "url" : "https://medlineplus.gov/acousticneuroma.html",
+  "sourceId" : "medlineplus",
+  "httpStatus" : 200,
+  "checkedAt" : "2026-11-24T16:54:04.791529700Z"
+}, {
+  "urlStatus" : "ACCESSIBLE",
+  "finalUrl" : "https://medlineplus.gov/acupuncture.html",
+  "externalId" : "3071",
+  "url" : "https://medlineplus.gov/acupuncture.html",
+  "sourceId" : "medlineplus",
+  "httpStatus" : 200,
+  "checkedAt" : "2026-11-24T16:54:05.963262800Z"
+}, {
+  "urlStatus" : "ACCESSIBLE",
+  "finalUrl" : "https://medlineplus.gov/acutebronchitis.html",
+  "externalId" : "5755",
+  "url" : "https://medlineplus.gov/acutebronchitis.html",
+  "sourceId" : "medlineplus",
+  "httpStatus" : 200,
+  "checkedAt" : "2026-11-24T16:54:06.992299500Z"
+}, {
+  "urlStatus" : "ACCESSIBLE",
+  "finalUrl" : "https://medlineplus.gov/acuteflaccidmyelitis.html",
+  "externalId" : "7207",
+  "url" : "https://medlineplus.gov/acuteflaccidmyelitis.html",
+  "sourceId" : "medlineplus",
+  "httpStatus" : 200,
+  "checkedAt" : "2026-11-24T16:54:07.967133300Z"
+}, {
+  "urlStatus" : "ACCESSIBLE",
+  "finalUrl" : "https://medlineplus.gov/acutelymphocyticleukemia.html",
+  "externalId" : "1437",
+  "url" : "https://medlineplus.gov/acutelymphocyticleukemia.html",
+  "sourceId" : "medlineplus",
+  "httpStatus" : 200,
+  "checkedAt" : "2026-11-24T16:54:08.965003Z"
+}, {
+  "urlStatus" : "REDIRECTED",
+  "finalUrl" : "https://ocw.mit.edu/courses/6-092-java-preparation-for-6-170-january-iap-2006/",
+  "externalId" : "3554",
+  "url" : "https://ocw.mit.edu/courses/6-092-java-preparation-for-6-170-january-iap-2006",
+  "sourceId" : "mit-ocw",
+  "httpStatus" : 200,
+  "checkedAt" : "2026-11-24T16:54:10.791376900Z"
+}, {
+  "urlStatus" : "REDIRECTED",
+  "finalUrl" : "https://ocw.mit.edu/courses/6-092-introduction-to-programming-in-java-january-iap-2010/",
+  "externalId" : "5065",
+  "url" : "https://ocw.mit.edu/courses/6-092-introduction-to-programming-in-java-january-iap-2010",
+  "sourceId" : "mit-ocw",
+  "httpStatus" : 200,
+  "checkedAt" : "2026-11-24T16:54:12.752679800Z"
+} ]

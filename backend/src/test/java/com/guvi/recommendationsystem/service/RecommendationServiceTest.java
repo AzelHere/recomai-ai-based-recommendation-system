@@ -37,11 +37,12 @@ class RecommendationServiceTest {
     @Mock
     private ItemDao itemDao;
 
+    @Mock private com.guvi.recommendationsystem.dao.UserPreferenceDao preferences;
     private RecommendationService service;
 
     @BeforeEach
     void setUp() {
-        service = new RecommendationService(recommendationDao, userDao, recommendationEngine, itemDao);
+        service = new RecommendationService(recommendationDao, userDao, recommendationEngine, itemDao, preferences);
     }
 
     @Test
@@ -54,15 +55,25 @@ class RecommendationServiceTest {
                 22L, 31L, 7L, "Design guide", draft.score(), draft.reason(), LocalDateTime.now());
         when(userDao.existsById(9L)).thenReturn(true);
         when(recommendationDao.findCandidates(9L)).thenReturn(List.of(candidate));
-        when(recommendationEngine.recommend(List.of(candidate), 3)).thenReturn(List.of(draft));
-        when(recommendationDao.createBatch(9L, "hybrid-evidence-v2")).thenReturn(31L);
+        when(preferences.lockExploration(9L)).thenReturn(50);
+        when(recommendationEngine.recommend(List.of(candidate), 3, 50)).thenReturn(List.of(draft));
+        when(recommendationDao.createBatch(9L, "hybrid-metadata-v4")).thenReturn(31L);
         when(recommendationDao.save(9L, 31L, draft)).thenReturn(saved);
 
         List<PersonalizedRecommendation> results = service.generateForUser(9L, 3);
 
         assertThat(results).containsExactly(saved);
-        verify(recommendationDao).createBatch(9L, "hybrid-evidence-v2");
+        verify(recommendationDao).createBatch(9L, "hybrid-metadata-v4");
         verify(recommendationDao).save(9L, 31L, draft);
+    }
+
+    @Test
+    void rejectsInvalidExplorationBeforeWriting() {
+        for (String value : List.of("-1", "101", "49.5")) {
+            assertThatExceptionOfType(InvalidUserInputException.class)
+                    .isThrownBy(() -> service.updateExploration(9L, new BigDecimal(value)));
+        }
+        verifyNoInteractions(preferences, recommendationDao);
     }
 
     @Test

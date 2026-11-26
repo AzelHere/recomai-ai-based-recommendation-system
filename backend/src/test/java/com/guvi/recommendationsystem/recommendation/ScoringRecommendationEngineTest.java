@@ -14,6 +14,31 @@ class ScoringRecommendationEngineTest {
     private final ScoringRecommendationEngine engine = new ScoringRecommendationEngine();
 
     @Test
+    void rejectsExplorationOutsideItsPercentageDomain() {
+        for (int value : List.of(-1, 101, Integer.MIN_VALUE, Integer.MAX_VALUE)) {
+            assertThatIllegalArgumentException().isThrownBy(() -> engine.recommend(List.of(), 10, value));
+        }
+    }
+
+    @Test
+    void explorationAdjustsAdminSharesWithoutChangingTheirDefaultOrIncludingRejectedItems() {
+        engine.configureMix(0.5, 0, 0.5);
+        var pool = new java.util.ArrayList<RecommendationCandidate>();
+        for (int i = 1; i <= 20; i++) {
+            pool.add(candidate(i, "Familiar", "1", "1", null, null, "1", "0"));
+            pool.add(candidate(20 + i, "Discovery", "0", "0", null, null, "0", "0"));
+        }
+        pool.add(candidate(41, "Hidden", "1", "1", null, null, "1", "1.5"));
+        for (int value : List.of(0, 50, 100)) {
+            var results = engine.recommend(pool, 20, value);
+            assertThat(results).extracting(RecommendationDraft::itemTitle).doesNotContain("Hidden");
+            assertThat(results.stream().filter(row -> row.bucketType().equals("DISCOVERY")).count())
+                    .isEqualTo(5 + value / 10);
+        }
+        assertThat(engine.recommend(pool, 20, 50)).isEqualTo(engine.recommend(pool, 20));
+    }
+
+    @Test
     void ranksItemsFromCategoryInterestRatingAndPositiveActivitySignals() {
         RecommendationCandidate strongMatch = candidate(
                 8, "Strong match", "0.8000", "0.9000", "4.00", "4.50", "2.00", "0.00");

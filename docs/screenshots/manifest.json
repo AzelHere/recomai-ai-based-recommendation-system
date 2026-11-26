@@ -1,0 +1,116 @@
+{
+  "capturedAt": "2026-11-26T13:57:07.805Z",
+  "application": "Recom AI",
+  "fixture": "Isolated generated demonstration account; no private database",
+  "errors": [],
+  "screenshots": [
+    {
+      "file": "01-landing-page.png",
+      "width": 1440,
+      "height": 900,
+      "sha256": "184b89b4c65cb2885ba1385f228b8e352af87bfd9297f20dca3c703f0ca1f63b"
+    },
+    {
+      "file": "02-authentication.png",
+      "width": 1440,
+      "height": 900,
+      "sha256": "8ec85cdd7cbf88b023bb46def9bbd23e9aca498f03e3fad0c553fd564bec5a44"
+    },
+    {
+      "file": "03-learning-goals.png",
+      "width": 1440,
+      "height": 900,
+      "sha256": "80af4f9feea6e2e2dccc79a35a90120817ebd68b3a09847955bfce736a13e14e"
+    },
+    {
+      "file": "04-interest-selection.png",
+      "width": 1440,
+      "height": 900,
+      "sha256": "0934311eea6d482dd5eadf0453eded8072a4a91bf35c12172c5ccf5d53f61809"
+    },
+    {
+      "file": "05-personalized-recommendations.png",
+      "width": 1440,
+      "height": 900,
+      "sha256": "156087ad2ed512976b48d7b2cbf8fed128fade2226c9f0971d54ab7c4b521c22"
+    },
+    {
+      "file": "06-recommendation-explanation.png",
+      "width": 1440,
+      "height": 900,
+      "sha256": "9aa34cf7932b6a71d8051610ffeff78d480d1591ba8b6451282a1197deeb43ab"
+    },
+    {
+      "file": "07-explore-catalog.png",
+      "width": 1440,
+      "height": 900,
+      "sha256": "90c6fadf2ef2ba959852089676314c1881b3dc8a2b95562ade5f64397d7cbf5d"
+    },
+    {
+      "file": "08-articles-filter.png",
+      "width": 1440,
+      "height": 900,
+      "sha256": "32c891a7cbe386cf26116602b80e0ab297fcbae7c20c96d06a1b3d4192e8b3ec"
+    },
+    {
+      "file": "09-search-and-filters.png",
+      "width": 1440,
+      "height": 900,
+      "sha256": "6bbf53c90d6b34921d9fa39730b4f287089e7131df9d8e12b3ba8c9573c67873"
+    },
+    {
+      "file": "18-resource-provenance.png",
+      "width": 1440,
+      "height": 900,
+      "sha256": "4b2d65a3164cff7f02823cf7967fc24466a4ed92e84cc40fb436021dd9004d2c"
+    },
+    {
+      "file": "10-saved-resources.png",
+      "width": 1440,
+      "height": 900,
+      "sha256": "b16d4989efb56d8bccdb752115b218caf2b7d0a39979824d326b7b58fbc0093a"
+    },
+    {
+      "file": "11-collections.png",
+      "width": 1440,
+      "height": 900,
+      "sha256": "c4664159f8f38f9d44553d8286ad9932a6615cf4ced918ab9a088ed0fafe8bac"
+    },
+    {
+      "file": "12-learning-journey.png",
+      "width": 1440,
+      "height": 900,
+      "sha256": "157ac6168477e465dd4c0fd15699a6677ff463dce241e678a93e5f9b70475c2a"
+    },
+    {
+      "file": "13-learning-progress.png",
+      "width": 1440,
+      "height": 900,
+      "sha256": "c141c7c497083afa1d925e52b28e882725a17d7b57941ec2b8d0c547a690bd0b"
+    },
+    {
+      "file": "14-activity-history.png",
+      "width": 1440,
+      "height": 900,
+      "sha256": "f63abc257ad26fb391ca7b943a01500580c021cd4052a882459b04c2379ed4bd"
+    },
+    {
+      "file": "15-profile-settings.png",
+      "width": 1440,
+      "height": 900,
+      "sha256": "d6fd9478e1d2738871aeafbe8485f4450fba170d75b6d8a38f541715e1915318"
+    },
+    {
+      "file": "16-admin-dashboard.png",
+      "width": 1440,
+      "height": 900,
+      "sha256": "8e5a49d39ccddeeb3fe36a5bd219d751fe0c31edf0486daec4a7e71925368192"
+    },
+    {
+      "file": "17-catalog-management.png",
+      "width": 1440,
+      "height": 900,
+      "sha256": "71401747861e1d5481861b148aad5b5363ffd708ced4868255964e4b64c157f7"
+    }
+  ]
+}

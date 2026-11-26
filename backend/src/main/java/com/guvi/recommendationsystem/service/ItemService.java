@@ -25,16 +25,23 @@ public class ItemService {
 
     private final ItemDao itemDao;
     private final CategoryDao categoryDao;
+    @org.springframework.beans.factory.annotation.Autowired
+    private org.springframework.context.ApplicationEventPublisher events;
+
+    private void catalogChanged() {
+        if(events!=null)events.publishEvent(new com.guvi.recommendationsystem.catalog.CatalogImported(0));
+    }
 
     public ItemService(ItemDao itemDao, CategoryDao categoryDao) {
         this.itemDao = itemDao;
         this.categoryDao = categoryDao;
     }
 
+    @org.springframework.transaction.annotation.Transactional
     public CatalogItem create(ItemRequest request) {
         ItemRequest validated = validate(request);
         ensureActiveCategory(validated.categoryId());
-        return itemDao.insert(
+        CatalogItem created = itemDao.insert(
                 validated.categoryId(),
                 validated.title(),
                 validated.description(),
@@ -42,6 +49,8 @@ public class ItemService {
                 validated.externalUrl(),
                 validated.price(), validated.sourceName(), validated.difficulty(),
                 validated.estimatedMinutes(), validated.qualityScore(), Boolean.TRUE.equals(validated.editorPick()));
+        catalogChanged();
+        return created;
     }
 
     public CatalogItem get(long itemId) {
@@ -89,6 +98,7 @@ public class ItemService {
         return new CatalogPage<>(items, page, pageSize, total, totalPages);
     }
 
+    @org.springframework.transaction.annotation.Transactional
     public CatalogItem update(long itemId, ItemRequest request) {
         validateId(itemId);
         ItemRequest validated = validate(request);
@@ -105,19 +115,23 @@ public class ItemService {
                 validated.externalUrl(),
                 validated.price(), validated.sourceName(), validated.difficulty(),
                 validated.estimatedMinutes(), validated.qualityScore(), Boolean.TRUE.equals(validated.editorPick()));
+        catalogChanged();
         return get(itemId);
     }
 
+    @org.springframework.transaction.annotation.Transactional
     public CatalogItem deactivate(long itemId) {
         return setActive(itemId, false);
     }
 
+    @org.springframework.transaction.annotation.Transactional
     public CatalogItem activate(long itemId) {
         CatalogItem item = get(itemId);
         ensureActiveCategory(item.categoryId());
         return setActive(itemId, true);
     }
 
+    @org.springframework.transaction.annotation.Transactional
     public int setActive(Collection<Long> itemIds, boolean active) {
         if (itemIds == null || itemIds.isEmpty() || itemIds.size() > 500
                 || itemIds.stream().anyMatch(id -> id == null || id <= 0)) {
@@ -128,7 +142,9 @@ public class ItemService {
             CatalogItem item = get(id);
             if (active) ensureActiveCategory(item.categoryId());
         }
-        return itemDao.setActive(distinctIds, active);
+        int changed=itemDao.setActive(distinctIds, active);
+        catalogChanged();
+        return changed;
     }
 
     private CatalogItem setActive(long itemId, boolean active) {
@@ -140,6 +156,7 @@ public class ItemService {
         if (!itemDao.setActive(itemId, active)) {
             throw new ItemNotFoundException("Item was not found.");
         }
+        catalogChanged();
         return get(itemId);
     }
 

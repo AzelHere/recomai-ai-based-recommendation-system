@@ -1,0 +1,47 @@
+import {test,expect,request} from '@playwright/test';
+import {accountFixture} from './account-fixture.js';
+import fs from 'node:fs/promises';
+import {spawnSync} from 'node:child_process';
+
+test('Phase 4 bounded admin pages, origin defense, errors and isolated recovery',async({page,browser,baseURL})=>{
+ test.setTimeout(120000);
+ // This fixture creates a resource; preserve the ingestion spec's exact global-count assertions.
+ if(process.env.E2E_FULL_SUITE==='true')await expect.poll(()=>fs.access(`test-results/${process.env.E2E_COMPOSE_PROJECT}/ingestion-complete.json`).then(()=>true,()=>false),{timeout:60000}).toBe(true);
+ await accountFixture(page,true);const api=page.request;
+ const anonymous=await request.newContext({baseURL});expect((await anonymous.get('/api/admin/items/search')).status()).toBe(401);await anonymous.dispose();
+ const memberContext=await browser.newContext({baseURL}),member=await memberContext.newPage();await accountFixture(member);
+ expect((await member.request.get('/api/admin/items/search')).status()).toBe(403);
+ expect((await member.request.get('/api/admin/items/composition')).status()).toBe(403);await memberContext.close();
+ const legacy=await api.get('/api/admin/items'),legacyBytes=(await legacy.body()).length,all=await legacy.json();
+ const firstResponse=await api.get('/api/admin/items/search?pageSize=20'),pageBytes=(await firstResponse.body()).length,first=await firstResponse.json();
+ expect(first.items).toHaveLength(20);expect(first.totalItems).toBe(all.length);expect(pageBytes).toBeLessThan(legacyBytes/2);
+ const second=await(await api.get('/api/admin/items/search?page=2&pageSize=20')).json();expect(second.items.some(i=>first.items.some(j=>j.itemId===i.itemId))).toBe(false);
+ for(const query of ['page=0','pageSize=101','status=bad','sort=title;DELETE','categoryId=-1'])expect((await api.get('/api/admin/items/search?'+query)).status()).toBe(400);
+ const injection=await(await api.get('/api/admin/items/search?query='+encodeURIComponent("' OR 1=1 --"))).json();expect(injection.totalItems).toBe(0);
+ const stats=await(await api.get('/api/admin/items/composition')).json();expect(stats.reduce((n,row)=>n+Number(row.total),0)).toBe(all.length);
+ expect((await api.get('/api/items/batch')).status()).toBe(400);
+ expect((await api.post('/api/health')).status()).toBe(405);
+ expect((await api.post('/api/auth/login',{headers:{'content-type':'text/plain'},data:'{}'})).status()).toBe(415);
+ for(const headers of [{'Origin':'https://foreign.test'},{'Origin':'null'},{'Sec-Fetch-Site':'cross-site'}])expect((await api.post('/api/auth/logout',{headers})).status()).toBe(403);
+ expect((await api.get('/api/users/me')).status()).toBe(200);
+ await page.goto('/#app/adminPanel');await expect(page.locator('#adminSnapshot')).toContainText('Catalog resources');await page.locator('[data-admin-section=resources]').click();
+ await expect(page.locator('#adminItems tbody tr')).toHaveCount(20);
+ await page.locator('#adminNext').click();await expect(page.locator('#adminPageSummary')).toContainText('21–40');
+ const searchResponse=page.waitForResponse(r=>new URL(r.url()).pathname==='/api/admin/items/search'&&new URL(r.url()).searchParams.get('query')==='Java');
+ await page.locator('#adminCatalogSearch').fill('Java');await expect(page.locator('#adminItems')).toBeEmpty();
+ const searched=await(await searchResponse).json();expect(searched.items.length).toBeGreaterThan(0);
+ expect(searched.items.every(i=>[i.title,i.sourceName,...i.tags].join(' ').toLowerCase().includes('java'))).toBe(true);
+ await expect(page.locator('#adminItems tbody tr').first()).toContainText(searched.items[0].title);
+ const fixtureTitle='Phase4 pagination draft '+Date.now();
+ const fixture=await(await api.post('/api/admin/items',{data:{categoryId:all[0].categoryId,title:fixtureTitle,description:'Disposable pagination regression fixture.',type:'GUIDE',externalUrl:'https://example.test/phase4/'+Date.now(),sourceName:'Isolated Phase4 fixture',difficulty:'UNKNOWN',estimatedMinutes:null,qualityScore:.82,price:12.5,editorPick:false}})).json();
+ await page.locator('#adminCatalogSearch').fill(fixtureTitle);await expect(page.locator('#adminItems tbody tr')).toHaveCount(1);
+ await page.locator('#adminItems tbody tr').getByRole('button',{name:'Edit',exact:true}).click();await page.locator('#itemForm [name=title]').fill(fixtureTitle+' revised');
+ await page.locator('#adminCatalogSearch').fill('No matching record '+crypto.randomUUID());await expect(page.locator('#adminItems')).toContainText('No resources match');
+ const saved=page.waitForResponse(r=>new URL(r.url()).pathname==='/api/admin/items/'+fixture.itemId&&r.request().method()==='PUT');
+ await page.locator('#itemForm button[type=submit]').click();const updated=await(await saved).json();expect(Number(updated.price)).toBe(12.5);expect(Number(updated.qualityScore)).toBe(.82);
+ const database=spawnSync(process.execPath,['scripts/phase4-database-audit.mjs',process.env.E2E_COMPOSE_PROJECT],{encoding:'utf8'});expect(database.status,database.stdout+'\n'+database.stderr).toBe(0);
+ const backup=spawnSync(process.execPath,['scripts/phase4-backup-restore.mjs',process.env.E2E_COMPOSE_PROJECT],{encoding:'utf8'});expect(backup.status,backup.stdout+'\n'+backup.stderr).toBe(0);
+ const upgrade=spawnSync(process.execPath,['scripts/phase-3-5-migrations.mjs',process.env.E2E_COMPOSE_PROJECT],{encoding:'utf8',env:{...process.env,PHASE4_UPGRADE:'true'}});expect(upgrade.status,upgrade.stdout+'\n'+upgrade.stderr).toBe(0);
+ await fs.writeFile('design-audit/recomai-2-phase-4/evidence/admin-pagination.json',JSON.stringify({catalog:all.length,legacyBytes,pageBytes,pageSize:20,disjointPages:true,parameterBounds:true,sqlInjectionLiteral:true,originChecks:true,backupRestore:true},null,2));
+ if(process.env.E2E_FULL_SUITE==='true')await fs.writeFile(`test-results/${process.env.E2E_COMPOSE_PROJECT}/phase4-complete.json`,JSON.stringify({passed:true}));
+});

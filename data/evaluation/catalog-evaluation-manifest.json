@@ -1,0 +1,18 @@
+{
+  "corpusResources" : 1665,
+  "judgedPool" : 30,
+  "queries" : 7,
+  "indexBuildMs" : 348.573,
+  "warmQueryMedianMs" : 2.1057,
+  "warmQueryP95Ms" : 3.5909,
+  "usedHeapBytes" : 122733456,
+  "maxHeapBytes" : 536870912,
+  "judgmentsSha256" : "9826d4d9820ba9e9c82019dbc57e730f866217812b41cd1c95509060d79ca13a",
+  "catalogSha256" : "49b96d30bae995808c7b5ac661884c72f7f0081ec69033bfc50e8e5edc139f2d",
+  "judgedPoolCoverage" : {
+    "phase3_no_history:10" : 0.9333333333333333,
+    "phase3_no_history:5" : 0.7666666666666667,
+    "selected_topic_tfidf:10" : 0.9333333333333333,
+    "selected_topic_tfidf:5" : 0.9
+  }
+}

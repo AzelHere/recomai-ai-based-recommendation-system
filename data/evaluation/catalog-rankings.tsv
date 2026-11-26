@@ -1,0 +1,141 @@
+query_id	algorithm	rank	resource_key	title	grade	score
+java	phase3_no_history	1	mit-ocw/3554	Java Preparation for 6.170	2	36.0000
+java	phase3_no_history	2	mit-ocw/5065	Introduction to Programming in Java	2	36.0000
+java	phase3_no_history	3	mit-ocw/3355	Prediction: Machine Learning and Statistics	0	12.0000
+java	phase3_no_history	4	mit-ocw/3372	High Speed Communication Circuits	0	12.0000
+java	phase3_no_history	5	mit-ocw/3384	Database, Internet, and Systems Integration Technologies	0	12.0000
+java	phase3_no_history	6	mit-ocw/3457	Spatial Database Management and Advanced Geographic Information Systems	0	12.0000
+java	phase3_no_history	7	mit-ocw/3588	Machine Learning for Healthcare	0	12.0000
+java	phase3_no_history	8	mit-ocw/3310	Science Writing and New Media: Communicating Science to the Public	0	0.0000
+java	phase3_no_history	9	mit-ocw/3684	Introduction to C Memory Management and C++ Object-Oriented Programming	0	12.0000
+java	phase3_no_history	10	mit-ocw/3733	Principles of Oceanographic Instrument Systems -- Sensors and Measurements (13.998)	0	12.0000
+java	selected_topic_tfidf	1	mit-ocw/5065	Introduction to Programming in Java	2	38.3947
+java	selected_topic_tfidf	2	mit-ocw/3554	Java Preparation for 6.170	2	37.1416
+java	selected_topic_tfidf	3	mit-ocw/4095	Numeric Photography	0	13.0551
+java	selected_topic_tfidf	4	mit-ocw/3684	Introduction to C Memory Management and C++ Object-Oriented Programming	0	12.8668
+java	selected_topic_tfidf	5	mit-ocw/3355	Prediction: Machine Learning and Statistics	0	12.0000
+java	selected_topic_tfidf	6	mit-ocw/3372	High Speed Communication Circuits	0	12.0000
+java	selected_topic_tfidf	7	mit-ocw/3384	Database, Internet, and Systems Integration Technologies	0	12.0000
+java	selected_topic_tfidf	8	mit-ocw/3310	Science Writing and New Media: Communicating Science to the Public	0	0.0000
+java	selected_topic_tfidf	9	mit-ocw/3457	Spatial Database Management and Advanced Geographic Information Systems	0	12.0000
+java	selected_topic_tfidf	10	mit-ocw/3588	Machine Learning for Healthcare	0	12.0000
+dsa	phase3_no_history	1	mit-ocw/3355	Prediction: Machine Learning and Statistics	0	36.0000
+dsa	phase3_no_history	2	mit-ocw/4134	Machine Learning	0	36.0000
+dsa	phase3_no_history	3	mit-ocw/4156	Advanced Data Structures	1	36.0000
+dsa	phase3_no_history	4	mit-ocw/4212	Introduction to Machine Learning	0	36.0000
+dsa	phase3_no_history	5	mit-ocw/4214	Introduction to Algorithms	2	36.0000
+dsa	phase3_no_history	6	mit-ocw/4273	Design and Analysis of Algorithms	2	36.0000
+dsa	phase3_no_history	7	mit-ocw/4505	Database Systems	0	36.0000
+dsa	phase3_no_history	8	mit-ocw/3310	Science Writing and New Media: Communicating Science to the Public	0	0.0000
+dsa	phase3_no_history	9	mit-ocw/3372	High Speed Communication Circuits	0	12.0000
+dsa	phase3_no_history	10	mit-ocw/3384	Database, Internet, and Systems Integration Technologies	0	12.0000
+dsa	selected_topic_tfidf	1	mit-ocw/4214	Introduction to Algorithms	2	39.8244
+dsa	selected_topic_tfidf	2	mit-ocw/4156	Advanced Data Structures	1	39.2534
+dsa	selected_topic_tfidf	3	mit-ocw/4273	Design and Analysis of Algorithms	2	38.2708
+dsa	selected_topic_tfidf	4	mit-ocw/4212	Introduction to Machine Learning	0	37.6973
+dsa	selected_topic_tfidf	5	mit-ocw/4505	Database Systems	0	37.6585
+dsa	selected_topic_tfidf	6	mit-ocw/4134	Machine Learning	0	37.5329
+dsa	selected_topic_tfidf	7	mit-ocw/3355	Prediction: Machine Learning and Statistics	0	37.4538
+dsa	selected_topic_tfidf	8	mit-ocw/5208	Financial Accounting	0	0.2579
+dsa	selected_topic_tfidf	9	mit-ocw/3384	Database, Internet, and Systems Integration Technologies	0	12.8353
+dsa	selected_topic_tfidf	10	mit-ocw/3554	Java Preparation for 6.170	1	12.7235
+sql	phase3_no_history	1	mit-ocw/3355	Prediction: Machine Learning and Statistics	0	12.0000
+sql	phase3_no_history	2	mit-ocw/3372	High Speed Communication Circuits	0	12.0000
+sql	phase3_no_history	3	mit-ocw/3384	Database, Internet, and Systems Integration Technologies	1	12.0000
+sql	phase3_no_history	4	mit-ocw/3457	Spatial Database Management and Advanced Geographic Information Systems	1	12.0000
+sql	phase3_no_history	5	mit-ocw/3554	Java Preparation for 6.170	0	12.0000
+sql	phase3_no_history	6	mit-ocw/3588	Machine Learning for Healthcare	0	12.0000
+sql	phase3_no_history	7	mit-ocw/3684	Introduction to C Memory Management and C++ Object-Oriented Programming	0	12.0000
+sql	phase3_no_history	8	mit-ocw/3310	Science Writing and New Media: Communicating Science to the Public	0	0.0000
+sql	phase3_no_history	9	mit-ocw/3733	Principles of Oceanographic Instrument Systems -- Sensors and Measurements (13.998)	0	12.0000
+sql	phase3_no_history	10	mit-ocw/4095	Numeric Photography	0	12.0000
+sql	selected_topic_tfidf	1	mit-ocw/3384	Database, Internet, and Systems Integration Technologies	1	13.2199
+sql	selected_topic_tfidf	2	mit-ocw/4505	Database Systems	2	13.2092
+sql	selected_topic_tfidf	3	mit-ocw/3457	Spatial Database Management and Advanced Geographic Information Systems	1	12.8149
+sql	selected_topic_tfidf	4	mit-ocw/3355	Prediction: Machine Learning and Statistics	0	12.0000
+sql	selected_topic_tfidf	5	mit-ocw/3372	High Speed Communication Circuits	0	12.0000
+sql	selected_topic_tfidf	6	mit-ocw/3554	Java Preparation for 6.170	0	12.0000
+sql	selected_topic_tfidf	7	mit-ocw/3588	Machine Learning for Healthcare	0	12.0000
+sql	selected_topic_tfidf	8	mit-ocw/3310	Science Writing and New Media: Communicating Science to the Public	0	0.0000
+sql	selected_topic_tfidf	9	mit-ocw/3684	Introduction to C Memory Management and C++ Object-Oriented Programming	0	12.0000
+sql	selected_topic_tfidf	10	mit-ocw/3733	Principles of Oceanographic Instrument Systems -- Sensors and Measurements (13.998)	0	12.0000
+ml	phase3_no_history	1	mit-ocw/3355	Prediction: Machine Learning and Statistics	1	36.0000
+ml	phase3_no_history	2	mit-ocw/3588	Machine Learning for Healthcare	1	36.0000
+ml	phase3_no_history	3	mit-ocw/4134	Machine Learning	2	36.0000
+ml	phase3_no_history	4	mit-ocw/4212	Introduction to Machine Learning	2	36.0000
+ml	phase3_no_history	5	mit-ocw/3372	High Speed Communication Circuits	0	12.0000
+ml	phase3_no_history	6	mit-ocw/3384	Database, Internet, and Systems Integration Technologies	0	12.0000
+ml	phase3_no_history	7	mit-ocw/3457	Spatial Database Management and Advanced Geographic Information Systems	0	12.0000
+ml	phase3_no_history	8	mit-ocw/3310	Science Writing and New Media: Communicating Science to the Public	0	0.0000
+ml	phase3_no_history	9	mit-ocw/3554	Java Preparation for 6.170	0	12.0000
+ml	phase3_no_history	10	mit-ocw/3684	Introduction to C Memory Management and C++ Object-Oriented Programming	0	12.0000
+ml	selected_topic_tfidf	1	mit-ocw/3588	Machine Learning for Healthcare	1	39.0096
+ml	selected_topic_tfidf	2	mit-ocw/4134	Machine Learning	2	38.6300
+ml	selected_topic_tfidf	3	mit-ocw/4212	Introduction to Machine Learning	2	38.5625
+ml	selected_topic_tfidf	4	mit-ocw/3355	Prediction: Machine Learning and Statistics	1	38.2944
+ml	selected_topic_tfidf	5	mit-ocw/3372	High Speed Communication Circuits	0	12.3650
+ml	selected_topic_tfidf	6	mit-ocw/3457	Spatial Database Management and Advanced Geographic Information Systems	0	12.2901
+ml	selected_topic_tfidf	7	mit-ocw/3384	Database, Internet, and Systems Integration Technologies	0	12.0000
+ml	selected_topic_tfidf	8	mit-ocw/3332	Design Thinking for Leading and Learning	0	0.8853
+ml	selected_topic_tfidf	9	mit-ocw/3764	Entrepreneurial Finance	0	0.0000
+ml	selected_topic_tfidf	10	mit-ocw/3554	Java Preparation for 6.170	0	12.0000
+finance	phase3_no_history	1	mit-ocw/3764	Entrepreneurial Finance	1	12.0000
+finance	phase3_no_history	2	mit-ocw/4182	Finance Theory II	1	12.0000
+finance	phase3_no_history	3	mit-ocw/5208	Financial Accounting	2	12.0000
+finance	phase3_no_history	4	mit-ocw/5535	Finance Theory I	2	12.0000
+finance	phase3_no_history	5	mit-ocw/3310	Science Writing and New Media: Communicating Science to the Public	0	0.0000
+finance	phase3_no_history	6	mit-ocw/3355	Prediction: Machine Learning and Statistics	0	0.0000
+finance	phase3_no_history	7	mit-ocw/3332	Design Thinking for Leading and Learning	0	0.0000
+finance	phase3_no_history	8	mit-ocw/3384	Database, Internet, and Systems Integration Technologies	0	0.0000
+finance	phase3_no_history	9	mit-ocw/3451	High-Intermediate Academic Communication	0	0.0000
+finance	phase3_no_history	10	mit-ocw/3457	Spatial Database Management and Advanced Geographic Information Systems	0	0.0000
+finance	selected_topic_tfidf	1	mit-ocw/3764	Entrepreneurial Finance	1	12.0000
+finance	selected_topic_tfidf	2	mit-ocw/4182	Finance Theory II	1	12.0000
+finance	selected_topic_tfidf	3	mit-ocw/5208	Financial Accounting	2	12.0000
+finance	selected_topic_tfidf	4	mit-ocw/5535	Finance Theory I	2	12.0000
+finance	selected_topic_tfidf	5	mit-ocw/3310	Science Writing and New Media: Communicating Science to the Public	0	0.0000
+finance	selected_topic_tfidf	6	mit-ocw/3355	Prediction: Machine Learning and Statistics	0	0.0000
+finance	selected_topic_tfidf	7	mit-ocw/3332	Design Thinking for Leading and Learning	0	0.0000
+finance	selected_topic_tfidf	8	mit-ocw/3384	Database, Internet, and Systems Integration Technologies	0	0.0000
+finance	selected_topic_tfidf	9	mit-ocw/3451	High-Intermediate Academic Communication	0	0.0000
+finance	selected_topic_tfidf	10	mit-ocw/3457	Spatial Database Management and Advanced Geographic Information Systems	0	0.0000
+communication	phase3_no_history	1	mit-ocw/3451	High-Intermediate Academic Communication	2	36.0000
+communication	phase3_no_history	2	mit-ocw/3486	Communications and Information Policy	0	36.0000
+communication	phase3_no_history	3	mit-ocw/5613	Oral Communication in the Earth, Atmospheric, and Planetary Sciences	2	36.0000
+communication	phase3_no_history	4	mit-ocw/3310	Science Writing and New Media: Communicating Science to the Public	1	12.0000
+communication	phase3_no_history	5	mit-ocw/3332	Design Thinking for Leading and Learning	0	12.0000
+communication	phase3_no_history	6	mit-ocw/3465	Graduate Technical Writing Workshop	2	12.0000
+communication	phase3_no_history	7	mit-ocw/3355	Prediction: Machine Learning and Statistics	0	0.0000
+communication	phase3_no_history	8	mit-ocw/3764	Entrepreneurial Finance	0	0.0000
+communication	phase3_no_history	9	mit-ocw/3384	Database, Internet, and Systems Integration Technologies	0	0.0000
+communication	phase3_no_history	10	mit-ocw/3861	Introduction to Photography and Related Media	0	0.0000
+communication	selected_topic_tfidf	1	mit-ocw/5613	Oral Communication in the Earth, Atmospheric, and Planetary Sciences	2	37.6587
+communication	selected_topic_tfidf	2	mit-ocw/3451	High-Intermediate Academic Communication	2	37.4256
+communication	selected_topic_tfidf	3	mit-ocw/3486	Communications and Information Policy	0	36.6653
+communication	selected_topic_tfidf	4	mit-ocw/3465	Graduate Technical Writing Workshop	2	12.7502
+communication	selected_topic_tfidf	5	mit-ocw/3332	Design Thinking for Leading and Learning	0	12.6390
+communication	selected_topic_tfidf	6	mit-ocw/3310	Science Writing and New Media: Communicating Science to the Public	1	12.0000
+communication	selected_topic_tfidf	7	mit-ocw/3372	High Speed Communication Circuits	0	1.0643
+communication	selected_topic_tfidf	8	mit-ocw/3764	Entrepreneurial Finance	0	0.0000
+communication	selected_topic_tfidf	9	mit-ocw/3355	Prediction: Machine Learning and Statistics	0	0.0000
+communication	selected_topic_tfidf	10	mit-ocw/3861	Introduction to Photography and Related Media	0	0.0000
+visual	phase3_no_history	1	mit-ocw/3861	Introduction to Photography and Related Media	2	36.0000
+visual	phase3_no_history	2	mit-ocw/4098	Sites in Sight: Photography as Inquiry	2	36.0000
+visual	phase3_no_history	3	mit-ocw/4095	Numeric Photography	1	24.0000
+visual	phase3_no_history	4	mit-ocw/3310	Science Writing and New Media: Communicating Science to the Public	0	0.0000
+visual	phase3_no_history	5	mit-ocw/3355	Prediction: Machine Learning and Statistics	0	0.0000
+visual	phase3_no_history	6	mit-ocw/3332	Design Thinking for Leading and Learning	0	0.0000
+visual	phase3_no_history	7	mit-ocw/3384	Database, Internet, and Systems Integration Technologies	0	0.0000
+visual	phase3_no_history	8	mit-ocw/3451	High-Intermediate Academic Communication	0	0.0000
+visual	phase3_no_history	9	mit-ocw/3457	Spatial Database Management and Advanced Geographic Information Systems	0	0.0000
+visual	phase3_no_history	10	mit-ocw/3465	Graduate Technical Writing Workshop	0	0.0000
+visual	selected_topic_tfidf	1	mit-ocw/4098	Sites in Sight: Photography as Inquiry	2	39.0314
+visual	selected_topic_tfidf	2	mit-ocw/3861	Introduction to Photography and Related Media	2	37.5133
+visual	selected_topic_tfidf	3	mit-ocw/4095	Numeric Photography	1	26.3009
+visual	selected_topic_tfidf	4	mit-ocw/3310	Science Writing and New Media: Communicating Science to the Public	0	0.0000
+visual	selected_topic_tfidf	5	mit-ocw/3355	Prediction: Machine Learning and Statistics	0	0.0000
+visual	selected_topic_tfidf	6	mit-ocw/3332	Design Thinking for Leading and Learning	0	0.0000
+visual	selected_topic_tfidf	7	mit-ocw/3384	Database, Internet, and Systems Integration Technologies	0	0.0000
+visual	selected_topic_tfidf	8	mit-ocw/3451	High-Intermediate Academic Communication	0	0.0000
+visual	selected_topic_tfidf	9	mit-ocw/3457	Spatial Database Management and Advanced Geographic Information Systems	0	0.0000
+visual	selected_topic_tfidf	10	mit-ocw/3465	Graduate Technical Writing Workshop	0	0.0000

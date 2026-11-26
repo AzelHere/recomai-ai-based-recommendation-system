@@ -1,0 +1,54 @@
+{
+  "javascriptSyntax": [
+    {
+      "file": "frontend/js/app.js",
+      "passed": true
+    },
+    {
+      "file": "frontend/js/modules/api-client.js",
+      "passed": true
+    },
+    {
+      "file": "frontend/js/modules/catalog-ingestion.js",
+      "passed": true
+    },
+    {
+      "file": "frontend/js/modules/landing-demo.js",
+      "passed": true
+    },
+    {
+      "file": "frontend/js/modules/learning-constellation.js",
+      "passed": true
+    },
+    {
+      "file": "frontend/js/modules/personalization.js",
+      "passed": true
+    },
+    {
+      "file": "frontend/js/modules/recommendation-workspace.js",
+      "passed": true
+    },
+    {
+      "file": "frontend/js/modules/resource-artwork.js",
+      "passed": true
+    },
+    {
+      "file": "frontend/js/modules/rising-lines.js",
+      "passed": true
+    },
+    {
+      "file": "frontend/js/modules/theme-toggle.js",
+      "passed": true
+    }
+  ],
+  "htmlFiles": [
+    "frontend\\index.html"
+  ],
+  "cssFiles": [
+    "frontend\\css\\account-command.css",
+    "frontend\\css\\journeys.css",
+    "frontend\\css\\learning-workspace.css",
+    "frontend\\css\\premium-graphite.css",
+    "frontend\\css\\styles.css"
+  ]
+}

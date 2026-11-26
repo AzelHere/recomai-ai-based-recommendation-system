@@ -4,5 +4,6 @@ public enum ItemDifficulty {
     BEGINNER,
     INTERMEDIATE,
     ADVANCED,
-    ALL_LEVELS
+    ALL_LEVELS,
+    UNKNOWN
 }

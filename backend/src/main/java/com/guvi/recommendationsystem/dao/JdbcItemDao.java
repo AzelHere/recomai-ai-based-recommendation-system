@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Map;
 
 @Repository
 public class JdbcItemDao implements ItemDao {
@@ -39,16 +40,62 @@ public class JdbcItemDao implements ItemDao {
             resultSet.getBoolean("is_active"),
             resultSet.getTimestamp("created_at").toLocalDateTime(),
             resultSet.getTimestamp("updated_at").toLocalDateTime(),
-            resultSet.getBoolean("is_editor_pick"));
+            resultSet.getBoolean("is_editor_pick"),resultSet.getLong("revision"));
 
     public JdbcItemDao(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
 
+    public com.guvi.recommendationsystem.model.CatalogPage<CatalogItem> searchPage(String query, Long categoryId,
+            ItemType type, CatalogSort sort, ItemDifficulty difficulty, Integer maximumTime, String provider, int page, int pageSize) {
+        return searchPage(query,categoryId,type,sort,difficulty,maximumTime,provider,null,page,pageSize);
+    }
+    public com.guvi.recommendationsystem.model.CatalogPage<CatalogItem> searchPage(String query, Long categoryId,
+            ItemType type, CatalogSort sort, ItemDifficulty difficulty, Integer maximumTime, String provider, String topic, int page, int pageSize) {
+        FilterParts base=filters(query,categoryId,type);
+        String where=base.sql();var args=new ArrayList<Object>(base.arguments());
+        if(difficulty!=null){where+=" AND item.difficulty=?";args.add(difficulty.name());}
+        if(maximumTime!=null){where+=" AND item.estimated_minutes<=?";args.add(maximumTime);}
+        if(provider!=null && !provider.isBlank()){where+=" AND item.source_name=?";args.add(provider.strip());}
+        if(topic!=null && !topic.isBlank()) {
+            where+=" AND (EXISTS (SELECT 1 FROM item_interests it JOIN interests t ON t.interest_id=it.interest_id WHERE it.item_id=item.item_id AND LOWER(t.name)=LOWER(?)) OR EXISTS (SELECT 1 FROM resource_provenance p WHERE p.item_id=item.item_id AND JSON_CONTAINS(p.source_topics,JSON_QUOTE(?))))";
+            args.add(topic.strip());args.add(topic.strip());
+        }
+        String from=" FROM items item JOIN categories category ON category.category_id=item.category_id AND category.is_active=TRUE WHERE item.is_active=TRUE "+where;
+        long total=jdbcTemplate.queryForObject("SELECT COUNT(*)"+from,Long.class,args.toArray());
+        String order=switch(sort){case TITLE_ASC -> "LOWER(item.title),item.item_id";case TIME_ASC -> "item.estimated_minutes IS NULL,item.estimated_minutes,item.item_id";case MOST_POPULAR -> "(SELECT COUNT(*) FROM interactions e WHERE e.item_id=item.item_id) DESC,item.created_at DESC,item.item_id DESC";default -> "item.created_at DESC,item.item_id DESC";};
+        if(sort==CatalogSort.RELEVANCE && query!=null&&!query.isBlank()){
+            order="CASE WHEN LOWER(item.title)=LOWER(?) THEN 3 WHEN LOCATE(LOWER(?),LOWER(item.title))>0 THEN 2 WHEN LOCATE(LOWER(?),LOWER(COALESCE(item.description,'')))>0 THEN 1 ELSE 0 END DESC,"+order;
+            args.add(query.strip());args.add(query.strip());args.add(query.strip());
+        }
+        args.add(pageSize);args.add((page-1)*pageSize);
+        List<Long> ids=jdbcTemplate.queryForList("SELECT item.item_id"+from+" ORDER BY "+order+" LIMIT ? OFFSET ?",Long.class,args.toArray());
+        Map<Long,CatalogItem> metadata=new java.util.HashMap<>();findByIds(ids).forEach(item->metadata.put(item.itemId(),item));
+        return new com.guvi.recommendationsystem.model.CatalogPage<>(ids.stream().map(metadata::get).toList(),page,pageSize,total,(total+pageSize-1)/pageSize);
+    }
+
+    /** One bounded metadata query, including unavailable resources for owner history. */
+    public List<CatalogItem> findByIds(Collection<Long> ids) {
+        if (ids.isEmpty()) return List.of();
+        if (ids.size() > 100) throw new IllegalArgumentException("At most 100 resource IDs are allowed.");
+        String placeholders = String.join(",", java.util.Collections.nCopies(ids.size(), "?"));
+        return jdbcTemplate.query("""
+                SELECT item.*, (item.is_active AND category.is_active) AS effective_active,
+                       (SELECT GROUP_CONCAT(tag.name ORDER BY tag.name SEPARATOR ',')
+                        FROM item_interests it JOIN interests tag ON tag.interest_id=it.interest_id
+                        WHERE it.item_id=item.item_id) AS tag_list
+                FROM items item JOIN categories category ON category.category_id=item.category_id
+                WHERE item.item_id IN (%s) ORDER BY item.created_at DESC,item.item_id DESC
+                """.formatted(placeholders), (rs,n) -> {
+            CatalogItem item=itemMapper.mapRow(rs,n);
+            return new CatalogItem(item.itemId(),item.categoryId(),item.title(),item.description(),item.type(),item.externalUrl(),item.sourceName(),item.tags(),item.difficulty(),item.estimatedMinutes(),item.qualityScore(),item.price(),rs.getBoolean("effective_active"),item.createdAt(),item.updatedAt(),item.editorPick(),item.revision());
+        }, ids.toArray());
+    }
+
     @Override
     public Optional<CatalogItem> findById(long itemId) {
         return jdbcTemplate.query("""
-                SELECT item_id, category_id, title, description, item_type,
+                SELECT revision, item_id, category_id, title, description, item_type,
                        external_url, source_name, difficulty, estimated_minutes, quality_score,
                        is_editor_pick, price, is_active, created_at, updated_at,
                        (SELECT GROUP_CONCAT(tag.name ORDER BY tag.name SEPARATOR ',')
@@ -62,7 +109,7 @@ public class JdbcItemDao implements ItemDao {
     @Override
     public List<CatalogItem> findAll() {
         return jdbcTemplate.query("""
-                SELECT item_id, category_id, title, description, item_type,
+                SELECT revision, item_id, category_id, title, description, item_type,
                        external_url, source_name, difficulty, estimated_minutes, quality_score,
                        is_editor_pick, price, is_active, created_at, updated_at,
                        (SELECT GROUP_CONCAT(tag.name ORDER BY tag.name SEPARATOR ',')
@@ -76,7 +123,7 @@ public class JdbcItemDao implements ItemDao {
     @Override
     public List<CatalogItem> findActive() {
         return jdbcTemplate.query("""
-                SELECT item_id, category_id, title, description, item_type,
+                SELECT revision, item_id, category_id, title, description, item_type,
                        external_url, source_name, difficulty, estimated_minutes, quality_score,
                        is_editor_pick, price, is_active, created_at, updated_at,
                        (SELECT GROUP_CONCAT(tag.name ORDER BY tag.name SEPARATOR ',')
@@ -91,7 +138,7 @@ public class JdbcItemDao implements ItemDao {
     @Override
     public List<CatalogItem> findDiscoveryForUser(long userId, int limit) {
         return jdbcTemplate.query("""
-                SELECT item.item_id, item.category_id, item.title, item.description, item.item_type,
+                SELECT item.revision, item.item_id, item.category_id, item.title, item.description, item.item_type,
                        item.external_url, item.source_name, item.difficulty, item.estimated_minutes,
                        item.quality_score, item.is_editor_pick, item.price, item.is_active,
                        item.created_at, item.updated_at,
@@ -120,7 +167,7 @@ public class JdbcItemDao implements ItemDao {
     @Override
     public List<CatalogItem> findActiveByCategory(long categoryId) {
         return jdbcTemplate.query("""
-                SELECT item_id, category_id, title, description, item_type,
+                SELECT revision, item_id, category_id, title, description, item_type,
                        external_url, source_name, difficulty, estimated_minutes, quality_score,
                        is_editor_pick, price, is_active, created_at, updated_at,
                        (SELECT GROUP_CONCAT(tag.name ORDER BY tag.name SEPARATOR ',')
@@ -137,7 +184,8 @@ public class JdbcItemDao implements ItemDao {
             String query, Long categoryId, ItemType type, CatalogSort sort, int limit, int offset) {
         FilterParts filters = filters(query, categoryId, type);
         String orderBy = switch (sort) {
-            case NEWEST -> "item.created_at DESC, item.item_id DESC";
+            case TIME_ASC -> "item.estimated_minutes IS NULL, item.estimated_minutes, item.item_id";
+            case NEWEST, RELEVANCE -> "item.created_at DESC, item.item_id DESC";
             case MOST_POPULAR -> "COUNT(interaction.interaction_id) DESC, item.created_at DESC, item.item_id DESC";
             case TITLE_ASC -> "LOWER(item.title) ASC, item.item_id ASC";
         };
@@ -145,7 +193,7 @@ public class JdbcItemDao implements ItemDao {
         arguments.add(limit);
         arguments.add(offset);
         return jdbcTemplate.query("""
-                SELECT item.item_id, item.category_id, item.title, item.description, item.item_type,
+                SELECT item.revision, item.item_id, item.category_id, item.title, item.description, item.item_type,
                        item.external_url, item.source_name, item.difficulty, item.estimated_minutes,
                        item.quality_score, item.is_editor_pick, item.price, item.is_active, item.created_at, item.updated_at,
                        (SELECT GROUP_CONCAT(tag.name ORDER BY tag.name SEPARATOR ',')
@@ -197,12 +245,13 @@ public class JdbcItemDao implements ItemDao {
                         + " OR LOWER(category.name) LIKE ? ESCAPE '!'"
                         + " OR EXISTS (SELECT 1 FROM item_interests item_tag"
                         + " JOIN interests tag ON tag.interest_id = item_tag.interest_id"
-                        + " WHERE item_tag.item_id = item.item_id AND LOWER(tag.name) LIKE ? ESCAPE '!'))");
+                        + " WHERE item_tag.item_id = item.item_id AND LOWER(tag.name) LIKE ? ESCAPE '!')"
+                        + " OR EXISTS (SELECT 1 FROM resource_provenance p WHERE p.item_id=item.item_id AND LOWER(CAST(p.source_topics AS CHAR)) LIKE ? ESCAPE '!'))");
             }
             sql.append(String.join(" OR ", termPredicates)).append(")");
             for (String term : terms) {
                 String pattern = SearchTerms.likePattern(term);
-                arguments.addAll(List.of(pattern, pattern, pattern, pattern, pattern));
+                arguments.addAll(List.of(pattern, pattern, pattern, pattern, pattern, pattern));
             }
         }
         return new FilterParts(sql.toString(), List.copyOf(arguments));
@@ -273,7 +322,7 @@ public class JdbcItemDao implements ItemDao {
     @Override
     public boolean setActive(long itemId, boolean active) {
         return jdbcTemplate.update(
-                "UPDATE items SET is_active = ? WHERE item_id = ?",
+                "UPDATE items SET is_active = ?, revision=revision+1 WHERE item_id = ?",
                 active,
                 itemId) == 1;
     }
@@ -285,7 +334,7 @@ public class JdbcItemDao implements ItemDao {
         List<Object> arguments = new ArrayList<>();
         arguments.add(active);
         arguments.addAll(itemIds);
-        return jdbcTemplate.update("UPDATE items SET is_active = ? WHERE item_id IN (" + placeholders + ")",
+        return jdbcTemplate.update("UPDATE items SET is_active = ?, revision=revision+1 WHERE item_id IN (" + placeholders + ")",
                 arguments.toArray());
     }
 

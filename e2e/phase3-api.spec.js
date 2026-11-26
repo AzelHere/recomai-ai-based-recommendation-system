@@ -1,0 +1,113 @@
+import {test,expect} from '@playwright/test';
+import {accountFixture} from './account-fixture.js';
+import {spawnSync} from 'node:child_process';
+import {phase3Capture} from './phase3-capture.js';
+const browserExceptions=new WeakMap();
+test.beforeEach(async({page})=>{const errors=[];browserExceptions.set(page,errors);page.on('pageerror',error=>errors.push(error.message));});
+test.afterEach(async({page})=>{expect(browserExceptions.get(page)).toEqual([]);});
+function isolatedQuery(sql){
+ const project=process.env.E2E_COMPOSE_PROJECT;if(!/^recomai-e2e-/.test(project||''))throw Error('Isolated fixture SQL requires the E2E runner');
+ return spawnSync('docker',['compose','-p',project,'exec','-T','mysql','sh','-c','MYSQL_PWD="$MYSQL_PASSWORD" mysql -N -u "$MYSQL_USER" "$MYSQL_DATABASE"'],{encoding:'utf8',input:sql});
+}
+
+test('Phase 3 library, collection and snapshot activity APIs enforce ownership and persistence',async({page,browser,baseURL})=>{
+ test.setTimeout(120000);
+ const owner=await accountFixture(page);const api=page.request;
+ const resources=await (await api.get('/api/items')).json();const item=resources[0];
+ for(let n=0;n<3;n++)expect((await api.post('/api/users/me/interactions',{data:{itemId:item.itemId,type:'SAVE'}})).status()).toBe(201);
+ const shelf=await (await api.post('/api/users/me/collections',{data:{name:'Owner shelf'}})).json();
+ expect((await api.put(`/api/users/me/collections/${shelf.collectionId}/items/${item.itemId}`)).status()).toBe(204);
+ const other=await browser.newContext({baseURL});const outsider=await other.newPage();await accountFixture(outsider);
+ expect((await outsider.request.patch(`/api/users/me/collections/${shelf.collectionId}`,{data:{name:'Stolen',expectedName:'Owner shelf'}})).status()).toBe(404);
+ expect((await outsider.request.get(`/api/users/me/saved?collectionId=${shelf.collectionId}`)).status()).toBe(404);
+ expect((await outsider.request.delete(`/api/users/me/saved/${item.itemId}`)).status()).toBe(204);
+ expect((await (await api.get('/api/users/me/saved')).json()).totalItems).toBe(1);
+ expect((await api.patch(`/api/users/me/collections/${shelf.collectionId}`,{data:{name:'Renamed shelf',expectedName:'Owner shelf'}})).status()).toBe(200);
+ expect((await api.patch(`/api/users/me/collections/${shelf.collectionId}`,{data:{name:'Lost update',expectedName:'Owner shelf'}})).status()).toBe(409);
+ expect((await api.patch(`/api/users/me/collections/${shelf.collectionId}`,{data:{name:' ',expectedName:'Renamed shelf'}})).status()).toBe(400);
+ await api.post('/api/users/me/collections',{data:{name:'Duplicate'}});
+ expect((await api.patch(`/api/users/me/collections/${shelf.collectionId}`,{data:{name:'Duplicate',expectedName:'Renamed shelf'}})).status()).toBe(409);
+ const renamed=(await (await api.get('/api/users/me/collections')).json()).find(c=>c.collectionId===shelf.collectionId);expect(renamed.name).toBe('Renamed shelf');expect(renamed.itemIds).toEqual([item.itemId]);
+ expect((await (await api.get('/api/users/me/saved?query='+encodeURIComponent(item.title))).json()).items[0].itemId).toBe(item.itemId);
+ for(const resource of resources.slice(1,23))await api.post('/api/users/me/interactions',{data:{itemId:resource.itemId,type:'SAVE'}});
+ const savedPages=[];for(let n=1;n<=4;n++){const result=await(await api.get('/api/users/me/saved?pageSize=7&page='+n)).json();expect(result.totalItems).toBe(23);savedPages.push(...result.items);}
+ expect(savedPages).toHaveLength(23);expect(new Set(savedPages.map(row=>row.itemId)).size).toBe(23);
+ for(const resource of resources.slice(1,23))await api.delete('/api/users/me/saved/'+resource.itemId);
+ for(let i=0;i<27;i++)await api.post('/api/users/me/interactions',{data:{itemId:resources[i%resources.length].itemId,type:'LIKE'}});
+ const fixtureUserId=(await(await api.get('/api/users/me')).json()).userId;if(!Number.isSafeInteger(fixtureUserId)||fixtureUserId<1)throw Error('Invalid isolated fixture owner');
+ expect(isolatedQuery(`UPDATE interactions SET occurred_at='2026-01-01 00:00:00' WHERE user_id=${fixtureUserId} AND interaction_type='LIKE';`).status).toBe(0);
+ const first=await (await api.get('/api/users/me/activity?pageSize=7&type=LIKE')).json();expect(first.hasMore).toBe(true);expect(first.totalItems).toBe(27);
+ await api.post('/api/users/me/interactions',{data:{itemId:item.itemId,type:'LIKE'}});
+ let rows=[...first.items],cursor=first.nextCursor;
+ while(cursor){const next=await(await api.get('/api/users/me/activity?pageSize=7&type=LIKE&cursor='+encodeURIComponent(cursor))).json();expect(next.totalItems).toBe(27);rows.push(...next.items);cursor=next.nextCursor;}
+ expect(rows).toHaveLength(27);expect(new Set(rows.map(e=>e.interactionId)).size).toBe(27);
+ expect(new Set(rows.map(e=>e.occurredAt)).size).toBe(1);
+ expect(rows.map(e=>e.interactionId)).toEqual([...rows].sort((a,b)=>b.occurredAt.localeCompare(a.occurredAt)||b.interactionId-a.interactionId).map(e=>e.interactionId));
+ expect((await outsider.request.get('/api/users/me/activity?cursor='+encodeURIComponent(first.nextCursor)+'&type=LIKE')).status()).toBe(400);
+ expect((await api.get('/api/users/me/activity?pageSize=101')).status()).toBe(400);
+ expect((await api.get('/api/users/me/activity?cursor=invalid')).status()).toBe(400);
+ expect((await api.get('/api/users/me/saved?pageSize=101')).status()).toBe(400);
+ expect((await api.get('/api/phase3-nonexistent-endpoint')).status()).toBe(404);
+ expect((await api.delete(`/api/users/me/saved/${item.itemId}`)).status()).toBe(204);
+ expect((await api.delete(`/api/users/me/saved/${item.itemId}`)).status()).toBe(204);
+ expect((await (await api.get('/api/users/me/saved')).json()).totalItems).toBe(0);
+ expect((await (await api.get('/api/users/me/collections')).json()).find(c=>c.collectionId===shelf.collectionId).itemIds).toEqual([]);
+ expect((await (await api.get('/api/users/me/activity?type=LIKE')).json()).totalItems).toBe(28);
+ await other.close();
+});
+
+test('Phase 3 catalog bounds and administrative revisions reject stale writes',async({page,browser,baseURL})=>{
+ test.setTimeout(120000);await accountFixture(page,true);const api=page.request;
+ const catalog=await(await api.get('/api/items/search?difficulty=BEGINNER&maximumTime=30&pageSize=3&sort=TIME_ASC')).json();
+ expect(catalog.items.length).toBeLessThanOrEqual(3);expect(catalog.items.every(i=>i.difficulty==='BEGINNER'&&i.estimatedMinutes<=30)).toBe(true);
+ expect((await api.get('/api/items/search?pageSize=101')).status()).toBe(400);expect((await api.get('/api/items/search?maximumTime=-1')).status()).toBe(400);
+ const item=(await(await api.get('/api/admin/items')).json())[0];
+ const body=Object.fromEntries(['categoryId','title','description','type','externalUrl','price','sourceName','difficulty','estimatedMinutes','qualityScore','editorPick'].map(key=>[key,item[key]]));
+ expect((await api.put('/api/admin/items/'+item.itemId,{headers:{'X-Expected-Revision':String(item.revision)},data:body})).status()).toBe(200);
+ expect((await api.put('/api/admin/items/'+item.itemId,{headers:{'X-Expected-Revision':String(item.revision)},data:{...body,title:'Stale overwrite'}})).status()).toBe(409);
+ expect((await api.put('/api/admin/items/'+item.itemId,{data:body})).status()).toBe(400);
+ const settings=await(await api.get('/api/admin/settings')).json();const shares={familiarShare:settings.familiarShare,relatedShare:settings.relatedShare,discoveryShare:settings.discoveryShare};
+ expect((await api.put('/api/admin/settings',{headers:{'X-Expected-Revision':String(settings.revision)},data:shares})).status()).toBe(200);
+ expect((await api.put('/api/admin/settings',{headers:{'X-Expected-Revision':String(settings.revision)},data:shares})).status()).toBe(409);
+ await page.goto('/#app/adminPanel');await expect(page.locator('#adminSnapshot')).toContainText('Catalog resources');await phase3Capture(page,'admin');
+ await page.getByRole('button',{name:'Resources',exact:true}).click();await page.getByLabel('Search admin catalog').fill(item.title);await page.locator('#adminItems tbody tr').first().getByRole('button',{name:'Edit',exact:true}).click();await page.locator('#itemForm [name=title]').fill('A draft that must survive conflict');
+ const current=(await(await api.get('/api/admin/items')).json()).find(row=>row.itemId===item.itemId);expect((await api.put('/api/admin/items/'+item.itemId,{headers:{'X-Expected-Revision':String(current.revision)},data:body})).status()).toBe(200);
+ await page.locator('#itemForm button[type=submit]').click();await expect(page.locator('#itemEditStatus')).toContainText('Resource changed');await expect(page.locator('#itemForm [name=title]')).toHaveValue('A draft that must survive conflict');page.once('dialog',d=>d.accept());await page.getByRole('button',{name:'Reload current resource',exact:true}).click();await expect(page.locator('#itemForm [name=title]')).toHaveValue(item.title);
+ await page.getByRole('button',{name:'Configuration',exact:true}).click();await expect(page.locator('[data-settings-save]')).toBeEnabled();await page.locator('[data-share=familiar]').focus();await page.keyboard.press('ArrowLeft');await expect(page.locator('[data-settings-save]')).toBeDisabled();await page.locator('[data-share=related]').focus();await page.keyboard.press('ArrowRight');await expect(page.locator('[data-settings-save]')).toBeEnabled();
+ const latest=await(await api.get('/api/admin/settings')).json();expect((await api.put('/api/admin/settings',{headers:{'X-Expected-Revision':String(latest.revision)},data:shares})).status()).toBe(200);await page.locator('[data-settings-save]').click();await expect(page.locator('#adminConfigStatus')).toContainText('Configuration changed');await expect(page.locator('[data-share=familiar]')).toHaveValue('69');
+ page.once('dialog',d=>d.accept());await page.getByRole('button',{name:'Reload saved configuration',exact:true}).click();await expect(page.locator('[data-share=familiar]')).toHaveValue('70');await phase3Capture(page,'admin-configuration');
+ const anonymous=await browser.newContext({baseURL});expect((await anonymous.request.get('/api/users/me/saved')).status()).toBe(401);expect((await anonymous.request.get('/api/users/me/activity')).status()).toBe(401);await anonymous.close();
+});
+
+test('Phase 3 persistent journeys reuse explicit progress, preserve completed steps and cascade on account deletion',async({page,browser,baseURL})=>{
+ test.setTimeout(120000);const owner=await accountFixture(page);const api=page.request;
+ const body={title:'A genuine suggested sequence',goal:'LEARN',categoryId:owner.niches[0].categoryId,steps:3,requestId:'journey_'+Date.now()};
+ const created=await api.post('/api/users/me/journeys',{data:body});expect(created.status()).toBe(201);const initial=await created.json();const id=initial.journey.journeyId;
+ expect(initial.steps).toHaveLength(3);expect(initial.completedSteps).toBe(0);expect(new Set(initial.steps.map(s=>s.itemId)).size).toBe(3);expect(initial.steps.map(s=>s.position)).toEqual([1,2,3]);
+ expect((await(await api.post('/api/users/me/journeys',{data:body})).json()).journey.journeyId).toBe(id);
+ expect((await api.post('/api/users/me/journeys',{data:{...body,title:'Conflicting replay'}})).status()).toBe(409);
+ expect((await api.post('/api/users/me/journeys',{data:{...body,steps:13,requestId:'invalid'}})).status()).toBe(400);
+ const outsider=await browser.newContext({baseURL});const other=await outsider.newPage();await accountFixture(other,true);
+ expect((await other.request.get(`/api/users/me/journeys/${id}`)).status()).toBe(404);
+ expect((await other.request.patch(`/api/users/me/journeys/${id}/steps/${initial.steps[0].stepId}`,{data:{status:'COMPLETED'}})).status()).toBe(404);
+ expect((await api.get('/api/admin/items')).status()).toBe(403);
+ const step=initial.steps[0];expect((await api.patch(`/api/users/me/journeys/${id}/steps/${step.stepId}`,{data:{status:'IN_PROGRESS'}})).status()).toBe(200);
+ let journey=await(await api.patch(`/api/users/me/journeys/${id}/steps/${step.stepId}`,{data:{status:'COMPLETED'}})).json();expect(journey.completedSteps).toBe(1);expect(journey.completionPercent).toBe(33);
+ const events=(await(await api.get('/api/users/me/activity?type=COMPLETE')).json()).totalItems;
+ await api.patch(`/api/users/me/journeys/${id}/steps/${step.stepId}`,{data:{status:'COMPLETED'}});expect((await(await api.get('/api/users/me/activity?type=COMPLETE')).json()).totalItems).toBe(events);
+ const resumed=await(await api.get(`/api/users/me/journeys/${id}`)).json();expect(resumed.completedSteps).toBe(1);expect(resumed.currentStepId).toBe(initial.steps[1].stepId);
+ const next=await(await api.post('/api/users/me/journeys',{data:{...body,requestId:'second_'+Date.now()}})).json();expect(next.steps.map(s=>s.itemId)).not.toContain(step.itemId);
+ for(const resourceId of [step.itemId,initial.steps[1].itemId])expect((await other.request.patch(`/api/admin/items/${resourceId}/active`,{data:{active:false}})).status()).toBe(200);
+ journey=await(await api.get(`/api/users/me/journeys/${id}`)).json();expect(journey.completedSteps).toBe(1);expect(journey.steps[0].available).toBe(false);expect(journey.steps[1].available).toBe(false);
+ expect((await api.patch(`/api/users/me/journeys/${id}/steps/${initial.steps[1].stepId}`,{data:{status:'COMPLETED'}})).status()).toBe(409);
+ journey=await(await api.post(`/api/users/me/journeys/${id}/replace-unavailable`)).json();expect(journey.completedSteps).toBe(1);expect(journey.steps[0].itemId).toBe(step.itemId);expect(journey.steps[1].itemId).not.toBe(initial.steps[1].itemId);expect(journey.replacements[0].previous_item_id).toBe(initial.steps[1].itemId);
+ const exported=await(await api.get('/api/users/me/export')).json();expect(exported.journeys.some(j=>j.journey_id===id)).toBe(true);expect(exported.journeySteps.filter(s=>s.journey_id===id)).toHaveLength(3);expect(exported.journeyReplacements).toHaveLength(1);
+ expect((await api.post(`/api/users/me/journeys/${id}/archive`)).status()).toBe(200);expect((await api.patch(`/api/users/me/journeys/${id}/steps/${step.stepId}`,{data:{status:'IN_PROGRESS'}})).status()).toBe(409);
+ expect((await api.delete(`/api/users/me/journeys/${next.journey.journeyId}`)).status()).toBe(204);expect((await api.get(`/api/users/me/journeys/${next.journey.journeyId}`)).status()).toBe(404);
+ expect((await api.delete('/api/users/me')).status()).toBe(204);
+ if(!/^recomai-e2e-/.test(process.env.E2E_COMPOSE_PROJECT||'')||!Number.isSafeInteger(id))throw Error('Isolated cascade verification required');
+ const result=isolatedQuery(`SELECT COUNT(*) FROM learning_journeys WHERE journey_id=${id}; SELECT COUNT(*) FROM learning_journey_steps WHERE journey_id=${id}; SELECT COUNT(*) FROM journey_step_replacements WHERE step_id=${step.stepId};`);
+ expect(result.status).toBe(0);expect(result.stdout.trim().split(/\s+/)).toEqual(['0','0','0']);
+ for(const resourceId of [step.itemId,initial.steps[1].itemId])await other.request.patch(`/api/admin/items/${resourceId}/active`,{data:{active:true}});
+ await outsider.close();
+});

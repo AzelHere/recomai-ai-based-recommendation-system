@@ -1,6 +1,6 @@
 # Phase 5 verification record
 
-> Historical record: this captures the verified Phase 5 state before adaptive-interest Phase 6 work. Current schema and code continue through Flyway V4; use the README for current behavior.
+> Historical record: this captures the verified Phase 5 state before adaptive-interest Phase 6 work. Current schema continues through V18; use the root README for current behavior.
 
 This note records the Phase 5 Docker/MySQL verification for the GUVI Galgotias **AI-Based Recommendation System**. Keep the project topic, Java 21/Spring Boot/Spring JDBC architecture, existing Phase 4 features, and Flyway migration history intact.
 
@@ -30,4 +30,4 @@ The original project repository has a `.git` directory on `master` but no commit
 
 ## Phase 6A follow-up (2026-10-08)
 
-The registration behavior described above was the Phase 5-era recovery flow. Phase 6A corrected it: successful registration now starts a server session, and the frontend verifies `/api/users/me` before opening the application; incomplete onboarding routes to onboarding. A dedicated Saved resources view now uses existing `SAVE` interaction history. This registration and saved-view follow-up needed no schema migration. See the current implementation and results in [README.md](README.md).
+The registration behavior described above was the Phase 5-era recovery flow. Phase 6A corrected it: successful registration now starts a server session, and the frontend verifies `/api/users/me` before opening the application; incomplete onboarding routes to onboarding. A dedicated Saved resources view now uses existing `SAVE` interaction history. This registration and saved-view follow-up needed no schema migration. See the current implementation and results in [README.md](../../README.md).

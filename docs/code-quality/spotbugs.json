@@ -1,0 +1,1244 @@
+{
+  "plugin": "com.github.spotbugs:spotbugs-maven-plugin:4.10.5.0",
+  "findings": [
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.catalog.CatalogIngestionService(JdbcTemplate, ItemService) may expose internal representation by storing an externally mutable object into CatalogIngestionService.items",
+      "source": "com/guvi/recommendationsystem/catalog/CatalogIngestionService.java",
+      "line": "26"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.catalog.CatalogIngestionService(JdbcTemplate, ItemService) may expose internal representation by storing an externally mutable object into CatalogIngestionService.jdbc",
+      "source": "com/guvi/recommendationsystem/catalog/CatalogIngestionService.java",
+      "line": "26"
+    },
+    {
+      "type": "NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE",
+      "priority": 2,
+      "message": "Possible null pointer dereference in com.guvi.recommendationsystem.catalog.CatalogIngestionService.commit(List, String) due to return value of called method",
+      "source": "com/guvi/recommendationsystem/catalog/CatalogIngestionService.java",
+      "line": "106"
+    },
+    {
+      "type": "NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE",
+      "priority": 2,
+      "message": "Possible null pointer dereference in com.guvi.recommendationsystem.catalog.CatalogIngestionService.preview(List) due to return value of called method",
+      "source": "com/guvi/recommendationsystem/catalog/CatalogIngestionService.java",
+      "line": "55"
+    },
+    {
+      "type": "NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE",
+      "priority": 2,
+      "message": "Possible null pointer dereference in com.guvi.recommendationsystem.catalog.CatalogIngestionService.preview(List) due to return value of called method",
+      "source": "com/guvi/recommendationsystem/catalog/CatalogIngestionService.java",
+      "line": "56"
+    },
+    {
+      "type": "NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE",
+      "priority": 2,
+      "message": "Possible null pointer dereference in com.guvi.recommendationsystem.catalog.CatalogIngestionService.validate(EducationalResource, Map) due to return value of called method",
+      "source": "com/guvi/recommendationsystem/catalog/CatalogIngestionService.java",
+      "line": "81"
+    },
+    {
+      "type": "OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.catalog.CatalogIngestionService.lambda$commit$3(CatalogIngestionService$Preview, Connection) may fail to clean up java.sql.Statement on checked exception",
+      "source": "com/guvi/recommendationsystem/catalog/CatalogIngestionService.java",
+      "line": "95"
+    },
+    {
+      "type": "EI_EXPOSE_REP",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.catalog.CatalogIngestionService$Preview.rows() may expose internal representation by returning CatalogIngestionService$Preview.rows",
+      "source": "com/guvi/recommendationsystem/catalog/CatalogIngestionService.java",
+      "line": "28"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.catalog.CatalogIngestionService$Preview(String, int, int, int, boolean, List) may expose internal representation by storing an externally mutable object into CatalogIngestionService$Preview.rows",
+      "source": "com/guvi/recommendationsystem/catalog/CatalogIngestionService.java",
+      "line": "28"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.catalog.CatalogMaintenance(JdbcTemplate) may expose internal representation by storing an externally mutable object into CatalogMaintenance.jdbc",
+      "source": "com/guvi/recommendationsystem/catalog/CatalogMaintenance.java",
+      "line": "20"
+    },
+    {
+      "type": "EI_EXPOSE_REP",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.catalog.EducationalResource.topics() may expose internal representation by returning EducationalResource.topics",
+      "source": "com/guvi/recommendationsystem/catalog/EducationalResource.java",
+      "line": "7"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.catalog.EducationalResource(String, String, String, String, String, String, String, List, String, String, String, String) may expose internal representation by storing an externally mutable object into EducationalResource.topics",
+      "source": "com/guvi/recommendationsystem/catalog/EducationalResource.java",
+      "line": "7"
+    },
+    {
+      "type": "EI_EXPOSE_REP",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.catalog.IngestionController$ImportRequest.resources() may expose internal representation by returning IngestionController$ImportRequest.resources",
+      "source": "com/guvi/recommendationsystem/catalog/IngestionController.java",
+      "line": "15"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.catalog.IngestionController$ImportRequest(List, String) may expose internal representation by storing an externally mutable object into IngestionController$ImportRequest.resources",
+      "source": "com/guvi/recommendationsystem/catalog/IngestionController.java",
+      "line": "15"
+    },
+    {
+      "type": "SWL_SLEEP_WITH_LOCK_HELD",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.catalog.SourceHttp.request(String, boolean, int) calls Thread.sleep() with a lock held",
+      "source": "com/guvi/recommendationsystem/catalog/SourceHttp.java",
+      "line": "70"
+    },
+    {
+      "type": "EI_EXPOSE_REP",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.catalog.SourceHttp$Result.body() may expose internal representation by returning SourceHttp$Result.body",
+      "source": "com/guvi/recommendationsystem/catalog/SourceHttp.java",
+      "line": "45"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.catalog.SourceHttp$Result(int, URI, byte[]) may expose internal representation by storing an externally mutable object into SourceHttp$Result.body",
+      "source": "com/guvi/recommendationsystem/catalog/SourceHttp.java",
+      "line": "45"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.controller.AuthController(UserAccountService, SessionAccess, PasswordResetService) may expose internal representation by storing an externally mutable object into AuthController.userAccountService",
+      "source": "com/guvi/recommendationsystem/controller/AuthController.java",
+      "line": "32"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.controller.HealthController(JdbcTemplate) may expose internal representation by storing an externally mutable object into HealthController.jdbcTemplate",
+      "source": "com/guvi/recommendationsystem/controller/HealthController.java",
+      "line": "14"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.controller.InteractionController(InteractionService, SessionAccess) may expose internal representation by storing an externally mutable object into InteractionController.interactionService",
+      "source": "com/guvi/recommendationsystem/controller/InteractionController.java",
+      "line": "28"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.controller.InterestController(InterestService, ItemInterestService, SessionAccess) may expose internal representation by storing an externally mutable object into InterestController.interestService",
+      "source": "com/guvi/recommendationsystem/controller/InterestController.java",
+      "line": "36"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.controller.InterestController(InterestService, ItemInterestService, SessionAccess) may expose internal representation by storing an externally mutable object into InterestController.itemInterestService",
+      "source": "com/guvi/recommendationsystem/controller/InterestController.java",
+      "line": "37"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.controller.ItemController(ItemService, SessionAccess, CatalogCsvService) may expose internal representation by storing an externally mutable object into ItemController.itemService",
+      "source": "com/guvi/recommendationsystem/controller/ItemController.java",
+      "line": "60"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.controller.LearningJourneyController(LearningJourneyService, SessionAccess) may expose internal representation by storing an externally mutable object into LearningJourneyController.service",
+      "source": "com/guvi/recommendationsystem/controller/LearningJourneyController.java",
+      "line": "13"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.controller.RecommendationInfoController(ScoringRecommendationEngine, InteractionSignalWeights) may expose internal representation by storing an externally mutable object into RecommendationInfoController.engine",
+      "source": "com/guvi/recommendationsystem/controller/RecommendationInfoController.java",
+      "line": "16"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.controller.UserCollectionController(UserCollectionService, SessionAccess) may expose internal representation by storing an externally mutable object into UserCollectionController.service",
+      "source": "com/guvi/recommendationsystem/controller/UserCollectionController.java",
+      "line": "16"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.controller.UserController(UserAccountService, UserPreferenceService, UserInterestService, RecommendationProfileService, SessionAccess) may expose internal representation by storing an externally mutable object into UserController.userAccountService",
+      "source": "com/guvi/recommendationsystem/controller/UserController.java",
+      "line": "42"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.controller.UserController(UserAccountService, UserPreferenceService, UserInterestService, RecommendationProfileService, SessionAccess) may expose internal representation by storing an externally mutable object into UserController.userInterestService",
+      "source": "com/guvi/recommendationsystem/controller/UserController.java",
+      "line": "44"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.controller.UserController(UserAccountService, UserPreferenceService, UserInterestService, RecommendationProfileService, SessionAccess) may expose internal representation by storing an externally mutable object into UserController.userPreferenceService",
+      "source": "com/guvi/recommendationsystem/controller/UserController.java",
+      "line": "43"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.dao.JdbcAdminAnalyticsDao(JdbcTemplate) may expose internal representation by storing an externally mutable object into JdbcAdminAnalyticsDao.jdbcTemplate",
+      "source": "com/guvi/recommendationsystem/dao/JdbcAdminAnalyticsDao.java",
+      "line": "19"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.dao.JdbcAdminSettingsDao(JdbcTemplate) may expose internal representation by storing an externally mutable object into JdbcAdminSettingsDao.jdbc",
+      "source": "com/guvi/recommendationsystem/dao/JdbcAdminSettingsDao.java",
+      "line": "14"
+    },
+    {
+      "type": "NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE",
+      "priority": 2,
+      "message": "Possible null pointer dereference in com.guvi.recommendationsystem.dao.JdbcAdminSettingsDao.getSettings() due to return value of called method",
+      "source": "com/guvi/recommendationsystem/dao/JdbcAdminSettingsDao.java",
+      "line": "25"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.dao.JdbcCategoryDao(JdbcTemplate) may expose internal representation by storing an externally mutable object into JdbcCategoryDao.jdbcTemplate",
+      "source": "com/guvi/recommendationsystem/dao/JdbcCategoryDao.java",
+      "line": "28"
+    },
+    {
+      "type": "OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.dao.JdbcCategoryDao.lambda$insert$1(String, String, Connection) may fail to clean up java.sql.Statement on checked exception",
+      "source": "com/guvi/recommendationsystem/dao/JdbcCategoryDao.java",
+      "line": "81"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.dao.JdbcFeedbackDao(JdbcTemplate) may expose internal representation by storing an externally mutable object into JdbcFeedbackDao.jdbcTemplate",
+      "source": "com/guvi/recommendationsystem/dao/JdbcFeedbackDao.java",
+      "line": "26"
+    },
+    {
+      "type": "OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.dao.JdbcFeedbackDao.lambda$insert$1(long, long, int, String, Connection) may fail to clean up java.sql.Statement on checked exception",
+      "source": "com/guvi/recommendationsystem/dao/JdbcFeedbackDao.java",
+      "line": "49"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.dao.JdbcInteractionDao(JdbcTemplate) may expose internal representation by storing an externally mutable object into JdbcInteractionDao.jdbcTemplate",
+      "source": "com/guvi/recommendationsystem/dao/JdbcInteractionDao.java",
+      "line": "31"
+    },
+    {
+      "type": "OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.dao.JdbcInteractionDao.lambda$insert$1(long, long, InteractionType, Connection) may fail to clean up java.sql.Statement on checked exception",
+      "source": "com/guvi/recommendationsystem/dao/JdbcInteractionDao.java",
+      "line": "38"
+    },
+    {
+      "type": "OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.dao.JdbcInteractionDao.lambda$insertSearch$7(long, String, Connection) may fail to clean up java.sql.Statement on checked exception",
+      "source": "com/guvi/recommendationsystem/dao/JdbcInteractionDao.java",
+      "line": "99"
+    },
+    {
+      "type": "OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.dao.JdbcInteractionDao.lambda$insertWithRequestId$3(long, Long, InteractionType, String, String, Connection) may fail to clean up java.sql.Statement on checked exception",
+      "source": "com/guvi/recommendationsystem/dao/JdbcInteractionDao.java",
+      "line": "72"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.dao.JdbcInterestDao(JdbcTemplate) may expose internal representation by storing an externally mutable object into JdbcInterestDao.jdbcTemplate",
+      "source": "com/guvi/recommendationsystem/dao/JdbcInterestDao.java",
+      "line": "25"
+    },
+    {
+      "type": "OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.dao.JdbcInterestDao.lambda$insert$1(String, Connection) may fail to clean up java.sql.Statement on checked exception",
+      "source": "com/guvi/recommendationsystem/dao/JdbcInterestDao.java",
+      "line": "64"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.dao.JdbcItemDao(JdbcTemplate) may expose internal representation by storing an externally mutable object into JdbcItemDao.jdbcTemplate",
+      "source": "com/guvi/recommendationsystem/dao/JdbcItemDao.java",
+      "line": "46"
+    },
+    {
+      "type": "NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE",
+      "priority": 2,
+      "message": "Possible null pointer dereference in com.guvi.recommendationsystem.dao.JdbcItemDao.searchPage(String, Long, ItemType, CatalogSort, ItemDifficulty, Integer, String, String, int, int) due to return value of called method",
+      "source": "com/guvi/recommendationsystem/dao/JdbcItemDao.java",
+      "line": "65"
+    },
+    {
+      "type": "OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.dao.JdbcItemDao.lambda$insert$5(String, long, String, String, ItemType, String, BigDecimal, String, ItemDifficulty, Integer, BigDecimal, boolean, Connection) may fail to clean up java.sql.Statement on checked exception",
+      "source": "com/guvi/recommendationsystem/dao/JdbcItemDao.java",
+      "line": "274"
+    },
+    {
+      "type": "VA_FORMAT_STRING_USES_NEWLINE",
+      "priority": 2,
+      "message": "Format string should use %n rather than \\n in com.guvi.recommendationsystem.dao.JdbcItemDao.findByIds(Collection)",
+      "source": "com/guvi/recommendationsystem/dao/JdbcItemDao.java",
+      "line": "89"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.dao.JdbcItemInterestDao(JdbcTemplate) may expose internal representation by storing an externally mutable object into JdbcItemInterestDao.jdbcTemplate",
+      "source": "com/guvi/recommendationsystem/dao/JdbcItemInterestDao.java",
+      "line": "13"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.dao.JdbcOnboardingDao(JdbcTemplate) may expose internal representation by storing an externally mutable object into JdbcOnboardingDao.jdbcTemplate",
+      "source": "com/guvi/recommendationsystem/dao/JdbcOnboardingDao.java",
+      "line": "22"
+    },
+    {
+      "type": "VA_FORMAT_STRING_USES_NEWLINE",
+      "priority": 2,
+      "message": "Format string should use %n rather than \\n in com.guvi.recommendationsystem.dao.JdbcOnboardingDao.areTopicsInNiche(long, List)",
+      "source": "com/guvi/recommendationsystem/dao/JdbcOnboardingDao.java",
+      "line": "131"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.dao.JdbcPasswordResetDao(JdbcTemplate) may expose internal representation by storing an externally mutable object into JdbcPasswordResetDao.jdbc",
+      "source": "com/guvi/recommendationsystem/dao/JdbcPasswordResetDao.java",
+      "line": "13"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.dao.JdbcRecommendationDao(JdbcTemplate, InteractionSignalWeights) may expose internal representation by storing an externally mutable object into JdbcRecommendationDao.jdbcTemplate",
+      "source": "com/guvi/recommendationsystem/dao/JdbcRecommendationDao.java",
+      "line": "70"
+    },
+    {
+      "type": "OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.dao.JdbcRecommendationDao.lambda$createBatch$6(long, String, Connection) may fail to clean up java.sql.Statement on checked exception",
+      "source": "com/guvi/recommendationsystem/dao/JdbcRecommendationDao.java",
+      "line": "349"
+    },
+    {
+      "type": "OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.dao.JdbcRecommendationDao.lambda$save$7(long, long, RecommendationDraft, Connection) may fail to clean up java.sql.Statement on checked exception",
+      "source": "com/guvi/recommendationsystem/dao/JdbcRecommendationDao.java",
+      "line": "365"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.dao.JdbcUserCollectionDao(JdbcTemplate) may expose internal representation by storing an externally mutable object into JdbcUserCollectionDao.jdbc",
+      "source": "com/guvi/recommendationsystem/dao/JdbcUserCollectionDao.java",
+      "line": "11"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.dao.JdbcUserDao(JdbcTemplate) may expose internal representation by storing an externally mutable object into JdbcUserDao.jdbcTemplate",
+      "source": "com/guvi/recommendationsystem/dao/JdbcUserDao.java",
+      "line": "36"
+    },
+    {
+      "type": "OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.dao.JdbcUserDao.lambda$insertUser$2(String, String, String, String, String, Connection) may fail to clean up java.sql.Statement on checked exception",
+      "source": "com/guvi/recommendationsystem/dao/JdbcUserDao.java",
+      "line": "78"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.dao.JdbcUserInterestDao(JdbcTemplate) may expose internal representation by storing an externally mutable object into JdbcUserInterestDao.jdbcTemplate",
+      "source": "com/guvi/recommendationsystem/dao/JdbcUserInterestDao.java",
+      "line": "15"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.dao.JdbcUserPreferenceDao(JdbcTemplate) may expose internal representation by storing an externally mutable object into JdbcUserPreferenceDao.jdbcTemplate",
+      "source": "com/guvi/recommendationsystem/dao/JdbcUserPreferenceDao.java",
+      "line": "15"
+    },
+    {
+      "type": "NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE",
+      "priority": 2,
+      "message": "Possible null pointer dereference in com.guvi.recommendationsystem.dao.JdbcUserPreferenceDao.exploration(long) due to return value of called method",
+      "source": "com/guvi/recommendationsystem/dao/JdbcUserPreferenceDao.java",
+      "line": "20"
+    },
+    {
+      "type": "NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE",
+      "priority": 2,
+      "message": "Possible null pointer dereference in com.guvi.recommendationsystem.dao.JdbcUserPreferenceDao.lockExploration(long) due to return value of called method",
+      "source": "com/guvi/recommendationsystem/dao/JdbcUserPreferenceDao.java",
+      "line": "25"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.dao.JdbcUserSignalSummaryDao(JdbcTemplate) may expose internal representation by storing an externally mutable object into JdbcUserSignalSummaryDao.jdbcTemplate",
+      "source": "com/guvi/recommendationsystem/dao/JdbcUserSignalSummaryDao.java",
+      "line": "11"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.dao.JdbcUserTopicPreferenceDao(JdbcTemplate, TopicPreferenceScorer) may expose internal representation by storing an externally mutable object into JdbcUserTopicPreferenceDao.jdbcTemplate",
+      "source": "com/guvi/recommendationsystem/dao/JdbcUserTopicPreferenceDao.java",
+      "line": "24"
+    },
+    {
+      "type": "NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE",
+      "priority": 2,
+      "message": "Possible null pointer dereference in com.guvi.recommendationsystem.evaluation.OfflineEvaluation.count(JdbcTemplate, String) due to return value of called method",
+      "source": "com/guvi/recommendationsystem/evaluation/OfflineEvaluation.java",
+      "line": "91"
+    },
+    {
+      "type": "NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE",
+      "priority": 2,
+      "message": "Possible null pointer dereference in com.guvi.recommendationsystem.evaluation.OfflineEvaluation.main(String[]) due to return value of called method",
+      "source": "com/guvi/recommendationsystem/evaluation/OfflineEvaluation.java",
+      "line": "66"
+    },
+    {
+      "type": "BX_UNBOXED_AND_COERCED_FOR_TERNARY_OPERATOR",
+      "priority": 2,
+      "message": "Primitive value is unboxed and coerced for ternary operator in com.guvi.recommendationsystem.evaluation.OuladEvaluation.main(String[])",
+      "source": "com/guvi/recommendationsystem/evaluation/OuladEvaluation.java",
+      "line": "35"
+    },
+    {
+      "type": "EI_EXPOSE_REP",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.model.AdminRecommendationInsights.mostDislikedItems() may expose internal representation by returning AdminRecommendationInsights.mostDislikedItems",
+      "source": "com/guvi/recommendationsystem/model/AdminRecommendationInsights.java",
+      "line": "6"
+    },
+    {
+      "type": "EI_EXPOSE_REP",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.model.AdminRecommendationInsights.mostInteractedItems() may expose internal representation by returning AdminRecommendationInsights.mostInteractedItems",
+      "source": "com/guvi/recommendationsystem/model/AdminRecommendationInsights.java",
+      "line": "6"
+    },
+    {
+      "type": "EI_EXPOSE_REP",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.model.AdminRecommendationInsights.mostRecommendedItems() may expose internal representation by returning AdminRecommendationInsights.mostRecommendedItems",
+      "source": "com/guvi/recommendationsystem/model/AdminRecommendationInsights.java",
+      "line": "6"
+    },
+    {
+      "type": "EI_EXPOSE_REP",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.model.AdminRecommendationInsights.mostSavedItems() may expose internal representation by returning AdminRecommendationInsights.mostSavedItems",
+      "source": "com/guvi/recommendationsystem/model/AdminRecommendationInsights.java",
+      "line": "6"
+    },
+    {
+      "type": "EI_EXPOSE_REP",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.model.AdminRecommendationInsights.topRecommendedCategories() may expose internal representation by returning AdminRecommendationInsights.topRecommendedCategories",
+      "source": "com/guvi/recommendationsystem/model/AdminRecommendationInsights.java",
+      "line": "6"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.model.AdminRecommendationInsights(List, List, List, List, List, BigDecimal) may expose internal representation by storing an externally mutable object into AdminRecommendationInsights.mostDislikedItems",
+      "source": "com/guvi/recommendationsystem/model/AdminRecommendationInsights.java",
+      "line": "6"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.model.AdminRecommendationInsights(List, List, List, List, List, BigDecimal) may expose internal representation by storing an externally mutable object into AdminRecommendationInsights.mostInteractedItems",
+      "source": "com/guvi/recommendationsystem/model/AdminRecommendationInsights.java",
+      "line": "6"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.model.AdminRecommendationInsights(List, List, List, List, List, BigDecimal) may expose internal representation by storing an externally mutable object into AdminRecommendationInsights.mostRecommendedItems",
+      "source": "com/guvi/recommendationsystem/model/AdminRecommendationInsights.java",
+      "line": "6"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.model.AdminRecommendationInsights(List, List, List, List, List, BigDecimal) may expose internal representation by storing an externally mutable object into AdminRecommendationInsights.mostSavedItems",
+      "source": "com/guvi/recommendationsystem/model/AdminRecommendationInsights.java",
+      "line": "6"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.model.AdminRecommendationInsights(List, List, List, List, List, BigDecimal) may expose internal representation by storing an externally mutable object into AdminRecommendationInsights.topRecommendedCategories",
+      "source": "com/guvi/recommendationsystem/model/AdminRecommendationInsights.java",
+      "line": "6"
+    },
+    {
+      "type": "EI_EXPOSE_REP",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.model.BulkActiveStatusRequest.itemIds() may expose internal representation by returning BulkActiveStatusRequest.itemIds",
+      "source": "com/guvi/recommendationsystem/model/BulkActiveStatusRequest.java",
+      "line": "5"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.model.BulkActiveStatusRequest(List, Boolean) may expose internal representation by storing an externally mutable object into BulkActiveStatusRequest.itemIds",
+      "source": "com/guvi/recommendationsystem/model/BulkActiveStatusRequest.java",
+      "line": "5"
+    },
+    {
+      "type": "EI_EXPOSE_REP",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.model.CatalogCsvPreview.rows() may expose internal representation by returning CatalogCsvPreview.rows",
+      "source": "com/guvi/recommendationsystem/model/CatalogCsvPreview.java",
+      "line": "5"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.model.CatalogCsvPreview(int, int, boolean, List) may expose internal representation by storing an externally mutable object into CatalogCsvPreview.rows",
+      "source": "com/guvi/recommendationsystem/model/CatalogCsvPreview.java",
+      "line": "5"
+    },
+    {
+      "type": "EI_EXPOSE_REP",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.model.CatalogCsvPreview$Row.errors() may expose internal representation by returning CatalogCsvPreview$Row.errors",
+      "source": "com/guvi/recommendationsystem/model/CatalogCsvPreview.java",
+      "line": "6"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.model.CatalogCsvPreview$Row(int, String, String, boolean, List) may expose internal representation by storing an externally mutable object into CatalogCsvPreview$Row.errors",
+      "source": "com/guvi/recommendationsystem/model/CatalogCsvPreview.java",
+      "line": "6"
+    },
+    {
+      "type": "EI_EXPOSE_REP",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.model.CatalogItem.tags() may expose internal representation by returning CatalogItem.tags",
+      "source": "com/guvi/recommendationsystem/model/CatalogItem.java",
+      "line": "7"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.model.CatalogItem(long, long, String, String, ItemType, String, String, List, ItemDifficulty, Integer, BigDecimal, BigDecimal, boolean, LocalDateTime, LocalDateTime, boolean, long) may expose internal representation by storing an externally mutable object into CatalogItem.tags",
+      "source": "com/guvi/recommendationsystem/model/CatalogItem.java",
+      "line": "7"
+    },
+    {
+      "type": "EI_EXPOSE_REP",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.model.CatalogPage.items() may expose internal representation by returning CatalogPage.items",
+      "source": "com/guvi/recommendationsystem/model/CatalogPage.java",
+      "line": "5"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.model.CatalogPage(List, int, int, long, long) may expose internal representation by storing an externally mutable object into CatalogPage.items",
+      "source": "com/guvi/recommendationsystem/model/CatalogPage.java",
+      "line": "5"
+    },
+    {
+      "type": "EI_EXPOSE_REP",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.model.InterestProfile.current() may expose internal representation by returning InterestProfile.current",
+      "source": "com/guvi/recommendationsystem/model/InterestProfile.java",
+      "line": "5"
+    },
+    {
+      "type": "EI_EXPOSE_REP",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.model.InterestProfile.declining() may expose internal representation by returning InterestProfile.declining",
+      "source": "com/guvi/recommendationsystem/model/InterestProfile.java",
+      "line": "5"
+    },
+    {
+      "type": "EI_EXPOSE_REP",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.model.InterestProfile.exploreNext() may expose internal representation by returning InterestProfile.exploreNext",
+      "source": "com/guvi/recommendationsystem/model/InterestProfile.java",
+      "line": "5"
+    },
+    {
+      "type": "EI_EXPOSE_REP",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.model.InterestProfile.growing() may expose internal representation by returning InterestProfile.growing",
+      "source": "com/guvi/recommendationsystem/model/InterestProfile.java",
+      "line": "5"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.model.InterestProfile(List, List, List, List) may expose internal representation by storing an externally mutable object into InterestProfile.current",
+      "source": "com/guvi/recommendationsystem/model/InterestProfile.java",
+      "line": "5"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.model.InterestProfile(List, List, List, List) may expose internal representation by storing an externally mutable object into InterestProfile.declining",
+      "source": "com/guvi/recommendationsystem/model/InterestProfile.java",
+      "line": "5"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.model.InterestProfile(List, List, List, List) may expose internal representation by storing an externally mutable object into InterestProfile.exploreNext",
+      "source": "com/guvi/recommendationsystem/model/InterestProfile.java",
+      "line": "5"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.model.InterestProfile(List, List, List, List) may expose internal representation by storing an externally mutable object into InterestProfile.growing",
+      "source": "com/guvi/recommendationsystem/model/InterestProfile.java",
+      "line": "5"
+    },
+    {
+      "type": "EI_EXPOSE_REP",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.model.NicheOption.topics() may expose internal representation by returning NicheOption.topics",
+      "source": "com/guvi/recommendationsystem/model/NicheOption.java",
+      "line": "5"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.model.NicheOption(long, String, String, List) may expose internal representation by storing an externally mutable object into NicheOption.topics",
+      "source": "com/guvi/recommendationsystem/model/NicheOption.java",
+      "line": "5"
+    },
+    {
+      "type": "EI_EXPOSE_REP",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.model.OnboardingRequest.interestIds() may expose internal representation by returning OnboardingRequest.interestIds",
+      "source": "com/guvi/recommendationsystem/model/OnboardingRequest.java",
+      "line": "5"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.model.OnboardingRequest(OnboardingPurpose, long, List) may expose internal representation by storing an externally mutable object into OnboardingRequest.interestIds",
+      "source": "com/guvi/recommendationsystem/model/OnboardingRequest.java",
+      "line": "5"
+    },
+    {
+      "type": "EI_EXPOSE_REP",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.model.RecommendationProfile.categoryPreferences() may expose internal representation by returning RecommendationProfile.categoryPreferences",
+      "source": "com/guvi/recommendationsystem/model/RecommendationProfile.java",
+      "line": "5"
+    },
+    {
+      "type": "EI_EXPOSE_REP",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.model.RecommendationProfile.interests() may expose internal representation by returning RecommendationProfile.interests",
+      "source": "com/guvi/recommendationsystem/model/RecommendationProfile.java",
+      "line": "5"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.model.RecommendationProfile(UserProfile, List, List, long, long) may expose internal representation by storing an externally mutable object into RecommendationProfile.categoryPreferences",
+      "source": "com/guvi/recommendationsystem/model/RecommendationProfile.java",
+      "line": "5"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.model.RecommendationProfile(UserProfile, List, List, long, long) may expose internal representation by storing an externally mutable object into RecommendationProfile.interests",
+      "source": "com/guvi/recommendationsystem/model/RecommendationProfile.java",
+      "line": "5"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.AdminCatalogService(JdbcTemplate, JdbcItemDao) may expose internal representation by storing an externally mutable object into AdminCatalogService.items",
+      "source": "com/guvi/recommendationsystem/service/AdminCatalogService.java",
+      "line": "15"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.AdminCatalogService(JdbcTemplate, JdbcItemDao) may expose internal representation by storing an externally mutable object into AdminCatalogService.jdbc",
+      "source": "com/guvi/recommendationsystem/service/AdminCatalogService.java",
+      "line": "15"
+    },
+    {
+      "type": "NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE",
+      "priority": 2,
+      "message": "Possible null pointer dereference in com.guvi.recommendationsystem.service.AdminCatalogService.search(String, Long, String, String, int, int, ItemType) due to return value of called method",
+      "source": "com/guvi/recommendationsystem/service/AdminCatalogService.java",
+      "line": "32"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.AdminSettingsService(AdminSettingsDao, RecommendationDao, UserDao, ScoringRecommendationEngine) may expose internal representation by storing an externally mutable object into AdminSettingsService.engine",
+      "source": "com/guvi/recommendationsystem/service/AdminSettingsService.java",
+      "line": "33"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.AdminSettingsService(AdminSettingsDao, RecommendationDao, UserDao, ScoringRecommendationEngine) may expose internal representation by storing an externally mutable object into AdminSettingsService.recommendationDao",
+      "source": "com/guvi/recommendationsystem/service/AdminSettingsService.java",
+      "line": "32"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.AdminSettingsService(AdminSettingsDao, RecommendationDao, UserDao, ScoringRecommendationEngine) may expose internal representation by storing an externally mutable object into AdminSettingsService.userDao",
+      "source": "com/guvi/recommendationsystem/service/AdminSettingsService.java",
+      "line": "33"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.AdminWriteService(JdbcTemplate, ItemService, AdminSettingsService) may expose internal representation by storing an externally mutable object into AdminWriteService.items",
+      "source": "com/guvi/recommendationsystem/service/AdminWriteService.java",
+      "line": "11"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.AdminWriteService(JdbcTemplate, ItemService, AdminSettingsService) may expose internal representation by storing an externally mutable object into AdminWriteService.jdbc",
+      "source": "com/guvi/recommendationsystem/service/AdminWriteService.java",
+      "line": "11"
+    },
+    {
+      "type": "NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE",
+      "priority": 2,
+      "message": "Possible null pointer dereference in com.guvi.recommendationsystem.service.AdminWriteService.settings(AdminSettingsUpdateRequest, long, Long) due to return value of called method",
+      "source": "com/guvi/recommendationsystem/service/AdminWriteService.java",
+      "line": "24"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.CatalogCsvService(CategoryDao, InterestDao, ItemDao, ItemInterestDao, ItemService) may expose internal representation by storing an externally mutable object into CatalogCsvService.categoryDao",
+      "source": "com/guvi/recommendationsystem/service/CatalogCsvService.java",
+      "line": "44"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.CatalogCsvService(CategoryDao, InterestDao, ItemDao, ItemInterestDao, ItemService) may expose internal representation by storing an externally mutable object into CatalogCsvService.interestDao",
+      "source": "com/guvi/recommendationsystem/service/CatalogCsvService.java",
+      "line": "45"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.CatalogCsvService(CategoryDao, InterestDao, ItemDao, ItemInterestDao, ItemService) may expose internal representation by storing an externally mutable object into CatalogCsvService.itemDao",
+      "source": "com/guvi/recommendationsystem/service/CatalogCsvService.java",
+      "line": "46"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.CatalogCsvService(CategoryDao, InterestDao, ItemDao, ItemInterestDao, ItemService) may expose internal representation by storing an externally mutable object into CatalogCsvService.itemInterestDao",
+      "source": "com/guvi/recommendationsystem/service/CatalogCsvService.java",
+      "line": "47"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.CatalogCsvService(CategoryDao, InterestDao, ItemDao, ItemInterestDao, ItemService) may expose internal representation by storing an externally mutable object into CatalogCsvService.itemService",
+      "source": "com/guvi/recommendationsystem/service/CatalogCsvService.java",
+      "line": "48"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.CatalogSeedLoader(CatalogCsvService, JdbcTemplate, ItemDao) may expose internal representation by storing an externally mutable object into CatalogSeedLoader.itemDao",
+      "source": "com/guvi/recommendationsystem/service/CatalogSeedLoader.java",
+      "line": "29"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.CatalogSeedLoader(CatalogCsvService, JdbcTemplate, ItemDao) may expose internal representation by storing an externally mutable object into CatalogSeedLoader.jdbcTemplate",
+      "source": "com/guvi/recommendationsystem/service/CatalogSeedLoader.java",
+      "line": "28"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.CategoryService(CategoryDao) may expose internal representation by storing an externally mutable object into CategoryService.categoryDao",
+      "source": "com/guvi/recommendationsystem/service/CategoryService.java",
+      "line": "24"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.FeedbackService(FeedbackDao, UserDao, ItemDao) may expose internal representation by storing an externally mutable object into FeedbackService.feedbackDao",
+      "source": "com/guvi/recommendationsystem/service/FeedbackService.java",
+      "line": "27"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.FeedbackService(FeedbackDao, UserDao, ItemDao) may expose internal representation by storing an externally mutable object into FeedbackService.itemDao",
+      "source": "com/guvi/recommendationsystem/service/FeedbackService.java",
+      "line": "29"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.FeedbackService(FeedbackDao, UserDao, ItemDao) may expose internal representation by storing an externally mutable object into FeedbackService.userDao",
+      "source": "com/guvi/recommendationsystem/service/FeedbackService.java",
+      "line": "28"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.InteractionService(InteractionDao, UserDao, ItemDao, UserTopicPreferenceDao, InteractionSignalWeights, RecommendationDao) may expose internal representation by storing an externally mutable object into InteractionService.interactionDao",
+      "source": "com/guvi/recommendationsystem/service/InteractionService.java",
+      "line": "37"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.InteractionService(InteractionDao, UserDao, ItemDao, UserTopicPreferenceDao, InteractionSignalWeights, RecommendationDao) may expose internal representation by storing an externally mutable object into InteractionService.itemDao",
+      "source": "com/guvi/recommendationsystem/service/InteractionService.java",
+      "line": "39"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.InteractionService(InteractionDao, UserDao, ItemDao, UserTopicPreferenceDao, InteractionSignalWeights, RecommendationDao) may expose internal representation by storing an externally mutable object into InteractionService.recommendationDao",
+      "source": "com/guvi/recommendationsystem/service/InteractionService.java",
+      "line": "42"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.InteractionService(InteractionDao, UserDao, ItemDao, UserTopicPreferenceDao, InteractionSignalWeights, RecommendationDao) may expose internal representation by storing an externally mutable object into InteractionService.topicPreferenceDao",
+      "source": "com/guvi/recommendationsystem/service/InteractionService.java",
+      "line": "40"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.InteractionService(InteractionDao, UserDao, ItemDao, UserTopicPreferenceDao, InteractionSignalWeights, RecommendationDao) may expose internal representation by storing an externally mutable object into InteractionService.userDao",
+      "source": "com/guvi/recommendationsystem/service/InteractionService.java",
+      "line": "38"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.InterestProfileService(UserDao, UserTopicPreferenceDao) may expose internal representation by storing an externally mutable object into InterestProfileService.preferenceDao",
+      "source": "com/guvi/recommendationsystem/service/InterestProfileService.java",
+      "line": "16"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.InterestProfileService(UserDao, UserTopicPreferenceDao) may expose internal representation by storing an externally mutable object into InterestProfileService.userDao",
+      "source": "com/guvi/recommendationsystem/service/InterestProfileService.java",
+      "line": "15"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.InterestService(InterestDao) may expose internal representation by storing an externally mutable object into InterestService.interestDao",
+      "source": "com/guvi/recommendationsystem/service/InterestService.java",
+      "line": "23"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.ItemInterestService(ItemDao, InterestDao, ItemInterestDao) may expose internal representation by storing an externally mutable object into ItemInterestService.interestDao",
+      "source": "com/guvi/recommendationsystem/service/ItemInterestService.java",
+      "line": "26"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.ItemInterestService(ItemDao, InterestDao, ItemInterestDao) may expose internal representation by storing an externally mutable object into ItemInterestService.itemDao",
+      "source": "com/guvi/recommendationsystem/service/ItemInterestService.java",
+      "line": "25"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.ItemInterestService(ItemDao, InterestDao, ItemInterestDao) may expose internal representation by storing an externally mutable object into ItemInterestService.itemInterestDao",
+      "source": "com/guvi/recommendationsystem/service/ItemInterestService.java",
+      "line": "27"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.ItemService(ItemDao, CategoryDao) may expose internal representation by storing an externally mutable object into ItemService.categoryDao",
+      "source": "com/guvi/recommendationsystem/service/ItemService.java",
+      "line": "37"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.ItemService(ItemDao, CategoryDao) may expose internal representation by storing an externally mutable object into ItemService.itemDao",
+      "source": "com/guvi/recommendationsystem/service/ItemService.java",
+      "line": "36"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.LearningJourneyService(JdbcTemplate, UserDao, RecommendationDao, RecommendationEngine, JdbcItemDao, InteractionService) may expose internal representation by storing an externally mutable object into LearningJourneyService.candidates",
+      "source": "com/guvi/recommendationsystem/service/LearningJourneyService.java",
+      "line": "23"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.LearningJourneyService(JdbcTemplate, UserDao, RecommendationDao, RecommendationEngine, JdbcItemDao, InteractionService) may expose internal representation by storing an externally mutable object into LearningJourneyService.interactions",
+      "source": "com/guvi/recommendationsystem/service/LearningJourneyService.java",
+      "line": "23"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.LearningJourneyService(JdbcTemplate, UserDao, RecommendationDao, RecommendationEngine, JdbcItemDao, InteractionService) may expose internal representation by storing an externally mutable object into LearningJourneyService.jdbc",
+      "source": "com/guvi/recommendationsystem/service/LearningJourneyService.java",
+      "line": "23"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.LearningJourneyService(JdbcTemplate, UserDao, RecommendationDao, RecommendationEngine, JdbcItemDao, InteractionService) may expose internal representation by storing an externally mutable object into LearningJourneyService.resources",
+      "source": "com/guvi/recommendationsystem/service/LearningJourneyService.java",
+      "line": "23"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.LearningJourneyService(JdbcTemplate, UserDao, RecommendationDao, RecommendationEngine, JdbcItemDao, InteractionService) may expose internal representation by storing an externally mutable object into LearningJourneyService.users",
+      "source": "com/guvi/recommendationsystem/service/LearningJourneyService.java",
+      "line": "23"
+    },
+    {
+      "type": "NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE",
+      "priority": 2,
+      "message": "Possible null pointer dereference in com.guvi.recommendationsystem.service.LearningJourneyService.create(long, LearningJourneyService$CreateRequest) due to return value of called method",
+      "source": "com/guvi/recommendationsystem/service/LearningJourneyService.java",
+      "line": "77"
+    },
+    {
+      "type": "NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE",
+      "priority": 2,
+      "message": "Possible null pointer dereference in com.guvi.recommendationsystem.service.LearningJourneyService.list(long, int, int) due to return value of called method",
+      "source": "com/guvi/recommendationsystem/service/LearningJourneyService.java",
+      "line": "37"
+    },
+    {
+      "type": "OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.service.LearningJourneyService.lambda$create$8(long, String, LearningJourneyService$CreateRequest, String, String, Connection) may fail to clean up java.sql.Statement on checked exception",
+      "source": "com/guvi/recommendationsystem/service/LearningJourneyService.java",
+      "line": "82"
+    },
+    {
+      "type": "EI_EXPOSE_REP",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.service.LearningJourneyService$Journey.replacements() may expose internal representation by returning LearningJourneyService$Journey.replacements",
+      "source": "com/guvi/recommendationsystem/service/LearningJourneyService.java",
+      "line": "27"
+    },
+    {
+      "type": "EI_EXPOSE_REP",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.service.LearningJourneyService$Journey.steps() may expose internal representation by returning LearningJourneyService$Journey.steps",
+      "source": "com/guvi/recommendationsystem/service/LearningJourneyService.java",
+      "line": "27"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.LearningJourneyService$Journey(LearningJourneyService$Header, List, int, int, int, Long, List) may expose internal representation by storing an externally mutable object into LearningJourneyService$Journey.replacements",
+      "source": "com/guvi/recommendationsystem/service/LearningJourneyService.java",
+      "line": "27"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.LearningJourneyService$Journey(LearningJourneyService$Header, List, int, int, int, Long, List) may expose internal representation by storing an externally mutable object into LearningJourneyService$Journey.steps",
+      "source": "com/guvi/recommendationsystem/service/LearningJourneyService.java",
+      "line": "27"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.OnboardingService(OnboardingDao, UserDao) may expose internal representation by storing an externally mutable object into OnboardingService.userDao",
+      "source": "com/guvi/recommendationsystem/service/OnboardingService.java",
+      "line": "21"
+    },
+    {
+      "type": "CT_CONSTRUCTOR_THROW",
+      "priority": 2,
+      "message": "Exception thrown in class com.guvi.recommendationsystem.service.PasswordResetService at new com.guvi.recommendationsystem.service.PasswordResetService(PasswordResetDao, UserDao, PasswordHasher, ResetMailDelivery, PlatformTransactionManager, String, int, Environment) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.",
+      "source": "com/guvi/recommendationsystem/service/PasswordResetService.java",
+      "line": "59"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.PasswordResetService(PasswordResetDao, UserDao, PasswordHasher, ResetMailDelivery, PlatformTransactionManager, String, int, Environment) may expose internal representation by storing an externally mutable object into PasswordResetService.resetDao",
+      "source": "com/guvi/recommendationsystem/service/PasswordResetService.java",
+      "line": "49"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.PasswordResetService(PasswordResetDao, UserDao, PasswordHasher, ResetMailDelivery, PlatformTransactionManager, String, int, Environment) may expose internal representation by storing an externally mutable object into PasswordResetService.userDao",
+      "source": "com/guvi/recommendationsystem/service/PasswordResetService.java",
+      "line": "50"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.RecommendationProfileService(UserAccountService, UserPreferenceService, UserInterestService, UserSignalSummaryDao) may expose internal representation by storing an externally mutable object into RecommendationProfileService.accountService",
+      "source": "com/guvi/recommendationsystem/service/RecommendationProfileService.java",
+      "line": "19"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.RecommendationProfileService(UserAccountService, UserPreferenceService, UserInterestService, UserSignalSummaryDao) may expose internal representation by storing an externally mutable object into RecommendationProfileService.interestService",
+      "source": "com/guvi/recommendationsystem/service/RecommendationProfileService.java",
+      "line": "21"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.RecommendationProfileService(UserAccountService, UserPreferenceService, UserInterestService, UserSignalSummaryDao) may expose internal representation by storing an externally mutable object into RecommendationProfileService.preferenceService",
+      "source": "com/guvi/recommendationsystem/service/RecommendationProfileService.java",
+      "line": "20"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.RecommendationService(RecommendationDao, UserDao, RecommendationEngine, ItemDao, UserPreferenceDao) may expose internal representation by storing an externally mutable object into RecommendationService.itemDao",
+      "source": "com/guvi/recommendationsystem/service/RecommendationService.java",
+      "line": "38"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.RecommendationService(RecommendationDao, UserDao, RecommendationEngine, ItemDao, UserPreferenceDao) may expose internal representation by storing an externally mutable object into RecommendationService.recommendationDao",
+      "source": "com/guvi/recommendationsystem/service/RecommendationService.java",
+      "line": "35"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.RecommendationService(RecommendationDao, UserDao, RecommendationEngine, ItemDao, UserPreferenceDao) may expose internal representation by storing an externally mutable object into RecommendationService.userDao",
+      "source": "com/guvi/recommendationsystem/service/RecommendationService.java",
+      "line": "36"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.ResetMailDelivery(ResetMailSender, PasswordResetDao, String) may expose internal representation by storing an externally mutable object into ResetMailDelivery.resetDao",
+      "source": "com/guvi/recommendationsystem/service/ResetMailDelivery.java",
+      "line": "19"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.UserAccountService(UserDao, PasswordHasher) may expose internal representation by storing an externally mutable object into UserAccountService.userDao",
+      "source": "com/guvi/recommendationsystem/service/UserAccountService.java",
+      "line": "28"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.UserCollectionService(UserCollectionDao, UserDao, ItemDao) may expose internal representation by storing an externally mutable object into UserCollectionService.collections",
+      "source": "com/guvi/recommendationsystem/service/UserCollectionService.java",
+      "line": "27"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.UserCollectionService(UserCollectionDao, UserDao, ItemDao) may expose internal representation by storing an externally mutable object into UserCollectionService.items",
+      "source": "com/guvi/recommendationsystem/service/UserCollectionService.java",
+      "line": "27"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.UserCollectionService(UserCollectionDao, UserDao, ItemDao) may expose internal representation by storing an externally mutable object into UserCollectionService.users",
+      "source": "com/guvi/recommendationsystem/service/UserCollectionService.java",
+      "line": "27"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.UserDataService(JdbcTemplate) may expose internal representation by storing an externally mutable object into UserDataService.jdbc",
+      "source": "com/guvi/recommendationsystem/service/UserDataService.java",
+      "line": "13"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.UserInterestService(UserDao, InterestDao, UserInterestDao) may expose internal representation by storing an externally mutable object into UserInterestService.interestDao",
+      "source": "com/guvi/recommendationsystem/service/UserInterestService.java",
+      "line": "24"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.UserInterestService(UserDao, InterestDao, UserInterestDao) may expose internal representation by storing an externally mutable object into UserInterestService.userDao",
+      "source": "com/guvi/recommendationsystem/service/UserInterestService.java",
+      "line": "23"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.UserInterestService(UserDao, InterestDao, UserInterestDao) may expose internal representation by storing an externally mutable object into UserInterestService.userInterestDao",
+      "source": "com/guvi/recommendationsystem/service/UserInterestService.java",
+      "line": "25"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.UserPreferenceService(UserDao, UserPreferenceDao, CategoryDao) may expose internal representation by storing an externally mutable object into UserPreferenceService.categoryDao",
+      "source": "com/guvi/recommendationsystem/service/UserPreferenceService.java",
+      "line": "27"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.UserPreferenceService(UserDao, UserPreferenceDao, CategoryDao) may expose internal representation by storing an externally mutable object into UserPreferenceService.userDao",
+      "source": "com/guvi/recommendationsystem/service/UserPreferenceService.java",
+      "line": "25"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.WorkspaceReadService(JdbcTemplate, JdbcItemDao) may expose internal representation by storing an externally mutable object into WorkspaceReadService.items",
+      "source": "com/guvi/recommendationsystem/service/WorkspaceReadService.java",
+      "line": "19"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.WorkspaceReadService(JdbcTemplate, JdbcItemDao) may expose internal representation by storing an externally mutable object into WorkspaceReadService.jdbc",
+      "source": "com/guvi/recommendationsystem/service/WorkspaceReadService.java",
+      "line": "19"
+    },
+    {
+      "type": "NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE",
+      "priority": 2,
+      "message": "Possible null pointer dereference in com.guvi.recommendationsystem.service.WorkspaceReadService.activity(long, int, InteractionType, String) due to return value of called method",
+      "source": "com/guvi/recommendationsystem/service/WorkspaceReadService.java",
+      "line": "64"
+    },
+    {
+      "type": "NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE",
+      "priority": 2,
+      "message": "Possible null pointer dereference in com.guvi.recommendationsystem.service.WorkspaceReadService.activity(long, int, InteractionType, String) due to return value of called method",
+      "source": "com/guvi/recommendationsystem/service/WorkspaceReadService.java",
+      "line": "79"
+    },
+    {
+      "type": "NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE",
+      "priority": 2,
+      "message": "Possible null pointer dereference in com.guvi.recommendationsystem.service.WorkspaceReadService.saved(long, int, int, String, Long) due to return value of called method",
+      "source": "com/guvi/recommendationsystem/service/WorkspaceReadService.java",
+      "line": "46"
+    },
+    {
+      "type": "EI_EXPOSE_REP",
+      "priority": 2,
+      "message": "com.guvi.recommendationsystem.service.WorkspaceReadService$ActivityPage.items() may expose internal representation by returning WorkspaceReadService$ActivityPage.items",
+      "source": "com/guvi/recommendationsystem/service/WorkspaceReadService.java",
+      "line": "92"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.service.WorkspaceReadService$ActivityPage(List, String, boolean, long) may expose internal representation by storing an externally mutable object into WorkspaceReadService$ActivityPage.items",
+      "source": "com/guvi/recommendationsystem/service/WorkspaceReadService.java",
+      "line": "92"
+    },
+    {
+      "type": "EI_EXPOSE_REP2",
+      "priority": 2,
+      "message": "new com.guvi.recommendationsystem.web.SessionAccess(UserDao) may expose internal representation by storing an externally mutable object into SessionAccess.userDao",
+      "source": "com/guvi/recommendationsystem/web/SessionAccess.java",
+      "line": "21"
+    }
+  ],
+  "total": 175,
+  "byPriority": {
+    "2": 175
+  },
+  "byType": {
+    "EI_EXPOSE_REP2": 116,
+    "NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE": 17,
+    "OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE": 12,
+    "EI_EXPOSE_REP": 25,
+    "SWL_SLEEP_WITH_LOCK_HELD": 1,
+    "VA_FORMAT_STRING_USES_NEWLINE": 2,
+    "BX_UNBOXED_AND_COERCED_FOR_TERNARY_OPERATOR": 1,
+    "CT_CONSTRUCTOR_THROW": 1
+  }
+}

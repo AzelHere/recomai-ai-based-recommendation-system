@@ -1,0 +1,3 @@
+ALTER TABLE users
+    ADD COLUMN exploration TINYINT UNSIGNED NOT NULL DEFAULT 50,
+    ADD CONSTRAINT chk_users_exploration CHECK (exploration BETWEEN 0 AND 100);

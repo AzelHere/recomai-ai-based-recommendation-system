@@ -26,6 +26,26 @@ public class JdbcRecommendationDao implements RecommendationDao {
     private final JdbcTemplate jdbcTemplate;
     private final InteractionSignalWeights signalWeights;
     private final ContentFeatureScorer contentFeatureScorer = new ContentFeatureScorer();
+    private volatile List<ContentFeatureScorer.ItemDocument> contentDocuments=List.of();
+    private volatile long contentExpires;
+    @org.springframework.transaction.event.TransactionalEventListener(fallbackExecution=true)
+    public synchronized void catalogImported(com.guvi.recommendationsystem.catalog.CatalogImported event){contentExpires=0;}
+
+    private synchronized List<ContentFeatureScorer.ItemDocument> contentCorpus() {
+        if(System.nanoTime()<contentExpires)return contentDocuments;
+        // ponytail: single-process immutable 30-second cache, explicit distributed invalidation if deployment grows.
+        contentDocuments=List.copyOf(jdbcTemplate.query("""
+                SELECT item.item_id, CONCAT_WS(' ',item.title,item.description,category.name,
+                  (SELECT GROUP_CONCAT(interest.name SEPARATOR ' ') FROM item_interests link
+                   JOIN interests interest ON interest.interest_id=link.interest_id AND interest.is_active=TRUE
+                   WHERE link.item_id=item.item_id),provenance.source_topics) AS feature_text
+                FROM items item JOIN categories category ON category.category_id=item.category_id
+                LEFT JOIN resource_provenance provenance ON provenance.item_id=item.item_id
+                WHERE item.is_active=TRUE AND category.is_active=TRUE ORDER BY item.item_id LIMIT 5000
+                """,(rs,n)->new ContentFeatureScorer.ItemDocument(rs.getLong("item_id"),rs.getString("feature_text"))));
+        contentExpires=System.nanoTime()+java.util.concurrent.TimeUnit.SECONDS.toNanos(30);
+        return contentDocuments;
+    }
 
     private final RowMapper<RecommendationCandidate> candidateMapper = (resultSet, rowNumber) ->
             new RecommendationCandidate(resultSet.getLong("item_id"), resultSet.getString("title"),
@@ -146,7 +166,7 @@ public class JdbcRecommendationDao implements RecommendationDao {
                        LEAST(COALESCE(related_match.match_weight, 0), 1.0) AS related_interest_match,
                        interest_match.topic_names AS matched_topics,
                        CASE
-                         WHEN onboarding.purpose = 'LEARN' AND item.item_type IN ('COURSE', 'GUIDE', 'DOCUMENTATION') THEN 1.0
+                         WHEN onboarding.purpose = 'LEARN' AND item.item_type IN ('COURSE', 'GUIDE', 'DOCUMENTATION', 'ARTICLE') THEN 1.0
                          WHEN onboarding.purpose = 'CAREER' AND EXISTS (
                              SELECT 1 FROM item_interests purpose_item_interest
                              JOIN interests purpose_interest ON purpose_interest.interest_id = purpose_item_interest.interest_id
@@ -194,7 +214,7 @@ public class JdbcRecommendationDao implements RecommendationDao {
                         - 20 * COALESCE(negative_interaction_signal, 0)
                         + 2 * COALESCE(item.quality_score, 0)
                         + 5 * item.is_editor_pick) DESC, item.item_id
-                LIMIT 1000
+                LIMIT 3000
                 """;
         List<RecommendationCandidate> candidates = jdbcTemplate.query(query, candidateMapper,
                 userId, userId, userId, userId, userId, userId, userId, userId, userId, userId, userId,
@@ -239,24 +259,15 @@ public class JdbcRecommendationDao implements RecommendationDao {
                         AND rejection.interaction_type IN ('DISLIKE', 'HIDE')
                   )
                 """, Long.class, userId);
-        java.util.Set<Long> documentIds = new java.util.HashSet<>(seedIds);
-        candidates.forEach(candidate -> documentIds.add(candidate.itemId()));
-        List<Long> boundedIds = documentIds.stream().sorted().toList();
-        if (boundedIds.isEmpty()) return Map.of();
-        String placeholders = String.join(",", java.util.Collections.nCopies(boundedIds.size(), "?"));
-        List<ContentFeatureScorer.ItemDocument> documents = jdbcTemplate.query("""
-                SELECT item.item_id, CONCAT_WS(' ', item.title, item.description, category.name,
-                       GROUP_CONCAT(DISTINCT interest.name SEPARATOR ' ')) AS feature_text
-                FROM items item
-                JOIN categories category ON category.category_id = item.category_id
-                LEFT JOIN item_interests item_interest ON item_interest.item_id = item.item_id
-                LEFT JOIN interests interest ON interest.interest_id = item_interest.interest_id
-                    AND interest.is_active = TRUE
-                WHERE item.item_id IN (%s) AND item.is_active = TRUE AND category.is_active = TRUE
-                GROUP BY item.item_id, item.title, item.description, category.name
-                """.formatted(placeholders), (resultSet, row) -> new ContentFeatureScorer.ItemDocument(
-                resultSet.getLong("item_id"), resultSet.getString("feature_text")), boundedIds.toArray());
-        return contentFeatureScorer.score(documents, new java.util.HashSet<>(seedIds));
+        var selected=jdbcTemplate.queryForList("""
+                SELECT interest.name FROM interests interest JOIN user_interests selected ON selected.interest_id=interest.interest_id
+                WHERE selected.user_id=? AND interest.is_active=TRUE
+                UNION SELECT interest.name FROM interests interest JOIN user_topic_preferences preference ON preference.interest_id=interest.interest_id
+                WHERE preference.user_id=? AND preference.preference_score>0 AND preference.confidence>=0.5 AND interest.is_active=TRUE
+                """,String.class,userId,userId);
+        String query=selected==null?"":String.join(" ",selected);
+        if(seedIds.isEmpty()&&query.isBlank())return Map.of();
+        return contentFeatureScorer.score(contentCorpus(),new java.util.HashSet<>(seedIds),query);
     }
 
     /** Implicit user-neighborhood score; only aggregates, never another user's identity, reach the ranker. */
@@ -364,7 +375,7 @@ public class JdbcRecommendationDao implements RecommendationDao {
             statement.setString(5, recommendation.reason());
             statement.setString(6, recommendation.reasonType());
             statement.setString(7, recommendation.bucketType());
-            statement.setString(8, "hybrid-evidence-v2");
+            statement.setString(8, "hybrid-metadata-v4");
             statement.setString(9, writeBreakdown(recommendation.scoreBreakdown()));
             return statement;
         }, keyHolder);
@@ -387,12 +398,34 @@ public class JdbcRecommendationDao implements RecommendationDao {
                        recommendation.score, recommendation.reason, recommendation.reason_type,
                        recommendation.bucket_type, recommendation.generated_at, recommendation.explanation_json
                 FROM recommendations recommendation JOIN items item ON item.item_id = recommendation.item_id
-                WHERE recommendation.user_id = ? AND recommendation.batch_id <=> (
+                JOIN categories category ON category.category_id=item.category_id
+                WHERE item.is_active=TRUE AND category.is_active=TRUE
+                  AND NOT EXISTS(SELECT 1 FROM interactions rejection WHERE rejection.user_id=recommendation.user_id AND rejection.item_id=item.item_id AND rejection.interaction_type IN ('HIDE','DISLIKE'))
+                  AND recommendation.user_id = ? AND recommendation.batch_id <=> (
                     SELECT batch.batch_id FROM recommendation_batches batch WHERE batch.user_id = ?
                     ORDER BY batch.generated_at DESC, batch.batch_id DESC LIMIT 1
                 )
-                ORDER BY recommendation.generated_at DESC, recommendation.recommendation_id DESC LIMIT ?
+                ORDER BY recommendation.recommendation_id ASC LIMIT ?
                 """, recommendationMapper, userId, userId, limit);
+    }
+
+    @Override
+    public void recordImpression(long userId, long recommendationId) {
+        jdbcTemplate.update("""
+                INSERT IGNORE INTO recommendation_impressions (recommendation_id)
+                SELECT recommendation_id FROM recommendations
+                WHERE recommendation_id = ? AND user_id = ?
+                """, recommendationId, userId);
+    }
+
+    @Override
+    public void recordClick(long userId, long recommendationId) {
+        jdbcTemplate.update("""
+                INSERT INTO recommendation_impressions (recommendation_id, clicked_at)
+                SELECT recommendation_id, CURRENT_TIMESTAMP(6) FROM recommendations
+                WHERE recommendation_id = ? AND user_id = ?
+                ON DUPLICATE KEY UPDATE clicked_at = COALESCE(clicked_at, CURRENT_TIMESTAMP(6))
+                """, recommendationId, userId);
     }
 
     @Override

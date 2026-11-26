@@ -37,6 +37,24 @@ public class ItemController {
     private final ItemService itemService;
     private final SessionAccess sessionAccess;
     private final CatalogCsvService catalogCsvService;
+    @org.springframework.beans.factory.annotation.Autowired
+    private com.guvi.recommendationsystem.service.AdminWriteService writes;
+    @org.springframework.beans.factory.annotation.Autowired
+    private com.guvi.recommendationsystem.service.AdminCatalogService adminCatalog;
+
+    @GetMapping("/admin/items/search")
+    public CatalogPage<CatalogItem> adminSearch(@RequestParam(defaultValue="") String query,
+            @RequestParam(required=false) Long categoryId,@RequestParam(defaultValue="") String status,
+            @RequestParam(defaultValue="title") String sort,@RequestParam(defaultValue="1") int page,
+            @RequestParam(defaultValue="20") int pageSize,@RequestParam(required=false) ItemType type,HttpServletRequest request){
+        sessionAccess.requireAdmin(request);
+        return adminCatalog.search(query,categoryId,status,sort,page,pageSize,type);
+    }
+
+    @GetMapping("/admin/items/composition")
+    public List<java.util.Map<String,Object>> adminComposition(HttpServletRequest request){
+        sessionAccess.requireAdmin(request);return adminCatalog.composition();
+    }
 
     public ItemController(ItemService itemService, SessionAccess sessionAccess, CatalogCsvService catalogCsvService) {
         this.itemService = itemService;
@@ -51,16 +69,6 @@ public class ItemController {
                 : itemService.getActiveByCategory(categoryId);
     }
 
-    @GetMapping("/items/search")
-    public CatalogPage<CatalogItem> searchActiveItems(
-            @RequestParam(required = false) String query,
-            @RequestParam(required = false) Long categoryId,
-            @RequestParam(required = false) ItemType type,
-            @RequestParam(defaultValue = "NEWEST") CatalogSort sort,
-            @RequestParam(defaultValue = "1") int page,
-            @RequestParam(defaultValue = "20") int pageSize) {
-        return itemService.searchActive(query, categoryId, type, sort, page, pageSize);
-    }
 
     @GetMapping("/items/{itemId}")
     public CatalogItem getActiveItem(@PathVariable long itemId) {
@@ -90,9 +98,10 @@ public class ItemController {
     public CatalogItem updateItem(
             @PathVariable long itemId,
             @RequestBody ItemRequest itemRequest,
+            @org.springframework.web.bind.annotation.RequestHeader(value="X-Expected-Revision",required=false) Long revision,
             HttpServletRequest request) {
         sessionAccess.requireAdmin(request);
-        return itemService.update(itemId, itemRequest);
+        return writes.item(itemId,itemRequest,revision);
     }
 
     @PatchMapping("/admin/items/{itemId}/active")

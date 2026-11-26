@@ -27,11 +27,17 @@ import java.time.Instant;
 
 @RestControllerAdvice
 public class ApiExceptionHandler {
+    @ExceptionHandler(org.springframework.web.servlet.resource.NoResourceFoundException.class)
+    public ResponseEntity<ApiError> handleMissingRoute(org.springframework.web.servlet.resource.NoResourceFoundException exception,HttpServletRequest request) {
+        return error(HttpStatus.NOT_FOUND,"Not found","Endpoint or resource was not found.",request);
+    }
     private static final Logger logger = LoggerFactory.getLogger(ApiExceptionHandler.class);
     @ExceptionHandler({
             InvalidUserInputException.class,
             IllegalArgumentException.class,
             HttpMessageNotReadableException.class,
+            org.springframework.web.bind.MissingServletRequestParameterException.class,
+            org.springframework.web.bind.ServletRequestBindingException.class,
             MethodArgumentTypeMismatchException.class
     })
     public ResponseEntity<ApiError> handleBadRequest(Exception exception, HttpServletRequest request) {
@@ -67,6 +73,7 @@ public class ApiExceptionHandler {
     @ExceptionHandler({
             DuplicateUserException.class,
             DuplicateCatalogEntryException.class,
+            com.guvi.recommendationsystem.exception.UpdateConflictException.class,
             CategoryInUseException.class,
             DataIntegrityViolationException.class
     })
@@ -79,11 +86,25 @@ public class ApiExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ApiError> handleUnexpected(Exception exception, HttpServletRequest request) {
-        logger.error("Unhandled request failure requestId={} method={} path={}",
+        logger.error("Unhandled request failure requestId={} method={} type={}",
                 request.getAttribute(RequestContextFilter.REQUEST_ID_ATTRIBUTE),
-                request.getMethod(), request.getRequestURI(), exception);
+                request.getMethod(), exception.getClass().getName());
         return error(HttpStatus.INTERNAL_SERVER_ERROR, "Internal server error",
                 "The request could not be completed.", request);
+    }
+
+    @ExceptionHandler(org.springframework.dao.DataAccessResourceFailureException.class)
+    public ResponseEntity<ApiError> handleDatabaseUnavailable(Exception exception,HttpServletRequest request){
+        logger.warn("Database unavailable requestId={} type={}",request.getAttribute(RequestContextFilter.REQUEST_ID_ATTRIBUTE),exception.getClass().getName());
+        return error(HttpStatus.SERVICE_UNAVAILABLE,"Service unavailable","The service is temporarily unavailable. Please try again shortly.",request);
+    }
+
+    @ExceptionHandler({org.springframework.web.HttpRequestMethodNotSupportedException.class,
+            org.springframework.web.HttpMediaTypeNotSupportedException.class})
+    public ResponseEntity<ApiError> handleUnsupported(Exception exception,HttpServletRequest request) {
+        return exception instanceof org.springframework.web.HttpRequestMethodNotSupportedException
+                ? error(HttpStatus.METHOD_NOT_ALLOWED,"Method not allowed","This endpoint does not support this method.",request)
+                : error(HttpStatus.UNSUPPORTED_MEDIA_TYPE,"Unsupported media type","Supply the supported JSON content type.",request);
     }
 
     private ResponseEntity<ApiError> error(
@@ -102,6 +123,7 @@ public class ApiExceptionHandler {
 
     private String messageForBadRequest(Exception exception) {
         if (exception instanceof HttpMessageNotReadableException
+                || exception instanceof org.springframework.web.bind.ServletRequestBindingException
                 || exception instanceof MethodArgumentTypeMismatchException) {
             return "Request body or parameter is missing, malformed, or has an invalid value.";
         }

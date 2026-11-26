@@ -26,6 +26,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(AdminSettingsController.class)
 @Import({SessionAccess.class, ApiExceptionHandler.class})
 class AdminSettingsControllerWebTest {
+    @MockitoBean private com.guvi.recommendationsystem.service.AdminWriteService writes;
     @Autowired private MockMvc mockMvc;
     @MockitoBean private AdminSettingsService service;
     @MockitoBean private UserDao userDao;

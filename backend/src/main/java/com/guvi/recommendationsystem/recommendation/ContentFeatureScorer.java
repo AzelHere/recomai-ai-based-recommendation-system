@@ -12,25 +12,30 @@ import java.util.regex.Pattern;
 
 /** Small-catalog TF-IDF cosine scorer over real item metadata and a user's positive item history. */
 public class ContentFeatureScorer {
+    private record Index(List<ItemDocument> documents, Map<String,Integer> frequencies, Map<Long,Map<String,Double>> vectors) { }
+    private volatile Index index=new Index(List.of(),Map.of(),Map.of());
     private static final Pattern TOKEN = Pattern.compile("[\\p{L}\\p{N}]{2,}");
     private static final Set<String> STOP_WORDS = Set.of("and", "the", "for", "with", "from", "into", "your",
             "this", "that", "you", "are", "how", "all", "our", "can", "will", "not", "use", "using");
 
     public Map<Long, Match> score(List<ItemDocument> documents, Set<Long> positivelyEngagedItemIds) {
-        if (documents == null || documents.isEmpty() || positivelyEngagedItemIds == null
-                || positivelyEngagedItemIds.isEmpty()) return Map.of();
+        return score(documents,positivelyEngagedItemIds,"");
+    }
 
-        Map<Long, Map<String, Integer>> tokensByItem = new LinkedHashMap<>();
-        Map<String, Integer> documentFrequency = new HashMap<>();
-        for (ItemDocument document : documents) {
-            Map<String, Integer> tokens = tokens(document.text());
-            tokensByItem.put(document.itemId(), tokens);
-            tokens.keySet().forEach(token -> documentFrequency.merge(token, 1, Integer::sum));
-        }
-
-        int corpusSize = Math.max(1, documents.size());
-        Map<Long, Map<String, Double>> vectors = new HashMap<>();
-        tokensByItem.forEach((itemId, tokens) -> vectors.put(itemId, vector(tokens, documentFrequency, corpusSize)));
+    /** Scores unengaged documents against normalized positive history plus explicit topic text.
+     * The cached immutable corpus contains no user profiles. Empty inputs yield an empty match map;
+     * zero-length vectors remain zero, avoiding division by zero. Rebuilds publish a complete snapshot.
+     * @param documents unique item IDs and metadata text from the bounded active catalog
+     * @param positivelyEngagedItemIds seeds omitted from the returned content matches
+     * @param selectedTopics optional cold-start topic text; unknown terms retain smoothed IDF
+     * @return immutable positive cosine matches with up to three explanatory overlap terms
+     */
+    public Map<Long, Match> score(List<ItemDocument> documents, Set<Long> positivelyEngagedItemIds,String selectedTopics) {
+        if (documents == null || documents.isEmpty() || positivelyEngagedItemIds == null) return Map.of();
+        if(positivelyEngagedItemIds.isEmpty() && (selectedTopics==null||selectedTopics.isBlank()))return Map.of();
+        Index current=index;
+        if(!current.documents().equals(documents))current=buildIndex(documents);
+        var vectors=current.vectors();
         Map<String, Double> profile = new HashMap<>();
         int seedCount = 0;
         for (Long seedId : positivelyEngagedItemIds) {
@@ -39,9 +44,10 @@ public class ContentFeatureScorer {
             vector.forEach((token, weight) -> profile.merge(token, weight, Double::sum));
             seedCount++;
         }
-        if (seedCount == 0) return Map.of();
-        double seedSize = seedCount;
-        profile.replaceAll((token, weight) -> weight / seedSize);
+        if(seedCount>0){double count=seedCount;profile.replaceAll((token,weight)->weight/count);normalize(profile);}
+        if(selectedTopics!=null&&!selectedTopics.isBlank())vector(tokens(selectedTopics),current.frequencies(),documents.size())
+                .forEach((token,weight)->profile.merge(token,weight,Double::sum));
+        if(profile.isEmpty())return Map.of();
         normalize(profile);
 
         Map<Long, Match> matches = new HashMap<>();
@@ -54,9 +60,28 @@ public class ContentFeatureScorer {
                     .sorted(Comparator.comparingDouble((String token) -> profile.get(token) * candidate.get(token))
                             .reversed().thenComparing(Comparator.naturalOrder()))
                     .limit(3).toList();
-            matches.put(document.itemId(), new Match(cosine, String.join(", ", overlappingTerms)));
+            matches.put(document.itemId(), new Match(Math.min(1,cosine), String.join(", ", overlappingTerms)));
         }
         return Map.copyOf(matches);
+    }
+
+    private synchronized Index buildIndex(List<ItemDocument> documents) {
+        if(index.documents().equals(documents))return index;
+
+        Map<Long, Map<String, Integer>> tokensByItem = new LinkedHashMap<>();
+        Map<String, Integer> documentFrequency = new HashMap<>();
+        for (ItemDocument document : documents) {
+            Map<String, Integer> tokens = tokens(document.text());
+            tokensByItem.put(document.itemId(), tokens);
+            tokens.keySet().forEach(token -> documentFrequency.merge(token, 1, Integer::sum));
+        }
+
+        int corpusSize = Math.max(1, documents.size());
+        Map<Long, Map<String, Double>> vectors = new HashMap<>();
+        tokensByItem.forEach((itemId, tokens) -> vectors.put(itemId, vector(tokens, documentFrequency, corpusSize)));
+        vectors.replaceAll((id,vector)->Map.copyOf(vector));
+        index=new Index(List.copyOf(documents),Map.copyOf(documentFrequency),Map.copyOf(vectors));
+        return index;
     }
 
     private Map<String, Integer> tokens(String text) {

@@ -1,0 +1,844 @@
+// backend/src/main/java/com/guvi/recommendationsystem/catalog/CatalogImported.java
+public record CatalogImported(long batchId)
+
+// backend/src/main/java/com/guvi/recommendationsystem/catalog/CatalogIngestionService.java
+public record Row(int number,String title,String decision,String reason)
+
+// backend/src/main/java/com/guvi/recommendationsystem/catalog/CatalogIngestionService.java
+public record Preview(String sha256,int imported,int existing,int review,boolean canImport,List<Row> rows)
+
+// backend/src/main/java/com/guvi/recommendationsystem/catalog/CatalogIngestionService.java
+public record ImportResult(long batchId,int imported,int skipped,int review,boolean repeated)
+
+// backend/src/main/java/com/guvi/recommendationsystem/catalog/EducationalResource.java
+public record EducationalResource(String sourceId, String externalId, String title, String description,
+        String canonicalUrl, String categoryCode, String resourceType, List<String> topics,
+        String language, String license, String attribution, String metadataOrigin)
+
+// backend/src/main/java/com/guvi/recommendationsystem/catalog/IngestionController.java
+public record ImportRequest(List<EducationalResource> resources,String expectedSha256)
+
+// backend/src/main/java/com/guvi/recommendationsystem/catalog/SourceHttp.java
+public record Result(int status, URI destination, byte[] body)
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/ActiveStatusRequest.java
+package com.guvi.recommendationsystem.model;
+
+public record ActiveStatusRequest(Boolean active) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/AdminDashboardSummary.java
+package com.guvi.recommendationsystem.model;
+
+import java.math.BigDecimal;
+
+public record AdminDashboardSummary(
+        long totalUsers,
+        long activeUsersLast30Days,
+        long totalItems,
+        long totalCategories,
+        long totalInteractions,
+        long recommendationsGenerated,
+        BigDecimal averageRating) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/AdminRecommendationInsights.java
+package com.guvi.recommendationsystem.model;
+
+import java.math.BigDecimal;
+import java.util.List;
+
+public record AdminRecommendationInsights(
+        List<ItemInsight> mostRecommendedItems,
+        List<ItemInsight> mostInteractedItems,
+        List<ItemInsight> mostSavedItems,
+        List<ItemInsight> mostDislikedItems,
+        List<CategoryInsight> topRecommendedCategories,
+        BigDecimal averageRecommendationScore) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/AdminSettingsAuditEntry.java
+package com.guvi.recommendationsystem.model;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
+public record AdminSettingsAuditEntry(long auditId, String settingKey, BigDecimal oldValue,
+                                      BigDecimal newValue, String actorUsername, LocalDateTime changedAt) { }
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/AdminSettingsPreviewRequest.java
+package com.guvi.recommendationsystem.model;
+
+import java.math.BigDecimal;
+
+public record AdminSettingsPreviewRequest(long sampleUserId, BigDecimal familiarShare,
+                                          BigDecimal relatedShare, BigDecimal discoveryShare) { }
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/AdminSettingsUpdateRequest.java
+package com.guvi.recommendationsystem.model;
+
+import java.math.BigDecimal;
+
+public record AdminSettingsUpdateRequest(BigDecimal familiarShare, BigDecimal relatedShare,
+                                         BigDecimal discoveryShare) { }
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/AdminSystemSettings.java
+package com.guvi.recommendationsystem.model;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
+public record AdminSystemSettings(BigDecimal familiarShare, BigDecimal relatedShare,
+                                  BigDecimal discoveryShare, LocalDateTime updatedAt,long revision) {
+    public AdminSystemSettings(BigDecimal familiarShare,BigDecimal relatedShare,BigDecimal discoveryShare,LocalDateTime updatedAt){this(familiarShare,relatedShare,discoveryShare,updatedAt,0);}
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/BulkActiveStatusRequest.java
+package com.guvi.recommendationsystem.model;
+
+import java.util.List;
+
+public record BulkActiveStatusRequest(List<Long> itemIds, Boolean active) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/BulkActiveStatusResult.java
+package com.guvi.recommendationsystem.model;
+
+public record BulkActiveStatusResult(int updated) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/CatalogCsvImportResult.java
+package com.guvi.recommendationsystem.model;
+
+public record CatalogCsvImportResult(int imported, int skippedExisting) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/CatalogCsvPreview.java
+package com.guvi.recommendationsystem.model;
+
+import java.util.List;
+
+public record CatalogCsvPreview(int validRows, int invalidRows, boolean canImport, List<Row> rows) {
+    public record Row(int line, String title, String category, boolean valid, List<String> errors) { }
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/CatalogCsvRequest.java
+package com.guvi.recommendationsystem.model;
+
+public record CatalogCsvRequest(String csv) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/CatalogItem.java
+package com.guvi.recommendationsystem.model;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.util.List;
+
+public record CatalogItem(
+        long itemId,
+        long categoryId,
+        String title,
+        String description,
+        ItemType type,
+        String externalUrl,
+        String sourceName,
+        List<String> tags,
+        ItemDifficulty difficulty,
+        Integer estimatedMinutes,
+        BigDecimal qualityScore,
+        BigDecimal price,
+        boolean active,
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt,
+        boolean editorPick,long revision) {
+    public CatalogItem(long itemId,long categoryId,String title,String description,ItemType type,String externalUrl,String sourceName,List<String> tags,ItemDifficulty difficulty,Integer estimatedMinutes,BigDecimal qualityScore,BigDecimal price,boolean active,LocalDateTime createdAt,LocalDateTime updatedAt,boolean editorPick){this(itemId,categoryId,title,description,type,externalUrl,sourceName,tags,difficulty,estimatedMinutes,qualityScore,price,active,createdAt,updatedAt,editorPick,0);}
+    public CatalogItem(long itemId, long categoryId, String title, String description, ItemType type,
+                       String externalUrl, String sourceName, List<String> tags, ItemDifficulty difficulty,
+                       Integer estimatedMinutes, BigDecimal qualityScore, BigDecimal price, boolean active,
+                       LocalDateTime createdAt, LocalDateTime updatedAt) {
+        this(itemId, categoryId, title, description, type, externalUrl, sourceName, tags, difficulty,
+                estimatedMinutes, qualityScore, price, active, createdAt, updatedAt, false);
+    }
+
+    public CatalogItem(long itemId, long categoryId, String title, String description, ItemType type,
+                       String externalUrl, BigDecimal price, boolean active, LocalDateTime createdAt,
+                       LocalDateTime updatedAt) {
+        this(itemId, categoryId, title, description, type, externalUrl, null, List.of(), ItemDifficulty.ALL_LEVELS,
+                null, BigDecimal.valueOf(0.5), price, active, createdAt, updatedAt, false);
+    }
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/CatalogPage.java
+package com.guvi.recommendationsystem.model;
+
+import java.util.List;
+
+public record CatalogPage<T>(List<T> items, int page, int pageSize, long totalItems, long totalPages) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/CatalogSort.java
+package com.guvi.recommendationsystem.model;
+
+public enum CatalogSort {
+    RELEVANCE,
+    TIME_ASC,
+    NEWEST,
+    MOST_POPULAR,
+    TITLE_ASC
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/Category.java
+package com.guvi.recommendationsystem.model;
+
+import java.time.LocalDateTime;
+
+public record Category(
+        long categoryId,
+        String name,
+        String description,
+        String nicheCode,
+        boolean active,
+        LocalDateTime createdAt) {
+    public Category(long categoryId, String name, String description, boolean active, LocalDateTime createdAt) {
+        this(categoryId, name, description, null, active, createdAt);
+    }
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/CategoryInsight.java
+package com.guvi.recommendationsystem.model;
+
+public record CategoryInsight(long categoryId, String name, long recommendationCount) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/CategoryRequest.java
+package com.guvi.recommendationsystem.model;
+
+public record CategoryRequest(String name, String description) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/DisplayNameUpdateRequest.java
+package com.guvi.recommendationsystem.model;
+
+public record DisplayNameUpdateRequest(String displayName) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/Feedback.java
+package com.guvi.recommendationsystem.model;
+
+import java.time.LocalDateTime;
+
+public record Feedback(
+        long feedbackId,
+        long userId,
+        long itemId,
+        int rating,
+        String comment,
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/FeedbackRequest.java
+package com.guvi.recommendationsystem.model;
+
+public record FeedbackRequest(Long itemId, Integer rating, String comment) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/Interaction.java
+package com.guvi.recommendationsystem.model;
+
+import java.time.LocalDateTime;
+
+public record Interaction(
+        long interactionId,
+        long userId,
+        Long itemId,
+        InteractionType type,
+        LocalDateTime occurredAt,
+        String searchQuery) {
+
+    public Interaction(long interactionId, long userId, long itemId, InteractionType type,
+                       LocalDateTime occurredAt) {
+        this(interactionId, userId, itemId, type, occurredAt, null);
+    }
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/InteractionType.java
+package com.guvi.recommendationsystem.model;
+
+/**
+ * Each new request ID represents one recorded event. Passive activity and negative feedback adapt topic
+ * preferences (including MORE_LIKE); explicit positive item actions contribute to item-level ranking and
+ * neighborhood evidence.
+ * New request IDs remain separate events; only a retry with the same ID is idempotent.
+ */
+public enum InteractionType {
+    VIEW,
+    CLICK,
+    READ_PROGRESS,
+    SAVE,
+    PURCHASE,
+    LIKE,
+    DISLIKE,
+    HIDE,
+    SHARE,
+    SKIP,
+    MORE_LIKE,
+    SEARCH,
+    COMPLETE
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/InteractionWriteResult.java
+package com.guvi.recommendationsystem.model;
+
+public record InteractionWriteResult(Interaction interaction, boolean created) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/Interest.java
+package com.guvi.recommendationsystem.model;
+
+import java.time.LocalDateTime;
+
+public record Interest(
+        long interestId,
+        String name,
+        boolean active,
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/InterestInsight.java
+package com.guvi.recommendationsystem.model;
+
+public record InterestInsight(
+        long interestId,
+        String topic,
+        String niche,
+        int strengthPercent,
+        String trend,
+        String confidence,
+        String evidence) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/InterestProfile.java
+package com.guvi.recommendationsystem.model;
+
+import java.util.List;
+
+public record InterestProfile(
+        List<InterestInsight> current,
+        List<InterestInsight> growing,
+        List<InterestInsight> declining,
+        List<InterestInsight> exploreNext) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/InterestRequest.java
+package com.guvi.recommendationsystem.model;
+
+public record InterestRequest(String name) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/InterestWeightRequest.java
+package com.guvi.recommendationsystem.model;
+
+import java.math.BigDecimal;
+
+public record InterestWeightRequest(BigDecimal weight) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/ItemDifficulty.java
+package com.guvi.recommendationsystem.model;
+
+public enum ItemDifficulty {
+    BEGINNER,
+    INTERMEDIATE,
+    ADVANCED,
+    ALL_LEVELS,
+    UNKNOWN
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/ItemInsight.java
+package com.guvi.recommendationsystem.model;
+
+public record ItemInsight(long itemId, String title, String categoryName, long count) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/ItemRequest.java
+package com.guvi.recommendationsystem.model;
+
+import java.math.BigDecimal;
+
+public record ItemRequest(
+        long categoryId,
+        String title,
+        String description,
+        ItemType type,
+        String externalUrl,
+        BigDecimal price,
+        String sourceName,
+        ItemDifficulty difficulty,
+        Integer estimatedMinutes,
+        BigDecimal qualityScore,
+        Boolean editorPick) {
+    public ItemRequest(long categoryId, String title, String description, ItemType type, String externalUrl,
+                       BigDecimal price, String sourceName, ItemDifficulty difficulty,
+                       Integer estimatedMinutes, BigDecimal qualityScore) {
+        this(categoryId, title, description, type, externalUrl, price, sourceName, difficulty,
+                estimatedMinutes, qualityScore, false);
+    }
+
+    public ItemRequest(long categoryId, String title, String description, ItemType type,
+                       String externalUrl, BigDecimal price) {
+        this(categoryId, title, description, type, externalUrl, price, null,
+                ItemDifficulty.ALL_LEVELS, null, BigDecimal.valueOf(0.5), false);
+    }
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/ItemType.java
+package com.guvi.recommendationsystem.model;
+
+public enum ItemType {
+    PRODUCT,
+    CONTENT,
+    COURSE,
+    RESOURCE,
+    ARTICLE,
+    VIDEO,
+    DOCUMENTATION,
+    GUIDE,
+    TOOL,
+    PROJECT,
+    OTHER
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/LoginRequest.java
+package com.guvi.recommendationsystem.model;
+
+public record LoginRequest(String email, String password) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/NicheOption.java
+package com.guvi.recommendationsystem.model;
+
+import java.util.List;
+
+public record NicheOption(long categoryId, String code, String name, List<TopicOption> topics) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/OnboardingPurpose.java
+package com.guvi.recommendationsystem.model;
+
+public enum OnboardingPurpose {
+    LEARN,
+    CAREER,
+    EXPLORE,
+    IMPROVE_MYSELF
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/OnboardingRequest.java
+package com.guvi.recommendationsystem.model;
+
+import java.util.List;
+
+public record OnboardingRequest(OnboardingPurpose purpose, long categoryId, List<Long> interestIds) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/OnboardingStatus.java
+package com.guvi.recommendationsystem.model;
+
+import java.time.LocalDateTime;
+
+public record OnboardingStatus(
+        boolean completed,
+        OnboardingPurpose purpose,
+        long categoryId,
+        LocalDateTime completedAt) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/PasswordResetCompletionRequest.java
+package com.guvi.recommendationsystem.model;
+
+public record PasswordResetCompletionRequest(String token, String password, String confirmPassword) { }
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/PasswordResetRequest.java
+package com.guvi.recommendationsystem.model;
+
+public record PasswordResetRequest(String email) { }
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/PersonalizedRecommendation.java
+package com.guvi.recommendationsystem.model;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.util.Map;
+
+public record PersonalizedRecommendation(
+        long recommendationId,
+        Long batchId,
+        long itemId,
+        String itemTitle,
+        BigDecimal score,
+        String reason,
+        String reasonType,
+        String bucketType,
+        LocalDateTime generatedAt,
+        Map<String, BigDecimal> scoreBreakdown) {
+    public PersonalizedRecommendation(long recommendationId, Long batchId, long itemId, String itemTitle,
+                                     BigDecimal score, String reason, String reasonType, String bucketType,
+                                     LocalDateTime generatedAt) {
+        this(recommendationId, batchId, itemId, itemTitle, score, reason, reasonType, bucketType,
+                generatedAt, Map.of());
+    }
+
+    public PersonalizedRecommendation(long recommendationId, Long batchId, long itemId, String itemTitle,
+                                      BigDecimal score, String reason, LocalDateTime generatedAt) {
+        this(recommendationId, batchId, itemId, itemTitle, score, reason,
+                "PROFILE_MATCH", "FAMILIAR", generatedAt, Map.of());
+    }
+
+    public PersonalizedRecommendation {
+        scoreBreakdown = scoreBreakdown == null ? Map.of() : Map.copyOf(scoreBreakdown);
+    }
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/PreferenceWeightRequest.java
+package com.guvi.recommendationsystem.model;
+
+import java.math.BigDecimal;
+
+public record PreferenceWeightRequest(BigDecimal weight) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/RecommendationCandidate.java
+package com.guvi.recommendationsystem.model;
+
+import java.math.BigDecimal;
+
+public record RecommendationCandidate(
+        long itemId,
+        String itemTitle,
+        BigDecimal categoryPreferenceWeight,
+        BigDecimal interestMatch,
+        BigDecimal userAverageRating,
+        BigDecimal itemAverageRating,
+        BigDecimal positiveInteractionSignal,
+        BigDecimal negativeInteractionSignal,
+        BigDecimal qualityScore,
+        String categoryName,
+        String matchedTopics,
+        BigDecimal relatedInterestMatch,
+        BigDecimal purposeMatch,
+        BigDecimal collaborativeMatch,
+        int collaborativeEvidenceCount,
+        BigDecimal popularityMatch,
+        int popularityEvidenceCount,
+        BigDecimal contentSimilarity,
+        String contentMatchTerms,
+        boolean editorPick) {
+    public RecommendationCandidate(long itemId, String itemTitle, BigDecimal categoryPreferenceWeight,
+                                   BigDecimal interestMatch, BigDecimal userAverageRating,
+                                   BigDecimal itemAverageRating, BigDecimal positiveInteractionSignal,
+                                   BigDecimal negativeInteractionSignal, BigDecimal qualityScore,
+                                   String categoryName, String matchedTopics, BigDecimal relatedInterestMatch,
+                                   BigDecimal purposeMatch, BigDecimal collaborativeMatch,
+                                   int collaborativeEvidenceCount, BigDecimal popularityMatch,
+                                   int popularityEvidenceCount, BigDecimal contentSimilarity, String contentMatchTerms) {
+        this(itemId, itemTitle, categoryPreferenceWeight, interestMatch, userAverageRating, itemAverageRating,
+                positiveInteractionSignal, negativeInteractionSignal, qualityScore, categoryName, matchedTopics,
+                relatedInterestMatch, purposeMatch, collaborativeMatch, collaborativeEvidenceCount,
+                popularityMatch, popularityEvidenceCount, contentSimilarity, contentMatchTerms, false);
+    }
+
+    public RecommendationCandidate(long itemId, String itemTitle, BigDecimal categoryPreferenceWeight,
+                                   BigDecimal interestMatch, BigDecimal userAverageRating,
+                                   BigDecimal itemAverageRating, BigDecimal positiveInteractionSignal,
+                                   BigDecimal negativeInteractionSignal, BigDecimal qualityScore,
+                                   String categoryName, String matchedTopics, BigDecimal relatedInterestMatch,
+                                   BigDecimal purposeMatch) {
+        this(itemId, itemTitle, categoryPreferenceWeight, interestMatch, userAverageRating, itemAverageRating,
+                positiveInteractionSignal, negativeInteractionSignal, qualityScore, categoryName, matchedTopics,
+                relatedInterestMatch, purposeMatch, BigDecimal.ZERO, 0, BigDecimal.ZERO, 0, BigDecimal.ZERO, "", false);
+    }
+
+    public RecommendationCandidate(long itemId, String itemTitle, BigDecimal categoryPreferenceWeight,
+                                   BigDecimal interestMatch, BigDecimal userAverageRating,
+                                   BigDecimal itemAverageRating, BigDecimal positiveInteractionSignal,
+                                   BigDecimal negativeInteractionSignal, BigDecimal qualityScore,
+                                   String categoryName, String matchedTopics, BigDecimal relatedInterestMatch,
+                                   BigDecimal purposeMatch, BigDecimal collaborativeMatch,
+                                   int collaborativeEvidenceCount, BigDecimal popularityMatch,
+                                   int popularityEvidenceCount) {
+        this(itemId, itemTitle, categoryPreferenceWeight, interestMatch, userAverageRating, itemAverageRating,
+                positiveInteractionSignal, negativeInteractionSignal, qualityScore, categoryName, matchedTopics,
+                relatedInterestMatch, purposeMatch, collaborativeMatch, collaborativeEvidenceCount,
+                popularityMatch, popularityEvidenceCount, BigDecimal.ZERO, "", false);
+    }
+
+    public RecommendationCandidate(long itemId, String itemTitle, BigDecimal categoryPreferenceWeight,
+                                   BigDecimal interestMatch, BigDecimal userAverageRating,
+                                   BigDecimal itemAverageRating, BigDecimal positiveInteractionSignal,
+                                   BigDecimal negativeInteractionSignal) {
+        this(itemId, itemTitle, categoryPreferenceWeight, interestMatch, userAverageRating,
+                itemAverageRating, positiveInteractionSignal, negativeInteractionSignal,
+                BigDecimal.valueOf(0.5), "", "", BigDecimal.ZERO, BigDecimal.ZERO,
+                BigDecimal.ZERO, 0, BigDecimal.ZERO, 0, BigDecimal.ZERO, "", false);
+    }
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/RecommendationDraft.java
+package com.guvi.recommendationsystem.model;
+
+import java.math.BigDecimal;
+import java.util.Map;
+
+public record RecommendationDraft(
+        long itemId,
+        String itemTitle,
+        BigDecimal score,
+        String reason,
+        String reasonType,
+        String bucketType,
+        Map<String, BigDecimal> scoreBreakdown) {
+    public RecommendationDraft(long itemId, String itemTitle, BigDecimal score, String reason,
+                               String reasonType, String bucketType) {
+        this(itemId, itemTitle, score, reason, reasonType, bucketType, Map.of());
+    }
+
+    public RecommendationDraft(long itemId, String itemTitle, BigDecimal score, String reason) {
+        this(itemId, itemTitle, score, reason, "PROFILE_MATCH", "FAMILIAR", Map.of());
+    }
+
+    public RecommendationDraft {
+        scoreBreakdown = scoreBreakdown == null ? Map.of() : Map.copyOf(scoreBreakdown);
+    }
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/RecommendationEngagementMetrics.java
+package com.guvi.recommendationsystem.model;
+
+import java.math.BigDecimal;
+
+/** Observed feed views and outbound clicks; unavailable is distinct from a measured zero rate. */
+public record RecommendationEngagementMetrics(
+        long impressions,
+        long clicks,
+        BigDecimal clickThroughRatePercent,
+        boolean available) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/RecommendationInfo.java
+package com.guvi.recommendationsystem.model;
+
+import java.util.Map;
+
+public record RecommendationInfo(Map<String, Double> feedMix, Map<String, Double> interactionWeights,
+                                 String scoreMeaning, int popularityMinimumUsers,
+                                 int collaborativeMinimumUsers) {
+    public RecommendationInfo {
+        feedMix = Map.copyOf(feedMix);
+        interactionWeights = Map.copyOf(interactionWeights);
+    }
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/RecommendationProfile.java
+package com.guvi.recommendationsystem.model;
+
+import java.util.List;
+
+public record RecommendationProfile(
+        UserProfile profile,
+        List<UserPreference> categoryPreferences,
+        List<UserInterest> interests,
+        long interactionCount,
+        long feedbackCount) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/RegisterUserRequest.java
+package com.guvi.recommendationsystem.model;
+
+public record RegisterUserRequest(String username, String email, String password, String displayName) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/SearchInteractionRequest.java
+package com.guvi.recommendationsystem.model;
+
+public record SearchInteractionRequest(String query, String requestId) {
+    public SearchInteractionRequest(String query) {
+        this(query, null);
+    }
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/TopicOption.java
+package com.guvi.recommendationsystem.model;
+
+public record TopicOption(long interestId, String name) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/TrackInteractionRequest.java
+package com.guvi.recommendationsystem.model;
+
+/** requestId makes retries of one client action idempotent; new actions use a new ID. */
+public record TrackInteractionRequest(long itemId, InteractionType type, String requestId) {
+    public TrackInteractionRequest(long itemId, InteractionType type) {
+        this(itemId, type, null);
+    }
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/UserAccount.java
+package com.guvi.recommendationsystem.model;
+
+import java.time.LocalDateTime;
+
+public record UserAccount(
+        long userId,
+        String username,
+        String email,
+        String passwordHash,
+        String displayName,
+        String role,
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/UserCollection.java
+package com.guvi.recommendationsystem.model;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+public record UserCollection(long collectionId, String name, LocalDateTime updatedAt, List<Long> itemIds) {
+    public UserCollection {
+        itemIds = itemIds == null ? List.of() : List.copyOf(itemIds);
+    }
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/UserInterest.java
+package com.guvi.recommendationsystem.model;
+
+import java.math.BigDecimal;
+
+public record UserInterest(long interestId, String name, BigDecimal weight) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/UserInterestRequest.java
+package com.guvi.recommendationsystem.model;
+
+import java.math.BigDecimal;
+
+public record UserInterestRequest(BigDecimal weight) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/UserPreference.java
+package com.guvi.recommendationsystem.model;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
+public record UserPreference(
+        long categoryId,
+        BigDecimal weight,
+        LocalDateTime updatedAt) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/model/UserProfile.java
+package com.guvi.recommendationsystem.model;
+
+import java.time.LocalDateTime;
+
+public record UserProfile(
+        long userId,
+        String username,
+        String email,
+        String displayName,
+        String role,
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt) {
+}
+
+
+// backend/src/main/java/com/guvi/recommendationsystem/service/CatalogCsvService.java
+record ParsedRow(int line, List<String> values)
+
+// backend/src/main/java/com/guvi/recommendationsystem/service/LearningJourneyService.java
+public record CreateRequest(String title,OnboardingPurpose goal,long categoryId,Integer steps,String requestId,String topic)
+
+// backend/src/main/java/com/guvi/recommendationsystem/service/LearningJourneyService.java
+public record Header(long journeyId,String title,OnboardingPurpose goal,Long categoryId,String status,String preferenceSnapshot,LocalDateTime createdAt,LocalDateTime updatedAt)
+
+// backend/src/main/java/com/guvi/recommendationsystem/service/LearningJourneyService.java
+public record Step(long stepId,int position,Long itemId,String title,String rationale,String status,LocalDateTime completedAt,boolean available,CatalogItem resource)
+
+// backend/src/main/java/com/guvi/recommendationsystem/service/LearningJourneyService.java
+public record Journey(Header journey,List<Step> steps,int completedSteps,int totalSteps,int completionPercent,Long currentStepId,List<Map<String,Object>> replacements)
+
+// backend/src/main/java/com/guvi/recommendationsystem/service/LearningJourneyService.java
+record Progress(InteractionType type,LocalDateTime at)
+
+// backend/src/main/java/com/guvi/recommendationsystem/service/PasswordResetService.java
+record ResetDelivery(long userId, byte[] tokenHash, String token)
+
+// backend/src/main/java/com/guvi/recommendationsystem/service/TopicPreferenceScorer.java
+public record TopicSignal(double positiveScore, double negativeScore, double preferenceScore,
+                              double confidence, long interactionCount, String trend)
+
+// backend/src/main/java/com/guvi/recommendationsystem/service/WorkspaceReadService.java
+public record ActivityEntry(long interactionId,Long itemId,InteractionType type,LocalDateTime occurredAt,String searchQuery,CatalogItem resource)
+
+// backend/src/main/java/com/guvi/recommendationsystem/service/WorkspaceReadService.java
+public record ActivityPage(List<ActivityEntry> items,String nextCursor,boolean hasMore,long totalItems)

@@ -29,5 +29,10 @@ public class UserCollectionController {
     }
     @DeleteMapping("/{collectionId}") @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable long collectionId, HttpServletRequest request) { service.delete(session.requireUserId(request), collectionId); }
+    @PatchMapping("/{collectionId}")
+    public UserCollection rename(@PathVariable long collectionId,@RequestBody RenameRequest body,HttpServletRequest request) {
+        return service.rename(session.requireUserId(request),collectionId,body==null?null:body.expectedName(),body==null?null:body.name());
+    }
+    public record RenameRequest(String name,String expectedName) { }
     public record CollectionRequest(String name) { }
 }

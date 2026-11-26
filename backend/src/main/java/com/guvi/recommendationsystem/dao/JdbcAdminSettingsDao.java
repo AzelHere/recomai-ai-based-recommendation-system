@@ -22,7 +22,7 @@ public class JdbcAdminSettingsDao implements AdminSettingsDao {
                 });
         java.sql.Timestamp updated = (java.sql.Timestamp) values.get("updated_at");
         return new AdminSystemSettings((BigDecimal) values.get("familiar"), (BigDecimal) values.get("related"),
-                (BigDecimal) values.get("discovery"), updated == null ? null : updated.toLocalDateTime());
+                (BigDecimal) values.get("discovery"), updated == null ? null : updated.toLocalDateTime(),jdbc.queryForObject("SELECT revision FROM recommendation_settings_revision WHERE singleton_id=1",Long.class));
     }
     @Override public void save(String key, BigDecimal value, long actorUserId) {
         BigDecimal old = jdbc.queryForObject("SELECT setting_value FROM recommendation_system_settings WHERE setting_key = ?", BigDecimal.class, key);

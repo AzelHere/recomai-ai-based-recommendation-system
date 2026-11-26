@@ -1,4 +1,4 @@
-# RecomAI architecture
+# Recom AI architecture
 
 This diagram reflects the current repository structure. The browser uses same-origin HTTP and a server-side session cookie. Spring MVC controllers delegate validation and workflows to services. Services and the recommendation ranker use DAO interfaces backed by Spring JDBC. Flyway initializes or upgrades MySQL; Docker Compose runs the local application services.
 

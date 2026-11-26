@@ -38,7 +38,7 @@ Business & Finance	SBA: Launch Your Business	https://www.sba.gov/business-guide/
 Business & Finance	SBA: Manage Your Business	https://www.sba.gov/business-guide/manage-your-business	U.S. Small Business Administration	Business Strategy|Entrepreneurship|Marketing	GUIDE	INTERMEDIATE	30	false
 Business & Finance	SCORE Business Plan Template	https://www.score.org/resource/business-plan-template-startup-business	SCORE	Entrepreneurship|Startups|Business Strategy	RESOURCE	BEGINNER	45	false
 Business & Finance	Y Combinator Startup School	https://www.startupschool.org/	Y Combinator	Startups|Entrepreneurship|Business Strategy	COURSE	BEGINNER	60	true
-Business & Finance	Y Combinator Startup Library	https://www.ycombinator.com/library	Y Combinator	Startups|Entrepreneurship|Business Strategy	ARTICLE	INTERMEDIATE	30	false
+Business & Finance	Y Combinator Startup Library	https://www.ycombinator.com/library	Y Combinator	Startups|Entrepreneurship|Business Strategy	RESOURCE	INTERMEDIATE	30	false
 Business & Finance	OpenStax: Entrepreneurship	https://openstax.org/details/books/entrepreneurship	OpenStax	Entrepreneurship|Startups|Business Strategy	RESOURCE	BEGINNER	90	false
 Business & Finance	Wharton Entrepreneurship Specialization	https://www.coursera.org/	Coursera	Entrepreneurship|Startups|Business Strategy	COURSE	INTERMEDIATE	60	false
 Business & Finance	MIT Entrepreneurship	https://entrepreneurship.mit.edu/	MIT	Entrepreneurship|Startups|Business Strategy	RESOURCE	INTERMEDIATE	30	false
@@ -49,7 +49,7 @@ Business & Finance	CFPB Credit Reports and Scores	https://www.consumerfinance.go
 Business & Finance	Khan Academy: Personal Finance	https://www.khanacademy.org/college-careers-more/personal-finance	Khan Academy	Personal Finance|Investing Basics|Healthy Habits	COURSE	BEGINNER	45	false
 Business & Finance	FDIC Money Smart	https://www.fdic.gov/consumer-resource-center/money-smart	FDIC	Personal Finance|Investing Basics|Healthy Habits	COURSE	BEGINNER	45	false
 Business & Finance	FINRA Investing Basics	https://www.finra.org/investors/investing/investing-basics	FINRA	Investing Basics|Personal Finance|Business Strategy	GUIDE	BEGINNER	30	true
-Business & Finance	FINRA Asset Allocation and Diversification	https://www.finra.org/investors/	FINRA	Investing Basics|Personal Finance|Business Strategy	ARTICLE	INTERMEDIATE	20	false
+Business & Finance	FINRA Asset Allocation and Diversification	https://www.finra.org/investors/	FINRA	Investing Basics|Personal Finance|Business Strategy	RESOURCE	INTERMEDIATE	20	false
 Business & Finance	Investor.gov: Investing Basics	https://www.investor.gov/	Investor.gov	Investing Basics|Personal Finance|Business Strategy	GUIDE	BEGINNER	25	false
 Business & Finance	Vanguard Investor Education	https://investor.vanguard.com/investor-resources-education	Vanguard	Investing Basics|Personal Finance|Business Strategy	RESOURCE	INTERMEDIATE	30	false
 Business & Finance	Charles Schwab Investing Basics	https://www.schwab.com/learn/story/investing-basics	Charles Schwab	Investing Basics|Personal Finance|Business Strategy	GUIDE	BEGINNER	25	false
@@ -66,7 +66,7 @@ Business & Finance	CFI Accounting Resources	https://corporatefinanceinstitute.co
 Business & Finance	Khan Academy: Taxes	https://www.khanacademy.org/economics-finance-domain/core-finance/taxes-topic	Khan Academy	Personal Finance|Investing Basics|Business Strategy	COURSE	BEGINNER	45	false
 Business & Finance	Federal Reserve Economic Data	https://fred.stlouisfed.org/	Federal Reserve Bank of St. Louis	Investing Basics|Personal Finance|Business Strategy	TOOL	INTERMEDIATE	25	false
 Business & Finance	World Bank Open Data	https://data.worldbank.org/	World Bank	Business Strategy|Investing Basics|Marketing	TOOL	INTERMEDIATE	30	false
-Business & Finance	IMF Finance & Development	https://www.imf.org/en/Publications/fandd	International Monetary Fund	Business Strategy|Investing Basics|Personal Finance	ARTICLE	ADVANCED	30	false
+Business & Finance	IMF Finance & Development	https://www.imf.org/en/Publications/fandd	International Monetary Fund	Business Strategy|Investing Basics|Personal Finance	RESOURCE	ADVANCED	30	false
 Business & Finance	Google Digital Marketing Learning	https://learndigital.withgoogle.com/digitalgarage	Google	Marketing|Business Strategy|Professional Skills	COURSE	BEGINNER	45	false
 Learning & Career	The Learning Scientists: Six Strategies	https://www.learningscientists.org/blog/2016/8/18-1	The Learning Scientists	Study Skills|Productivity|Professional Skills	ARTICLE	BEGINNER	15	false
 Learning & Career	Anki Manual	https://docs.ankiweb.net/	Anki	Study Skills|Productivity|Career Development	DOCUMENTATION	BEGINNER	30	false
@@ -99,7 +99,7 @@ Learning & Career	University of Minnesota: Communication in the Real World	https
 Learning & Career	MindTools Career Skills	https://www.mindtools.com/	MindTools	Professional Skills|Career Development|Productivity	GUIDE	INTERMEDIATE	30	false
 Learning & Career	Coursera: Successful Negotiation	https://www.coursera.org/learn/negotiation-skills	University of Michigan	Communication|Professional Skills|Career Development	COURSE	INTERMEDIATE	45	false
 Learning & Career	OpenLearn: Effective Communication	https://www.open.edu/openlearn/money-business/leadership-management/effective-communication/content-section-overview	The Open University	Communication|Professional Skills|Career Development	COURSE	BEGINNER	45	false
-Learning & Career	The Muse Career Advice	https://www.themuse.com/advice	The Muse	Career Development|Interview Preparation|Professional Skills	ARTICLE	BEGINNER	20	false
+Learning & Career	The Muse Career Advice	https://www.themuse.com/advice	The Muse	Career Development|Interview Preparation|Professional Skills	RESOURCE	BEGINNER	20	false
 Learning & Career	Coursera: English for Career Development	https://www.coursera.org/learn	Coursera	Communication|Professional Skills|Career Development	COURSE	BEGINNER	45	false
 Learning & Career	LeetCode Interview Preparation	https://leetcode.com/explore/interview/card/top-interview-questions-easy/	LeetCode	Interview Preparation|Programming|Career Development	PROJECT	INTERMEDIATE	60	false
 Learning & Career	GitHub: Technical Interview Handbook	https://github.com/yangshun/tech-interview-handbook	GitHub	Interview Preparation|Programming|Career Development	GUIDE	INTERMEDIATE	60	false
@@ -149,10 +149,10 @@ Creative & Lifestyle	Pixar in a Box	https://www.khanacademy.org/computing/pixar	
 Creative & Lifestyle	Blender Tutorials	https://www.blender.org/support/tutorials/	Blender	Design|Creativity|Hobbies	GUIDE	INTERMEDIATE	45	false
 Creative & Lifestyle	Inkscape Tutorials	https://inkscape.org/learn/tutorials/	Inkscape	Design|Creativity|Photography	GUIDE	BEGINNER	30	false
 Creative & Lifestyle	GIMP Tutorials	https://www.gimp.org/tutorials/	GIMP	Photography|Design|Creativity	GUIDE	BEGINNER	30	false
-Creative & Lifestyle	Unsplash Photography Resources	https://unsplash.com/blog/	Unsplash	Photography|Creativity|Travel	ARTICLE	BEGINNER	20	false
-Creative & Lifestyle	PetaPixel Photography Tutorials	https://petapixel.com/	PetaPixel	Photography|Creativity|Design	ARTICLE	INTERMEDIATE	20	false
+Creative & Lifestyle	Unsplash Photography Resources	https://unsplash.com/blog/	Unsplash	Photography|Creativity|Travel	RESOURCE	BEGINNER	20	false
+Creative & Lifestyle	PetaPixel Photography Tutorials	https://petapixel.com/	PetaPixel	Photography|Creativity|Design	RESOURCE	INTERMEDIATE	20	false
 Creative & Lifestyle	Digital Photography School	https://digital-photography-school.com/	Digital Photography School	Photography|Creativity|Travel	GUIDE	BEGINNER	25	false
-Creative & Lifestyle	National Geographic Photography	https://www.nationalgeographic.com/photography	National Geographic	Photography|Travel|Creativity	ARTICLE	INTERMEDIATE	20	false
+Creative & Lifestyle	National Geographic Photography	https://www.nationalgeographic.com/photography	National Geographic	Photography|Travel|Creativity	RESOURCE	INTERMEDIATE	20	false
 Creative & Lifestyle	Adobe Lightroom Tutorials	https://helpx.adobe.com/lightroom-cc/tutorials.html	Adobe	Photography|Design|Creativity	GUIDE	INTERMEDIATE	30	false
 Creative & Lifestyle	Adobe Illustrator Tutorials	https://helpx.adobe.com/illustrator/tutorials.html	Adobe	Design|Creativity|Photography	GUIDE	INTERMEDIATE	30	false
 Creative & Lifestyle	Adobe Photoshop Tutorials	https://helpx.adobe.com/photoshop/tutorials.html	Adobe	Photography|Design|Creativity	GUIDE	INTERMEDIATE	30	false
@@ -160,7 +160,7 @@ Creative & Lifestyle	Procreate Handbook	https://procreate.com/handbook/procreate
 Creative & Lifestyle	W3C Web Accessibility Tutorials	https://www.w3.org/WAI/tutorials/	W3C	Design|Creativity|Professional Skills	GUIDE	INTERMEDIATE	30	false
 Creative & Lifestyle	Google Fonts Knowledge	https://fonts.google.com/knowledge	Google Fonts	Design|Creativity|Writing	GUIDE	INTERMEDIATE	25	false
 Creative & Lifestyle	Typography.com	https://typography.com/	Hoefler&Co.	Design|Creativity|Writing	RESOURCE	INTERMEDIATE	25	false
-Creative & Lifestyle	The Writing Cooperative	https://writingcooperative.com/	The Writing Cooperative	Writing|Creativity|Communication	ARTICLE	BEGINNER	20	false
+Creative & Lifestyle	The Writing Cooperative	https://writingcooperative.com/	The Writing Cooperative	Writing|Creativity|Communication	RESOURCE	BEGINNER	20	false
 Creative & Lifestyle	Purdue OWL General Writing	https://owl.purdue.edu/owl/general_writing/	Purdue OWL	Writing|Communication|Creativity	GUIDE	BEGINNER	30	false
 Creative & Lifestyle	Hemingway Editor	https://hemingwayapp.com/	Hemingway Editor	Writing|Communication|Creativity	TOOL	BEGINNER	20	false
 Creative & Lifestyle	NaNoWriMo Resources	https://nanowrimo.org/	National Novel Writing Month	Writing|Creativity|Hobbies	RESOURCE	BEGINNER	25	false
@@ -170,7 +170,7 @@ Creative & Lifestyle	Library of Congress: Chronicling America	https://www.loc.go
 Creative & Lifestyle	Atlas Obscura Places	https://www.atlasobscura.com/places	Atlas Obscura	Travel|Photography|Hobbies	RESOURCE	BEGINNER	20	false
 Creative & Lifestyle	UNESCO World Heritage List	https://whc.unesco.org/en/list/	UNESCO	Travel|Photography|Creativity	RESOURCE	BEGINNER	25	false
 Creative & Lifestyle	National Park Service: Find a Park	https://www.nps.gov/findapark/index.htm	National Park Service	Travel|Hobbies|Photography	TOOL	BEGINNER	20	false
-Creative & Lifestyle	Google Maps Trip Planning	https://support.google.com/maps/answer/6230175	Google Maps Help	Travel|Hobbies|Photography	GUIDE	BEGINNER	15	false
+Creative & Lifestyle	Google Maps Trip Planning	https://support.google.com/maps/answer/144339	Google Maps Help	Travel|Hobbies|Photography	GUIDE	BEGINNER	15	false
 Creative & Lifestyle	Smithsonian Learning Lab	https://learninglab.si.edu/	Smithsonian	Hobbies|Creativity|Travel	RESOURCE	BEGINNER	25	false
 Creative & Lifestyle	Exploratorium Learning Resources	https://www.exploratorium.edu/learn	Exploratorium	Hobbies|Creativity|Design	RESOURCE	BEGINNER	25	false
-Creative & Lifestyle	Royal Photographic Society Learning	https://rps.org/learning/	Royal Photographic Society	Photography|Creativity|Design	GUIDE	INTERMEDIATE	30	false
+Creative & Lifestyle	Royal Photographic Society Learning	https://rps.org/qualifications/	Royal Photographic Society	Photography|Creativity|Design	GUIDE	INTERMEDIATE	30	false

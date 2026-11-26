@@ -53,14 +53,17 @@ const composeEnv = {
 
 let failed = false;
 try {
-  run('docker', ['compose', '-p', projectName, 'up', '--detach', '--build', '--wait'], composeEnv);
+  run('docker', ['compose', ...(process.env.E2E_EXISTING_IMAGE ? ['-f','docker-compose.yml','-f','docker-compose.audit-image.yml'] : []), '-p', projectName, 'up', '--detach', ...(process.env.E2E_EXISTING_IMAGE ? ['--no-build'] : ['--build']), '--wait'], composeEnv);
   const testEnv = {
     ...composeEnv,
     E2E_BASE_URL: `http://127.0.0.1:${appPort}`,
     E2E_MAILPIT_URL: `http://127.0.0.1:${mailpitPort}`,
     E2E_COMPOSE_PROJECT: projectName
   };
-  run(process.execPath, [playwrightCli, 'test', ...process.argv.slice(2)], testEnv);
+  const selection=process.argv.slice(2);
+  testEnv.E2E_FULL_SUITE=String(selection.length===0 || selection.every(arg=>/^--workers=\d+$/.test(arg)));
+  // Concurrent audit runs must not delete each other's traces in Playwright's output cleanup.
+  run(process.execPath, [playwrightCli, 'test', '--output', path.join('test-results', projectName), ...process.argv.slice(2)], testEnv);
 } catch (error) {
   failed = true;
   console.error(error.message);

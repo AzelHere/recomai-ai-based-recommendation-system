@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -28,6 +29,22 @@ public class RecommendationController {
         this.sessionAccess = sessionAccess;
     }
 
+    public record ExplorationPreference(java.math.BigDecimal value) {}
+
+    @GetMapping("/exploration")
+    public ExplorationPreference exploration(HttpServletRequest request) {
+        return new ExplorationPreference(java.math.BigDecimal.valueOf(
+                recommendationService.exploration(sessionAccess.requireUserId(request))));
+    }
+
+    @org.springframework.web.bind.annotation.PutMapping("/exploration")
+    public ResponseEntity<Void> updateExploration(
+            @org.springframework.web.bind.annotation.RequestBody ExplorationPreference preference,
+            HttpServletRequest request) {
+        recommendationService.updateExploration(sessionAccess.requireUserId(request), preference.value());
+        return ResponseEntity.noContent().build();
+    }
+
     @PostMapping
     public ResponseEntity<List<PersonalizedRecommendation>> generate(
             @RequestParam(defaultValue = "10") int limit,
@@ -43,6 +60,18 @@ public class RecommendationController {
             @RequestParam(defaultValue = "10") int limit,
             HttpServletRequest request) {
         return recommendationService.getLatestForUser(sessionAccess.requireUserId(request), limit);
+    }
+
+    @PostMapping("/{recommendationId}/impression")
+    public ResponseEntity<Void> recordImpression(@PathVariable long recommendationId, HttpServletRequest request) {
+        recommendationService.recordImpression(sessionAccess.requireUserId(request), recommendationId);
+        return ResponseEntity.noContent().build();
+    }
+
+    @PostMapping("/{recommendationId}/click")
+    public ResponseEntity<Void> recordClick(@PathVariable long recommendationId, HttpServletRequest request) {
+        recommendationService.recordClick(sessionAccess.requireUserId(request), recommendationId);
+        return ResponseEntity.noContent().build();
     }
 
     @GetMapping("/discovery")

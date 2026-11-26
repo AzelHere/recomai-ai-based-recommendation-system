@@ -1,0 +1,1434 @@
+{
+  "recordedAt": "2026-11-26T13:38:22.108810+00:00",
+  "head": "34094b6f8c4c79847d84d14ed010d8515ffc7cbd",
+  "branch": "master",
+  "remote": "https://github.com/FaizAhmad-0786/recomai-ai-based-recommendation-system.git",
+  "status": "M .dockerignore\n M .env.example\n M .gitignore\n M Dockerfile\n M README.md\n M backend/pom.xml\n M backend/src/main/java/com/guvi/recommendationsystem/controller/AdminAnalyticsController.java\n M backend/src/main/java/com/guvi/recommendationsystem/controller/AdminSettingsController.java\n M backend/src/main/java/com/guvi/recommendationsystem/controller/ItemController.java\n M backend/src/main/java/com/guvi/recommendationsystem/controller/RecommendationController.java\n M backend/src/main/java/com/guvi/recommendationsystem/controller/UserCollectionController.java\n M backend/src/main/java/com/guvi/recommendationsystem/dao/AdminAnalyticsDao.java\n M backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcAdminAnalyticsDao.java\n M backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcAdminSettingsDao.java\n M backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcItemDao.java\n M backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcRecommendationDao.java\n M backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcUserCollectionDao.java\n M backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcUserDao.java\n M backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcUserPreferenceDao.java\n M backend/src/main/java/com/guvi/recommendationsystem/dao/RecommendationDao.java\n M backend/src/main/java/com/guvi/recommendationsystem/dao/UserCollectionDao.java\n M backend/src/main/java/com/guvi/recommendationsystem/dao/UserDao.java\n M backend/src/main/java/com/guvi/recommendationsystem/dao/UserPreferenceDao.java\n M backend/src/main/java/com/guvi/recommendationsystem/model/AdminSystemSettings.java\n M backend/src/main/java/com/guvi/recommendationsystem/model/CatalogItem.java\n M backend/src/main/java/com/guvi/recommendationsystem/model/CatalogSort.java\n M backend/src/main/java/com/guvi/recommendationsystem/model/ItemDifficulty.java\n M backend/src/main/java/com/guvi/recommendationsystem/recommendation/ContentFeatureScorer.java\n M backend/src/main/java/com/guvi/recommendationsystem/recommendation/RecommendationEngine.java\n M backend/src/main/java/com/guvi/recommendationsystem/recommendation/ScoringRecommendationEngine.java\n M backend/src/main/java/com/guvi/recommendationsystem/service/AdminAnalyticsService.java\n M backend/src/main/java/com/guvi/recommendationsystem/service/AdminSettingsService.java\n M backend/src/main/java/com/guvi/recommendationsystem/service/CategoryService.java\n M backend/src/main/java/com/guvi/recommendationsystem/service/InteractionService.java\n M backend/src/main/java/com/guvi/recommendationsystem/service/InterestService.java\n M backend/src/main/java/com/guvi/recommendationsystem/service/ItemInterestService.java\n M backend/src/main/java/com/guvi/recommendationsystem/service/ItemService.java\n M backend/src/main/java/com/guvi/recommendationsystem/service/RecommendationService.java\n M backend/src/main/java/com/guvi/recommendationsystem/service/ResetMailDelivery.java\n M backend/src/main/java/com/guvi/recommendationsystem/service/UserCollectionService.java\n M backend/src/main/java/com/guvi/recommendationsystem/service/UserDataService.java\n M backend/src/main/java/com/guvi/recommendationsystem/web/ApiExceptionHandler.java\n M backend/src/main/java/com/guvi/recommendationsystem/web/RequestContextFilter.java\n M backend/src/main/resources/catalog/curated-resources.tsv\n M backend/src/test/java/com/guvi/recommendationsystem/controller/AdminAnalyticsControllerWebTest.java\n M backend/src/test/java/com/guvi/recommendationsystem/controller/AdminSettingsControllerWebTest.java\n M backend/src/test/java/com/guvi/recommendationsystem/controller/HealthControllerWebTest.java\n M backend/src/test/java/com/guvi/recommendationsystem/controller/ItemAdminControllerWebTest.java\n M backend/src/test/java/com/guvi/recommendationsystem/controller/RecommendationControllerWebTest.java\n M backend/src/test/java/com/guvi/recommendationsystem/dao/JdbcRecommendationDaoTest.java\n M backend/src/test/java/com/guvi/recommendationsystem/recommendation/ContentFeatureScorerTest.java\n M backend/src/test/java/com/guvi/recommendationsystem/recommendation/ScoringRecommendationEngineTest.java\n M backend/src/test/java/com/guvi/recommendationsystem/service/RecommendationServiceTest.java\n M database/schema-reference.sql\n M e2e/recomai-user-journey.spec.js\n M frontend/assets/hero-poster.svg\n M frontend/css/styles.css\n M frontend/index.html\n M frontend/js/app.js\n M package-lock.json\n M package.json\n M playwright.config.js\n M scripts/test-e2e-isolated.mjs\n?? .chart-data-AQLTey/\n?? .chart-data-DvDRnb/\n?? .chart-data-E45at8/\n?? .chart-data-MhrifQ/\n?? .chart-data-mc2FLM/\n?? .chart-data-ps3HXz/\n?? .chart-data-v9dsu1/\n?? RecomAI-2.0-Final-Submission.zip.sha256\n?? RecomAI-Article-Integration-Deliverables.zip.sha256\n?? backend/src/main/java/com/guvi/recommendationsystem/catalog/\n?? backend/src/main/java/com/guvi/recommendationsystem/controller/CatalogQueryController.java\n?? backend/src/main/java/com/guvi/recommendationsystem/controller/LearningJourneyController.java\n?? backend/src/main/java/com/guvi/recommendationsystem/controller/WorkspaceController.java\n?? backend/src/main/java/com/guvi/recommendationsystem/evaluation/\n?? backend/src/main/java/com/guvi/recommendationsystem/exception/UpdateConflictException.java\n?? backend/src/main/java/com/guvi/recommendationsystem/model/RecommendationEngagementMetrics.java\n?? backend/src/main/java/com/guvi/recommendationsystem/service/AdminCatalogService.java\n?? backend/src/main/java/com/guvi/recommendationsystem/service/AdminWriteService.java\n?? backend/src/main/java/com/guvi/recommendationsystem/service/LearningJourneyService.java\n?? backend/src/main/java/com/guvi/recommendationsystem/service/ProductionConfigurationGuard.java\n?? backend/src/main/java/com/guvi/recommendationsystem/service/WorkspaceReadService.java\n?? backend/src/main/java/com/guvi/recommendationsystem/web/SameOriginMutationFilter.java\n?? backend/src/main/resources/application-production.properties\n?? backend/src/main/resources/db/migration/V12__recommendation_impressions.sql\n?? backend/src/main/resources/db/migration/V13__user_exploration.sql\n?? backend/src/main/resources/db/migration/V14__workspace_integrity.sql\n?? backend/src/main/resources/db/migration/V15__persistent_learning_journeys.sql\n?? backend/src/main/resources/db/migration/V16__verified_catalog_ingestion.sql\n?? backend/src/main/resources/db/migration/V17__repair_verified_learning_links.sql\n?? backend/src/main/resources/db/migration/V18__reviewed_article_sources.sql\n?? backend/src/test/java/com/guvi/recommendationsystem/catalog/\n?? backend/src/test/java/com/guvi/recommendationsystem/dao/ContentCacheConcurrencyTest.java\n?? backend/src/test/java/com/guvi/recommendationsystem/evaluation/\n?? backend/src/test/java/com/guvi/recommendationsystem/recommendation/BaselineScoringRecommendationEngine.java\n?? backend/src/test/java/com/guvi/recommendationsystem/recommendation/Phase3RankingEvaluationTest.java\n?? backend/src/test/java/com/guvi/recommendationsystem/service/LearningJourneyPolicyTest.java\n?? backend/src/test/java/com/guvi/recommendationsystem/service/ProductionConfigurationGuardTest.java\n?? backend/src/test/java/com/guvi/recommendationsystem/web/SameOriginMutationFilterTest.java\n?? data/\n?? design-audit/\n?? docker-compose.audit-image.yml\n?? docker-compose.production.yml\n?? docs/candidate-query-experiment.md\n?? docs/deployment/\n?? docs/offline-evaluation.md\n?? docs/performance-benchmark.md\n?? docs/release/\n?? docs/screenshots/for-you.png\n?? docs/screenshots/journeys.png\n?? docs/screenshots/landing.png\n?? docs/technical/\n?? e2e/account-admin.spec.js\n?? e2e/account-fixture.js\n?? e2e/capture-pages.spec.js\n?? e2e/design-audit.spec.js\n?? e2e/landing-explore-redesign.spec.js\n?? e2e/learning-workspace.spec.js\n?? e2e/more-menu.spec.js\n?? e2e/onboarding-diagnostics.spec.js\n?? e2e/onboarding-helper.js\n?? e2e/personalization.spec.js\n?? e2e/phase3-api.spec.js\n?? e2e/phase3-capture.js\n?? e2e/phase3-workspace.spec.js\n?? e2e/phase35-real-data.spec.js\n?? e2e/phase4-contrast.js\n?? e2e/phase4-hardening.spec.js\n?? e2e/phase4-rendering.spec.js\n?? e2e/phase4-visual.spec.js\n?? e2e/premium-refinement-functional.spec.js\n?? e2e/premium-refinement-screenshots.spec.js\n?? e2e/premium-refinement.spec.js\n?? e2e/product-experience-functional.spec.js\n?? e2e/product-experience-screenshots.spec.js\n?? e2e/recomai-2-experience.spec.js\n?? e2e/zz-article-integration.spec.js\n?? frontend/assets/favicon.svg\n?? frontend/assets/fonts/\n?? frontend/css/account-command.css\n?? frontend/css/journeys.css\n?? frontend/css/learning-workspace.css\n?? frontend/css/premium-graphite.css\n?? frontend/js/modules/catalog-ingestion.js\n?? frontend/js/modules/landing-demo.js\n?? frontend/js/modules/learning-constellation.js\n?? frontend/js/modules/personalization.js\n?? frontend/js/modules/recommendation-workspace.js\n?? frontend/js/modules/resource-artwork.js\n?? frontend/js/modules/rising-lines.js\n?? frontend/js/vendor/\n?? recomai-2-phase-4-deliverables.sha256\n?? recomai-2-phase-5-deliverables.zip.sha256\n?? scripts/article-document-qa.py\n?? scripts/article-preservation.mjs\n?? scripts/benchmark.py\n?? scripts/build-article-presentation.mjs\n?? scripts/build-phase-2c-audit.py\n?? scripts/build-phase-3-5-audit.py\n?? scripts/build-phase-3-audit.py\n?? scripts/build-phase4-audit.py\n?? scripts/build-phase5-presentation.mjs\n?? scripts/build-phase5-submission.py\n?? scripts/candidate_experiment.py\n?? scripts/evaluate-imported-catalog.mjs\n?? scripts/finalize-article-reports.mjs\n?? scripts/finalize-phase5-reports.py\n?? scripts/import-articles-local.mjs\n?? scripts/package-article-integration.py\n?? scripts/package-phase5.py\n?? scripts/phase-3-5-local-import.mjs\n?? scripts/phase-3-5-migrations.mjs\n?? scripts/phase-3-measure.mjs\n?? scripts/phase-3-migrations.mjs\n?? scripts/phase-3-performance-compare.mjs\n?? scripts/phase4-backup-restore.mjs\n?? scripts/phase4-data-audit.mjs\n?? scripts/phase4-database-audit.mjs\n?? scripts/phase4-dependency-audit.mjs\n?? scripts/phase4-link-audit.mjs\n?? scripts/phase4-local-preservation.mjs\n?? scripts/phase5-document-qa.py\n?? scripts/phase5-inspect.mjs\n?? scripts/phase5-repository-audit.py\n?? scripts/phase5_academic_documents.py\n?? scripts/phase5_viva_content.py\n?? scripts/render-article-documents.ps1\n?? scripts/render-article-presentation.ps1\n?? scripts/render-phase5-documents.ps1\n?? scripts/render-phase5-presentation.ps1\n?? scripts/report_candidate_experiment.py\n?? scripts/test-offline-evaluation.ps1\n?? scripts/test_benchmark.py\n?? scripts/test_candidate_experiment.py\n?? scripts/update-article-documents.py\n?? scripts/verify-articles-live.mjs\n?? scripts/verify-landing-layout.mjs",
+  "files": [
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/RecommendationSystemApplication.java",
+      "bytes": 506,
+      "sha256": "2dd4c98b69b1399605d123bba17659ccdff94ab9ba700396e6a3a4ad0da91f2f"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/catalog/ArticleAcquisition.java",
+      "bytes": 15894,
+      "sha256": "3142c9188f49037796a6c09eb23207160fe5f3e33046768d49d13fde29d6e153"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/catalog/ArticleAvailabilityImport.java",
+      "bytes": 3139,
+      "sha256": "5cf4a6137d55ac2a2c7d5bd942d386ea071cecb96c50b4a089135ab92e08ca53"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/catalog/CatalogImported.java",
+      "bytes": 95,
+      "sha256": "4cddaaf6b1ec3955e638fe5c7992314fa34ded3ecdd13eb7a0436139576f87d1"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/catalog/CatalogIngestionService.java",
+      "bytes": 13329,
+      "sha256": "fdcdea1eba695729166de02bb5ab3dee9379595ee30303d434b25ddfe538fa73"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/catalog/CatalogMaintenance.java",
+      "bytes": 3838,
+      "sha256": "54439a130b5c936c000af57b629d35e1e335d1eba6dc27bdf465b38db38bc744"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/catalog/EducationalResource.java",
+      "bytes": 1562,
+      "sha256": "c79e1ec7749e8e48aae86d259f0369d0ccb6dc1ba1ae58d31921f167839e2e5b"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/catalog/IngestionBodyLimit.java",
+      "bytes": 1585,
+      "sha256": "5fe3f9f3087d79fa5dce5500aa63baaafa09eedbe704d400558024543e82fee7"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/catalog/IngestionController.java",
+      "bytes": 1831,
+      "sha256": "680e7f600c93f5e1101635d0da3c860138b76827bec9f0cf91fbdf3a0d813bfe"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/catalog/RealDataAcquisition.java",
+      "bytes": 12993,
+      "sha256": "d92d1305f5e4042341e1b525a0d92c1e15c9c66928ed3fa517dafbfcdbf169d9"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/catalog/SourceHttp.java",
+      "bytes": 6168,
+      "sha256": "a820797375bbff6d7508ed6f14ea1682b05932b2ddcdf2f9c1f1011aa0da995b"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/catalog/ValidateSourceSample.java",
+      "bytes": 2164,
+      "sha256": "010109aee9d2913b8eecd19f407497289c7ffab4bc890cc09ecdd6add9458dbe"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/catalog/VerifiedCatalogImport.java",
+      "bytes": 2695,
+      "sha256": "2c12cac4662c153b303090a97063c6ba6db2abc3292525e2e40653490b8bd524"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/AdminAnalyticsController.java",
+      "bytes": 1829,
+      "sha256": "27da5913b7b5eaae58f33b7d45d18574bcba95e05e8f9ecb99b2603e5d779ec9"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/AdminSettingsController.java",
+      "bytes": 2152,
+      "sha256": "5a11af573b5b3ef33d506edad9da245048c03b9ecd99e7bb876bb80fbf1a6147"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/AuthController.java",
+      "bytes": 3817,
+      "sha256": "870e01458c688c9dd18dc526f1ae426a73af99a8690938f9d0c7d5c8952b80c1"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/CatalogQueryController.java",
+      "bytes": 1232,
+      "sha256": "180fbbc5ddea6df27ef8776935b416ee42e780f5bf3e6b49fb3afeb187d0218b"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/CategoryController.java",
+      "bytes": 3149,
+      "sha256": "1f5548e3c53980a3d2f7a2be925085d334eba3729d2da1bb659f82420b82a760"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/DiscoveryController.java",
+      "bytes": 2239,
+      "sha256": "323f537b7e28d3faeb68fa8444b544288f73ba301c1efaf066f00c52a37ae2c3"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/FeedbackController.java",
+      "bytes": 2044,
+      "sha256": "9908cf94cf9ee000499554d2c132e86455e09b9cee3be0a0119782bbdde4acf8"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/HealthController.java",
+      "bytes": 650,
+      "sha256": "167b69ba3283bbf1d86bb611005803712d67e100981c16974c7f08f2beed107c"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/InteractionController.java",
+      "bytes": 2889,
+      "sha256": "ad0438c3e7a68efd118c61f1070b04ed39f36e787a7b099dfe862ffcd9dbeb42"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/InterestController.java",
+      "bytes": 4409,
+      "sha256": "bac534ca1abf646b19a9a0014ec606d146c22bf2c622f50176d7e093fafe411b"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/ItemController.java",
+      "bytes": 6682,
+      "sha256": "2b822a3b944a699e9e3801fdcce5cd610380736323bd8e7c6f4d8bedda84dc1b"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/LearningJourneyController.java",
+      "bytes": 2210,
+      "sha256": "829b0b00d7d46869bf9666024b7fc780209d0da7fa0da6fe9e1f4ac920c9bf0a"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/RecommendationController.java",
+      "bytes": 3827,
+      "sha256": "2cc4aebeee71edb859ffc3d706c5ea2c80a2a8cdeec68f2ca8b3e8255d93645c"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/RecommendationInfoController.java",
+      "bytes": 1156,
+      "sha256": "0447cc34e82c28d41f96d97f2cf89dcb41ca79ea904e3e2775629741ab2a7333"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/UserCollectionController.java",
+      "bytes": 2362,
+      "sha256": "a05b30b41a44bb2da064a44d6ff78a588fef66baa77e04581175883169e4a1b3"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/UserController.java",
+      "bytes": 4913,
+      "sha256": "fabe81249229f140e7c28acd27edad39eaf3befa3f60e4874736ae8f7b17f9f9"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/UserDataController.java",
+      "bytes": 1721,
+      "sha256": "68a3b9d04282880c99976b62959dd12266767a8f9b3a375d6b4af49d897c14e4"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/WorkspaceController.java",
+      "bytes": 1561,
+      "sha256": "a925f20590fe0858f8bf5fb30eed9e7209e48c92553fb2fc7f3a3909cd2fb2bc"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/AdminAnalyticsDao.java",
+      "bytes": 477,
+      "sha256": "e93f3c1888cfe61730ab4fcd3d16d26f3abba66a7aae67ddc71a538ab5181e64"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/AdminSettingsDao.java",
+      "bytes": 425,
+      "sha256": "721615ed7f66130d58c965ae9ff5b27cabc72c40dd23cdf51463ad6c5cc833c9"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/CategoryDao.java",
+      "bytes": 568,
+      "sha256": "a37ce67aa688e46ef8d1b868614b1c894b849078995dd87d4492df9ed55d3525"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/FeedbackDao.java",
+      "bytes": 448,
+      "sha256": "488ada2a70fb41104f10a898c21aa17e690f2be2d735cc567cca09c2b892981f"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/InteractionDao.java",
+      "bytes": 885,
+      "sha256": "187101482a4cc480b1b428456f75708dcfcbd71b8c5ea8f04258e70f9e309426"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/InterestDao.java",
+      "bytes": 482,
+      "sha256": "fd4b75222d6072b7a4b26e0219039d55ecd1e86ac00655451110427cdab293c6"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/ItemDao.java",
+      "bytes": 1640,
+      "sha256": "715287f73aa1ad624ce14d264dc13f948f06915992d194e991d818bf341d435c"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/ItemInterestDao.java",
+      "bytes": 226,
+      "sha256": "4c67e91527412d07f27f3aebe3ada498df95d25a2db63fa6040a93335265db9f"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcAdminAnalyticsDao.java",
+      "bytes": 6130,
+      "sha256": "cbd41738200b4bc3d1fc7228eacab4ed89b8677bf5d0f7b24e67a4f0cf13ec55"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcAdminSettingsDao.java",
+      "bytes": 2824,
+      "sha256": "a7f65ecbc55ee25f10cc117877fbfa81f3e498e09b2d54e39e34b743901f5a54"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcCategoryDao.java",
+      "bytes": 4130,
+      "sha256": "c8f5d8e30044b48f60255ba2f1e6731c43753fe4635484aa7a8f0c3699966b38"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcFeedbackDao.java",
+      "bytes": 3326,
+      "sha256": "08b0065a32f16b84cfd0d813aa7554f006f34c891b243597d6570cb5f3fa0abf"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcInteractionDao.java",
+      "bytes": 7603,
+      "sha256": "711953bdb9274129ca6271693764943b70a1822dceda3a1b77c2395c361434da"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcInterestDao.java",
+      "bytes": 3459,
+      "sha256": "80a2745bcac6c276db825f10851184b74cc5527012c036ae3060c5e0086e6d51"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcItemDao.java",
+      "bytes": 20429,
+      "sha256": "348c5448ed0302b6af9ffe6b3ffef5a91a121c311fe9c6b0b459b69c1ff48398"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcItemInterestDao.java",
+      "bytes": 1008,
+      "sha256": "c75bbf537c5c5de76110c9472cd498ffb4ca95d809cda0575296e7d5c49c0247"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcOnboardingDao.java",
+      "bytes": 7125,
+      "sha256": "4d892c7fb652a67c449c441f737a1547f25501f205c533f766ae1d66788a2b83"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcPasswordResetDao.java",
+      "bytes": 3145,
+      "sha256": "d7e6bd721ef9ece1456277a4475518733ab49005361e4f502e488dfb88f4be41"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcRecommendationDao.java",
+      "bytes": 31104,
+      "sha256": "dc0f922505f7f9e322da15716beb355d4b602199a64c4dc339b05a5ed6efb4d1"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcUserCollectionDao.java",
+      "bytes": 3276,
+      "sha256": "da1161d9bf9f0a1f43c5175d5c933e6b019fb45f2335f4f8bff619ba98b786c9"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcUserDao.java",
+      "bytes": 4129,
+      "sha256": "ba529eee877268e4e6f822b15b2661ae16f9f8f4dc9fbf2f0414a93b24c75b1e"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcUserInterestDao.java",
+      "bytes": 1788,
+      "sha256": "6c49d49ce174f8245097626d74442d193567e113fa2b7837cf13e41168a2b5d3"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcUserPreferenceDao.java",
+      "bytes": 2298,
+      "sha256": "612f8a8c4a9c9573e26e405bfaf9c6a75750edb9063a9843275ebeb6b0b8d50c"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcUserSignalSummaryDao.java",
+      "bytes": 891,
+      "sha256": "e60fa48bca3fe8b704cf97dbf21d654e505687aa0978bd998b47d791eaa9f3f6"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcUserTopicPreferenceDao.java",
+      "bytes": 12209,
+      "sha256": "d4b24d55e2c8a4f5622ad02dc1290fde48a5748a4a79434a7590c544ade5a5c2"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/OnboardingDao.java",
+      "bytes": 617,
+      "sha256": "fa269e6d14ea5164cf83693ff4f95bc66720f2780562598536e96061df569350"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/PasswordResetDao.java",
+      "bytes": 513,
+      "sha256": "731abdbc76b377c81729477a5a4afba129fcd7fb7c3267d25f7ccbad7f2c85b0"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/RecommendationDao.java",
+      "bytes": 780,
+      "sha256": "7484de745d6fca824111f185b166716d5ffe7ef277b159cd3942c76d5d36d5a0"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/SearchTerms.java",
+      "bytes": 938,
+      "sha256": "d0debecd1f1bc62d2e13ab8c37fb245e6c65422c51567e65acb8aa363c9187ae"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/UserCollectionDao.java",
+      "bytes": 595,
+      "sha256": "48a06c98d3eea86daf427c860b36f4d676878d8f41f4de8034296a24313660ad"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/UserDao.java",
+      "bytes": 608,
+      "sha256": "73542c54b53d9efd4d51893b1629ed6cd69c3c604331ddb8bfd4c2729f5b5b38"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/UserInterestDao.java",
+      "bytes": 358,
+      "sha256": "6443a2e87364a1a9f809755daf37f9e64c1abd2bbf15a60cc47cfb5ab5de8677"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/UserPreferenceDao.java",
+      "bytes": 452,
+      "sha256": "001df8bb178ab88a52a7f2f4dab6b6539cea7ab89dd826baae4db1107e839f0a"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/UserSignalSummaryDao.java",
+      "bytes": 165,
+      "sha256": "025dac32dd94f3e236f3843175d4f452a1f4bc476c64c1043f07716ce416b97f"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/UserTopicPreferenceDao.java",
+      "bytes": 497,
+      "sha256": "1781e87d221b89b8902d3ac93732849bd1062b2adb4d6ce75c61c8988d9834b2"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/evaluation/Evaluation.java",
+      "bytes": 3610,
+      "sha256": "50a4407f294553e7be24c6174503648ecc67d725630304591b2fcf6202aeb56f"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/evaluation/MigrationVerification.java",
+      "bytes": 3665,
+      "sha256": "27a24819847a027cf9805571f6e2f45d2049a7810a78afdbf95a3f5d3dfe4b0d"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/evaluation/OfflineEvaluation.java",
+      "bytes": 6592,
+      "sha256": "a25ca9e96f7bb6efef74591ee3ed85362b5e7a70651c9516aee8de5b0f844de7"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/evaluation/OuladEvaluation.java",
+      "bytes": 6337,
+      "sha256": "090d04b675871af14461f601cafce2dd5fbe3833fb5dfab6c11584cf3cce5c16"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/evaluation/Phase35MigrationVerification.java",
+      "bytes": 8701,
+      "sha256": "9706d03630778ca429b153659cb2328f4d16aa2a1344f00df582d3101cbe604a"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/evaluation/RealCatalogEvaluation.java",
+      "bytes": 6740,
+      "sha256": "0b5cd5aa672ba32c58b21280622a354eb8b944b7b135d0e78e63bb7ab34e4cc0"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/exception/CategoryInUseException.java",
+      "bytes": 251,
+      "sha256": "506010059c1aea1f8b6b67cad423260fb2d327c8101561e083d291025b395e17"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/exception/CategoryNotFoundException.java",
+      "bytes": 257,
+      "sha256": "908df69351b381a2f3dfec73c76ea38bab5f29ec08c7ff11fd068e4fdbb9b208"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/exception/DuplicateCatalogEntryException.java",
+      "bytes": 267,
+      "sha256": "387f09e23ee8c814d121ee539cf8eeb5db8b7690ac8dbb10c63cc7c0efa4198e"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/exception/DuplicateUserException.java",
+      "bytes": 251,
+      "sha256": "36156b45f369fca8a5baba92ef34095cf3112f78ca1a1b7ac4c78591916a0a83"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/exception/FeedbackNotFoundException.java",
+      "bytes": 257,
+      "sha256": "9bb5ca6c691c0d053c49dcd4926198f6c94537f6278d67d35c1766eead887677"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/exception/ForbiddenRequestException.java",
+      "bytes": 257,
+      "sha256": "c75e693ffd7a505d24cc42091b9ac1b78989dac85e8e2b9ec87f2b0a4581944a"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/exception/InterestNotFoundException.java",
+      "bytes": 257,
+      "sha256": "ba7644fb6074eac40705681d651a2254977561fb4a33dba8b53ed47147b460ad"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/exception/InvalidUserInputException.java",
+      "bytes": 257,
+      "sha256": "95f67a0335d8ea8676b5df38fefd46cf9ae3815410bd3527b4e6c739986b308e"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/exception/ItemNotFoundException.java",
+      "bytes": 249,
+      "sha256": "c7bb0b19bcde813bcf056741097c170f24a1fa35a9306bace454070d80e2505c"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/exception/RecommendationNotFoundException.java",
+      "bytes": 269,
+      "sha256": "decc7c5a25b3e8a49a6b8c2d51da534f0f09323659adf1d300ba7dc8689a99e6"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/exception/UnauthorizedRequestException.java",
+      "bytes": 263,
+      "sha256": "91b8c3cd304262e382116d81c237a297809e55fd0ea42eb0582038c170a96b8c"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/exception/UpdateConflictException.java",
+      "bytes": 187,
+      "sha256": "7919ff3857027d3730aa334330fda50c69a7fe33431727d1b50bcd00d429bd49"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/exception/UserNotFoundException.java",
+      "bytes": 249,
+      "sha256": "ceb3991dece1804f47fac7908a45a36fb1ac03c857b812666fd52be643b6dbb3"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/ActiveStatusRequest.java",
+      "bytes": 100,
+      "sha256": "d19b788dfb8915ae7797108ea438916a07dde3a0a4ba81812992899bd0054325"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/AdminDashboardSummary.java",
+      "bytes": 338,
+      "sha256": "2dd4617c2036c3027da07287b9e5e112495396b510cfad7196fc2cda64f74f7b"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/AdminRecommendationInsights.java",
+      "bytes": 431,
+      "sha256": "5146413052bd9683ea65777a53ed55af53687bdc033b0cbf08da218b5a844463"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/AdminSettingsAuditEntry.java",
+      "bytes": 310,
+      "sha256": "e3a879a5b2393d7267fd8acb76e05ec090c5fd9cae1b3b75d5f1b7e900c06b64"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/AdminSettingsPreviewRequest.java",
+      "bytes": 261,
+      "sha256": "c0b9c13f1b6bc31b4e7a23363dfd5b7fc48e4d2f9e95a3105d90d462c934d5f8"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/AdminSettingsUpdateRequest.java",
+      "bytes": 240,
+      "sha256": "baa19f71991832d80972bba39e231cc56154967684de3b3e91a5ce1a4309b974"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/AdminSystemSettings.java",
+      "bytes": 490,
+      "sha256": "c26830e0fb518fc242637588b36e7b844b36aef1c7ff04af3e020a8574782537"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/BulkActiveStatusRequest.java",
+      "bytes": 148,
+      "sha256": "00d5ab031cfe9120b8bf6d060f713073659259cef173a85bbc1976adbff25094"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/BulkActiveStatusResult.java",
+      "bytes": 100,
+      "sha256": "b2180bf748f0e93d4ff43896a1cd8a3370ff738e3b1199aec58d1af00401a04a"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/CatalogCsvImportResult.java",
+      "bytes": 122,
+      "sha256": "e3f107dfc41d88b5d03e21c8c5f95e85f8fc538917f09bf5b4402eda352234b1"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/CatalogCsvPreview.java",
+      "bytes": 276,
+      "sha256": "c594bbb7e4a5d151ef789f77d7b9716247d4d722c1d6f9356b88ced6a71b64a6"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/CatalogCsvRequest.java",
+      "bytes": 94,
+      "sha256": "2bbeeed75fc8f8a4431b482da703b68caee30b5d8865d121a742c27888a53247"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/CatalogItem.java",
+      "bytes": 2177,
+      "sha256": "1fe16620a29b831cba280efc8846c1cbea3db71cb330dfe0a56dc0da75b04d61"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/CatalogPage.java",
+      "bytes": 176,
+      "sha256": "0809b18be46fe70dbaf307868a16548dd75d0378ca2a3456d621ddfed0409530"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/CatalogSort.java",
+      "bytes": 147,
+      "sha256": "148fa646750ba1f8004719440e96573c937d7585afd1b653555d405494e3d3a1"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/Category.java",
+      "bytes": 453,
+      "sha256": "fe307653775aa472b31e32ba2295d63285bb4ee73cbf66bb6fd3c97d6e783bf9"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/CategoryInsight.java",
+      "bytes": 136,
+      "sha256": "6fde49f15d30e12cb18c77b1c3353647a1af249669d35d044ec7e75f1694d1c0"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/CategoryRequest.java",
+      "bytes": 113,
+      "sha256": "d940fc907e76daba6df55dc30b1f11f999563b69123f0d4244628590511ee304"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/DisplayNameUpdateRequest.java",
+      "bytes": 109,
+      "sha256": "76ff11b223cf60cd7cc5d48b5d98c0c7585b56b02d1aca8e52847b0de75b7708"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/Feedback.java",
+      "bytes": 284,
+      "sha256": "2921a1dab7372762b5b491672bc525547716ed74cd133331e893225ebebb36d8"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/FeedbackRequest.java",
+      "bytes": 125,
+      "sha256": "ba78ba88a26a19e95b33b2faf215ed1437c60f65187d5c8feff69ff4115224b7"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/Interaction.java",
+      "bytes": 490,
+      "sha256": "5f4f7dda0dbb40ba706d3ab76b2a528953044974e95e895e68a81f90262b49b7"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/InteractionType.java",
+      "bytes": 569,
+      "sha256": "3ea48e59da67708804952f464cdc83699778ca135ebe3459cdd03e29e3ed45df"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/InteractionWriteResult.java",
+      "bytes": 129,
+      "sha256": "e0229e0f31770610215fe4a082dbfc4668cc6a04d7019e7f1dee51e5f58e3af7"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/Interest.java",
+      "bytes": 243,
+      "sha256": "2c45717b1e963f6dc42b41f1e514c45b8a01e8e874da3e728b0e34bef873d504"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/InterestInsight.java",
+      "bytes": 253,
+      "sha256": "e37c90963f37edd4ff021c79fd78dd742090882bf4c6fc748bf337991556ea57"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/InterestProfile.java",
+      "bytes": 267,
+      "sha256": "6576148c4479b6a2b1b3fe735b2a34c57c51c7d9839c9d58d26237c36244ad55"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/InterestRequest.java",
+      "bytes": 93,
+      "sha256": "6696fa72660c4009de50c1d6ade91416d36735009195a7be63f0303817a667c6"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/InterestWeightRequest.java",
+      "bytes": 135,
+      "sha256": "5aefdb05cf213475eba45d1393efe8f1a4a6c390720005b568b1912cc194d0d6"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/ItemDifficulty.java",
+      "bytes": 151,
+      "sha256": "665dc85181abe866389d2e08cffc9dca24604e198619eb6e5a64be8d34a4fc36"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/ItemInsight.java",
+      "bytes": 136,
+      "sha256": "961c3e8d15d0200319273e99f2429c8e4c36947f5a9e9c0cd275fcf080135428"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/ItemRequest.java",
+      "bytes": 1163,
+      "sha256": "59264cf11b9a4d42af33b411c7d6db23604e407e95574f696e87e433eb74f0ba"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/ItemType.java",
+      "bytes": 210,
+      "sha256": "7d0895f59b3142847ff10e29155f1dd73ea648afd9160caf837893474e99269b"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/LoginRequest.java",
+      "bytes": 108,
+      "sha256": "42665fd4ea240353b46acea07465c6ada1ac8ee2b6af35b1df65e2257586e960"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/NicheOption.java",
+      "bytes": 169,
+      "sha256": "4eb16049e6a44186f55a17797fbff7a41f330d0a5ae974127ed79fee6234717a"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/OnboardingPurpose.java",
+      "bytes": 135,
+      "sha256": "eca2480a6930196d2400adbf00193a85f64b3fd6fe2c2a59751459fec682c4c4"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/OnboardingRequest.java",
+      "bytes": 174,
+      "sha256": "11f2ff38fefaaa16242626781cb5a1bd741423d2a00e1d81a9aaa9c9c1cd8121"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/OnboardingStatus.java",
+      "bytes": 237,
+      "sha256": "b6cea8526df257df142fdcf348a2c0db074ee12e6f758b59e05b811e33f94445"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/PasswordResetCompletionRequest.java",
+      "bytes": 150,
+      "sha256": "adb9c82543111b022d12056427eb710a8fba237d5eefa25687d97bd4669ac920"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/PasswordResetRequest.java",
+      "bytes": 99,
+      "sha256": "05b1116b3fd7aaad95b4f182324ad94683938621c2dbef901984dfdc705ce1b2"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/PersonalizedRecommendation.java",
+      "bytes": 1378,
+      "sha256": "40a62848cf7f5b56485de9665ce2a46d75e9831ba06856a72c49e9a4f05c9afa"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/PreferenceWeightRequest.java",
+      "bytes": 137,
+      "sha256": "df914d1e9d7d85e5695d6dbceb91e5f3774a40a008339bff81d9299ac5287c2f"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/RecommendationCandidate.java",
+      "bytes": 4903,
+      "sha256": "adf2eb6ba938f1452dfa5d9b4d8c40176ce35c741c8cbf0b5637522f234b726e"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/RecommendationDraft.java",
+      "bytes": 909,
+      "sha256": "3fc71fe03585d6d3318b2ee1546cad74ded90627bf16b44dda9f6111e711553b"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/RecommendationEngagementMetrics.java",
+      "bytes": 344,
+      "sha256": "58303837b6195220e99fcde3830f542067d138a55590ed119861b91ce4cbbbc5"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/RecommendationInfo.java",
+      "bytes": 459,
+      "sha256": "5a0ddc69389dcf51ca51739e53ceefe02eac76ed18bcc5edf119eb08e414d98c"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/RecommendationProfile.java",
+      "bytes": 287,
+      "sha256": "01514f8ef29b60739a42deaa1d4214566db8e1ac69a40a15d4372639ddd534ee"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/RegisterUserRequest.java",
+      "bytes": 152,
+      "sha256": "b6653f2f621147611dee2f8a80fdfd3673da6f75e19ec6d14134e8f81ad9ffd0"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/SearchInteractionRequest.java",
+      "bytes": 206,
+      "sha256": "c88c312f61966877101645a68e32daf5f5d9272be346f993696e40ab8f1cf6d1"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/TopicOption.java",
+      "bytes": 106,
+      "sha256": "52e85913cc8a24bb2e131b3677d1aeedcce3565f46b78f789a8c36bab7da32c7"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/TrackInteractionRequest.java",
+      "bytes": 343,
+      "sha256": "c3dd6500ae042d5a82b70ab69dbb90cd14603b06f891670e2193987380e2d977"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/UserAccount.java",
+      "bytes": 322,
+      "sha256": "3228a502d3db8a043d8fe58a78ac2192700602c64f48b24511916f9256dc60aa"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/UserCollection.java",
+      "bytes": 316,
+      "sha256": "acb2219401dae28ddcc12de6270ff394bebe4a60cc3f6fae6ce737d86e13909c"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/UserInterest.java",
+      "bytes": 156,
+      "sha256": "b8d8482444fe754255fc4bae593cadeabda99dce530fcd2bdfd9df5ad5711cde"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/UserInterestRequest.java",
+      "bytes": 133,
+      "sha256": "277d8e9fc0c46c23a9e644342ef4e10b063bc530c93ad538702ceb22470f4536"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/UserPreference.java",
+      "bytes": 227,
+      "sha256": "3a42e6a923d421ae1b7459ea2e3d82c631faa35c8c515f9a8424b992e620998d"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/model/UserProfile.java",
+      "bytes": 293,
+      "sha256": "179b99d776237eae9532262fdc6e0e125f7683ca667cbda7abd720b2d0e16763"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/recommendation/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/recommendation/ContentFeatureScorer.java",
+      "bytes": 5810,
+      "sha256": "395339b1dd1392bda9088b32f787135999d90b4e6fae17935d7d6bbd74cc58a2"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/recommendation/RecommendationEngine.java",
+      "bytes": 470,
+      "sha256": "8dfc4bd71a3bb6d924d564625030c09c567836ff3d431b968cf3b7c18649adbd"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/recommendation/ScoringRecommendationEngine.java",
+      "bytes": 15500,
+      "sha256": "30fca0cb5617c881e7821c7733e92efb74a8422eaf52dcb3a6f5804c4487cfd8"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/AdminAnalyticsService.java",
+      "bytes": 1236,
+      "sha256": "5d79560a72556b3d01b7085180d2f3379aecf777c78496ba0499ee63583c855b"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/AdminCatalogService.java",
+      "bytes": 3026,
+      "sha256": "30df9507534212d8ff581aafb7609d4bcde6a4994da5cdc421241c5bb826adcc"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/AdminSettingsService.java",
+      "bytes": 5263,
+      "sha256": "643c7438469b100cba778c1f9a440be69cb7d6eccc29775486200d54c8f11654"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/AdminWriteService.java",
+      "bytes": 2140,
+      "sha256": "bceba18dd09bed7d0e5b1badcdfbd67c566f264dbded3897c528cde9c06457de"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/AsyncMailConfiguration.java",
+      "bytes": 723,
+      "sha256": "57a68b0dd748203bba7793d08ab4170c9bc23fc29b0f1df753aa4a4f1f4541bb"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/CatalogCsvService.java",
+      "bytes": 9865,
+      "sha256": "86eb9611f4ab2fd8979d67fcd1f41ebd6c3d11a67ade9eda316b71271e49218c"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/CatalogSeedLoader.java",
+      "bytes": 3824,
+      "sha256": "5fae2296401397e170c597e25835587d3b091d56297f0372452199d83dc0307a"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/CategoryService.java",
+      "bytes": 4609,
+      "sha256": "573c5a718d61edc2a71ce5e935337e504485e3f8599b71b615a07ad6a63eb0ec"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/FeedbackService.java",
+      "bytes": 4417,
+      "sha256": "36762d2ee4fe45ef0644fbc489566081a1fb9c65ee581317c4507480b7095df7"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/InteractionService.java",
+      "bytes": 7726,
+      "sha256": "cf2a76d6e696e8df24d74abe39d88a96036ce69f80e5b87671eebf6022d6119b"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/InteractionSignalWeights.java",
+      "bytes": 2608,
+      "sha256": "05b3fb28e8b28adeaf03935ae896705cf5d335ba14876e6d1c098b1b18e285db"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/InterestProfileService.java",
+      "bytes": 901,
+      "sha256": "bf5110f17dc41d44bfbbd6f62a670d5aa587f03fd2d9a4a625da07b4e70153e6"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/InterestService.java",
+      "bytes": 3812,
+      "sha256": "6fa62eb93afd724e50e689bdb28227258edb673c8f5ac0e75bf811a69012c264"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/ItemInterestService.java",
+      "bytes": 2915,
+      "sha256": "b9d9e744a52b89a74f7dd69e220a88dae98cfa31b0d8922373b22b35c8a05d56"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/ItemService.java",
+      "bytes": 10690,
+      "sha256": "c84545bf2cee6bfea7256966ff773b981c0e84b3f14b37ea5a44849c77df874e"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/LearningJourneyService.java",
+      "bytes": 16441,
+      "sha256": "46851bc5f77fc70ce8028e0eafa85f3f87d3fe20d372a60ae520b3f491926404"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/OnboardingService.java",
+      "bytes": 2433,
+      "sha256": "3f8ed3e83754fd3f50d79464cd9c3af1220933548575b4d9574b0a76a2fa996f"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/PasswordHasher.java",
+      "bytes": 181,
+      "sha256": "57786f449cb102333e90b5bab81bb39ee9d9b8523da1af0af65c5b8f9f75e5eb"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/PasswordResetService.java",
+      "bytes": 6449,
+      "sha256": "db2a63dd171191a4da8399569fd8f4d6611df2fefd1ae1ab64809896e57afb54"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/Pbkdf2PasswordHasher.java",
+      "bytes": 2750,
+      "sha256": "d13b7f0ebe729d38ba5ba3f3c612c27f76d2811c4a40eb79f508db1f3bc2ad44"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/ProductionConfigurationGuard.java",
+      "bytes": 1613,
+      "sha256": "864d7d45e7616a0fe99aeeb858c4fdaa3c73ee781b6ef8f2f3e08008d9dec3f7"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/RecommendationProfileService.java",
+      "bytes": 1336,
+      "sha256": "0ccf7462a36bcc7c793e7120b97e93e0b7c31385b09ba950fbf13f0346f4fc71"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/RecommendationService.java",
+      "bytes": 5247,
+      "sha256": "abf6fc7d6e69e275f857533ad50daa682c5f9fe84c0595aebf69e7b6b9f9ad33"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/ResetMailDelivery.java",
+      "bytes": 1521,
+      "sha256": "d07915ed7d987255160372fac541255cb04d0f897e0a743628eab8e6a6e2c62c"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/ResetMailSender.java",
+      "bytes": 144,
+      "sha256": "5c21bcf5da8e5065da400d7ae1259873affdfe6d4f6c4157e225550c3fd1674c"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/SmtpResetMailSender.java",
+      "bytes": 1125,
+      "sha256": "cfae906b301e4cd2693577e12c49d95ecac43c44afbcf6d3380fb2b98b3c0af4"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/TopicPreferenceScorer.java",
+      "bytes": 1905,
+      "sha256": "9d73289550a643ac5b40882d51d7e55c223c6195d43b385373307a007185ac78"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/UserAccountService.java",
+      "bytes": 5377,
+      "sha256": "d8ffc00133ada984b3a027a2349c7ca28500870492b6b4653585cb741997184a"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/UserCollectionService.java",
+      "bytes": 3419,
+      "sha256": "ed2280e194a0c00a04bb4a35fc2f84a37ef536c580b45ff462f3dfdf298965bf"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/UserDataService.java",
+      "bytes": 3989,
+      "sha256": "8b6740ec04a68d4a656550c12b4161cfee3009410e2d7ca586c85c4f5ac597fd"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/UserInterestService.java",
+      "bytes": 2654,
+      "sha256": "e31698747a3defba1e330739ce6c6a866635192628b5039d1e4fa1383682c51e"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/UserPreferenceService.java",
+      "bytes": 2409,
+      "sha256": "06f7661e18d1815d5f8783527d5fec4574c79983b967b48db715d9e80d2cc763"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/service/WorkspaceReadService.java",
+      "bytes": 8362,
+      "sha256": "3ef48a5b626a375778c562c59e53e250116b2f95614d5ccc4153550b675ad278"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/web/ApiError.java",
+      "bytes": 213,
+      "sha256": "595af26354ab9fa8dfe782781f719fd04543d4e4a6c3d2b9cbfaf53ae175d731"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/web/ApiExceptionHandler.java",
+      "bytes": 6999,
+      "sha256": "3b6de0bce435d5a25c9b72bb6af1af18347758d629907695c11e352d2d6de7a8"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/web/LoginRateLimitFilter.java",
+      "bytes": 2759,
+      "sha256": "5058f92b4a7174d6a699f244ca6bc99ffdf73e9f0b488e4174967a7d8484f73f"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/web/PasswordResetRateLimitFilter.java",
+      "bytes": 2606,
+      "sha256": "aadbc667fc79700bed6042e65174d75e53847da6d85cc8438ecbd832e2711c7f"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/web/RequestContextFilter.java",
+      "bytes": 1963,
+      "sha256": "71f9346c5d2dfd7c0a5d5a2f6274f4f2b6d207d988348cdb382d8b6dfd2b8293"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/web/SameOriginMutationFilter.java",
+      "bytes": 2585,
+      "sha256": "21d145f1e9e1799b751e4c746091bcec47efbe56d0e64578fe51b9c693b71f9e"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/web/SecurityHeadersFilter.java",
+      "bytes": 2003,
+      "sha256": "155ec2b472b6f2f475ac4b974c5d8e46c1c1034f9eb7854404d29305e03c89f4"
+    },
+    {
+      "path": "backend/src/main/java/com/guvi/recommendationsystem/web/SessionAccess.java",
+      "bytes": 3018,
+      "sha256": "31f82681fb5361c758fdb3161333079e321bdf14be2c2ee4488fc83e6d63026f"
+    },
+    {
+      "path": "frontend/catalog-import-template.csv",
+      "bytes": 315,
+      "sha256": "f6483af1f3035a1f4dbc796b601e2bf6c6221d780050353ef8c4d19484662345"
+    },
+    {
+      "path": "frontend/index.html",
+      "bytes": 49510,
+      "sha256": "2cfcc08f0d92175966e20d7035edee46819dc5c872a9f8cb67da088633af102a"
+    },
+    {
+      "path": "frontend/assets/favicon.svg",
+      "bytes": 290,
+      "sha256": "6e49ef8d3389968b99b93b1417ad4c7139b72a311cf92d0201feb98d6273efd4"
+    },
+    {
+      "path": "frontend/assets/hero-poster.svg",
+      "bytes": 2436,
+      "sha256": "e71c241363660ca0c98162f3277efe500eedec54374077977e1fc9bd51f5f71b"
+    },
+    {
+      "path": "frontend/css/account-command.css",
+      "bytes": 10806,
+      "sha256": "4b4c00c92548a66fac48ce2774630e8fcc26bc70ac0858eb1a61f67008fddd45"
+    },
+    {
+      "path": "frontend/css/journeys.css",
+      "bytes": 4065,
+      "sha256": "80682415bcc8b1f1e89f6c2b3abab37473d68bbddfc38c3cf7d76ac88b053e8a"
+    },
+    {
+      "path": "frontend/css/learning-workspace.css",
+      "bytes": 9473,
+      "sha256": "197e3976880670541f043d8d82ddef0cabc85d0c864a3e4680434433517b3f2b"
+    },
+    {
+      "path": "frontend/css/premium-graphite.css",
+      "bytes": 16109,
+      "sha256": "4d9a4b94773f42960ea59bda32bac911bbed22230b7e649010534beda1ac6791"
+    },
+    {
+      "path": "frontend/css/styles.css",
+      "bytes": 211101,
+      "sha256": "cdf25ca8f6517d7a5aabbc8358d52ad8c8486e9446e482d1c25b490a498cdb71"
+    },
+    {
+      "path": "frontend/js/app.js",
+      "bytes": 201346,
+      "sha256": "4a87c6eeb79e46aefdfea981783c8d4a4fdbd0f6e9634de70b6166294633f88c"
+    },
+    {
+      "path": "frontend/js/modules/api-client.js",
+      "bytes": 1096,
+      "sha256": "09a33c5ee95f7104388e57d4136a9b03feedafa67baf421e77fcea97471b3c3d"
+    },
+    {
+      "path": "frontend/js/modules/catalog-ingestion.js",
+      "bytes": 6475,
+      "sha256": "df92a792d80429cb4d82bd82b90db86b0e724680a7f39cba2e948659df945498"
+    },
+    {
+      "path": "frontend/js/modules/landing-demo.js",
+      "bytes": 6129,
+      "sha256": "d62b7ec31e6250583fa55da7a4c6467027f59b10670fdbe79c8cd48363fb0487"
+    },
+    {
+      "path": "frontend/js/modules/learning-constellation.js",
+      "bytes": 9094,
+      "sha256": "2ad0209b42ba850a3aa563e34eb9811ff77a5703fd7b0789c0a5834d5b73e5fb"
+    },
+    {
+      "path": "frontend/js/modules/personalization.js",
+      "bytes": 7488,
+      "sha256": "5680309387e84db577510b37b906a354016bb3c0d3c17c41a5dbba3fe816834e"
+    },
+    {
+      "path": "frontend/js/modules/recommendation-workspace.js",
+      "bytes": 17173,
+      "sha256": "b6e9ac9bd3df5f838123d5e1ea9a0af269c593bd343bcab81061ce4123d4b00c"
+    },
+    {
+      "path": "frontend/js/modules/resource-artwork.js",
+      "bytes": 10783,
+      "sha256": "ee4301f9689ffd122cfa687321449867883bc48a8a928b9907e64ff142c43f5d"
+    },
+    {
+      "path": "frontend/js/modules/rising-lines.js",
+      "bytes": 8148,
+      "sha256": "c3dde330281a73de7c8b1e1ffac724bc89b9083116cb9d96497851b64eefde2d"
+    },
+    {
+      "path": "frontend/js/modules/theme-toggle.js",
+      "bytes": 792,
+      "sha256": "d910de6e64ddf159b5b0a40c269de6bcfa2a3caaf8293c858d3a3a84a619b728"
+    },
+    {
+      "path": "frontend/js/vendor/THREE-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    },
+    {
+      "path": "frontend/js/vendor/three.core.js",
+      "bytes": 1403455,
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20"
+    },
+    {
+      "path": "frontend/js/vendor/three.module.js",
+      "bytes": 603113,
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a"
+    },
+    {
+      "path": "frontend/assets/fonts/geist-0.ttf",
+      "bytes": 72916,
+      "sha256": "ccce59465ae5c61930ada5453834f60500fbd95084d85db63e0e65fad0125455"
+    },
+    {
+      "path": "frontend/assets/fonts/geist-1.ttf",
+      "bytes": 72996,
+      "sha256": "a8eefb873ba9c9020665f8a98302697ce1f3b79ab2deef6ee508c0ca6a82e876"
+    },
+    {
+      "path": "frontend/assets/fonts/geist-2.ttf",
+      "bytes": 73048,
+      "sha256": "7171f481b121803d007f5c6c76cd9988c0d41cce4202db9a18dff9945505d36d"
+    },
+    {
+      "path": "frontend/assets/fonts/geist-3.ttf",
+      "bytes": 72984,
+      "sha256": "1a9874b3be0fc168692a3d2327bccb4d28835653d3b91537a755296a467a83e3"
+    },
+    {
+      "path": "frontend/assets/fonts/geist-LICENSE.txt",
+      "bytes": 4387,
+      "sha256": "1781d2806a07d91c4edf4740b88449fab7d0eadad53f7c351b94cd4d4eb8c00f"
+    },
+    {
+      "path": "frontend/assets/fonts/geist.css",
+      "bytes": 672,
+      "sha256": "cf5f10efaf168e3c2192d52657043394656cf7b8fb3b3f24670ae6519ae3a3bc"
+    },
+    {
+      "path": "frontend/assets/fonts/newsreader-0.ttf",
+      "bytes": 109472,
+      "sha256": "b8f5e0a8bdd6a12c722ca5635d9da87e77ccbb2d0172112e34e00c4e55f2cd5a"
+    },
+    {
+      "path": "frontend/assets/fonts/newsreader-1.ttf",
+      "bytes": 111588,
+      "sha256": "68c4493c7c6c9aaff48defeeb6408e7ce705efc4c33363de4d9d6f5e07775064"
+    },
+    {
+      "path": "frontend/assets/fonts/newsreader-2.ttf",
+      "bytes": 111628,
+      "sha256": "04188d5295f4e1100ce91a96b864f15b7af5be976e9fb9cc279af737be804272"
+    },
+    {
+      "path": "frontend/assets/fonts/newsreader-3.ttf",
+      "bytes": 111520,
+      "sha256": "81d90be46eec4aefac9cf507352f96c4890dbbcb0f7a390091545c1df06f16c6"
+    },
+    {
+      "path": "frontend/assets/fonts/newsreader-LICENSE.txt",
+      "bytes": 4394,
+      "sha256": "fdfad38143ec470553cae82a1e45320bdd1b9ec70415d37bd0171051d8a4ded8"
+    },
+    {
+      "path": "frontend/assets/fonts/newsreader.css",
+      "bytes": 712,
+      "sha256": "bf061eba79e9d705b4c2e563acb2e8b157536a751b70cfb8716dc405ff7b6e03"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/catalog/ArticlePolicyTest.java",
+      "bytes": 3043,
+      "sha256": "ed6eee3777e51a32da5d078ada1dc0c3fa102bb3f0219f8b7734a48773f10430"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/catalog/CatalogDataPolicyTest.java",
+      "bytes": 5344,
+      "sha256": "ac5fa83d8ebf306c84961949e920f724e8798e6e8a5ebea91dc15e251ae0c75c"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/catalog/CatalogMaintenanceTest.java",
+      "bytes": 2854,
+      "sha256": "09ebd9275333a5d5951294572d009b64ec22c09ff5787d0640abe9eaaed9d439"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/catalog/IngestionAuthorizationTest.java",
+      "bytes": 1310,
+      "sha256": "c6a9c4f99e1acfdeba82cb3f1dfc28ac76c2de9757a990d3d7f44ee52959f914"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/controller/AdminAnalyticsControllerWebTest.java",
+      "bytes": 4008,
+      "sha256": "cf60423109084bf713d921ca12e0af134692cd1671d321440c089b3a5f2990da"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/controller/AdminSettingsControllerWebTest.java",
+      "bytes": 3057,
+      "sha256": "7c2c0b1ed8ad279cc9aa793c39c0a4f0ffb80abb66de966dcb4fee3f2814dceb"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/controller/AuthControllerWebTest.java",
+      "bytes": 8001,
+      "sha256": "9c74d6ce2c6f69049310e611ccff7702dfaefef7e0170f069d394c280e84dcd8"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/controller/FeedbackControllerWebTest.java",
+      "bytes": 2732,
+      "sha256": "7971104b3f2794d372318235063eec6506ac10252c4990467b808b60e4ebc7a8"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/controller/HealthControllerWebTest.java",
+      "bytes": 2003,
+      "sha256": "9384fa3cf6b2365726caff5377c45eaaf5d8f1a77ee5647e24ff271ad58d1ff8"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/controller/InteractionControllerWebTest.java",
+      "bytes": 3872,
+      "sha256": "50cc8972c35c857e15c7fd2e47490c762c29c4f05313232fb2f05d7f94a8115f"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/controller/ItemAdminControllerWebTest.java",
+      "bytes": 4981,
+      "sha256": "e3f6792f2ede2839e15b1b46d32321e026c475c88382cdf9fa4d313c6fcdb75e"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/controller/RecommendationControllerWebTest.java",
+      "bytes": 3777,
+      "sha256": "66b8dac5f1d59bc78a5ba7d4d3b1de9a45b443b06f41d0dc233de80d7efc6059"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/dao/ContentCacheConcurrencyTest.java",
+      "bytes": 2005,
+      "sha256": "88f3d3248bac1ecfaebb2e5263790b4d76c2b1953a3396bf8fa7c5fabd2a642e"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/dao/JdbcItemDaoTest.java",
+      "bytes": 1381,
+      "sha256": "ff839242271cdb4694d019a0facb40741ed386efd21beda44ba84256c36424fe"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/dao/JdbcRecommendationDaoTest.java",
+      "bytes": 8819,
+      "sha256": "6e09cd26ccadc68d30c3d4720eeb3693b959f0fa22f1a167ab073e0a63e8db95"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/dao/JdbcUserTopicPreferenceDaoTest.java",
+      "bytes": 1246,
+      "sha256": "7f70d7eaa1dff07e2beeffc877af2de3b5b864c56264e60a449a669b3cbb3076"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/dao/SearchTermsTest.java",
+      "bytes": 775,
+      "sha256": "9aede4f561d13a6f177f89428e50322bd25cc6f1ea16dc4a26664a5533c34aed"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/evaluation/EvaluationTest.java",
+      "bytes": 2429,
+      "sha256": "ad4876bd364c48ee461ed1ffeef69c49658dd0aafe9f358bbc2ea3262c20f39b"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/recommendation/BaselineScoringRecommendationEngine.java",
+      "bytes": 14880,
+      "sha256": "e26fb9fc7a0d91eb2b2e0a4f95c140d71c93050ab856a91e75c7f5f4871d6cb7"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/recommendation/ContentFeatureScorerTest.java",
+      "bytes": 2686,
+      "sha256": "8658e72fe36508f4a3bee1e037ad30338f74d52602cd8d4e1a4fb78abdfc785b"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/recommendation/Phase3RankingEvaluationTest.java",
+      "bytes": 8479,
+      "sha256": "b61f17437ed23eb772068f1ae9ab098af52c6d277ae2b5931e3bdc984cece1ae"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/recommendation/ScoringRecommendationEngineTest.java",
+      "bytes": 14952,
+      "sha256": "ef7503e2c83a9f04c55931e028a34eb57e8326b2c600b9d688b091fa7fe97edd"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/service/AdminAnalyticsServiceTest.java",
+      "bytes": 931,
+      "sha256": "2e37973fb7e889e4efcc2d66d804ff4e7710570a72f004d943cc8785e45a795c"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/service/AdminSettingsServiceTest.java",
+      "bytes": 3380,
+      "sha256": "78c5b3a5a37010c2b67f79d00b5e6fe4b39069677d33182a68ab3c940e7eb647"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/service/CatalogCsvServiceTest.java",
+      "bytes": 4754,
+      "sha256": "3723f59744bba63ec357d4c8e29263e65eb20977beede8fb5b70980b9d754e73"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/service/CatalogSeedDataTest.java",
+      "bytes": 3055,
+      "sha256": "9e5132350cdfade2ee149bd1f1b1b455e49780b6f6d0190e015d6e3566befdd7"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/service/CatalogServiceTest.java",
+      "bytes": 8363,
+      "sha256": "121996825623e066a358a4ae7447706776434bb69e7437f539a99f8cf59d5168"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/service/FeedbackServiceTest.java",
+      "bytes": 4489,
+      "sha256": "c2018df39080a22d69b8d692d17fe21c0d6164034f9cfca8eb550d140b6c5b6b"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/service/LearningJourneyPolicyTest.java",
+      "bytes": 1974,
+      "sha256": "cc8639c1991a7c5de5d559f10672fab64317f84398c305d68ee4653b375a32eb"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/service/OnboardingServiceTest.java",
+      "bytes": 3117,
+      "sha256": "935c8959e01fd193958c8a41a3f9c6c92c8a21c92ec1d1011f1266b5e4d09ad9"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/service/PasswordResetServiceTest.java",
+      "bytes": 6954,
+      "sha256": "736696605f993c80bcf69b51af58a5a616156ad3f431c044b0adf63201e6174b"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/service/Pbkdf2PasswordHasherTest.java",
+      "bytes": 892,
+      "sha256": "c8355a08ed7a749c76647238e9641bd2397e4ab05e66522928dd4ea8dc8f571f"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/service/ProductionConfigurationGuardTest.java",
+      "bytes": 1482,
+      "sha256": "eef1aefb65c1c5aba6e39607e489a2345626723518972a3dd501036f9f88af26"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/service/RecommendationServiceTest.java",
+      "bytes": 4575,
+      "sha256": "af36316e657085b73ccc92da3691482dffabd565286598328ceb8a666143521f"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/service/TopicPreferenceScorerTest.java",
+      "bytes": 1738,
+      "sha256": "68a3c8b30973da17ab5fb7290d6579cc24dbfffea10e3300a4c3954c6436cfc7"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/service/UserAccountServiceTest.java",
+      "bytes": 3626,
+      "sha256": "d62b31e0062e9068571f7027f8c2504044ef17bf42c0fdea98d43d4c51ad7c8b"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/service/UserCollectionServiceTest.java",
+      "bytes": 2978,
+      "sha256": "423a416d66523fb2cfcb20a99d230208e2ef3687ffb4ee9364a12f8b8adea2be"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/service/UserInterestServiceTest.java",
+      "bytes": 2447,
+      "sha256": "4866593bde58303593b00dc26a520b7358f0e1322fab6abc73a7e22ec2615130"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/service/UserSignalServiceTest.java",
+      "bytes": 14422,
+      "sha256": "7254257fd51901f51e376e2ca2cba965be31a70c41b8a1d8114ff65d2948ad22"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/web/SameOriginMutationFilterTest.java",
+      "bytes": 1531,
+      "sha256": "bfb0a7e60ee1abf4de4449e60175aba5f9910474fb0fc4476fa8fc643571cb56"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/web/SecurityFiltersTest.java",
+      "bytes": 1935,
+      "sha256": "ab0d1c89af4e57ff51612c7515c4d7010ca203585b3395c98fed790a8beb17a0"
+    },
+    {
+      "path": "backend/src/test/java/com/guvi/recommendationsystem/web/SessionAccessTest.java",
+      "bytes": 2503,
+      "sha256": "ec1b55846c7a42732a051882026a97c15cf6899bd0020c542b8755ed501de887"
+    },
+    {
+      "path": "backend/src/main/resources/db/migration/V10__admin_recommendation_settings.sql",
+      "bytes": 1458,
+      "sha256": "8e0c03e757c4e2d35644b2c06afeaab9962b6e663315992a90ff74a1420221c5"
+    },
+    {
+      "path": "backend/src/main/resources/db/migration/V11__interaction_idempotency.sql",
+      "bytes": 340,
+      "sha256": "b6b900694e70931f4a421253e6950a8ae5d0c63a74077f44ba186ad4c4b2be9e"
+    },
+    {
+      "path": "backend/src/main/resources/db/migration/V12__recommendation_impressions.sql",
+      "bytes": 803,
+      "sha256": "d4e6f136414c62142e0349dc23e0450e0f7398997cc28b359ffcdeda64f8b4aa"
+    },
+    {
+      "path": "backend/src/main/resources/db/migration/V13__user_exploration.sql",
+      "bytes": 166,
+      "sha256": "dbb9a33788da760ca5cf12d8579b9227eafad6b8f6bf4890b06cd15d257e7378"
+    },
+    {
+      "path": "backend/src/main/resources/db/migration/V14__workspace_integrity.sql",
+      "bytes": 610,
+      "sha256": "2a5713cd89813928c87ac8cca5e1ed99991cbe24ea2b847de036d4f121643dbb"
+    },
+    {
+      "path": "backend/src/main/resources/db/migration/V15__persistent_learning_journeys.sql",
+      "bytes": 2375,
+      "sha256": "6dff5adbba70bb18f570cffab95ec5563d8ae88bd3dcbe9589a543582c84ba5c"
+    },
+    {
+      "path": "backend/src/main/resources/db/migration/V16__verified_catalog_ingestion.sql",
+      "bytes": 3917,
+      "sha256": "06fa55fb20f420865fc5a0db936c863d322e5d597f8959bbaabd29c8b0e5c3c5"
+    },
+    {
+      "path": "backend/src/main/resources/db/migration/V17__repair_verified_learning_links.sql",
+      "bytes": 653,
+      "sha256": "6c4800ece1483e6bfee1922eeec21db2d8847cc37c582b354633d8a65b6826d4"
+    },
+    {
+      "path": "backend/src/main/resources/db/migration/V18__reviewed_article_sources.sql",
+      "bytes": 2686,
+      "sha256": "e05db48d00d38acdfb93bf39442a469425cee16dccf9825b6478803f5dc5b019"
+    },
+    {
+      "path": "backend/src/main/resources/db/migration/V1__initial_schema.sql",
+      "bytes": 7714,
+      "sha256": "9a012d8d96831b189f4c22fcba1f9c88959e8aee339982ccc69b5f72fc3ee116"
+    },
+    {
+      "path": "backend/src/main/resources/db/migration/V2__recommendation_schema_improvements.sql",
+      "bytes": 2293,
+      "sha256": "87be195db1ab3d57670631eb8f3ee0c72a45a7bbdf3fc5aad11a824fec4e9914"
+    },
+    {
+      "path": "backend/src/main/resources/db/migration/V3__adaptive_interest_discovery.sql",
+      "bytes": 18880,
+      "sha256": "7ba236015e033331930c8ec87f4a4ac540ecbaf0635d4812b769390bf973d225"
+    },
+    {
+      "path": "backend/src/main/resources/db/migration/V4__search_intent_signals.sql",
+      "bytes": 771,
+      "sha256": "4f58563f7bec48c549b4a35663127bceb2e7d36b5451d2fd3f3a3de030f59b1a"
+    },
+    {
+      "path": "backend/src/main/resources/db/migration/V5__secure_password_reset.sql",
+      "bytes": 802,
+      "sha256": "dfd14696b4dd9fd449ba21b0dfd5b94512f00c9ac5149e7652103636d38f29eb"
+    },
+    {
+      "path": "backend/src/main/resources/db/migration/V6__recommendation_score_explanations.sql",
+      "bytes": 994,
+      "sha256": "6faa13592d61e8999d920bfd9d3791c2704392cf2a1a788df55544b3617fa382"
+    },
+    {
+      "path": "backend/src/main/resources/db/migration/V7__editor_picks.sql",
+      "bytes": 660,
+      "sha256": "7e7e63fa3cb27ecced6b97fc7d9c217c087b2779f9cff6d5b8acae512768e1cd"
+    },
+    {
+      "path": "backend/src/main/resources/db/migration/V8__repair_broken_catalog_urls.sql",
+      "bytes": 2927,
+      "sha256": "3ed0579b21518de7d324c1a06afa5ac256547d58dc237383f5115be1818dfbec"
+    },
+    {
+      "path": "backend/src/main/resources/db/migration/V9__progress_and_collections.sql",
+      "bytes": 1703,
+      "sha256": "9fa4b1822642c318e97f12c36f26b8f096793b5a7b994f7d6528eb57779a63db"
+    }
+  ]
+}

@@ -6,5 +6,7 @@ import com.guvi.recommendationsystem.model.RecommendationDraft;
 import java.util.List;
 
 public interface RecommendationEngine {
+    List<RecommendationDraft> recommend(List<RecommendationCandidate> candidates, int topN, int exploration);
+
     List<RecommendationDraft> recommend(List<RecommendationCandidate> candidates, int topN);
 }

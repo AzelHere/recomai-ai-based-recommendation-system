@@ -14,6 +14,10 @@ import java.util.List;
 @Service
 public class InterestService {
     private final InterestDao interestDao;
+    @org.springframework.beans.factory.annotation.Autowired
+    private org.springframework.context.ApplicationEventPublisher events;
+    private void catalogChanged(){if(events!=null)events.publishEvent(new com.guvi.recommendationsystem.catalog.CatalogImported(0));}
+
 
     public InterestService(InterestDao interestDao) {
         this.interestDao = interestDao;
@@ -27,15 +31,17 @@ public class InterestService {
         return interestDao.findAll();
     }
 
+    @org.springframework.transaction.annotation.Transactional
     public Interest create(InterestRequest request) {
         String name = validate(request);
         try {
-            return interestDao.insert(name);
+            var created=interestDao.insert(name);catalogChanged();return created;
         } catch (DuplicateKeyException exception) {
             throw new DuplicateCatalogEntryException("An interest with that name already exists.");
         }
     }
 
+    @org.springframework.transaction.annotation.Transactional
     public Interest update(long interestId, InterestRequest request) {
         validateId(interestId);
         String name = validate(request);
@@ -43,17 +49,19 @@ public class InterestService {
             throw new InterestNotFoundException("Interest was not found.");
         }
         try {
-            interestDao.update(interestId, name);
+            interestDao.update(interestId, name);catalogChanged();
         } catch (DuplicateKeyException exception) {
             throw new DuplicateCatalogEntryException("An interest with that name already exists.");
         }
         return get(interestId);
     }
 
+    @org.springframework.transaction.annotation.Transactional
     public Interest activate(long interestId) {
         return setActive(interestId, true);
     }
 
+    @org.springframework.transaction.annotation.Transactional
     public Interest deactivate(long interestId) {
         return setActive(interestId, false);
     }
@@ -69,7 +77,7 @@ public class InterestService {
         if (existing.active() == active) {
             return existing;
         }
-        interestDao.setActive(interestId, active);
+        interestDao.setActive(interestId, active);catalogChanged();
         return get(interestId);
     }
 

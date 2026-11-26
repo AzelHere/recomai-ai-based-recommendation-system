@@ -12,6 +12,14 @@ import java.util.List;
 
 @Service
 public class UserCollectionService {
+    @org.springframework.transaction.annotation.Transactional
+    public UserCollection rename(long userId,long collectionId,String expectedName,String rawName) {
+        requireCollection(userId,collectionId);
+        String name=rawName==null?"":rawName.strip();
+        if(name.isBlank() || name.length()>80 || expectedName==null || expectedName.length()>80) throw new InvalidUserInputException("Collection name must be 1 to 80 characters, with its original name supplied.");
+        if(!collections.rename(userId,collectionId,expectedName,name)) throw new com.guvi.recommendationsystem.exception.UpdateConflictException("Collection changed. Refresh before renaming again.");
+        return collections.findByUserId(userId).stream().filter(c->c.collectionId()==collectionId).findFirst().orElseThrow();
+    }
     private final UserCollectionDao collections;
     private final UserDao users;
     private final ItemDao items;
@@ -25,12 +33,16 @@ public class UserCollectionService {
         if (name.length() < 1 || name.length() > 80) throw new InvalidUserInputException("Collection name must be 1 to 80 characters.");
         return collections.create(userId, name);
     }
+    @org.springframework.transaction.annotation.Transactional
     public void addItem(long userId, long collectionId, long itemId) {
+        users.lock(userId);
         requireCollection(userId, collectionId);
         if (items.findById(itemId).filter(item -> item.active()).isEmpty()) throw new ItemNotFoundException("An active resource with that ID was not found.");
         collections.addItem(collectionId, itemId);
     }
+    @org.springframework.transaction.annotation.Transactional
     public void removeItem(long userId, long collectionId, long itemId) {
+        users.lock(userId);
         requireCollection(userId, collectionId); collections.removeItem(collectionId, itemId);
     }
     public void delete(long userId, long collectionId) {

@@ -2,6 +2,7 @@ package com.guvi.recommendationsystem.controller;
 
 import com.guvi.recommendationsystem.model.AdminDashboardSummary;
 import com.guvi.recommendationsystem.model.AdminRecommendationInsights;
+import com.guvi.recommendationsystem.model.RecommendationEngagementMetrics;
 import com.guvi.recommendationsystem.service.AdminAnalyticsService;
 import com.guvi.recommendationsystem.web.SessionAccess;
 import jakarta.servlet.http.HttpServletRequest;
@@ -32,5 +33,11 @@ public class AdminAnalyticsController {
             @RequestParam(defaultValue = "5") int limit, HttpServletRequest request) {
         sessionAccess.requireAdmin(request);
         return analyticsService.getInsights(limit);
+    }
+
+    @GetMapping("/recommendation-engagement")
+    public RecommendationEngagementMetrics getRecommendationEngagement(HttpServletRequest request) {
+        sessionAccess.requireAdmin(request);
+        return analyticsService.getRecommendationEngagement();
     }
 }

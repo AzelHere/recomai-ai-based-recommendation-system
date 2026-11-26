@@ -8,6 +8,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Component;
 
+/** Establishes rotated sessions and rechecks the persisted authentication version on every protected request.
+ * Role changes and credential resets must increment that version to invalidate existing sessions. */
 @Component
 public class SessionAccess {
     private static final String USER_ID_ATTRIBUTE = "authenticatedUserId";

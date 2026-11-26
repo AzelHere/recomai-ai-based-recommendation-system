@@ -18,6 +18,14 @@ class HealthControllerWebTest {
     @Autowired private MockMvc mockMvc;
     @MockitoBean private JdbcTemplate jdbcTemplate;
 
+    @Test void databaseFailureDoesNotExposeSqlOrCredentials() throws Exception {
+        when(jdbcTemplate.queryForObject("SELECT 1",Integer.class)).thenThrow(new org.springframework.dao.DataAccessResourceFailureException("private database credential and SQL"));
+        mockMvc.perform(get("/api/health"))
+                .andExpect(status().isServiceUnavailable())
+                .andExpect(jsonPath("$.message").value("The service is temporarily unavailable. Please try again shortly."))
+                .andExpect(org.springframework.test.web.servlet.result.MockMvcResultMatchers.header().exists("X-Request-ID"));
+    }
+
     @Test
     void healthEndpointConfirmsThatJdbcCanQueryTheDatabase() throws Exception {
         when(jdbcTemplate.queryForObject("SELECT 1", Integer.class)).thenReturn(1);

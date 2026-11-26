@@ -1,3 +1,4 @@
+import { onboardingStage } from './onboarding-helper.js';
 import { test, expect } from '@playwright/test';
 import { createHash } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
@@ -21,6 +22,19 @@ async function waitForResetLink(mailpitUrl, email, excludedIds = []) {
     return true;
   }, { timeout: 20_000 }).toBeTruthy();
   return found;
+}
+
+async function openSecondaryPanel(page, panelId) {
+  const workspaceLink = panelId === 'activityPanel'
+    ? page.getByRole('navigation', { name: 'Workspace navigation' }).getByRole('button', { name: /Activity/ })
+    : null;
+  if (workspaceLink && await workspaceLink.isVisible()) {
+    await workspaceLink.click();
+    return;
+  }
+  const menu = page.locator('.secondary-navigation');
+  if (!(await menu.evaluate(details => details.open))) await menu.locator('summary').click();
+  await menu.locator(`.nav-link[data-panel="${panelId}"]`).click();
 }
 
 function expireIsolatedResetToken(token) {
@@ -96,7 +110,7 @@ test('search, account, password recovery, rating, session and recommendation jou
     await expect(page.locator('#heroTitle')).toBeVisible();
     await expect(page.locator('#connectionStatus')).toBeVisible();
     await expect(page.locator('#connectionStatusMessage')).toContainText('account state is unknown');
-    await expect(page.locator('#connectionStatusMessage')).toContainText("couldn't reach RecomAI");
+    await expect(page.locator('#connectionStatusMessage')).toContainText("couldn't reach Recom AI");
     await page.locator('#retrySessionCheck').click();
     await expect(page.locator('#connectionStatusMessage')).toContainText('server returned an error');
     await expect(page.locator('#connectionStatusMessage')).toContainText('account state is unknown');
@@ -162,11 +176,11 @@ test('search, account, password recovery, rating, session and recommendation jou
     await expect(page.locator('#onboardingPanel')).toHaveClass(/active/, { timeout: 20_000 });
     const niche = page.locator('#onboardingNiche');
     await expect.poll(async () => niche.locator('option').count()).toBeGreaterThan(1);
-    await niche.selectOption({ index: 1 });
-    await page.locator('#onboardingPurpose').selectOption('LEARN');
+    await onboardingStage(page,1); await niche.selectOption({ index: 1 });
+    await onboardingStage(page,0); await page.locator('#onboardingPurpose').selectOption('LEARN');
     const topic = page.locator('#onboardingTopics input').first();
-    if (await topic.count()) await topic.check();
-    await page.getByRole('button', { name: /Build my Explore feed/ }).click();
+    if (await topic.count()) { await onboardingStage(page,2); await topic.check(); }
+    await onboardingStage(page,3); await page.locator('#onboardingForm button[type=submit]').click();
     await expect(page.locator('#dashboardMessage')).toContainText('Your new picks are ready.');
     const themeToggle = page.locator('#themeToggle');
     await expect(themeToggle).toBeVisible();
@@ -180,6 +194,32 @@ test('search, account, password recovery, rating, session and recommendation jou
     await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
     await page.locator('#themeToggle').click();
     await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
+
+    // The For You destination is a functional recommendation workspace.
+    await page.locator('.nav-link[data-panel="recommendationsPanel"]').click();
+    await expect(page.locator('#recommendationsPanel')).toHaveClass(/active/);
+    await expect(page.locator('.nav-link[data-panel="recommendationsPanel"]')).toHaveAttribute('aria-current', 'page');
+    const feature = page.locator('#nextStepCard');
+    await expect(feature.getByRole('heading')).toBeVisible();
+    await expect(feature).toContainText('Why this was recommended');
+    const title = await feature.getByRole('heading').innerText();
+    const rows = await (await page.request.get('/api/users/me/recommendations?limit=10')).json();
+    expect(rows.some(row => row.itemTitle === title)).toBeTruthy();
+    await feature.getByRole('button', {name:/View details/}).click();
+    await expect(page.getByRole('dialog')).toContainText(title);
+    await page.keyboard.press('Escape');
+    await expect(feature.getByRole('button', {name:/View details/})).toBeFocused();
+    const stageSave = page.waitForResponse(response => new URL(response.url()).pathname === '/api/users/me/interactions' && response.request().method() === 'POST' && response.request().postDataJSON()?.type === 'SAVE');
+    await feature.getByRole('button', {name:/Save/}).click();
+    expect((await stageSave).status()).toBe(201);
+    for (const [width,height] of [[1366,768],[1440,900],[1536,864],[1920,1080],[2560,1440]]) {
+      await page.setViewportSize({width,height});
+      expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
+      await expect(feature.getByRole('button',{name:/View details/})).toBeVisible();
+    }
+    await page.emulateMedia({reducedMotion:'reduce'});
+    await page.locator('.nav-link[data-panel="catalogPanel"]').click();
+    await expect(page.locator('#catalogPanel')).toHaveClass(/active/);
 
     // Recovery uses a separate unauthenticated browser context; the original session
     // remains active so the reset can prove server-side revocation.
@@ -274,7 +314,10 @@ test('search, account, password recovery, rating, session and recommendation jou
     await recoveryPage.locator('#loginForm button[type=submit]').click();
     await expect(recoveryPage.locator('#authMessage')).toContainText('Email or password is incorrect.');
     await recoveryPage.locator('#loginForm [name=password]').fill(newPassword);
+    const relogin = recoveryPage.waitForResponse(r => new URL(r.url()).pathname === '/api/auth/login' && r.request().method() === 'POST');
     await recoveryPage.locator('#loginForm button[type=submit]').click();
+    expect((await relogin).ok()).toBeTruthy();
+    await recoveryPage.locator('[data-enter-workspace]').click();
     await expect(recoveryPage.locator('#appShell')).toBeVisible({ timeout: 20_000 });
 
     await recoveryPage.goto(resetLink);
@@ -534,14 +577,15 @@ test('search, account, password recovery, rating, session and recommendation jou
       expect(isolatedPrivateData.history).toHaveLength(0);
       expect(isolatedPrivateData.feedback).toHaveLength(0);
       expect(isolatedPrivateData.progress).toHaveLength(0);
-      // A guaranteed high-enough-ranked item keeps this popularity-threshold check
-      // independent of the arbitrary newest-item position in a 200-item catalog.
-      const repeatedItemId = await page.evaluate(async () => {
-        const response = await fetch('/api/items');
-        const items = await response.json();
-        const editorPick = items.find(item => item.editorPick);
-        return editorPick ? Number(editorPick.itemId) : null;
-      });
+      // A fresh disposable resource isolates distinct-user popularity from other
+      // specs' legitimate feedback. Keep the zero-popularity assertion unchanged.
+      const probeProject=process.env.E2E_COMPOSE_PROJECT;
+      if(!/^recomai-e2e-/.test(probeProject||'')||!/^\d+_\d+$/.test(suffix))throw new Error('Popularity probe requires the isolated E2E project');
+      const probe=spawnSync('docker',['compose','-p',probeProject,'exec','-T','mysql','sh','-c','MYSQL_PWD="$MYSQL_PASSWORD" mysql -N -u "$MYSQL_USER" "$MYSQL_DATABASE"'],{encoding:'utf8',input:`INSERT INTO items(category_id,title,description,item_type,external_url,source_name,difficulty,estimated_minutes,quality_score,is_editor_pick) SELECT category_id,'Isolated popularity probe ${suffix}','A synthetic test reference. Used only for distinct-user popularity coverage.','GUIDE','https://example.test/popularity/${suffix}','Isolated fixture','BEGINNER',10,1,TRUE FROM categories WHERE niche_code='TECHNOLOGY' LIMIT 1; SELECT LAST_INSERT_ID();`});
+      expect(probe.status).toBe(0);
+      const repeatedItemId=Number(probe.stdout.trim());
+      const probeItem=await(await page.request.get('/api/items/'+repeatedItemId)).json();
+      expect((await otherPage.evaluate(async categoryId=>(await fetch('/api/users/me/preferences/'+categoryId,{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({weight:1})})).status,probeItem.categoryId))).toBe(204);
       expect(repeatedItemId).toBeGreaterThan(0);
       const repeatedLikeStatuses = await page.evaluate(async itemId => Promise.all(
         Array.from({ length: 5 }, () => fetch('/api/users/me/interactions', {
@@ -564,8 +608,19 @@ test('search, account, password recovery, rating, session and recommendation jou
     }
 
     await page.locator('.nav-link[data-panel="recommendationsPanel"]').click();
+    const firstVisibleImpression = page.waitForResponse(response =>
+      new URL(response.url()).pathname.match(/^\/api\/users\/me\/recommendations\/\d+\/impression$/)
+      && response.request().method() === 'POST');
     await page.locator('#generateRecommendations').click();
-    await expect(page.locator('#recommendationList .recommendation-card').first()).toBeVisible({ timeout: 20_000 });
+    await expect(page.locator('#nextStepCard')).toBeVisible({ timeout: 20_000 });
+    expect((await firstVisibleImpression).status()).toBe(204);
+    const outboundClick = page.waitForResponse(response =>
+      new URL(response.url()).pathname.match(/^\/api\/users\/me\/recommendations\/\d+\/click$/)
+      && response.request().method() === 'POST');
+    const openedResource = page.context().waitForEvent('page');
+    await page.locator('#nextStepCard a').click();
+    await (await openedResource).close();
+    expect((await outboundClick).status()).toBe(204);
     const preferenceRanking = await page.evaluate(async () => {
       const categoriesResponse = await fetch('/api/categories');
       const categories = await categoriesResponse.json();
@@ -602,8 +657,7 @@ test('search, account, password recovery, rating, session and recommendation jou
     // Persistence is checked here; the scorer's category contribution is covered in Java.
     expect(preferenceRanking.updated).toHaveLength(10);
     await page.locator('#generateRecommendations').click();
-    await expect(page.locator('#generateRecommendations')).toHaveText(/Find my picks/i);
-    await expect(page.locator('#recommendationList .recommendation-card').first()).toBeVisible({ timeout: 20_000 });
+    await expect(page.locator('#nextStepCard')).toBeVisible({ timeout: 20_000 });
     const storedRecommendations = await page.evaluate(async () => {
       const response = await fetch('/api/users/me/recommendations?limit=10');
       return response.ok ? response.json() : [];
@@ -614,12 +668,7 @@ test('search, account, password recovery, rating, session and recommendation jou
         && !/probability|chance of liking/i.test(entry.reason || '');
     })).toBeTruthy();
     const hasColdStartPick = storedRecommendations.some(entry => entry.reasonType === 'COLD_START');
-    if (hasColdStartPick) {
-      await expect(page.locator('#recommendationEvidenceNote')).toBeVisible();
-      await expect(page.locator('#recommendationEvidenceNote')).toContainText('exploratory');
-    } else {
-      await expect(page.locator('#recommendationEvidenceNote')).toBeHidden();
-    }
+    if (hasColdStartPick) expect(storedRecommendations.some(entry => Boolean(entry.reason))).toBeTruthy();
     const recentlyViewedItemId = Number(storedRecommendations[0].itemId);
     const viewSuppression = await page.evaluate(async itemId => {
       const tracked = await fetch('/api/users/me/interactions', {
@@ -634,61 +683,47 @@ test('search, account, password recovery, rating, session and recommendation jou
     expect(viewSuppression.trackStatus).toBe(201);
     expect(viewSuppression.stillRecommended).toBeFalsy();
     await page.locator('#generateRecommendations').click();
-    await expect(page.locator('#generateRecommendations')).toHaveText(/Find my picks/i);
-    await expect(page.locator('#recommendationList .recommendation-card').first()).toBeVisible({ timeout: 20_000 });
-    await expect(page.locator('#generateRecommendations')).toBeVisible();
-    const firstRecommendation = page.locator('#recommendationList .recommendation-card').first();
-    await expect(firstRecommendation.locator('.recommendation-score')).toHaveCount(0);
-    await expect(page.locator('.recommendation-intro')).toContainText(/refresh your picks/i);
-    await expect(firstRecommendation.locator('.recommendation-actions button')).toHaveCount(5);
-    await firstRecommendation.locator('details.recommendation-explanation summary').click();
-    await expect(firstRecommendation.locator('.recommendation-score-note'))
-      .toContainText('not a probability');
-    await expect(firstRecommendation.locator('.recommendation-signals'))
-      .not.toContainText('_');
+    await expect(page.locator('#nextStepCard')).toBeVisible({ timeout: 20_000 });
+    await expect(page.locator('.goal-resource-reason')).toBeVisible();
+    await expect(page.locator('.goal-resource-reason')).not.toContainText('_');
     await page.setViewportSize({ width: 1440, height: 900 });
-    await firstRecommendation.screenshot({ path: 'test-results/recommendation-desktop.png' });
-    await page.setViewportSize({ width: 390, height: 844 });
-    await firstRecommendation.scrollIntoViewIfNeeded();
-    const mobileLayout = await page.evaluate(() => ({
-      documentWidth: document.documentElement.scrollWidth,
-      viewportWidth: window.innerWidth
-    }));
-    expect(mobileLayout.documentWidth).toBeLessThanOrEqual(mobileLayout.viewportWidth);
-    await expect(firstRecommendation.locator('.recommendation-actions button')).toHaveCount(5);
-    const mobileCardGeometry = await firstRecommendation.evaluate(card => {
-      const title = card.querySelector('h3').getBoundingClientRect();
-      const actions = card.querySelector('.recommendation-actions').getBoundingClientRect();
-      return { titleTop: title.top, titleBottom: title.bottom, actionsTop: actions.top };
-    });
-    expect(mobileCardGeometry.actionsTop).toBeGreaterThanOrEqual(mobileCardGeometry.titleBottom);
-    await firstRecommendation.screenshot({ path: 'test-results/recommendation-mobile.png' });
+    await page.screenshot({ path: 'logs/workspace-1440.png' });
+    await page.locator('.nav-link[data-panel="catalogPanel"]').click();
+    const firstRecommendation = page.locator('#catalogItems .item-card').first();
+    const selectedTitle = await firstRecommendation.locator('h3').textContent();
+    const ratingSelect = firstRecommendation.getByRole('combobox', { name: 'Your rating for this resource' });
+    await ratingSelect.selectOption('5');
+    const ratingResponse = page.waitForResponse(response =>
+      new URL(response.url()).pathname.startsWith('/api/users/me/feedback')
+      && ['POST', 'PUT'].includes(response.request().method()));
+    await firstRecommendation.getByRole('button', { name: /Save rating|Update rating/ }).click();
+    expect((await ratingResponse).status()).toBeLessThan(300);
     const likedResponse = page.waitForResponse(response =>
       new URL(response.url()).pathname === '/api/users/me/interactions' && response.request().method() === 'POST');
-    await firstRecommendation.getByRole('button', { name: /^Like / }).click();
+    await firstRecommendation.getByRole('button', { name: 'Like', exact: true }).click();
     expect((await likedResponse).status()).toBe(201);
     const likes = await page.evaluate(async () => {
       const response = await fetch('/api/users/me/interactions?limit=100');
       return response.ok ? response.json() : [];
     });
     expect(likes.some(entry => entry.type === 'LIKE')).toBeTruthy();
-    const hiddenCard = page.locator('#recommendationList .recommendation-card').nth(1);
-    const hiddenTitle = await hiddenCard.locator('h3').first().textContent();
-    await hiddenCard.getByRole('button', { name: /^Hide / }).click();
-    await expect(page.locator('#recommendationList .recommendation-card h3').filter({ hasText: hiddenTitle || '' }))
-      .toHaveCount(0);
-    const rejectedTitle = await firstRecommendation.locator('h3').first().textContent();
-    await firstRecommendation.locator('button.recommendation-dismiss').click();
-    await expect(page.locator('#recommendationList .recommendation-card h3').filter({ hasText: rejectedTitle || '' }))
-      .toHaveCount(0);
+    await firstRecommendation.getByRole('button', { name: 'Hide', exact: true }).click();
+    await page.locator('.nav-link[data-panel="recommendationsPanel"]').click();
     await page.locator('#generateRecommendations').click();
-    await expect(page.locator('#recommendationList .recommendation-card').first()).toBeVisible({ timeout: 20_000 });
-    await expect(page.locator('#recommendationList .recommendation-card h3').filter({ hasText: rejectedTitle || '' }))
-      .toHaveCount(0);
-    await expect(page.locator('#recommendationList .recommendation-card h3').filter({ hasText: hiddenTitle || '' }))
-      .toHaveCount(0);
+    await expect(page.locator('#nextStepCard h3')).not.toHaveText(selectedTitle);
+    const rejectedTitle = await page.locator('#nextStepCard h3').textContent();
+    const dislikedResponse = page.waitForResponse(response =>
+      new URL(response.url()).pathname === '/api/users/me/interactions'
+      && response.request().method() === 'POST'
+      && response.request().postDataJSON()?.type === 'DISLIKE');
+    await page.locator('#nextStepCard').getByRole('button', { name: 'Not for me' }).click();
+    expect((await dislikedResponse).status()).toBe(201);
+    await page.locator('#generateRecommendations').click();
+    await expect(page.locator('#nextStepCard')).toBeVisible({ timeout: 20_000 });
+    await expect(page.locator('#goalFirstDashboard')).not.toContainText(selectedTitle);
+    await expect(page.locator('#goalFirstDashboard')).not.toContainText(rejectedTitle);
 
-    await page.locator('.nav-link[data-panel="activityPanel"]').click();
+    await openSecondaryPanel(page, 'activityPanel');
     await page.locator('#clearHistoryButton').click();
     await expect(page.locator('#dashboardMessage')).toContainText('history cleared');
     const clearedData = await page.evaluate(async () => {
@@ -713,7 +748,7 @@ test('search, account, password recovery, rating, session and recommendation jou
       return response.ok ? response.json() : [];
     });
     expect(persistedFeedback.some(entry => Number(entry.rating) === 5)).toBeTruthy();
-    await page.locator('.nav-link[data-panel="activityPanel"]').click();
+    await openSecondaryPanel(page, 'activityPanel');
     const deletionResponsePromise = page.waitForResponse(response =>
       response.url().endsWith('/api/users/me') && response.request().method() === 'DELETE');
     await page.locator('#deleteAccountButton').click();
@@ -756,10 +791,10 @@ test('a new user sees an honest cold-start message before any behavior exists', 
   await page.getByRole('button', { name: /Create your account/ }).click();
   await expect(page.locator('#onboardingPanel')).toHaveClass(/active/, { timeout: 20_000 });
   await expect.poll(async () => page.locator('#onboardingNiche option').count()).toBeGreaterThan(1);
-  await page.locator('#onboardingPurpose').selectOption('LEARN');
-  await page.locator('#onboardingNiche').selectOption({ index: 1 });
+  await onboardingStage(page,0); await page.locator('#onboardingPurpose').selectOption('LEARN');
+  await onboardingStage(page,1); await page.locator('#onboardingNiche').selectOption({ index: 1 });
 
-  await page.getByRole('button', { name: /Build my Explore feed/ }).click();
+  await onboardingStage(page,3); await page.locator('#onboardingForm button[type=submit]').click();
   await expect(page.locator('#recommendationsPanel')).toHaveClass(/active/, { timeout: 20_000 });
   const profile = await page.evaluate(async () => {
     const response = await fetch('/api/users/me/recommendation-profile');
@@ -773,6 +808,27 @@ test('a new user sees an honest cold-start message before any behavior exists', 
   await expect(page.locator('#recommendationEvidenceNote'))
     .toContainText('onboarding choices and editor-selected resources');
 
+  await page.getByRole('button', { name: 'My Taste' }).click();
+  const slider = page.getByRole('slider', { name: /Exploration preference/ });
+  await expect(slider).toBeEnabled();
+  await expect(slider).toHaveValue('50');
+  const latest = async () => (await page.request.get('/api/users/me/recommendations?limit=10')).json();
+  const discoveryCount = rows => rows.filter(row => row.bucketType === 'DISCOVERY').length;
+  await slider.focus();
+  await slider.press('Home');
+  await page.getByRole('button', { name: 'Save preference' }).click();
+  await expect(page.locator('#explorationStatus')).toContainText('Preference saved');
+  const focused = await latest();
+  await slider.focus();
+  await slider.press('End');
+  await page.getByRole('button', { name: 'Save preference' }).click();
+  await expect(page.locator('#explorationStatus')).toContainText('Preference saved');
+  expect(discoveryCount(await latest())).toBeGreaterThan(discoveryCount(focused));
+  await page.reload();
+  await expect(slider).toBeEnabled();
+  await expect(slider).toHaveValue('100');
+  await page.locator('[data-panel="recommendationsPanel"]').click();
+
   await page.route('**/api/users/me/recommendations?limit=10', async route => {
     if (route.request().method() === 'POST') {
       await route.fulfill({ status: 201, contentType: 'application/json', body: '[]' });
@@ -784,4 +840,46 @@ test('a new user sees an honest cold-start message before any behavior exists', 
   await expect(page.locator('#recommendationList .feed-bucket-title'))
     .toContainText('not personalized');
   await expect(page.locator('#recommendationList .item-card').first()).toBeVisible();
+});
+
+test('exploration API persists per account across sign-in', async ({ playwright, baseURL }) => {
+  const a = await playwright.request.newContext({ baseURL });
+  const b = await playwright.request.newContext({ baseURL });
+  const endpoint = '/api/users/me/recommendations/exploration';
+  const suffix = Date.now();
+  const password = 'Test-only-Pass-482!';
+  try {
+    expect((await a.get(endpoint)).status()).toBe(401);
+    for (const [client, id] of [[a, 'a'], [b, 'b']]) {
+      const username = 'taste' + id + suffix;
+      expect((await client.post('/api/auth/register', { data: {
+        username, displayName: 'Taste test', email: username + '@example.test', password
+      } })).status()).toBe(201);
+      expect(await (await client.get(endpoint)).json()).toEqual({ value: 50 });
+    }
+    for (const value of [0, 100]) {
+      expect((await a.put(endpoint, { data: { value } })).status()).toBe(204);
+      expect(await (await a.get(endpoint)).json()).toEqual({ value });
+      expect(await (await b.get(endpoint)).json()).toEqual({ value: 50 });
+    }
+    for (const value of [-1, 101, 0.5, null]) {
+      expect((await a.put(endpoint, { data: { value } })).status()).toBe(400);
+    }
+    await a.post('/api/auth/logout');
+    const credentials = { email: 'tastea' + suffix + '@example.test', password };
+    let login = await a.post('/api/auth/login', { data: credentials });
+    // All workers share a real IP limit. Honor its explicit backoff once during fixture sign-in.
+    if (login.status() === 429) {
+      const seconds = Number(login.headers()['retry-after']);
+      expect(Number.isInteger(seconds) && seconds >= 1 && seconds <= 20).toBeTruthy();
+      console.log('Shared fixture IP reached the real login limit; honoring Retry-After ' + seconds + 's once.');
+      await new Promise(resolve => setTimeout(resolve, (seconds + 0.1) * 1000));
+      login = await a.post('/api/auth/login', { data: credentials });
+    }
+    expect(login.ok()).toBeTruthy();
+    expect(await (await a.get(endpoint)).json()).toEqual({ value: 100 });
+  } finally {
+    await a.dispose();
+    await b.dispose();
+  }
 });

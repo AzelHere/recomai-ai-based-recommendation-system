@@ -14,7 +14,7 @@ public class UserDataService {
 
     public Map<String, Object> export(long userId) {
         Map<String, Object> result = new LinkedHashMap<>();
-        result.put("profile", jdbc.queryForMap("SELECT user_id, username, email, display_name, role, created_at FROM users WHERE user_id = ?", userId));
+        result.put("profile", jdbc.queryForMap("SELECT user_id, username, email, display_name, exploration, role, created_at FROM users WHERE user_id = ?", userId));
         result.put("preferences", jdbc.queryForList("SELECT category_id, preference_weight, preference_source, updated_at FROM user_preferences WHERE user_id = ? ORDER BY category_id", userId));
         result.put("interests", jdbc.queryForList("SELECT interest_id, interest_weight FROM user_interests WHERE user_id = ? ORDER BY interest_id", userId));
         result.put("topicSignals", jdbc.queryForList("SELECT interest_id, positive_score, negative_score, preference_score, confidence, trend, updated_at FROM user_topic_preferences WHERE user_id = ? ORDER BY interest_id", userId));
@@ -23,11 +23,15 @@ public class UserDataService {
         result.put("feedback", jdbc.queryForList("SELECT item_id, rating, comment, created_at, updated_at FROM feedback WHERE user_id = ? ORDER BY item_id", userId));
         result.put("collections", jdbc.queryForList("SELECT c.collection_id, c.name, ci.item_id, ci.added_at FROM user_collections c LEFT JOIN user_collection_items ci ON ci.collection_id = c.collection_id WHERE c.user_id = ? ORDER BY c.name, ci.added_at", userId));
         result.put("exportedAt", java.time.Instant.now().toString());
+        result.put("journeys",jdbc.queryForList("SELECT journey_id,title,goal,category_id,status,preference_snapshot,created_at,updated_at FROM learning_journeys WHERE user_id=? ORDER BY journey_id",userId));
+        result.put("journeySteps",jdbc.queryForList("SELECT s.step_id,s.journey_id,s.item_id,s.position,s.title_snapshot,s.rationale FROM learning_journey_steps s JOIN learning_journeys j ON j.journey_id=s.journey_id WHERE j.user_id=? ORDER BY s.journey_id,s.position",userId));
+        result.put("journeyReplacements",jdbc.queryForList("SELECT r.step_id,r.previous_item_id,r.previous_title,r.previous_rationale,r.replaced_at FROM journey_step_replacements r JOIN learning_journey_steps s ON s.step_id=r.step_id JOIN learning_journeys j ON j.journey_id=s.journey_id WHERE j.user_id=? ORDER BY r.replacement_id",userId));
         return result;
     }
 
     @Transactional
     public void resetPersonalization(long userId) {
+        jdbc.update("UPDATE users SET exploration = 50 WHERE user_id = ?", userId);
         jdbc.update("DELETE FROM feedback WHERE user_id = ?", userId);
         jdbc.update("DELETE FROM interactions WHERE user_id = ?", userId);
         jdbc.update("DELETE FROM user_topic_preferences WHERE user_id = ?", userId);

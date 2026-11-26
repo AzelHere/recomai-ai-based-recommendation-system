@@ -1,4 +1,4 @@
-# RecomAI post-implementation validation
+# Recom AI post-implementation validation
 
 Validation date: 2026-10-10.
 

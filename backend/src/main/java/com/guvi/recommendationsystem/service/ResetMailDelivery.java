@@ -20,7 +20,7 @@ public class ResetMailDelivery {
         this.publicUrl = publicUrl.replaceAll("/+$", "");
     }
 
-    @Async
+    @Async("applicationTaskExecutor")
     public void deliver(String recipient, byte[] tokenHash, String token, String requestId) {
         String link = publicUrl + "/#reset-password?token="
                 + java.net.URLEncoder.encode(token, java.nio.charset.StandardCharsets.UTF_8);

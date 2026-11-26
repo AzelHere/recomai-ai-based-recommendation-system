@@ -15,3 +15,9 @@ README.md
 node_modules/
 playwright-report
 test-results
+data/raw/
+data/evaluation/raw/
+design-audit/
+*.zip
+*.log
+RecomAI-2.0-Final-Submission/

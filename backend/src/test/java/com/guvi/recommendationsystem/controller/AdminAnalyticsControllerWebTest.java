@@ -1,6 +1,7 @@
 package com.guvi.recommendationsystem.controller;
 
 import com.guvi.recommendationsystem.model.AdminDashboardSummary;
+import com.guvi.recommendationsystem.model.RecommendationEngagementMetrics;
 import com.guvi.recommendationsystem.service.AdminAnalyticsService;
 import com.guvi.recommendationsystem.web.ApiExceptionHandler;
 import com.guvi.recommendationsystem.web.SessionAccess;
@@ -61,5 +62,23 @@ class AdminAnalyticsControllerWebTest {
                 .andExpect(jsonPath("$.totalUsers").value(8))
                 .andExpect(jsonPath("$.activeUsersLast30Days").value(3))
                 .andExpect(jsonPath("$.averageRating").value(4.25));
+    }
+
+    @Test
+    void recommendationEngagementIsAdminOnlyAndReportsUnavailableSeparately() throws Exception {
+        mockMvc.perform(get("/api/admin/analytics/recommendation-engagement")
+                        .sessionAttr("authenticatedUserId", 21L)
+                        .sessionAttr("authenticatedUserRole", "USER"))
+                .andExpect(status().isForbidden());
+        verifyNoInteractions(analyticsService);
+
+        when(analyticsService.getRecommendationEngagement()).thenReturn(
+                new RecommendationEngagementMetrics(0, 0, BigDecimal.ZERO, false));
+        mockMvc.perform(get("/api/admin/analytics/recommendation-engagement")
+                        .sessionAttr("authenticatedUserId", 21L)
+                        .sessionAttr("authenticatedUserRole", "ADMIN"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.impressions").value(0))
+                .andExpect(jsonPath("$.available").value(false));
     }
 }

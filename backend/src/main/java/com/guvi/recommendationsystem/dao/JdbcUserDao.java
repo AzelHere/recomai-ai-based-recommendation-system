@@ -14,6 +14,9 @@ import java.util.OptionalInt;
 
 @Repository
 public class JdbcUserDao implements UserDao {
+    @Override public void lock(long userId) {
+        jdbcTemplate.queryForObject("SELECT user_id FROM users WHERE user_id=? FOR UPDATE",Long.class,userId);
+    }
     private static final String SELECT_COLUMNS =
             "user_id, username, email, password_hash, display_name, role, created_at, updated_at";
 

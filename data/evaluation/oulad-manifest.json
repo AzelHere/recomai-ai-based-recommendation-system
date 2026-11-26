@@ -1,0 +1,11 @@
+{
+  "license" : "CC-BY-4.0",
+  "scannedRows" : 10655280,
+  "trainingItems" : 94,
+  "source" : "https://archive.ics.uci.edu/static/public/349/open+university+learning+analytics+dataset.zip",
+  "split" : "CCC/2014B; lowest 1000 anonymous numeric IDs; train days 0..40; test days 41..80; binary distinct clicks; unseen targets restricted to train-known items; all train-known unseen candidates; >=3 train resources and >=1 unseen test target; no random sampling",
+  "sha256" : "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+  "selectedLearners" : 1000,
+  "scopedRows" : 114579,
+  "evaluatedLearners" : 595
+}

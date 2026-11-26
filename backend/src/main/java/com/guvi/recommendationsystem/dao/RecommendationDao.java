@@ -15,5 +15,9 @@ public interface RecommendationDao {
 
     List<PersonalizedRecommendation> findLatestForUser(long userId, int limit);
 
+    void recordImpression(long userId, long recommendationId);
+
+    void recordClick(long userId, long recommendationId);
+
     int deleteAllForUser(long userId);
 }

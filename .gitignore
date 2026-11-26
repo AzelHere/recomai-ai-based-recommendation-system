@@ -39,3 +39,28 @@ logs/
 *.db
 *.bak
 *.tmp
+
+# Raw educational/research downloads are reproducible, not Git artifacts.
+data/raw/
+data/evaluation/raw/
+
+# Generated submission bundles and local research/build caches.
+RecomAI-2.0-Final-Submission/
+*.zip
+*.vhdx
+__pycache__/
+*.py[cod]
+data/private/
+data/evaluation/restricted/
+phase-1-6-focused-results/
+phase-2a-final-capture-results/
+phase-2b-targeted-results/
+
+# Local historical audits and artifact-authoring caches
+design-audit/
+.chart-data-*/
+*.zip.sha256
+recomai-2-phase-4-deliverables.sha256
+
+# Historical academic material stays local; application repository only.
+/submission/

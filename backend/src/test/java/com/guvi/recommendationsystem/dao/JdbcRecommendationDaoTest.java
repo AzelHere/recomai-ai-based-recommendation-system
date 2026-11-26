@@ -22,6 +22,35 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.eq;
 
 class JdbcRecommendationDaoTest {
+    @SuppressWarnings({"rawtypes","unchecked"})
+    @Test void restoringAFeedPreservesGeneratedOrderAndRechecksEligibility() {
+        JdbcTemplate jdbc=mock(JdbcTemplate.class);ArgumentCaptor<String> sql=ArgumentCaptor.forClass(String.class);
+        doReturn(List.of()).when(jdbc).query(sql.capture(),any(RowMapper.class),eq(17L),eq(17L),eq(10));
+        new JdbcRecommendationDao(jdbc,mock(InteractionSignalWeights.class)).findLatestForUser(17L,10);
+        assertThat(sql.getValue()).contains("ORDER BY recommendation.recommendation_id ASC")
+                .contains("recommendation.user_id = ?").contains("item.is_active=TRUE")
+                .contains("category.is_active=TRUE").contains("rejection.user_id=recommendation.user_id")
+                .contains("rejection.interaction_type IN ('HIDE','DISLIKE')");
+    }
+    @Test
+    void impressionAndClickWritesAreRecommendationOwnerScopedAndIdempotent() {
+        JdbcTemplate jdbcTemplate = mock(JdbcTemplate.class);
+        new JdbcRecommendationDao(jdbcTemplate, mock(InteractionSignalWeights.class))
+                .recordImpression(17L, 42L);
+        new JdbcRecommendationDao(jdbcTemplate, mock(InteractionSignalWeights.class))
+                .recordClick(17L, 42L);
+
+        ArgumentCaptor<String> sql = ArgumentCaptor.forClass(String.class);
+        org.mockito.Mockito.verify(jdbcTemplate, org.mockito.Mockito.times(2))
+                .update(sql.capture(), org.mockito.ArgumentMatchers.any(Object[].class));
+        assertThat(sql.getAllValues().get(0)).contains("INSERT IGNORE INTO recommendation_impressions")
+                .contains("FROM recommendations")
+                .contains("WHERE recommendation_id = ? AND user_id = ?");
+        assertThat(sql.getAllValues().get(1)).contains("INSERT INTO recommendation_impressions")
+                .contains("WHERE recommendation_id = ? AND user_id = ?")
+                .contains("ON DUPLICATE KEY UPDATE clicked_at = COALESCE(clicked_at, CURRENT_TIMESTAMP(6))");
+    }
+
     @SuppressWarnings({"rawtypes", "unchecked"})
     @Test
     void candidateScoringKeepsOnboardingSignalsTopicScopedAndUndiluted() {
@@ -34,7 +63,7 @@ class JdbcRecommendationDaoTest {
         new JdbcRecommendationDao(jdbcTemplate, signalWeights).findCandidates(17L);
 
         String query = sql.getValue();
-        assertThat(query).contains("user_topic_behavior_maturity AS")
+        assertThat(query).contains("item.item_type IN ('COURSE', 'GUIDE', 'DOCUMENTATION', 'ARTICLE')").contains("user_topic_behavior_maturity AS")
                 .contains("user_category_ratings AS")
                 .contains("GROUP BY item.category_id")
                 .contains("user_ratings.average_rating AS user_average_rating")

@@ -1,0 +1,12 @@
+import {spawnSync} from 'node:child_process';import {randomBytes} from 'node:crypto';import fs from 'node:fs/promises';
+const [project]=process.argv.slice(2);if(!/^recomai-e2e-[\w-]+$/.test(project||''))throw Error('A disposable E2E project is required');
+const database='recomai_upgrade_'+randomBytes(8).toString('hex');
+const userResult=spawnSync('docker',['compose','-p',project,'exec','-T','mysql','sh','-c','printf "%s" "$MYSQL_USER"'],{encoding:'utf8'});
+const appUser=userResult.stdout.trim();if(userResult.status!==0||!/^[A-Za-z0-9_]+$/.test(appUser))throw Error('Cannot identify isolated application principal');
+const sql=`CREATE DATABASE ${database}; GRANT ALL PRIVILEGES ON ${database}.* TO '${appUser}'@'%';`;
+const provision=spawnSync('docker',['compose','-p',project,'exec','-T','mysql','sh','-c','MYSQL_PWD="$MYSQL_ROOT_PASSWORD" mysql -u root'],{input:sql,encoding:'utf8'});
+if(provision.status!==0)throw Error('Isolated upgrade database provisioning failed: '+provision.stderr);
+const result=spawnSync('docker',['compose','-p',project,'exec','-T','backend','java','-Dloader.main=com.guvi.recommendationsystem.evaluation.Phase35MigrationVerification','-cp','/app/application.jar','org.springframework.boot.loader.launch.PropertiesLauncher',database,...(process.env.PHASE4_UPGRADE?['16']:[])],{encoding:'utf8'});
+if(result.status!==0)throw Error('Migration verification failed: '+result.stdout+' '+result.stderr);
+const report='Fresh schema: verified separately by the isolated Spring Boot API suite applying all current migrations.\n'+result.stdout+'\nThe upgrade fixture database is retained in this disposable project volume. No database/volume was reset or deleted.\n';
+const phase4=process.env.PHASE4_UPGRADE||process.env.PHASE4_MEASURE;const output=phase4?'design-audit/recomai-2-phase-4/evidence':'design-audit/recomai-2-phase-3-5';const filename=phase4&&!process.env.PHASE4_UPGRADE?'migration-v15-'+process.env.PHASE4_MEASURE.replace(/[^\w-]/g,'')+'.txt':'migration-verification.txt';await fs.mkdir(output,{recursive:true});await fs.writeFile(output+'/'+filename,report);console.log(report);

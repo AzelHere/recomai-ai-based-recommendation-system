@@ -7,6 +7,7 @@ import java.util.Optional;
 public interface UserCollectionDao {
     List<UserCollection> findByUserId(long userId);
     UserCollection create(long userId, String name);
+    boolean rename(long userId, long collectionId, String expectedName, String name);
     boolean belongsToUser(long userId, long collectionId);
     void addItem(long collectionId, long itemId);
     void removeItem(long collectionId, long itemId);

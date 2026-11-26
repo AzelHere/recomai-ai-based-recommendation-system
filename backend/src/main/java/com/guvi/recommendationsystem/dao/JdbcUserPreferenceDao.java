@@ -16,6 +16,21 @@ public class JdbcUserPreferenceDao implements UserPreferenceDao {
     }
 
     @Override
+    public int exploration(long userId) {
+        return jdbcTemplate.queryForObject("SELECT exploration FROM users WHERE user_id = ?", Integer.class, userId);
+    }
+
+    @Override
+    public int lockExploration(long userId) {
+        return jdbcTemplate.queryForObject("SELECT exploration FROM users WHERE user_id = ? FOR UPDATE", Integer.class, userId);
+    }
+
+    @Override
+    public void saveExploration(long userId, int value) {
+        jdbcTemplate.update("UPDATE users SET exploration = ? WHERE user_id = ?", value, userId);
+    }
+
+    @Override
     public List<UserPreference> findByUserId(long userId) {
         return jdbcTemplate.query("""
                 SELECT category_id, preference_weight, updated_at

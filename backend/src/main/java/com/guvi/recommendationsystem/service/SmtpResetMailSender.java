@@ -21,7 +21,7 @@ public class SmtpResetMailSender implements ResetMailSender {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom(from);
         message.setTo(recipient);
-        message.setSubject("Reset your RecomAI password");
+        message.setSubject("Reset your Recom AI password");
         message.setText("Use this link within 15 minutes to reset your password:\n\n" + resetUrl
                 + "\n\nIf you did not request this, you can ignore this message.");
         mailSender.send(message);

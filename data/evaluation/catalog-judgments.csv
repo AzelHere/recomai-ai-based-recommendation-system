@@ -1,0 +1,211 @@
+query_id,query,category_code,selected_topic,resource_key,grade,assessor
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/3554,2,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/5065,2,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/4214,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/4273,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/4156,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/4505,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/3457,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/3384,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/4212,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/3355,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/4134,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/3588,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/5535,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/5208,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/4182,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/3764,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/3451,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/3310,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/3465,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/5613,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/3861,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/4095,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/4098,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/3332,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/3372,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/3486,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/3733,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,mit-ocw/3684,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,medlineplus/3083,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+java,Java programming fundamentals,TECHNOLOGY,Java,medlineplus/3162,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/3554,1,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/5065,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/4214,2,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/4273,2,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/4156,1,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/4505,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/3457,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/3384,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/4212,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/3355,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/4134,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/3588,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/5535,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/5208,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/4182,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/3764,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/3451,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/3310,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/3465,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/5613,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/3861,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/4095,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/4098,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/3332,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/3372,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/3486,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/3733,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,mit-ocw/3684,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,medlineplus/3083,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+dsa,Algorithms and data structures,TECHNOLOGY,Algorithms and Data Structures,medlineplus/3162,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/3554,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/5065,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/4214,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/4273,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/4156,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/4505,2,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/3457,1,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/3384,1,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/4212,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/3355,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/4134,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/3588,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/5535,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/5208,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/4182,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/3764,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/3451,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/3310,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/3465,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/5613,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/3861,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/4095,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/4098,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/3332,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/3372,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/3486,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/3733,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,mit-ocw/3684,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,medlineplus/3083,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+sql,SQL relational database systems,TECHNOLOGY,Databases,medlineplus/3162,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/3554,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/5065,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/4214,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/4273,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/4156,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/4505,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/3457,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/3384,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/4212,2,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/3355,1,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/4134,2,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/3588,1,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/5535,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/5208,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/4182,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/3764,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/3451,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/3310,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/3465,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/5613,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/3861,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/4095,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/4098,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/3332,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/3372,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/3486,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/3733,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,mit-ocw/3684,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,medlineplus/3083,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+ml,Machine learning fundamentals,TECHNOLOGY,Machine Learning,medlineplus/3162,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/3554,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/5065,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/4214,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/4273,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/4156,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/4505,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/3457,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/3384,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/4212,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/3355,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/4134,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/3588,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/5535,2,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/5208,2,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/4182,1,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/3764,1,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/3451,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/3310,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/3465,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/5613,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/3861,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/4095,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/4098,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/3332,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/3372,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/3486,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/3733,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,mit-ocw/3684,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,medlineplus/3083,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+finance,Investment and financial statements,BUSINESS_FINANCE,Investing,medlineplus/3162,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/3554,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/5065,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/4214,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/4273,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/4156,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/4505,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/3457,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/3384,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/4212,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/3355,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/4134,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/3588,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/5535,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/5208,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/4182,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/3764,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/3451,2,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/3310,1,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/3465,2,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/5613,2,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/3861,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/4095,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/4098,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/3332,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/3372,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/3486,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/3733,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,mit-ocw/3684,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,medlineplus/3083,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+communication,Academic oral and written communication,LEARNING_CAREER,Communication,medlineplus/3162,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/3554,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/5065,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/4214,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/4273,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/4156,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/4505,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/3457,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/3384,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/4212,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/3355,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/4134,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/3588,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/5535,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/5208,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/4182,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/3764,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/3451,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/3310,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/3465,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/5613,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/3861,2,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/4095,1,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/4098,2,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/3332,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/3372,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/3486,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/3733,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,mit-ocw/3684,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,medlineplus/3083,0,Codex assistant: editorial reading of provider title and description; not independent human assessment
+visual,Photography and visual design,CREATIVE_LIFESTYLE,Photography,medlineplus/3162,0,Codex assistant: editorial reading of provider title and description; not independent human assessment

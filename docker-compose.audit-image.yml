@@ -1,0 +1,4 @@
+# Explicit immutable image selection for reproducible before/after audits only.
+services:
+  backend:
+    image: ${E2E_EXISTING_IMAGE:?Set the reviewed local audit image}

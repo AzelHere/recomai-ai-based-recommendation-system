@@ -11,12 +11,15 @@ public class JdbcUserCollectionDao implements UserCollectionDao {
     public JdbcUserCollectionDao(JdbcTemplate jdbc) { this.jdbc = jdbc; }
 
     @Override public List<UserCollection> findByUserId(long userId) {
-        List<CollectionHeader> headers = jdbc.query(
-                "SELECT collection_id, name, updated_at FROM user_collections WHERE user_id = ? ORDER BY name",
-                (rs, row) -> new CollectionHeader(rs.getLong("collection_id"), rs.getString("name"),
-                        rs.getTimestamp("updated_at").toLocalDateTime()), userId);
-        return headers.stream().map(header -> new UserCollection(header.id(), header.name(), header.updatedAt(),
-                findItemIds(header.id()))).toList();
+        return jdbc.query("SELECT c.collection_id,c.name,c.updated_at,ci.item_id FROM user_collections c LEFT JOIN user_collection_items ci ON ci.collection_id=c.collection_id WHERE c.user_id=? ORDER BY c.name,c.collection_id,ci.added_at DESC,ci.item_id", rs -> {
+            var headers=new java.util.LinkedHashMap<Long,CollectionHeader>();
+            var memberships=new java.util.HashMap<Long,java.util.List<Long>>();
+            while(rs.next()) { long id=rs.getLong("collection_id");headers.putIfAbsent(id,new CollectionHeader(id,rs.getString("name"),rs.getTimestamp("updated_at").toLocalDateTime()));memberships.computeIfAbsent(id,ignored->new java.util.ArrayList<>());Long item=rs.getObject("item_id",Long.class);if(item!=null)memberships.get(id).add(item); }
+            return headers.values().stream().map(h->new UserCollection(h.id(),h.name(),h.updatedAt(),memberships.get(h.id()))).toList();
+        },userId);
+    }
+    @Override public boolean rename(long userId,long collectionId,String expectedName,String name) {
+        return jdbc.update("UPDATE user_collections SET name=?,updated_at=CURRENT_TIMESTAMP WHERE user_id=? AND collection_id=? AND BINARY name=BINARY ?",name,userId,collectionId,expectedName)==1;
     }
     @Override public UserCollection create(long userId, String name) {
         jdbc.update("INSERT INTO user_collections (user_id, name) VALUES (?, ?)", userId, name);
@@ -38,10 +41,6 @@ public class JdbcUserCollectionDao implements UserCollectionDao {
     }
     @Override public void delete(long userId, long collectionId) {
         jdbc.update("DELETE FROM user_collections WHERE user_id = ? AND collection_id = ?", userId, collectionId);
-    }
-    private List<Long> findItemIds(long collectionId) {
-        return jdbc.query("SELECT item_id FROM user_collection_items WHERE collection_id = ? ORDER BY added_at DESC",
-                (rs, row) -> rs.getLong(1), collectionId);
     }
     private record CollectionHeader(long id, String name, java.time.LocalDateTime updatedAt) { }
 }

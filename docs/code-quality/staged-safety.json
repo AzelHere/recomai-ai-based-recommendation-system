@@ -1,0 +1,6 @@
+{
+  "reviewedChangedFiles": 263,
+  "bytes": 19476370,
+  "findings": [],
+  "scope": "Proposed changed blobs: credential signatures, exact local secrets, private paths, restricted/generated paths. Does not prove absence of all arbitrary secrets."
+}

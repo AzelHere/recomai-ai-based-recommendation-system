@@ -20,7 +20,8 @@ public record CatalogItem(
         boolean active,
         LocalDateTime createdAt,
         LocalDateTime updatedAt,
-        boolean editorPick) {
+        boolean editorPick,long revision) {
+    public CatalogItem(long itemId,long categoryId,String title,String description,ItemType type,String externalUrl,String sourceName,List<String> tags,ItemDifficulty difficulty,Integer estimatedMinutes,BigDecimal qualityScore,BigDecimal price,boolean active,LocalDateTime createdAt,LocalDateTime updatedAt,boolean editorPick){this(itemId,categoryId,title,description,type,externalUrl,sourceName,tags,difficulty,estimatedMinutes,qualityScore,price,active,createdAt,updatedAt,editorPick,0);}
     public CatalogItem(long itemId, long categoryId, String title, String description, ItemType type,
                        String externalUrl, String sourceName, List<String> tags, ItemDifficulty difficulty,
                        Integer estimatedMinutes, BigDecimal qualityScore, BigDecimal price, boolean active,

@@ -18,7 +18,9 @@ import java.util.List;
 import java.util.OptionalInt;
 
 import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.verify;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -44,5 +46,28 @@ class RecommendationControllerWebTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[0].title").value("General resource"))
                 .andExpect(jsonPath("$[0].editorPick").value(true));
+    }
+
+    @Test
+    void impressionTrackingRequiresSessionAndUsesTheAuthenticatedUser() throws Exception {
+        mockMvc.perform(post("/api/users/me/recommendations/31/impression"))
+                .andExpect(status().isUnauthorized());
+
+        when(userDao.findAuthVersion(9L)).thenReturn(OptionalInt.of(1));
+        mockMvc.perform(post("/api/users/me/recommendations/31/impression")
+                        .sessionAttr("authenticatedUserId", 9L)
+                        .sessionAttr("authenticatedUserVersion", 1))
+                .andExpect(status().isNoContent());
+        verify(recommendationService).recordImpression(9L, 31L);
+    }
+
+    @Test
+    void clickTrackingRequiresSessionAndUsesTheAuthenticatedUser() throws Exception {
+        when(userDao.findAuthVersion(9L)).thenReturn(OptionalInt.of(1));
+        mockMvc.perform(post("/api/users/me/recommendations/31/click")
+                        .sessionAttr("authenticatedUserId", 9L)
+                        .sessionAttr("authenticatedUserVersion", 1))
+                .andExpect(status().isNoContent());
+        verify(recommendationService).recordClick(9L, 31L);
     }
 }

@@ -3,14 +3,15 @@ WORKDIR /workspace
 
 COPY backend backend
 COPY frontend frontend
-RUN mvn -B -f backend/pom.xml clean verify
+RUN --mount=type=cache,target=/root/.m2 mvn -B -f backend/pom.xml clean verify
 
-FROM eclipse-temurin:21-jre
+FROM eclipse-temurin:21-jre@sha256:d77e090ae1f6970c047b443c6f0a6c1358b0426d44432bb5a7753408cd43de0d
 WORKDIR /app
 ENV SERVER_PORT=8080
 ENV SESSION_COOKIE_SECURE=true
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends curl \
+    && apt-get install -y --no-install-recommends curl perl-base \
+    && rm -f /usr/bin/pebble \
     && rm -rf /var/lib/apt/lists/* \
     && groupadd --system --gid 10001 app \
     && useradd --system --uid 10001 --gid app --home-dir /app --shell /usr/sbin/nologin app

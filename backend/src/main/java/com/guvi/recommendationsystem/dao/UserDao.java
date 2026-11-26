@@ -6,6 +6,7 @@ import java.util.Optional;
 import java.util.OptionalInt;
 
 public interface UserDao {
+    void lock(long userId);
     Optional<UserAccount> findById(long userId);
 
     Optional<UserAccount> findByEmail(String email);

@@ -1,0 +1,27 @@
+{
+  "application": "Recom AI",
+  "maven": {
+    "passed": 167,
+    "failed": 0,
+    "skipped": 0
+  },
+  "playwrightWorkers2": {
+    "passed": 29,
+    "failed": 0,
+    "skipped": 3
+  },
+  "playwrightWorkers1": {
+    "passed": 29,
+    "failed": 0,
+    "skipped": 3
+  },
+  "gallery": {
+    "passed": 1,
+    "screenshots": 18,
+    "viewport": "1440x900",
+    "visualReview": "All 18 captures inspected in three contact sheets; generated isolated demonstration account only"
+  },
+  "cleanClone": "Pending",
+  "publication": "Not pushed yet",
+  "ci": "Configured; no remote pass claimed"
+}

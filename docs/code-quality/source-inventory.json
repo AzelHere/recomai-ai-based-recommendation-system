@@ -1,0 +1,1490 @@
+[
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/RecommendationSystemApplication.java",
+    "lines": 17,
+    "package": "com.guvi.recommendationsystem",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/catalog/ArticleAcquisition.java",
+    "lines": 160,
+    "package": "com.guvi.recommendationsystem.catalog",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/catalog/ArticleAvailabilityImport.java",
+    "lines": 40,
+    "package": "com.guvi.recommendationsystem.catalog",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 2
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/catalog/CatalogImported.java",
+    "lines": 2,
+    "package": "com.guvi.recommendationsystem.catalog",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/catalog/CatalogIngestionService.java",
+    "lines": 124,
+    "package": "com.guvi.recommendationsystem.catalog",
+    "publicDeclarations": 12,
+    "transactionAnnotations": 1,
+    "sqlOperations": 20
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/catalog/CatalogMaintenance.java",
+    "lines": 47,
+    "package": "com.guvi.recommendationsystem.catalog",
+    "publicDeclarations": 6,
+    "transactionAnnotations": 0,
+    "sqlOperations": 5
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/catalog/EducationalResource.java",
+    "lines": 25,
+    "package": "com.guvi.recommendationsystem.catalog",
+    "publicDeclarations": 4,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/catalog/IngestionBodyLimit.java",
+    "lines": 21,
+    "package": "com.guvi.recommendationsystem.catalog",
+    "publicDeclarations": 6,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/catalog/IngestionController.java",
+    "lines": 26,
+    "package": "com.guvi.recommendationsystem.catalog",
+    "publicDeclarations": 8,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/catalog/RealDataAcquisition.java",
+    "lines": 125,
+    "package": "com.guvi.recommendationsystem.catalog",
+    "publicDeclarations": 3,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/catalog/SourceHttp.java",
+    "lines": 96,
+    "package": "com.guvi.recommendationsystem.catalog",
+    "publicDeclarations": 6,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/catalog/ValidateSourceSample.java",
+    "lines": 25,
+    "package": "com.guvi.recommendationsystem.catalog",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/catalog/VerifiedCatalogImport.java",
+    "lines": 28,
+    "package": "com.guvi.recommendationsystem.catalog",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/AdminAnalyticsController.java",
+    "lines": 43,
+    "package": "com.guvi.recommendationsystem.controller",
+    "publicDeclarations": 5,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/AdminSettingsController.java",
+    "lines": 36,
+    "package": "com.guvi.recommendationsystem.controller",
+    "publicDeclarations": 6,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/AuthController.java",
+    "lines": 77,
+    "package": "com.guvi.recommendationsystem.controller",
+    "publicDeclarations": 7,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/CatalogQueryController.java",
+    "lines": 15,
+    "package": "com.guvi.recommendationsystem.controller",
+    "publicDeclarations": 4,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/CategoryController.java",
+    "lines": 77,
+    "package": "com.guvi.recommendationsystem.controller",
+    "publicDeclarations": 7,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/DiscoveryController.java",
+    "lines": 52,
+    "package": "com.guvi.recommendationsystem.controller",
+    "publicDeclarations": 6,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/FeedbackController.java",
+    "lines": 50,
+    "package": "com.guvi.recommendationsystem.controller",
+    "publicDeclarations": 5,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/HealthController.java",
+    "lines": 22,
+    "package": "com.guvi.recommendationsystem.controller",
+    "publicDeclarations": 3,
+    "transactionAnnotations": 0,
+    "sqlOperations": 2
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/InteractionController.java",
+    "lines": 68,
+    "package": "com.guvi.recommendationsystem.controller",
+    "publicDeclarations": 7,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/InterestController.java",
+    "lines": 103,
+    "package": "com.guvi.recommendationsystem.controller",
+    "publicDeclarations": 9,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/ItemController.java",
+    "lines": 142,
+    "package": "com.guvi.recommendationsystem.controller",
+    "publicDeclarations": 13,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/LearningJourneyController.java",
+    "lines": 22,
+    "package": "com.guvi.recommendationsystem.controller",
+    "publicDeclarations": 10,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/RecommendationController.java",
+    "lines": 83,
+    "package": "com.guvi.recommendationsystem.controller",
+    "publicDeclarations": 10,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/RecommendationInfoController.java",
+    "lines": 24,
+    "package": "com.guvi.recommendationsystem.controller",
+    "publicDeclarations": 3,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/UserCollectionController.java",
+    "lines": 38,
+    "package": "com.guvi.recommendationsystem.controller",
+    "publicDeclarations": 10,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/UserController.java",
+    "lines": 107,
+    "package": "com.guvi.recommendationsystem.controller",
+    "publicDeclarations": 10,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/UserDataController.java",
+    "lines": 35,
+    "package": "com.guvi.recommendationsystem.controller",
+    "publicDeclarations": 4,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/controller/WorkspaceController.java",
+    "lines": 22,
+    "package": "com.guvi.recommendationsystem.controller",
+    "publicDeclarations": 5,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/AdminAnalyticsDao.java",
+    "lines": 13,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/AdminSettingsDao.java",
+    "lines": 12,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/CategoryDao.java",
+    "lines": 24,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/FeedbackDao.java",
+    "lines": 16,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/InteractionDao.java",
+    "lines": 26,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/InterestDao.java",
+    "lines": 22,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/ItemDao.java",
+    "lines": 42,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/ItemInterestDao.java",
+    "lines": 9,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcAdminAnalyticsDao.java",
+    "lines": 124,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 5,
+    "transactionAnnotations": 0,
+    "sqlOperations": 8
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcAdminSettingsDao.java",
+    "lines": 44,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 5,
+    "transactionAnnotations": 0,
+    "sqlOperations": 7
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcCategoryDao.java",
+    "lines": 112,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 10,
+    "transactionAnnotations": 0,
+    "sqlOperations": 12
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcFeedbackDao.java",
+    "lines": 76,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 6,
+    "transactionAnnotations": 0,
+    "sqlOperations": 9
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcInteractionDao.java",
+    "lines": 163,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 10,
+    "transactionAnnotations": 0,
+    "sqlOperations": 12
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcInterestDao.java",
+    "lines": 90,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 9,
+    "transactionAnnotations": 0,
+    "sqlOperations": 11
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcItemDao.java",
+    "lines": 347,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 17,
+    "transactionAnnotations": 0,
+    "sqlOperations": 19
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcItemInterestDao.java",
+    "lines": 31,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 4,
+    "transactionAnnotations": 0,
+    "sqlOperations": 3
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcOnboardingDao.java",
+    "lines": 151,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 7,
+    "transactionAnnotations": 1,
+    "sqlOperations": 14
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcPasswordResetDao.java",
+    "lines": 70,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 9,
+    "transactionAnnotations": 0,
+    "sqlOperations": 10
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcRecommendationDao.java",
+    "lines": 463,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 10,
+    "transactionAnnotations": 0,
+    "sqlOperations": 18
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcUserCollectionDao.java",
+    "lines": 46,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 9,
+    "transactionAnnotations": 0,
+    "sqlOperations": 9
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcUserDao.java",
+    "lines": 106,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 10,
+    "transactionAnnotations": 0,
+    "sqlOperations": 12
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcUserInterestDao.java",
+    "lines": 46,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 5,
+    "transactionAnnotations": 0,
+    "sqlOperations": 4
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcUserPreferenceDao.java",
+    "lines": 63,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 7,
+    "transactionAnnotations": 0,
+    "sqlOperations": 6
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcUserSignalSummaryDao.java",
+    "lines": 27,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 4,
+    "transactionAnnotations": 0,
+    "sqlOperations": 3
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/JdbcUserTopicPreferenceDao.java",
+    "lines": 197,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 6,
+    "transactionAnnotations": 2,
+    "sqlOperations": 9
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/OnboardingDao.java",
+    "lines": 16,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/PasswordResetDao.java",
+    "lines": 13,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/RecommendationDao.java",
+    "lines": 23,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/SearchTerms.java",
+    "lines": 25,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 0,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/UserCollectionDao.java",
+    "lines": 15,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/UserDao.java",
+    "lines": 23,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/UserInterestDao.java",
+    "lines": 14,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/UserPreferenceDao.java",
+    "lines": 16,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/UserSignalSummaryDao.java",
+    "lines": 7,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/dao/UserTopicPreferenceDao.java",
+    "lines": 12,
+    "package": "com.guvi.recommendationsystem.dao",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/evaluation/Evaluation.java",
+    "lines": 72,
+    "package": "com.guvi.recommendationsystem.evaluation",
+    "publicDeclarations": 0,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/evaluation/MigrationVerification.java",
+    "lines": 40,
+    "package": "com.guvi.recommendationsystem.evaluation",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/evaluation/OfflineEvaluation.java",
+    "lines": 94,
+    "package": "com.guvi.recommendationsystem.evaluation",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 12
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/evaluation/OuladEvaluation.java",
+    "lines": 58,
+    "package": "com.guvi.recommendationsystem.evaluation",
+    "publicDeclarations": 3,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/evaluation/Phase35MigrationVerification.java",
+    "lines": 68,
+    "package": "com.guvi.recommendationsystem.evaluation",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/evaluation/RealCatalogEvaluation.java",
+    "lines": 52,
+    "package": "com.guvi.recommendationsystem.evaluation",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/exception/CategoryInUseException.java",
+    "lines": 9,
+    "package": "com.guvi.recommendationsystem.exception",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/exception/CategoryNotFoundException.java",
+    "lines": 9,
+    "package": "com.guvi.recommendationsystem.exception",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/exception/DuplicateCatalogEntryException.java",
+    "lines": 9,
+    "package": "com.guvi.recommendationsystem.exception",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/exception/DuplicateUserException.java",
+    "lines": 9,
+    "package": "com.guvi.recommendationsystem.exception",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/exception/FeedbackNotFoundException.java",
+    "lines": 9,
+    "package": "com.guvi.recommendationsystem.exception",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/exception/ForbiddenRequestException.java",
+    "lines": 9,
+    "package": "com.guvi.recommendationsystem.exception",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/exception/InterestNotFoundException.java",
+    "lines": 9,
+    "package": "com.guvi.recommendationsystem.exception",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/exception/InvalidUserInputException.java",
+    "lines": 9,
+    "package": "com.guvi.recommendationsystem.exception",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/exception/ItemNotFoundException.java",
+    "lines": 9,
+    "package": "com.guvi.recommendationsystem.exception",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/exception/RecommendationNotFoundException.java",
+    "lines": 9,
+    "package": "com.guvi.recommendationsystem.exception",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/exception/UnauthorizedRequestException.java",
+    "lines": 9,
+    "package": "com.guvi.recommendationsystem.exception",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/exception/UpdateConflictException.java",
+    "lines": 5,
+    "package": "com.guvi.recommendationsystem.exception",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/exception/UserNotFoundException.java",
+    "lines": 9,
+    "package": "com.guvi.recommendationsystem.exception",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/ActiveStatusRequest.java",
+    "lines": 4,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/AdminDashboardSummary.java",
+    "lines": 13,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/AdminRecommendationInsights.java",
+    "lines": 13,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/AdminSettingsAuditEntry.java",
+    "lines": 7,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/AdminSettingsPreviewRequest.java",
+    "lines": 6,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/AdminSettingsUpdateRequest.java",
+    "lines": 6,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/AdminSystemSettings.java",
+    "lines": 9,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/BulkActiveStatusRequest.java",
+    "lines": 6,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/BulkActiveStatusResult.java",
+    "lines": 4,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/CatalogCsvImportResult.java",
+    "lines": 4,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/CatalogCsvPreview.java",
+    "lines": 7,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/CatalogCsvRequest.java",
+    "lines": 4,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/CatalogItem.java",
+    "lines": 39,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 4,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/CatalogPage.java",
+    "lines": 6,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/CatalogSort.java",
+    "lines": 9,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/Category.java",
+    "lines": 15,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/CategoryInsight.java",
+    "lines": 4,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/CategoryRequest.java",
+    "lines": 4,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/DisplayNameUpdateRequest.java",
+    "lines": 4,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/Feedback.java",
+    "lines": 13,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/FeedbackRequest.java",
+    "lines": 4,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/Interaction.java",
+    "lines": 17,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/InteractionType.java",
+    "lines": 23,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/InteractionWriteResult.java",
+    "lines": 4,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/Interest.java",
+    "lines": 11,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/InterestInsight.java",
+    "lines": 11,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/InterestProfile.java",
+    "lines": 10,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/InterestRequest.java",
+    "lines": 4,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/InterestWeightRequest.java",
+    "lines": 6,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/ItemDifficulty.java",
+    "lines": 9,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/ItemInsight.java",
+    "lines": 4,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/ItemRequest.java",
+    "lines": 29,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 3,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/ItemType.java",
+    "lines": 15,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/LoginRequest.java",
+    "lines": 4,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/NicheOption.java",
+    "lines": 6,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/OnboardingPurpose.java",
+    "lines": 8,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/OnboardingRequest.java",
+    "lines": 6,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/OnboardingStatus.java",
+    "lines": 10,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/PasswordResetCompletionRequest.java",
+    "lines": 3,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/PasswordResetRequest.java",
+    "lines": 3,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/PersonalizedRecommendation.java",
+    "lines": 34,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 4,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/PreferenceWeightRequest.java",
+    "lines": 6,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/RecommendationCandidate.java",
+    "lines": 74,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 5,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/RecommendationDraft.java",
+    "lines": 26,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 4,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/RecommendationEngagementMetrics.java",
+    "lines": 11,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/RecommendationInfo.java",
+    "lines": 12,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/RecommendationProfile.java",
+    "lines": 11,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/RegisterUserRequest.java",
+    "lines": 4,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/SearchInteractionRequest.java",
+    "lines": 7,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/TopicOption.java",
+    "lines": 4,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/TrackInteractionRequest.java",
+    "lines": 8,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/UserAccount.java",
+    "lines": 14,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/UserCollection.java",
+    "lines": 10,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/UserInterest.java",
+    "lines": 6,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/UserInterestRequest.java",
+    "lines": 6,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/UserPreference.java",
+    "lines": 10,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/model/UserProfile.java",
+    "lines": 13,
+    "package": "com.guvi.recommendationsystem.model",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/recommendation/ContentFeatureScorer.java",
+    "lines": 124,
+    "package": "com.guvi.recommendationsystem.recommendation",
+    "publicDeclarations": 5,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/recommendation/RecommendationEngine.java",
+    "lines": 12,
+    "package": "com.guvi.recommendationsystem.recommendation",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/recommendation/ScoringRecommendationEngine.java",
+    "lines": 281,
+    "package": "com.guvi.recommendationsystem.recommendation",
+    "publicDeclarations": 7,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/AdminAnalyticsService.java",
+    "lines": 33,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 5,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/AdminCatalogService.java",
+    "lines": 43,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 5,
+    "transactionAnnotations": 0,
+    "sqlOperations": 4
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/AdminSettingsService.java",
+    "lines": 87,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 8,
+    "transactionAnnotations": 1,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/AdminWriteService.java",
+    "lines": 30,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 4,
+    "transactionAnnotations": 2,
+    "sqlOperations": 5
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/AsyncMailConfiguration.java",
+    "lines": 21,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/CatalogCsvService.java",
+    "lines": 178,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 4,
+    "transactionAnnotations": 1,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/CatalogSeedLoader.java",
+    "lines": 77,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 5,
+    "transactionAnnotations": 0,
+    "sqlOperations": 2
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/CategoryService.java",
+    "lines": 109,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 9,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/FeedbackService.java",
+    "lines": 106,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 5,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/InteractionService.java",
+    "lines": 165,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 7,
+    "transactionAnnotations": 3,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/InteractionSignalWeights.java",
+    "lines": 57,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 5,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/InterestProfileService.java",
+    "lines": 25,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 3,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/InterestService.java",
+    "lines": 100,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 9,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/ItemInterestService.java",
+    "lines": 62,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 4,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/ItemService.java",
+    "lines": 247,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 12,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/LearningJourneyService.java",
+    "lines": 133,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 13,
+    "transactionAnnotations": 7,
+    "sqlOperations": 23
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/OnboardingService.java",
+    "lines": 57,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 5,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/PasswordHasher.java",
+    "lines": 7,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/PasswordResetService.java",
+    "lines": 132,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 8,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/Pbkdf2PasswordHasher.java",
+    "lines": 71,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 3,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/ProductionConfigurationGuard.java",
+    "lines": 25,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 6,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/RecommendationProfileService.java",
+    "lines": 33,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 3,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/RecommendationService.java",
+    "lines": 134,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 9,
+    "transactionAnnotations": 2,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/ResetMailDelivery.java",
+    "lines": 35,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 4,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/ResetMailSender.java",
+    "lines": 5,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/SmtpResetMailSender.java",
+    "lines": 29,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 3,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/TopicPreferenceScorer.java",
+    "lines": 35,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 4,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/UserAccountService.java",
+    "lines": 133,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 7,
+    "transactionAnnotations": 1,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/UserCollectionService.java",
+    "lines": 58,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 8,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/UserDataService.java",
+    "lines": 45,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 4,
+    "transactionAnnotations": 1,
+    "sqlOperations": 22
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/UserInterestService.java",
+    "lines": 71,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 5,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/UserPreferenceService.java",
+    "lines": 62,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 4,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/service/WorkspaceReadService.java",
+    "lines": 93,
+    "package": "com.guvi.recommendationsystem.service",
+    "publicDeclarations": 10,
+    "transactionAnnotations": 3,
+    "sqlOperations": 10
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/web/ApiError.java",
+    "lines": 11,
+    "package": "com.guvi.recommendationsystem.web",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/web/ApiExceptionHandler.java",
+    "lines": 132,
+    "package": "com.guvi.recommendationsystem.web",
+    "publicDeclarations": 10,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/web/LoginRateLimitFilter.java",
+    "lines": 59,
+    "package": "com.guvi.recommendationsystem.web",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/web/PasswordResetRateLimitFilter.java",
+    "lines": 55,
+    "package": "com.guvi.recommendationsystem.web",
+    "publicDeclarations": 1,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/web/RequestContextFilter.java",
+    "lines": 40,
+    "package": "com.guvi.recommendationsystem.web",
+    "publicDeclarations": 3,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/web/SameOriginMutationFilter.java",
+    "lines": 43,
+    "package": "com.guvi.recommendationsystem.web",
+    "publicDeclarations": 4,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/web/SecurityHeadersFilter.java",
+    "lines": 40,
+    "package": "com.guvi.recommendationsystem.web",
+    "publicDeclarations": 2,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  },
+  {
+    "path": "backend/src/main/java/com/guvi/recommendationsystem/web/SessionAccess.java",
+    "lines": 70,
+    "package": "com.guvi.recommendationsystem.web",
+    "publicDeclarations": 6,
+    "transactionAnnotations": 0,
+    "sqlOperations": 0
+  }
+]

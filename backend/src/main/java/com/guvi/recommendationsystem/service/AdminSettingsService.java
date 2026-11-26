@@ -51,7 +51,9 @@ public class AdminSettingsService {
         settingsDao.save("related", scale(request.relatedShare()), actorUserId);
         settingsDao.save("discovery", scale(request.discoveryShare()), actorUserId);
         AdminSystemSettings saved = settingsDao.getSettings();
-        apply(saved);
+        if(org.springframework.transaction.support.TransactionSynchronizationManager.isSynchronizationActive()) {
+            org.springframework.transaction.support.TransactionSynchronizationManager.registerSynchronization(new org.springframework.transaction.support.TransactionSynchronization(){@Override public void afterCommit(){apply(saved);}});
+        } else apply(saved);
         return saved;
     }
 

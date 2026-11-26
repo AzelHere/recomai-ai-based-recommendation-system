@@ -16,6 +16,7 @@ import java.util.UUID;
 @Component("correlationIdFilter")
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public class RequestContextFilter extends OncePerRequestFilter {
+    private static final org.slf4j.Logger logger=org.slf4j.LoggerFactory.getLogger(RequestContextFilter.class);
     public static final String REQUEST_ID_ATTRIBUTE = RequestContextFilter.class.getName() + ".requestId";
     public static final String REQUEST_ID_HEADER = "X-Request-ID";
 
@@ -26,9 +27,13 @@ public class RequestContextFilter extends OncePerRequestFilter {
         request.setAttribute(REQUEST_ID_ATTRIBUTE, requestId);
         response.setHeader(REQUEST_ID_HEADER, requestId);
         MDC.put("requestId", requestId);
+        long started=System.nanoTime();
         try {
             filterChain.doFilter(request, response);
         } finally {
+            Object route=request.getAttribute(org.springframework.web.servlet.HandlerMapping.BEST_MATCHING_PATTERN_ATTRIBUTE);
+            if(route!=null && (request.getRequestURI().startsWith("/api/auth/") || request.getRequestURI().startsWith("/api/admin/")))
+                logger.info("Request completed method={} route={} status={} durationMs={}",request.getMethod(),route,response.getStatus(),(System.nanoTime()-started)/1_000_000);
             MDC.remove("requestId");
         }
     }

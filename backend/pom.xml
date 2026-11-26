@@ -14,14 +14,22 @@
     <groupId>com.guvi</groupId>
     <artifactId>ai-based-recommendation-system</artifactId>
     <version>0.1.0-SNAPSHOT</version>
-    <name>AI-Based Recommendation System</name>
-    <description>GUVI Galgotias project skeleton for an explainable recommendation web application</description>
+    <name>Recom AI</name>
+    <description>Explainable personalized learning resource recommendations</description>
 
     <properties>
         <java.version>21</java.version>
+        <!-- Same-line security patches: OSV audit and upstream advisories recorded in Phase 4. -->
+        <tomcat.version>11.0.29</tomcat.version>
+        <jackson-bom.version>3.1.7</jackson-bom.version>
     </properties>
 
     <dependencies>
+        <!-- A connection-level DNS resolver is required to prevent source-fetch DNS rebinding. -->
+        <dependency>
+            <groupId>org.apache.httpcomponents.client5</groupId>
+            <artifactId>httpclient5</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webmvc</artifactId>
@@ -80,6 +88,15 @@
             </resource>
         </resources>
         <plugins>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.14</version>
+                <executions>
+                    <execution><goals><goal>prepare-agent</goal></goals></execution>
+                    <execution><id>coverage-report</id><phase>verify</phase><goals><goal>report</goal></goals></execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

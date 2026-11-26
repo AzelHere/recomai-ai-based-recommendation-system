@@ -4,6 +4,7 @@ import com.guvi.recommendationsystem.dao.AdminAnalyticsDao;
 import com.guvi.recommendationsystem.exception.InvalidUserInputException;
 import com.guvi.recommendationsystem.model.AdminDashboardSummary;
 import com.guvi.recommendationsystem.model.AdminRecommendationInsights;
+import com.guvi.recommendationsystem.model.RecommendationEngagementMetrics;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -24,5 +25,9 @@ public class AdminAnalyticsService {
             throw new InvalidUserInputException("Insight limit must be between 1 and 20.");
         }
         return analyticsDao.getRecommendationInsights(limit);
+    }
+
+    public RecommendationEngagementMetrics getRecommendationEngagement() {
+        return analyticsDao.getRecommendationEngagement();
     }
 }

@@ -1,4 +1,4 @@
-# RecomAI Phases 2–6: architecture and data map
+# Recom AI Phases 2–6: architecture and data map
 
 ## Request and data flow
 

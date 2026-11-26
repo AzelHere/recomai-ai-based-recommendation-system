@@ -1,0 +1,7 @@
+# Controlled synthetic regression, kept separate
+
+The existing Phase3RankingEvaluationTest reruns seven named category stress scenarios against frozen BaselineScoringRecommendationEngine and the current weighted/diversity engine. Its 32 public resource titles are representative fixture metadata; relevance and preference strengths are deliberately synthetic category judgments, not independently judged human outcomes. The 14 scenario/engine rows and exact synthetic judgments are supplied separately from the genuine-catalog and OULAD experiments.
+
+Run `.\mvnw.cmd -f backend/pom.xml test` from the repository root. The complete suite includes these five ranking tests. Source copies of the test and frozen baseline are in the audit's reproducible-source directory. They use the existing project catalog TSV on the Maven classpath. Results are regenerated under backend/target/phase3-evaluation and copied into this directory with controlled-phase3 prefixes.
+
+The experiment isolates relevance-bounded category variety. It cannot establish fine-topic relevance or real satisfaction and must not be combined with external dataset scores into a common accuracy number. The final genuine-catalog evaluation instead uses 1,665 actual imported metadata records, 30 fully judged candidates and 210 assistant editorial judgments; OULAD uses genuine time-split anonymous access histories. Each has its own declared truth/candidate universe.

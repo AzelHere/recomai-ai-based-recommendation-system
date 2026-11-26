@@ -15,15 +15,20 @@ import java.util.List;
 @Service
 public class CategoryService {
     private final CategoryDao categoryDao;
+    @org.springframework.beans.factory.annotation.Autowired
+    private org.springframework.context.ApplicationEventPublisher events;
+    private void catalogChanged(){if(events!=null)events.publishEvent(new com.guvi.recommendationsystem.catalog.CatalogImported(0));}
+
 
     public CategoryService(CategoryDao categoryDao) {
         this.categoryDao = categoryDao;
     }
 
+    @org.springframework.transaction.annotation.Transactional
     public Category create(CategoryRequest request) {
         CategoryRequest validated = validate(request);
         try {
-            return categoryDao.insert(validated.name(), validated.description());
+            var created=categoryDao.insert(validated.name(), validated.description());catalogChanged();return created;
         } catch (DuplicateKeyException exception) {
             throw new DuplicateCatalogEntryException("A category with that name already exists.");
         }
@@ -43,6 +48,7 @@ public class CategoryService {
         return categoryDao.findActive();
     }
 
+    @org.springframework.transaction.annotation.Transactional
     public Category update(long categoryId, CategoryRequest request) {
         validateId(categoryId);
         CategoryRequest validated = validate(request);
@@ -50,29 +56,31 @@ public class CategoryService {
             throw new CategoryNotFoundException("Category was not found.");
         }
         try {
-            categoryDao.update(categoryId, validated.name(), validated.description());
+            categoryDao.update(categoryId, validated.name(), validated.description());catalogChanged();
         } catch (DuplicateKeyException exception) {
             throw new DuplicateCatalogEntryException("A category with that name already exists.");
         }
         return get(categoryId);
     }
 
+    @org.springframework.transaction.annotation.Transactional
     public Category deactivate(long categoryId) {
         validateId(categoryId);
-        Category category = get(categoryId);
+        get(categoryId);
         if (categoryDao.hasActiveItems(categoryId)) {
             throw new CategoryInUseException("Deactivate or move the category's active items first.");
         }
-        categoryDao.setActive(categoryId, false);
+        categoryDao.setActive(categoryId, false);catalogChanged();
         return get(categoryId);
     }
 
+    @org.springframework.transaction.annotation.Transactional
     public Category activate(long categoryId) {
         validateId(categoryId);
         if (!categoryDao.existsById(categoryId)) {
             throw new CategoryNotFoundException("Category was not found.");
         }
-        categoryDao.setActive(categoryId, true);
+        categoryDao.setActive(categoryId, true);catalogChanged();
         return get(categoryId);
     }
 

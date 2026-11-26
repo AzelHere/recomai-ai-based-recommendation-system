@@ -39,6 +39,9 @@ public class ScoringRecommendationEngine implements RecommendationEngine {
         configureMix(familiar, related, discovery);
     }
 
+    /** Atomically replaces the immutable allocation shared by concurrent recommendation requests.
+     * @throws IllegalArgumentException when shares are non-finite, out of range or do not sum to one
+     */
     public void configureMix(double familiar, double related, double discovery) {
         double sum = familiar + related + discovery;
         if (!Double.isFinite(sum) || familiar < 0 || related < 0 || discovery < 0
@@ -58,6 +61,20 @@ public class ScoringRecommendationEngine implements RecommendationEngine {
         return recommend(candidates, topN, feedMix);
     }
 
+    @Override
+    public List<RecommendationDraft> recommend(List<RecommendationCandidate> candidates, int topN, int exploration) {
+        if (exploration < 0 || exploration > 100) {
+            throw new IllegalArgumentException("Exploration must be between 0 and 100.");
+        }
+        FeedMix base = feedMix;
+        double shift = (exploration - 50) / 100.0;
+        double retained = 1 - Math.abs(shift);
+        return recommend(candidates, topN, new FeedMix(
+                base.familiar() * retained + Math.max(0, -shift),
+                base.related() * retained,
+                base.discovery() * retained + Math.max(0, shift)));
+    }
+
     public List<RecommendationDraft> recommendWithMix(List<RecommendationCandidate> candidates, int topN,
                                                        double familiar, double related, double discovery) {
         double sum = familiar + related + discovery;
@@ -75,7 +92,9 @@ public class ScoringRecommendationEngine implements RecommendationEngine {
         if (candidates == null || candidates.isEmpty()) {
             return List.of();
         }
-        List<ScoredCandidate> scored = candidates.stream()
+        Map<Long, RecommendationCandidate> unique = new LinkedHashMap<>();
+        candidates.stream().filter(java.util.Objects::nonNull).forEach(candidate -> unique.putIfAbsent(candidate.itemId(),candidate));
+        List<ScoredCandidate> scored = unique.values().stream()
                 .filter(candidate -> candidate != null && (candidate.negativeInteractionSignal() == null
                         || candidate.negativeInteractionSignal().doubleValue() < 1.25))
                 .map(this::score)
@@ -106,11 +125,11 @@ public class ScoringRecommendationEngine implements RecommendationEngine {
         List<ScoredCandidate> bucketItems = source.stream().filter(value -> value.bucketType().equals(bucket))
                 .filter(value -> !destination.contains(value)).toList();
         for (int i = 0; i < limit && !bucketItems.isEmpty(); i++) {
-            ScoredCandidate next = bucketItems.stream()
-                    .filter(value -> !destination.contains(value))
-                    .filter(value -> !sameCategoryAtEnd(destination, value))
-                    .findFirst().orElseGet(() -> bucketItems.stream()
-                            .filter(value -> !destination.contains(value)).findFirst().orElse(null));
+            ScoredCandidate best=bucketItems.stream().filter(value->!destination.contains(value)).findFirst().orElse(null);
+            if(best==null)return;
+            ScoredCandidate next=bucketItems.stream().filter(value->!destination.contains(value))
+                    .filter(value->!sameCategoryAtEnd(destination,value) && comparableRelevance(best,value))
+                    .findFirst().orElse(best);
             if (next == null) return;
             destination.add(next);
         }
@@ -123,8 +142,13 @@ public class ScoringRecommendationEngine implements RecommendationEngine {
             return;
         }
         ScoredCandidate alternative = source.stream().filter(value -> !destination.contains(value))
-                .filter(value -> !sameCategoryAtEnd(destination, value)).findFirst().orElse(candidate);
+                .filter(value -> !sameCategoryAtEnd(destination, value) && comparableRelevance(candidate,value)).findFirst().orElse(candidate);
         destination.add(alternative);
+    }
+
+    private boolean comparableRelevance(ScoredCandidate best,ScoredCandidate alternative) {
+        // Diversity may break near ties, but cannot replace a strong match with an unrelated one.
+        return alternative.rawScore() >= best.rawScore() - Math.max(2.0,best.rawScore()*0.10);
     }
 
     private boolean sameCategoryAtEnd(List<ScoredCandidate> destination, ScoredCandidate candidate) {
@@ -173,7 +197,7 @@ public class ScoringRecommendationEngine implements RecommendationEngine {
         if (bucket.equals("DISCOVERY")) {
             if (candidate.editorPick()) {
                 reasonType = "EDITOR_PICK";
-                reason = "Editor's pick: selected by the RecomAI catalog team as a useful starting resource.";
+                reason = "Editor's pick: selected by the Recom AI catalog team as a useful starting resource.";
             } else if (popularity > 0) {
                 reasonType = "POPULARITY";
                 reason = "Popular in this catalog based on recent positive activity from multiple users.";
@@ -188,7 +212,7 @@ public class ScoringRecommendationEngine implements RecommendationEngine {
             } else if (content >= 0.10 && (candidate.contentMatchTerms() != null
                     && !candidate.contentMatchTerms().isBlank())) {
                 reasonType = "CONTENT_SIMILARITY";
-                reason = "Its description and topics overlap with resources you engaged with: "
+                reason = "Its description and topics overlap with your selected topics or positive resource history: "
                         + candidate.contentMatchTerms() + ".";
             } else {
                 reasonType = "RELATED_INTEREST";

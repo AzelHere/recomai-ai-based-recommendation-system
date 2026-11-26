@@ -3,6 +3,8 @@
 -- The database itself must exist before the application starts.
 CREATE TABLE IF NOT EXISTS users (
     user_id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    exploration TINYINT UNSIGNED NOT NULL DEFAULT 50,
+    CONSTRAINT chk_users_exploration CHECK (exploration BETWEEN 0 AND 100),
     username VARCHAR(50) NOT NULL,
     email VARCHAR(254) NOT NULL,
     password_hash VARCHAR(255) NOT NULL,
@@ -303,3 +305,80 @@ CREATE TABLE IF NOT EXISTS recommendations (
         ON UPDATE CASCADE
         ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE IF NOT EXISTS recommendation_impressions (
+    recommendation_id BIGINT UNSIGNED NOT NULL,
+    shown_at TIMESTAMP(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+    clicked_at TIMESTAMP(6) NULL,
+    PRIMARY KEY (recommendation_id),
+    INDEX ix_recommendation_impressions_shown (shown_at, recommendation_id),
+    INDEX ix_recommendation_impressions_clicked (clicked_at, recommendation_id),
+    CONSTRAINT fk_recommendation_impressions_recommendation FOREIGN KEY (recommendation_id)
+        REFERENCES recommendations (recommendation_id)
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- Phase 3 reference additions (runtime uses append-only Flyway V14/V15).
+
+-- V14__workspace_integrity.sql
+-- Append-only: retain all existing history and catalog rows.
+CREATE INDEX ix_interactions_user_order ON interactions(user_id, occurred_at DESC, interaction_id DESC);
+CREATE INDEX ix_interactions_user_item_type ON interactions(user_id, item_id, interaction_type);
+ALTER TABLE items ADD COLUMN revision BIGINT NOT NULL DEFAULT 0;
+CREATE TABLE recommendation_settings_revision (
+    singleton_id INT NOT NULL PRIMARY KEY,
+    revision BIGINT NOT NULL DEFAULT 0,
+    CONSTRAINT chk_settings_singleton CHECK (singleton_id = 1)
+);
+INSERT INTO recommendation_settings_revision(singleton_id, revision) VALUES (1, 0);
+
+-- V15__persistent_learning_journeys.sql
+CREATE TABLE learning_journeys (
+    journey_id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user_id BIGINT UNSIGNED NOT NULL,
+    title VARCHAR(150) NOT NULL,
+    goal VARCHAR(30) NOT NULL,
+    category_id BIGINT UNSIGNED NULL,
+    status VARCHAR(20) NOT NULL DEFAULT 'ACTIVE',
+    preference_snapshot JSON NOT NULL,
+    request_id VARCHAR(64) NOT NULL,
+    request_hash CHAR(64) NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    UNIQUE KEY uk_journey_request(user_id,request_id),
+    INDEX ix_journey_owner_time(user_id,created_at,journey_id),
+    CONSTRAINT fk_journey_user FOREIGN KEY(user_id) REFERENCES users(user_id) ON DELETE CASCADE,
+    CONSTRAINT fk_journey_category FOREIGN KEY(category_id) REFERENCES categories(category_id) ON DELETE SET NULL,
+    CONSTRAINT chk_journey_goal CHECK(goal IN ('LEARN','CAREER','EXPLORE','IMPROVE_MYSELF')),
+    CONSTRAINT chk_journey_status CHECK(status IN ('ACTIVE','ARCHIVED'))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE learning_journey_steps (
+    step_id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    journey_id BIGINT UNSIGNED NOT NULL,
+    item_id BIGINT UNSIGNED NULL,
+    position INT NOT NULL,
+    title_snapshot VARCHAR(150) NOT NULL,
+    rationale TEXT NOT NULL,
+    UNIQUE KEY uk_journey_position(journey_id,position),
+    UNIQUE KEY uk_journey_item(journey_id,item_id),
+    CONSTRAINT fk_step_journey FOREIGN KEY(journey_id) REFERENCES learning_journeys(journey_id) ON DELETE CASCADE,
+    CONSTRAINT fk_step_resource FOREIGN KEY(item_id) REFERENCES items(item_id) ON DELETE SET NULL,
+    CONSTRAINT chk_step_position CHECK(position BETWEEN 1 AND 12)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE journey_step_replacements (
+    replacement_id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    step_id BIGINT UNSIGNED NOT NULL,
+    previous_item_id BIGINT UNSIGNED NULL,
+    previous_title VARCHAR(150) NOT NULL,
+    previous_rationale TEXT NOT NULL,
+    replaced_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT fk_replacement_step FOREIGN KEY(step_id) REFERENCES learning_journey_steps(step_id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- Phase 3.5 reference: V16 adds UNKNOWN difficulty, reviewed fine topics, catalog_sources,
+-- catalog_import_batches, resource_provenance and catalog_import_reviews.
+-- See the append-only V16__verified_catalog_ingestion.sql for authoritative DDL; this file is not an initializer.

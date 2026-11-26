@@ -1,0 +1,225 @@
+scenario	item_id	title	category	synthetic_topic_match	synthetic_category_match	negative	judged_relevance
+Java beginner (Programming fallback)	1	Getting Started with Java	Technology	0.85	1.0	0.0	2
+Java beginner (Programming fallback)	2	Spring Guides: Building a RESTful Web Service	Technology	0.85	1.0	0.0	2
+Java beginner (Programming fallback)	3	Python Tutorial	Technology	0.85	1.0	0.0	2
+Java beginner (Programming fallback)	4	CS50x: Introduction to Computer Science	Technology	0.85	1.0	0.0	2
+Java beginner (Programming fallback)	5	Python for Everybody	Technology	0.85	1.0	0.0	2
+Java beginner (Programming fallback)	6	The Odin Project: Foundations	Technology	0.85	1.0	0.0	2
+Java beginner (Programming fallback)	7	freeCodeCamp: Responsive Web Design	Technology	0.85	1.0	0.0	2
+Java beginner (Programming fallback)	8	MDN JavaScript Guide	Technology	0.85	1.0	0.0	2
+Java beginner (Programming fallback)	9	SBA: Plan Your Business	Business & Finance	0.01	0.05	0.0	0
+Java beginner (Programming fallback)	10	SBA: Launch Your Business	Business & Finance	0.01	0.05	0.0	0
+Java beginner (Programming fallback)	11	SBA: Manage Your Business	Business & Finance	0.01	0.05	0.0	0
+Java beginner (Programming fallback)	12	SCORE Business Plan Template	Business & Finance	0.01	0.05	0.0	0
+Java beginner (Programming fallback)	13	Y Combinator Startup School	Business & Finance	0.01	0.05	0.0	0
+Java beginner (Programming fallback)	14	Y Combinator Startup Library	Business & Finance	0.01	0.05	0.0	0
+Java beginner (Programming fallback)	15	Adobe Learn: Creative Cloud	Creative & Lifestyle	0.01	0.05	0.0	0
+Java beginner (Programming fallback)	16	Figma Learn Design	Creative & Lifestyle	0.01	0.05	0.0	0
+Java beginner (Programming fallback)	17	Google Arts & Culture	Creative & Lifestyle	0.01	0.05	0.0	0
+Java beginner (Programming fallback)	18	The Met: Heilbrunn Timeline of Art History	Creative & Lifestyle	0.01	0.05	0.0	0
+Java beginner (Programming fallback)	19	MoMA Learning	Creative & Lifestyle	0.01	0.05	0.0	0
+Java beginner (Programming fallback)	20	Tate Art Terms	Creative & Lifestyle	0.01	0.05	0.0	0
+Java beginner (Programming fallback)	21	The Learning Scientists: Six Strategies	Learning & Career	0.01	0.05	0.0	0
+Java beginner (Programming fallback)	22	Anki Manual	Learning & Career	0.01	0.05	0.0	0
+Java beginner (Programming fallback)	23	MIT OpenCourseWare	Learning & Career	0.01	0.05	0.0	0
+Java beginner (Programming fallback)	24	Coursera: Mindshift	Learning & Career	0.01	0.05	0.0	0
+Java beginner (Programming fallback)	25	Google Career Certificates	Learning & Career	0.01	0.05	0.0	0
+Java beginner (Programming fallback)	26	Microsoft Learn Training	Learning & Career	0.01	0.05	0.0	0
+Java beginner (Programming fallback)	27	Harvard Health: Exercise and Fitness	Health & Fitness	0.01	0.05	0.0	0
+Java beginner (Programming fallback)	28	WHO Physical Activity Fact Sheet	Health & Fitness	0.01	0.05	0.0	0
+Java beginner (Programming fallback)	29	Health.gov Physical Activity Guidelines	Health & Fitness	0.01	0.05	0.0	0
+Java beginner (Programming fallback)	30	NHS Couch to 5K	Health & Fitness	0.01	0.05	0.0	0
+Java beginner (Programming fallback)	31	NHS Strength Exercises	Health & Fitness	0.01	0.05	0.0	0
+Java beginner (Programming fallback)	32	MedlinePlus Exercise and Physical Fitness	Health & Fitness	0.01	0.05	0.0	0
+DSA preparation (Programming fallback)	1	Getting Started with Java	Technology	0.85	1.0	0.0	2
+DSA preparation (Programming fallback)	2	Spring Guides: Building a RESTful Web Service	Technology	0.85	1.0	0.0	2
+DSA preparation (Programming fallback)	3	Python Tutorial	Technology	0.85	1.0	0.0	2
+DSA preparation (Programming fallback)	4	CS50x: Introduction to Computer Science	Technology	0.85	1.0	0.0	2
+DSA preparation (Programming fallback)	5	Python for Everybody	Technology	0.85	1.0	0.0	2
+DSA preparation (Programming fallback)	6	The Odin Project: Foundations	Technology	0.85	1.0	0.0	2
+DSA preparation (Programming fallback)	7	freeCodeCamp: Responsive Web Design	Technology	0.85	1.0	0.0	2
+DSA preparation (Programming fallback)	8	MDN JavaScript Guide	Technology	0.85	1.0	0.0	2
+DSA preparation (Programming fallback)	9	SBA: Plan Your Business	Business & Finance	0.01	0.05	0.0	0
+DSA preparation (Programming fallback)	10	SBA: Launch Your Business	Business & Finance	0.01	0.05	0.0	0
+DSA preparation (Programming fallback)	11	SBA: Manage Your Business	Business & Finance	0.01	0.05	0.0	0
+DSA preparation (Programming fallback)	12	SCORE Business Plan Template	Business & Finance	0.01	0.05	0.0	0
+DSA preparation (Programming fallback)	13	Y Combinator Startup School	Business & Finance	0.01	0.05	0.0	0
+DSA preparation (Programming fallback)	14	Y Combinator Startup Library	Business & Finance	0.01	0.05	0.0	0
+DSA preparation (Programming fallback)	15	Adobe Learn: Creative Cloud	Creative & Lifestyle	0.01	0.05	0.0	0
+DSA preparation (Programming fallback)	16	Figma Learn Design	Creative & Lifestyle	0.01	0.05	0.0	0
+DSA preparation (Programming fallback)	17	Google Arts & Culture	Creative & Lifestyle	0.01	0.05	0.0	0
+DSA preparation (Programming fallback)	18	The Met: Heilbrunn Timeline of Art History	Creative & Lifestyle	0.01	0.05	0.0	0
+DSA preparation (Programming fallback)	19	MoMA Learning	Creative & Lifestyle	0.01	0.05	0.0	0
+DSA preparation (Programming fallback)	20	Tate Art Terms	Creative & Lifestyle	0.01	0.05	0.0	0
+DSA preparation (Programming fallback)	21	The Learning Scientists: Six Strategies	Learning & Career	0.01	0.05	0.0	0
+DSA preparation (Programming fallback)	22	Anki Manual	Learning & Career	0.01	0.05	0.0	0
+DSA preparation (Programming fallback)	23	MIT OpenCourseWare	Learning & Career	0.01	0.05	0.0	0
+DSA preparation (Programming fallback)	24	Coursera: Mindshift	Learning & Career	0.01	0.05	0.0	0
+DSA preparation (Programming fallback)	25	Google Career Certificates	Learning & Career	0.01	0.05	0.0	0
+DSA preparation (Programming fallback)	26	Microsoft Learn Training	Learning & Career	0.01	0.05	0.0	0
+DSA preparation (Programming fallback)	27	Harvard Health: Exercise and Fitness	Health & Fitness	0.01	0.05	0.0	0
+DSA preparation (Programming fallback)	28	WHO Physical Activity Fact Sheet	Health & Fitness	0.01	0.05	0.0	0
+DSA preparation (Programming fallback)	29	Health.gov Physical Activity Guidelines	Health & Fitness	0.01	0.05	0.0	0
+DSA preparation (Programming fallback)	30	NHS Couch to 5K	Health & Fitness	0.01	0.05	0.0	0
+DSA preparation (Programming fallback)	31	NHS Strength Exercises	Health & Fitness	0.01	0.05	0.0	0
+DSA preparation (Programming fallback)	32	MedlinePlus Exercise and Physical Fitness	Health & Fitness	0.01	0.05	0.0	0
+Business and finance	1	Getting Started with Java	Technology	0.01	0.05	0.0	0
+Business and finance	2	Spring Guides: Building a RESTful Web Service	Technology	0.01	0.05	0.0	0
+Business and finance	3	Python Tutorial	Technology	0.01	0.05	0.0	0
+Business and finance	4	CS50x: Introduction to Computer Science	Technology	0.01	0.05	0.0	0
+Business and finance	5	Python for Everybody	Technology	0.01	0.05	0.0	0
+Business and finance	6	The Odin Project: Foundations	Technology	0.01	0.05	0.0	0
+Business and finance	7	freeCodeCamp: Responsive Web Design	Technology	0.01	0.05	0.0	0
+Business and finance	8	MDN JavaScript Guide	Technology	0.01	0.05	0.0	0
+Business and finance	9	SBA: Plan Your Business	Business & Finance	0.85	1.0	0.0	2
+Business and finance	10	SBA: Launch Your Business	Business & Finance	0.85	1.0	0.0	2
+Business and finance	11	SBA: Manage Your Business	Business & Finance	0.85	1.0	0.0	2
+Business and finance	12	SCORE Business Plan Template	Business & Finance	0.85	1.0	0.0	2
+Business and finance	13	Y Combinator Startup School	Business & Finance	0.85	1.0	0.0	2
+Business and finance	14	Y Combinator Startup Library	Business & Finance	0.85	1.0	0.0	2
+Business and finance	15	Adobe Learn: Creative Cloud	Creative & Lifestyle	0.01	0.05	0.0	0
+Business and finance	16	Figma Learn Design	Creative & Lifestyle	0.01	0.05	0.0	0
+Business and finance	17	Google Arts & Culture	Creative & Lifestyle	0.01	0.05	0.0	0
+Business and finance	18	The Met: Heilbrunn Timeline of Art History	Creative & Lifestyle	0.01	0.05	0.0	0
+Business and finance	19	MoMA Learning	Creative & Lifestyle	0.01	0.05	0.0	0
+Business and finance	20	Tate Art Terms	Creative & Lifestyle	0.01	0.05	0.0	0
+Business and finance	21	The Learning Scientists: Six Strategies	Learning & Career	0.01	0.05	0.0	0
+Business and finance	22	Anki Manual	Learning & Career	0.01	0.05	0.0	0
+Business and finance	23	MIT OpenCourseWare	Learning & Career	0.01	0.05	0.0	0
+Business and finance	24	Coursera: Mindshift	Learning & Career	0.01	0.05	0.0	0
+Business and finance	25	Google Career Certificates	Learning & Career	0.01	0.05	0.0	0
+Business and finance	26	Microsoft Learn Training	Learning & Career	0.01	0.05	0.0	0
+Business and finance	27	Harvard Health: Exercise and Fitness	Health & Fitness	0.01	0.05	0.0	0
+Business and finance	28	WHO Physical Activity Fact Sheet	Health & Fitness	0.01	0.05	0.0	0
+Business and finance	29	Health.gov Physical Activity Guidelines	Health & Fitness	0.01	0.05	0.0	0
+Business and finance	30	NHS Couch to 5K	Health & Fitness	0.01	0.05	0.0	0
+Business and finance	31	NHS Strength Exercises	Health & Fitness	0.01	0.05	0.0	0
+Business and finance	32	MedlinePlus Exercise and Physical Fitness	Health & Fitness	0.01	0.05	0.0	0
+Creative learning	1	Getting Started with Java	Technology	0.01	0.05	0.0	0
+Creative learning	2	Spring Guides: Building a RESTful Web Service	Technology	0.01	0.05	0.0	0
+Creative learning	3	Python Tutorial	Technology	0.01	0.05	0.0	0
+Creative learning	4	CS50x: Introduction to Computer Science	Technology	0.01	0.05	0.0	0
+Creative learning	5	Python for Everybody	Technology	0.01	0.05	0.0	0
+Creative learning	6	The Odin Project: Foundations	Technology	0.01	0.05	0.0	0
+Creative learning	7	freeCodeCamp: Responsive Web Design	Technology	0.01	0.05	0.0	0
+Creative learning	8	MDN JavaScript Guide	Technology	0.01	0.05	0.0	0
+Creative learning	9	SBA: Plan Your Business	Business & Finance	0.01	0.05	0.0	0
+Creative learning	10	SBA: Launch Your Business	Business & Finance	0.01	0.05	0.0	0
+Creative learning	11	SBA: Manage Your Business	Business & Finance	0.01	0.05	0.0	0
+Creative learning	12	SCORE Business Plan Template	Business & Finance	0.01	0.05	0.0	0
+Creative learning	13	Y Combinator Startup School	Business & Finance	0.01	0.05	0.0	0
+Creative learning	14	Y Combinator Startup Library	Business & Finance	0.01	0.05	0.0	0
+Creative learning	15	Adobe Learn: Creative Cloud	Creative & Lifestyle	0.85	1.0	0.0	2
+Creative learning	16	Figma Learn Design	Creative & Lifestyle	0.85	1.0	0.0	2
+Creative learning	17	Google Arts & Culture	Creative & Lifestyle	0.85	1.0	0.0	2
+Creative learning	18	The Met: Heilbrunn Timeline of Art History	Creative & Lifestyle	0.85	1.0	0.0	2
+Creative learning	19	MoMA Learning	Creative & Lifestyle	0.85	1.0	0.0	2
+Creative learning	20	Tate Art Terms	Creative & Lifestyle	0.85	1.0	0.0	2
+Creative learning	21	The Learning Scientists: Six Strategies	Learning & Career	0.01	0.05	0.0	0
+Creative learning	22	Anki Manual	Learning & Career	0.01	0.05	0.0	0
+Creative learning	23	MIT OpenCourseWare	Learning & Career	0.01	0.05	0.0	0
+Creative learning	24	Coursera: Mindshift	Learning & Career	0.01	0.05	0.0	0
+Creative learning	25	Google Career Certificates	Learning & Career	0.01	0.05	0.0	0
+Creative learning	26	Microsoft Learn Training	Learning & Career	0.01	0.05	0.0	0
+Creative learning	27	Harvard Health: Exercise and Fitness	Health & Fitness	0.01	0.05	0.0	0
+Creative learning	28	WHO Physical Activity Fact Sheet	Health & Fitness	0.01	0.05	0.0	0
+Creative learning	29	Health.gov Physical Activity Guidelines	Health & Fitness	0.01	0.05	0.0	0
+Creative learning	30	NHS Couch to 5K	Health & Fitness	0.01	0.05	0.0	0
+Creative learning	31	NHS Strength Exercises	Health & Fitness	0.01	0.05	0.0	0
+Creative learning	32	MedlinePlus Exercise and Physical Fitness	Health & Fitness	0.01	0.05	0.0	0
+Multiple interests	1	Getting Started with Java	Technology	0.85	1.0	0.0	2
+Multiple interests	2	Spring Guides: Building a RESTful Web Service	Technology	0.85	1.0	0.0	2
+Multiple interests	3	Python Tutorial	Technology	0.85	1.0	0.0	2
+Multiple interests	4	CS50x: Introduction to Computer Science	Technology	0.85	1.0	0.0	2
+Multiple interests	5	Python for Everybody	Technology	0.85	1.0	0.0	2
+Multiple interests	6	The Odin Project: Foundations	Technology	0.85	1.0	0.0	2
+Multiple interests	7	freeCodeCamp: Responsive Web Design	Technology	0.85	1.0	0.0	2
+Multiple interests	8	MDN JavaScript Guide	Technology	0.85	1.0	0.0	2
+Multiple interests	9	SBA: Plan Your Business	Business & Finance	0.85	1.0	0.0	2
+Multiple interests	10	SBA: Launch Your Business	Business & Finance	0.85	1.0	0.0	2
+Multiple interests	11	SBA: Manage Your Business	Business & Finance	0.85	1.0	0.0	2
+Multiple interests	12	SCORE Business Plan Template	Business & Finance	0.85	1.0	0.0	2
+Multiple interests	13	Y Combinator Startup School	Business & Finance	0.85	1.0	0.0	2
+Multiple interests	14	Y Combinator Startup Library	Business & Finance	0.85	1.0	0.0	2
+Multiple interests	15	Adobe Learn: Creative Cloud	Creative & Lifestyle	0.01	0.05	0.0	0
+Multiple interests	16	Figma Learn Design	Creative & Lifestyle	0.01	0.05	0.0	0
+Multiple interests	17	Google Arts & Culture	Creative & Lifestyle	0.01	0.05	0.0	0
+Multiple interests	18	The Met: Heilbrunn Timeline of Art History	Creative & Lifestyle	0.01	0.05	0.0	0
+Multiple interests	19	MoMA Learning	Creative & Lifestyle	0.01	0.05	0.0	0
+Multiple interests	20	Tate Art Terms	Creative & Lifestyle	0.01	0.05	0.0	0
+Multiple interests	21	The Learning Scientists: Six Strategies	Learning & Career	0.01	0.05	0.0	0
+Multiple interests	22	Anki Manual	Learning & Career	0.01	0.05	0.0	0
+Multiple interests	23	MIT OpenCourseWare	Learning & Career	0.01	0.05	0.0	0
+Multiple interests	24	Coursera: Mindshift	Learning & Career	0.01	0.05	0.0	0
+Multiple interests	25	Google Career Certificates	Learning & Career	0.01	0.05	0.0	0
+Multiple interests	26	Microsoft Learn Training	Learning & Career	0.01	0.05	0.0	0
+Multiple interests	27	Harvard Health: Exercise and Fitness	Health & Fitness	0.01	0.05	0.0	0
+Multiple interests	28	WHO Physical Activity Fact Sheet	Health & Fitness	0.01	0.05	0.0	0
+Multiple interests	29	Health.gov Physical Activity Guidelines	Health & Fitness	0.01	0.05	0.0	0
+Multiple interests	30	NHS Couch to 5K	Health & Fitness	0.01	0.05	0.0	0
+Multiple interests	31	NHS Strength Exercises	Health & Fitness	0.01	0.05	0.0	0
+Multiple interests	32	MedlinePlus Exercise and Physical Fitness	Health & Fitness	0.01	0.05	0.0	0
+Negative feedback	1	Getting Started with Java	Technology	0.85	1.0	1.5	0
+Negative feedback	2	Spring Guides: Building a RESTful Web Service	Technology	0.85	1.0	0.0	2
+Negative feedback	3	Python Tutorial	Technology	0.85	1.0	0.0	2
+Negative feedback	4	CS50x: Introduction to Computer Science	Technology	0.85	1.0	0.0	2
+Negative feedback	5	Python for Everybody	Technology	0.85	1.0	0.0	2
+Negative feedback	6	The Odin Project: Foundations	Technology	0.85	1.0	0.0	2
+Negative feedback	7	freeCodeCamp: Responsive Web Design	Technology	0.85	1.0	0.0	2
+Negative feedback	8	MDN JavaScript Guide	Technology	0.85	1.0	0.0	2
+Negative feedback	9	SBA: Plan Your Business	Business & Finance	0.01	0.05	0.0	0
+Negative feedback	10	SBA: Launch Your Business	Business & Finance	0.01	0.05	0.0	0
+Negative feedback	11	SBA: Manage Your Business	Business & Finance	0.01	0.05	0.0	0
+Negative feedback	12	SCORE Business Plan Template	Business & Finance	0.01	0.05	0.0	0
+Negative feedback	13	Y Combinator Startup School	Business & Finance	0.01	0.05	0.0	0
+Negative feedback	14	Y Combinator Startup Library	Business & Finance	0.01	0.05	0.0	0
+Negative feedback	15	Adobe Learn: Creative Cloud	Creative & Lifestyle	0.01	0.05	0.0	0
+Negative feedback	16	Figma Learn Design	Creative & Lifestyle	0.01	0.05	0.0	0
+Negative feedback	17	Google Arts & Culture	Creative & Lifestyle	0.01	0.05	0.0	0
+Negative feedback	18	The Met: Heilbrunn Timeline of Art History	Creative & Lifestyle	0.01	0.05	0.0	0
+Negative feedback	19	MoMA Learning	Creative & Lifestyle	0.01	0.05	0.0	0
+Negative feedback	20	Tate Art Terms	Creative & Lifestyle	0.01	0.05	0.0	0
+Negative feedback	21	The Learning Scientists: Six Strategies	Learning & Career	0.01	0.05	0.0	0
+Negative feedback	22	Anki Manual	Learning & Career	0.01	0.05	0.0	0
+Negative feedback	23	MIT OpenCourseWare	Learning & Career	0.01	0.05	0.0	0
+Negative feedback	24	Coursera: Mindshift	Learning & Career	0.01	0.05	0.0	0
+Negative feedback	25	Google Career Certificates	Learning & Career	0.01	0.05	0.0	0
+Negative feedback	26	Microsoft Learn Training	Learning & Career	0.01	0.05	0.0	0
+Negative feedback	27	Harvard Health: Exercise and Fitness	Health & Fitness	0.01	0.05	0.0	0
+Negative feedback	28	WHO Physical Activity Fact Sheet	Health & Fitness	0.01	0.05	0.0	0
+Negative feedback	29	Health.gov Physical Activity Guidelines	Health & Fitness	0.01	0.05	0.0	0
+Negative feedback	30	NHS Couch to 5K	Health & Fitness	0.01	0.05	0.0	0
+Negative feedback	31	NHS Strength Exercises	Health & Fitness	0.01	0.05	0.0	0
+Negative feedback	32	MedlinePlus Exercise and Physical Fitness	Health & Fitness	0.01	0.05	0.0	0
+No history or onboarding	1	Getting Started with Java	Technology	0.0	0.0	0.0	0
+No history or onboarding	2	Spring Guides: Building a RESTful Web Service	Technology	0.0	0.0	0.0	0
+No history or onboarding	3	Python Tutorial	Technology	0.0	0.0	0.0	0
+No history or onboarding	4	CS50x: Introduction to Computer Science	Technology	0.0	0.0	0.0	0
+No history or onboarding	5	Python for Everybody	Technology	0.0	0.0	0.0	0
+No history or onboarding	6	The Odin Project: Foundations	Technology	0.0	0.0	0.0	0
+No history or onboarding	7	freeCodeCamp: Responsive Web Design	Technology	0.0	0.0	0.0	0
+No history or onboarding	8	MDN JavaScript Guide	Technology	0.0	0.0	0.0	0
+No history or onboarding	9	SBA: Plan Your Business	Business & Finance	0.0	0.0	0.0	0
+No history or onboarding	10	SBA: Launch Your Business	Business & Finance	0.0	0.0	0.0	0
+No history or onboarding	11	SBA: Manage Your Business	Business & Finance	0.0	0.0	0.0	0
+No history or onboarding	12	SCORE Business Plan Template	Business & Finance	0.0	0.0	0.0	0
+No history or onboarding	13	Y Combinator Startup School	Business & Finance	0.0	0.0	0.0	0
+No history or onboarding	14	Y Combinator Startup Library	Business & Finance	0.0	0.0	0.0	0
+No history or onboarding	15	Adobe Learn: Creative Cloud	Creative & Lifestyle	0.0	0.0	0.0	0
+No history or onboarding	16	Figma Learn Design	Creative & Lifestyle	0.0	0.0	0.0	0
+No history or onboarding	17	Google Arts & Culture	Creative & Lifestyle	0.0	0.0	0.0	0
+No history or onboarding	18	The Met: Heilbrunn Timeline of Art History	Creative & Lifestyle	0.0	0.0	0.0	0
+No history or onboarding	19	MoMA Learning	Creative & Lifestyle	0.0	0.0	0.0	0
+No history or onboarding	20	Tate Art Terms	Creative & Lifestyle	0.0	0.0	0.0	0
+No history or onboarding	21	The Learning Scientists: Six Strategies	Learning & Career	0.0	0.0	0.0	0
+No history or onboarding	22	Anki Manual	Learning & Career	0.0	0.0	0.0	0
+No history or onboarding	23	MIT OpenCourseWare	Learning & Career	0.0	0.0	0.0	0
+No history or onboarding	24	Coursera: Mindshift	Learning & Career	0.0	0.0	0.0	0
+No history or onboarding	25	Google Career Certificates	Learning & Career	0.0	0.0	0.0	0
+No history or onboarding	26	Microsoft Learn Training	Learning & Career	0.0	0.0	0.0	0
+No history or onboarding	27	Harvard Health: Exercise and Fitness	Health & Fitness	0.0	0.0	0.0	0
+No history or onboarding	28	WHO Physical Activity Fact Sheet	Health & Fitness	0.0	0.0	0.0	0
+No history or onboarding	29	Health.gov Physical Activity Guidelines	Health & Fitness	0.0	0.0	0.0	0
+No history or onboarding	30	NHS Couch to 5K	Health & Fitness	0.0	0.0	0.0	0
+No history or onboarding	31	NHS Strength Exercises	Health & Fitness	0.0	0.0	0.0	0
+No history or onboarding	32	MedlinePlus Exercise and Physical Fitness	Health & Fitness	0.0	0.0	0.0	0

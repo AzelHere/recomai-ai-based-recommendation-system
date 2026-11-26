@@ -16,6 +16,10 @@ public class ItemInterestService {
     private final ItemDao itemDao;
     private final InterestDao interestDao;
     private final ItemInterestDao itemInterestDao;
+    @org.springframework.beans.factory.annotation.Autowired
+    private org.springframework.context.ApplicationEventPublisher events;
+    private void catalogChanged(){if(events!=null)events.publishEvent(new com.guvi.recommendationsystem.catalog.CatalogImported(0));}
+
 
     public ItemInterestService(ItemDao itemDao, InterestDao interestDao, ItemInterestDao itemInterestDao) {
         this.itemDao = itemDao;
@@ -23,6 +27,7 @@ public class ItemInterestService {
         this.itemInterestDao = itemInterestDao;
     }
 
+    @org.springframework.transaction.annotation.Transactional
     public void associate(long itemId, long interestId, BigDecimal weight) {
         validateIds(itemId, interestId);
         if (weight == null || weight.compareTo(BigDecimal.ZERO) < 0 || weight.compareTo(BigDecimal.ONE) > 0) {
@@ -34,9 +39,10 @@ public class ItemInterestService {
         if (interestDao.findById(interestId).filter(interest -> interest.active()).isEmpty()) {
             throw new InterestNotFoundException("An active interest with that ID was not found.");
         }
-        itemInterestDao.save(item.itemId(), interestId, weight);
+        itemInterestDao.save(item.itemId(), interestId, weight);catalogChanged();
     }
 
+    @org.springframework.transaction.annotation.Transactional
     public void remove(long itemId, long interestId) {
         validateIds(itemId, interestId);
         if (itemDao.findById(itemId).isEmpty()) {
@@ -45,7 +51,7 @@ public class ItemInterestService {
         if (!interestDao.existsById(interestId)) {
             throw new InterestNotFoundException("Interest was not found.");
         }
-        itemInterestDao.delete(itemId, interestId);
+        itemInterestDao.delete(itemId, interestId);catalogChanged();
     }
 
     private void validateIds(long itemId, long interestId) {

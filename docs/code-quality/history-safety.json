@@ -1,0 +1,6 @@
+{
+  "commitsScanned": 4,
+  "uniquePaths": 468,
+  "findings": [],
+  "limitations": "Signature and exact local-secret scan; cannot prove that arbitrary historical strings were never credentials."
+}

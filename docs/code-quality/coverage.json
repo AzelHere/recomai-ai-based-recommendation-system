@@ -1,0 +1,347 @@
+{
+  "scope": "Maven JVM tests only; all production classes included; browser execution is outside this agent",
+  "overall": {
+    "INSTRUCTION": {
+      "missed": 18098,
+      "covered": 9465,
+      "percent": 34.34
+    },
+    "BRANCH": {
+      "missed": 1591,
+      "covered": 827,
+      "percent": 34.2
+    },
+    "LINE": {
+      "missed": 2044,
+      "covered": 1447,
+      "percent": 41.45
+    },
+    "COMPLEXITY": {
+      "missed": 1510,
+      "covered": 620,
+      "percent": 29.11
+    },
+    "METHOD": {
+      "missed": 537,
+      "covered": 381,
+      "percent": 41.5
+    },
+    "CLASS": {
+      "missed": 86,
+      "covered": 120,
+      "percent": 58.25
+    }
+  },
+  "packages": {
+    "com/guvi/recommendationsystem/recommendation": {
+      "INSTRUCTION": {
+        "missed": 91,
+        "covered": 1568,
+        "percent": 94.51
+      },
+      "BRANCH": {
+        "missed": 54,
+        "covered": 168,
+        "percent": 75.68
+      },
+      "LINE": {
+        "missed": 12,
+        "covered": 231,
+        "percent": 95.06
+      },
+      "COMPLEXITY": {
+        "missed": 48,
+        "covered": 117,
+        "percent": 70.91
+      },
+      "METHOD": {
+        "missed": 2,
+        "covered": 52,
+        "percent": 96.3
+      },
+      "CLASS": {
+        "missed": 0,
+        "covered": 7,
+        "percent": 100.0
+      }
+    },
+    "com/guvi/recommendationsystem/dao": {
+      "INSTRUCTION": {
+        "missed": 4327,
+        "covered": 758,
+        "percent": 14.91
+      },
+      "BRANCH": {
+        "missed": 205,
+        "covered": 23,
+        "percent": 10.09
+      },
+      "LINE": {
+        "missed": 672,
+        "covered": 105,
+        "percent": 13.51
+      },
+      "COMPLEXITY": {
+        "missed": 288,
+        "covered": 31,
+        "percent": 9.72
+      },
+      "METHOD": {
+        "missed": 178,
+        "covered": 25,
+        "percent": 12.32
+      },
+      "CLASS": {
+        "missed": 17,
+        "covered": 6,
+        "percent": 26.09
+      }
+    },
+    "com/guvi/recommendationsystem/service": {
+      "INSTRUCTION": {
+        "missed": 4881,
+        "covered": 3321,
+        "percent": 40.49
+      },
+      "BRANCH": {
+        "missed": 587,
+        "covered": 384,
+        "percent": 39.55
+      },
+      "LINE": {
+        "missed": 572,
+        "covered": 621,
+        "percent": 52.05
+      },
+      "COMPLEXITY": {
+        "missed": 537,
+        "covered": 226,
+        "percent": 29.62
+      },
+      "METHOD": {
+        "missed": 144,
+        "covered": 133,
+        "percent": 48.01
+      },
+      "CLASS": {
+        "missed": 20,
+        "covered": 22,
+        "percent": 52.38
+      }
+    },
+    "com/guvi/recommendationsystem/evaluation": {
+      "INSTRUCTION": {
+        "missed": 3193,
+        "covered": 388,
+        "percent": 10.83
+      },
+      "BRANCH": {
+        "missed": 256,
+        "covered": 26,
+        "percent": 9.22
+      },
+      "LINE": {
+        "missed": 224,
+        "covered": 43,
+        "percent": 16.1
+      },
+      "COMPLEXITY": {
+        "missed": 163,
+        "covered": 22,
+        "percent": 11.89
+      },
+      "METHOD": {
+        "missed": 33,
+        "covered": 11,
+        "percent": 25.0
+      },
+      "CLASS": {
+        "missed": 6,
+        "covered": 4,
+        "percent": 40.0
+      }
+    },
+    "com/guvi/recommendationsystem/web": {
+      "INSTRUCTION": {
+        "missed": 166,
+        "covered": 689,
+        "percent": 80.58
+      },
+      "BRANCH": {
+        "missed": 30,
+        "covered": 70,
+        "percent": 70.0
+      },
+      "LINE": {
+        "missed": 26,
+        "covered": 127,
+        "percent": 83.01
+      },
+      "COMPLEXITY": {
+        "missed": 33,
+        "covered": 57,
+        "percent": 63.33
+      },
+      "METHOD": {
+        "missed": 7,
+        "covered": 33,
+        "percent": 82.5
+      },
+      "CLASS": {
+        "missed": 0,
+        "covered": 10,
+        "percent": 100.0
+      }
+    },
+    "com/guvi/recommendationsystem/controller": {
+      "INSTRUCTION": {
+        "missed": 973,
+        "covered": 306,
+        "percent": 23.92
+      },
+      "BRANCH": {
+        "missed": 46,
+        "covered": 8,
+        "percent": 14.81
+      },
+      "LINE": {
+        "missed": 166,
+        "covered": 70,
+        "percent": 29.66
+      },
+      "COMPLEXITY": {
+        "missed": 108,
+        "covered": 26,
+        "percent": 19.4
+      },
+      "METHOD": {
+        "missed": 81,
+        "covered": 26,
+        "percent": 24.3
+      },
+      "CLASS": {
+        "missed": 14,
+        "covered": 8,
+        "percent": 36.36
+      }
+    },
+    "com/guvi/recommendationsystem/model": {
+      "INSTRUCTION": {
+        "missed": 283,
+        "covered": 1127,
+        "percent": 79.93
+      },
+      "BRANCH": {
+        "missed": 4,
+        "covered": 2,
+        "percent": 33.33
+      },
+      "LINE": {
+        "missed": 29,
+        "covered": 116,
+        "percent": 80.0
+      },
+      "COMPLEXITY": {
+        "missed": 24,
+        "covered": 55,
+        "percent": 69.62
+      },
+      "METHOD": {
+        "missed": 21,
+        "covered": 55,
+        "percent": 72.37
+      },
+      "CLASS": {
+        "missed": 19,
+        "covered": 39,
+        "percent": 67.24
+      }
+    },
+    "com/guvi/recommendationsystem/catalog": {
+      "INSTRUCTION": {
+        "missed": 4171,
+        "covered": 1261,
+        "percent": 23.21
+      },
+      "BRANCH": {
+        "missed": 409,
+        "covered": 146,
+        "percent": 26.31
+      },
+      "LINE": {
+        "missed": 338,
+        "covered": 111,
+        "percent": 24.72
+      },
+      "COMPLEXITY": {
+        "missed": 306,
+        "covered": 74,
+        "percent": 19.47
+      },
+      "METHOD": {
+        "missed": 68,
+        "covered": 34,
+        "percent": 33.33
+      },
+      "CLASS": {
+        "missed": 8,
+        "covered": 12,
+        "percent": 60.0
+      }
+    },
+    "com/guvi/recommendationsystem": {
+      "INSTRUCTION": {
+        "missed": 5,
+        "covered": 3,
+        "percent": 37.5
+      },
+      "LINE": {
+        "missed": 2,
+        "covered": 1,
+        "percent": 33.33
+      },
+      "COMPLEXITY": {
+        "missed": 1,
+        "covered": 1,
+        "percent": 50.0
+      },
+      "METHOD": {
+        "missed": 1,
+        "covered": 1,
+        "percent": 50.0
+      },
+      "CLASS": {
+        "missed": 0,
+        "covered": 1,
+        "percent": 100.0
+      }
+    },
+    "com/guvi/recommendationsystem/exception": {
+      "INSTRUCTION": {
+        "missed": 8,
+        "covered": 44,
+        "percent": 84.62
+      },
+      "LINE": {
+        "missed": 3,
+        "covered": 22,
+        "percent": 88.0
+      },
+      "COMPLEXITY": {
+        "missed": 2,
+        "covered": 11,
+        "percent": 84.62
+      },
+      "METHOD": {
+        "missed": 2,
+        "covered": 11,
+        "percent": 84.62
+      },
+      "CLASS": {
+        "missed": 2,
+        "covered": 11,
+        "percent": 84.62
+      }
+    }
+  }
+}

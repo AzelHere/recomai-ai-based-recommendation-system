@@ -1,0 +1,219 @@
+{
+  "generatedAt" : "2026-11-24T16:43:35.741786500Z",
+  "processingVersion" : "recomai-3.5-v1",
+  "acquiredRecords" : 3605,
+  "validRecords" : 1770,
+  "rejectedOrOutOfScope" : 1835,
+  "categoryDistribution" : {
+    "BUSINESS_FINANCE" : 397,
+    "CREATIVE_LIFESTYLE" : 557,
+    "HEALTH_FITNESS" : 306,
+    "LEARNING_CAREER" : 126,
+    "TECHNOLOGY" : 384
+  },
+  "sourceDistribution" : {
+    "medlineplus" : 200,
+    "mit-ocw" : 1570
+  },
+  "unknownDuration" : 1770,
+  "unknownDifficulty" : 1770,
+  "unknownLanguage" : 1570,
+  "urlStatus" : "NOT_CHECKED: official feed URLs; HTTP checks are separately recorded",
+  "downloads" : [ {
+    "sha256" : "adf16798373de34aafae66900d69ebf17615bed02363207818650b5e91a021d9",
+    "file" : "raw/mit-ocw-0.json",
+    "acquiredAt" : "2026-11-24T16:34:40.901134500Z",
+    "bytes" : 683092,
+    "cached" : true,
+    "url" : "https://api.learn.mit.edu/api/v1/courses/?platform=ocw&limit=100&offset=0"
+  }, {
+    "sha256" : "e5c81e12e7646230bae0e03f9389aee7d39154180ef0d01f5039a2107fa941d5",
+    "file" : "raw/mit-ocw-1.json",
+    "acquiredAt" : "2026-11-24T16:34:42.971117600Z",
+    "bytes" : 613519,
+    "cached" : true,
+    "url" : "https://api.learn.mit.edu/api/v1/courses/?platform=ocw&limit=100&offset=100"
+  }, {
+    "sha256" : "6fc9a756c34dbe6724669e1903cc48f81a29a129b9e69e97afe7086d7b0ade98",
+    "file" : "raw/mit-ocw-2.json",
+    "acquiredAt" : "2026-11-24T16:34:44.965776600Z",
+    "bytes" : 654431,
+    "cached" : true,
+    "url" : "https://api.learn.mit.edu/api/v1/courses/?platform=ocw&limit=100&offset=200"
+  }, {
+    "sha256" : "bcf49bb122f3763a150ad905c0bd281614729a4763014d0ad292a18c8eca102f",
+    "file" : "raw/mit-ocw-3.json",
+    "acquiredAt" : "2026-11-24T16:34:46.673617200Z",
+    "bytes" : 581009,
+    "cached" : true,
+    "url" : "https://api.learn.mit.edu/api/v1/courses/?platform=ocw&limit=100&offset=300"
+  }, {
+    "sha256" : "0b798b231450b5463f7378998592b17e5777dfc5ebdea1907be938de3142a3c5",
+    "file" : "raw/mit-ocw-4.json",
+    "acquiredAt" : "2026-11-24T16:34:48.170196100Z",
+    "bytes" : 641380,
+    "cached" : true,
+    "url" : "https://api.learn.mit.edu/api/v1/courses/?platform=ocw&limit=100&offset=400"
+  }, {
+    "sha256" : "a94e62c115ebf2b582a6a8949a0a11d725fd4561beed1384d1df20585289887a",
+    "file" : "raw/mit-ocw-5.json",
+    "acquiredAt" : "2026-11-24T16:34:49.932734300Z",
+    "bytes" : 613430,
+    "cached" : true,
+    "url" : "https://api.learn.mit.edu/api/v1/courses/?platform=ocw&limit=100&offset=500"
+  }, {
+    "sha256" : "5b71c4c3de7438d0f500b14d47943e53dd8f44755646495bfcdb49fafb7b2a92",
+    "file" : "raw/mit-ocw-6.json",
+    "acquiredAt" : "2026-11-24T16:34:51.148952200Z",
+    "bytes" : 626537,
+    "cached" : true,
+    "url" : "https://api.learn.mit.edu/api/v1/courses/?platform=ocw&limit=100&offset=600"
+  }, {
+    "sha256" : "88bcc310bb702f96bab5c6f33ee1f0a44406667e5ef5bc00aac80160d32581fd",
+    "file" : "raw/mit-ocw-7.json",
+    "acquiredAt" : "2026-11-24T16:34:52.435154200Z",
+    "bytes" : 612728,
+    "cached" : true,
+    "url" : "https://api.learn.mit.edu/api/v1/courses/?platform=ocw&limit=100&offset=700"
+  }, {
+    "sha256" : "cce3d9a6ba4afaa69a5448944bab63ad82289f05ed3692325e529dfec0408fda",
+    "file" : "raw/mit-ocw-8.json",
+    "acquiredAt" : "2026-11-24T16:34:53.645347600Z",
+    "bytes" : 648979,
+    "cached" : true,
+    "url" : "https://api.learn.mit.edu/api/v1/courses/?platform=ocw&limit=100&offset=800"
+  }, {
+    "sha256" : "a143b07a0d60e25bf7bb459b66806634d190fd4de9b9e21fe60cef80c6c9070d",
+    "file" : "raw/mit-ocw-9.json",
+    "acquiredAt" : "2026-11-24T16:34:55.415211600Z",
+    "bytes" : 609358,
+    "cached" : true,
+    "url" : "https://api.learn.mit.edu/api/v1/courses/?platform=ocw&limit=100&offset=900"
+  }, {
+    "sha256" : "32300450dd5e6b1e4789e0e0b89c4db252c7a12fb7a57a1aafe33ffe5d2a7713",
+    "file" : "raw/mit-ocw-10.json",
+    "acquiredAt" : "2026-11-24T16:34:56.589498800Z",
+    "bytes" : 660074,
+    "cached" : true,
+    "url" : "https://api.learn.mit.edu/api/v1/courses/?platform=ocw&limit=100&offset=1000"
+  }, {
+    "sha256" : "5e48189f737aa601f8ee2a4dfb54fa696ebe57ad0aee02fa86709486de44a0ad",
+    "file" : "raw/mit-ocw-11.json",
+    "acquiredAt" : "2026-11-24T16:34:58.461322500Z",
+    "bytes" : 588148,
+    "cached" : true,
+    "url" : "https://api.learn.mit.edu/api/v1/courses/?platform=ocw&limit=100&offset=1100"
+  }, {
+    "sha256" : "3e9269981a1fd39030d04e69a8efc7b997654681c9f6188d53ca9d720e96bb4f",
+    "file" : "raw/mit-ocw-12.json",
+    "acquiredAt" : "2026-11-24T16:34:59.502267900Z",
+    "bytes" : 642388,
+    "cached" : true,
+    "url" : "https://api.learn.mit.edu/api/v1/courses/?platform=ocw&limit=100&offset=1200"
+  }, {
+    "sha256" : "60aa9894c6bc1fa54c25f75465db9b757869087f0ad659b0dc46c6c0812a8388",
+    "file" : "raw/mit-ocw-13.json",
+    "acquiredAt" : "2026-11-24T16:35:01.302637100Z",
+    "bytes" : 621894,
+    "cached" : true,
+    "url" : "https://api.learn.mit.edu/api/v1/courses/?platform=ocw&limit=100&offset=1300"
+  }, {
+    "sha256" : "9b2061d67caec0c47919e1af7d1fded001a3dd2456004e4d8dde13f2b8512645",
+    "file" : "raw/mit-ocw-14.json",
+    "acquiredAt" : "2026-11-24T16:35:02.229110700Z",
+    "bytes" : 602876,
+    "cached" : true,
+    "url" : "https://api.learn.mit.edu/api/v1/courses/?platform=ocw&limit=100&offset=1400"
+  }, {
+    "sha256" : "2d7eab2dd32efbf83f6f90fad31f6356ec59813fea276982ac66d254431c8312",
+    "file" : "raw/mit-ocw-15.json",
+    "acquiredAt" : "2026-11-24T16:35:03.311417800Z",
+    "bytes" : 586219,
+    "cached" : true,
+    "url" : "https://api.learn.mit.edu/api/v1/courses/?platform=ocw&limit=100&offset=1500"
+  }, {
+    "sha256" : "542fec4fda48883fe517661956407131536bda9bdc5f6f35ecf5aecd636f52b6",
+    "file" : "raw/mit-ocw-16.json",
+    "acquiredAt" : "2026-11-24T16:35:04.338939800Z",
+    "bytes" : 591584,
+    "cached" : true,
+    "url" : "https://api.learn.mit.edu/api/v1/courses/?platform=ocw&limit=100&offset=1600"
+  }, {
+    "sha256" : "80ca3025587b5cf46e6187d27886e56df085c9f3c3f7084b3da00a57b67722bd",
+    "file" : "raw/mit-ocw-17.json",
+    "acquiredAt" : "2026-11-24T16:35:05.452710500Z",
+    "bytes" : 624183,
+    "cached" : true,
+    "url" : "https://api.learn.mit.edu/api/v1/courses/?platform=ocw&limit=100&offset=1700"
+  }, {
+    "sha256" : "1b7bb5a5312222b3db5ae5602754f966994bdaa1546f60fbe2af6f6207646e0a",
+    "file" : "raw/mit-ocw-18.json",
+    "acquiredAt" : "2026-11-24T16:35:06.406665700Z",
+    "bytes" : 593942,
+    "cached" : true,
+    "url" : "https://api.learn.mit.edu/api/v1/courses/?platform=ocw&limit=100&offset=1800"
+  }, {
+    "sha256" : "1ffabc9c374d23fe8d740d54d9d6a54d742d60c76356466d75d750b540a1c4f8",
+    "file" : "raw/mit-ocw-19.json",
+    "acquiredAt" : "2026-11-24T16:35:07.376966200Z",
+    "bytes" : 620990,
+    "cached" : true,
+    "url" : "https://api.learn.mit.edu/api/v1/courses/?platform=ocw&limit=100&offset=1900"
+  }, {
+    "sha256" : "1f96e5720a46bda7e8ba21862f4a24dcefde7e4cb66c861974469950df9bd4d6",
+    "file" : "raw/mit-ocw-20.json",
+    "acquiredAt" : "2026-11-24T16:35:08.394717Z",
+    "bytes" : 615185,
+    "cached" : true,
+    "url" : "https://api.learn.mit.edu/api/v1/courses/?platform=ocw&limit=100&offset=2000"
+  }, {
+    "sha256" : "95d1907ba01a394e238f1082c354ce4a3cd34c7fc942dfedb9be2751d800aa14",
+    "file" : "raw/mit-ocw-21.json",
+    "acquiredAt" : "2026-11-24T16:35:09.576005400Z",
+    "bytes" : 620015,
+    "cached" : true,
+    "url" : "https://api.learn.mit.edu/api/v1/courses/?platform=ocw&limit=100&offset=2100"
+  }, {
+    "sha256" : "75f0122802e0dc8ce9a7ebd3be5cf029bb0fa48659325dcc344d5f8019a79051",
+    "file" : "raw/mit-ocw-22.json",
+    "acquiredAt" : "2026-11-24T16:35:10.552696500Z",
+    "bytes" : 586998,
+    "cached" : true,
+    "url" : "https://api.learn.mit.edu/api/v1/courses/?platform=ocw&limit=100&offset=2200"
+  }, {
+    "sha256" : "7c72807ecdd81661faf68dba10f1d70cea899850abb40345ebedecc1fc113c42",
+    "file" : "raw/mit-ocw-23.json",
+    "acquiredAt" : "2026-11-24T16:35:11.606779Z",
+    "bytes" : 634541,
+    "cached" : true,
+    "url" : "https://api.learn.mit.edu/api/v1/courses/?platform=ocw&limit=100&offset=2300"
+  }, {
+    "sha256" : "6af2cacd01454cbc1a8cef3054bfa3157468982ceb9c38f21b3d49fdede29e3e",
+    "file" : "raw/mit-ocw-24.json",
+    "acquiredAt" : "2026-11-24T16:35:13.270614300Z",
+    "bytes" : 634755,
+    "cached" : true,
+    "url" : "https://api.learn.mit.edu/api/v1/courses/?platform=ocw&limit=100&offset=2400"
+  }, {
+    "sha256" : "b9c90ca5c227a1ab9c7d0a67f65cb7c94dead6b54d29b171429c861d63f4a483",
+    "file" : "raw/mit-ocw-25.json",
+    "acquiredAt" : "2026-11-24T16:35:14.175249900Z",
+    "bytes" : 564670,
+    "cached" : true,
+    "url" : "https://api.learn.mit.edu/api/v1/courses/?platform=ocw&limit=100&offset=2500"
+  }, {
+    "sha256" : "a42f6234ffeaf61618f0f1c422a5c8c944a8d85635a16189e3e17874ff9b8ca7",
+    "file" : "raw/medline-downloads.html",
+    "acquiredAt" : "2026-11-24T16:35:15.397485700Z",
+    "bytes" : 27779,
+    "cached" : true,
+    "url" : "https://medlineplus.gov/xml.html"
+  }, {
+    "sha256" : "b71e4ae9d979fe8061ddb0651326fa78a9db93d5c0d7f8bd55b8fdfee0140e93",
+    "file" : "raw/medline-topics.xml",
+    "acquiredAt" : "2026-11-24T16:35:22.826979700Z",
+    "bytes" : 30156344,
+    "cached" : true,
+    "url" : "https://medlineplus.gov/xml/mplus_topics_2026-11-24.xml"
+  } ]
+}

@@ -1,0 +1,21 @@
+# Review with a separate production environment file; never load local Mailpit credentials in production.
+# The HTTPS reverse proxy must reach only the loopback backend port and provide HSTS.
+services:
+  mysql:
+    ports: !reset []
+    mem_limit: 1g
+  backend:
+    environment:
+      SPRING_PROFILES_ACTIVE: production
+      SESSION_COOKIE_SECURE: "true"
+      PRODUCTION_PUBLIC_URL: ${PRODUCTION_PUBLIC_URL:?Trusted HTTPS origin required}
+      PRODUCTION_SMTP_HOST: ${PRODUCTION_SMTP_HOST:?Authenticated SMTP host required}
+      PRODUCTION_SMTP_PORT: ${PRODUCTION_SMTP_PORT:-587}
+      DB_POOL_SIZE: ${DB_POOL_SIZE:-10}
+      JAVA_TOOL_OPTIONS: "-XX:MaxRAMPercentage=65 -XX:+ExitOnOutOfMemoryError"
+    mem_limit: 768m
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=128m
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]

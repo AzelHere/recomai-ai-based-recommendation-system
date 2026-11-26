@@ -1,0 +1,21 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {spawnSync} from 'node:child_process';
+// Stage the exact publicly identified imported subset; all ranking/metrics still execute in Java.
+const resources=JSON.parse(await fs.readFile('data/processed/educational-resources.json','utf8'));
+const keys=new Set(JSON.parse(await fs.readFile('data/manifests/imported-resource-keys.json','utf8')));
+const imported=resources.filter(r=>keys.has(r.sourceId+'/'+r.externalId));
+if(imported.length!==keys.size||!imported.length)throw Error('Imported resource keys must all match the genuine acquired snapshot');
+const judgments=await fs.readFile('data/evaluation/catalog-judgments.csv','utf8');
+for(const row of judgments.trim().split(/\r?\n/).slice(1))if(!keys.has(row.split(',')[4]))throw Error('A judged candidate was not imported: '+row.split(',')[4]);
+const staging='backend/target/phase35-imported-evaluation';
+await fs.mkdir(staging+'/processed',{recursive:true});await fs.mkdir(staging+'/evaluation',{recursive:true});
+const bytes=JSON.stringify(imported,null,2)+'\n';
+await fs.writeFile('data/processed/imported-educational-resources.json',bytes);
+await fs.writeFile(staging+'/processed/educational-resources.json',bytes);
+await fs.writeFile(staging+'/evaluation/catalog-judgments.csv',judgments);
+const classpath=path.resolve('backend/target/classes')+path.delimiter+(await fs.readFile('backend/target/runtime-classpath.txt','utf8')).trim();
+const result=spawnSync('java',['-Xmx512m','-cp',classpath,'com.guvi.recommendationsystem.evaluation.RealCatalogEvaluation',staging],{encoding:'utf8'});
+if(result.status!==0)throw Error(result.stderr+' '+result.stdout);
+for(const name of ['catalog-results.csv','catalog-rankings.tsv','catalog-evaluation-manifest.json'])await fs.copyFile(staging+'/evaluation/'+name,'data/evaluation/'+name);
+console.log(result.stdout.trim());

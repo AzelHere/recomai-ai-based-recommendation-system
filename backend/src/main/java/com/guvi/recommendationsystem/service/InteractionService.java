@@ -55,6 +55,7 @@ public class InteractionService {
         validateItemId(request.itemId());
         ensureUserExists(userId);
         ensureItemIsActive(request.itemId());
+        if (request.type() == InteractionType.SAVE) userDao.lock(userId);
         InteractionWriteResult result = requestId == null
                 ? new InteractionWriteResult(interactionDao.insert(userId, request.itemId(), request.type()), true)
                 : interactionDao.insertWithRequestId(userId, request.itemId(), request.type(), requestId);

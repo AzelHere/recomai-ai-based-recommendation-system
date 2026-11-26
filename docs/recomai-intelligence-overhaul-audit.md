@@ -1,4 +1,4 @@
-# RecomAI intelligence overhaul: audit and implementation record
+# Recom AI intelligence overhaul: audit and implementation record
 
 ## Baseline audit (2026-10-10)
 

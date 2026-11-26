@@ -4,6 +4,7 @@ import com.guvi.recommendationsystem.model.AdminDashboardSummary;
 import com.guvi.recommendationsystem.model.AdminRecommendationInsights;
 import com.guvi.recommendationsystem.model.CategoryInsight;
 import com.guvi.recommendationsystem.model.ItemInsight;
+import com.guvi.recommendationsystem.model.RecommendationEngagementMetrics;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -51,6 +52,21 @@ public class JdbcAdminAnalyticsDao implements AdminAnalyticsDao {
                 findInteractionCounts("DISLIKE", limit),
                 findTopCategories(limit),
                 averageScore == null ? BigDecimal.ZERO : averageScore);
+    }
+
+    @Override
+    public RecommendationEngagementMetrics getRecommendationEngagement() {
+        return jdbcTemplate.queryForObject("""
+                SELECT COUNT(*) AS impressions,
+                       COUNT(clicked_at) AS clicks,
+                       COALESCE(ROUND(COUNT(clicked_at) * 100.0 / NULLIF(COUNT(*), 0), 2), 0.00)
+                           AS click_through_rate_percent
+                FROM recommendation_impressions
+                """, (resultSet, rowNumber) -> {
+            long impressions = resultSet.getLong("impressions");
+            return new RecommendationEngagementMetrics(impressions, resultSet.getLong("clicks"),
+                    resultSet.getBigDecimal("click_through_rate_percent"), impressions > 0);
+        });
     }
 
     private List<ItemInsight> findRecommendationCounts(int limit) {
